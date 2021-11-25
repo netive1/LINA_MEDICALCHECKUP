@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=yes">
+		<title>라이나생명 검진분석 서비스</title>
+		<link rel="stylesheet" href="../../resources/css/ui.base.css">
+		<link rel="canonical" href="">
+		<script src="../../resources/js/lib/jquery-3.6.0.min.js"></script>
+		<script src="../../resources/js/netive.ui.common.js"></script>
+		<script src="../../resources/js/ui.common.js"></script>
+		<style>
+			h1 {margin-bottom: 1.6rem;}
+			.base-main {padding: 5rem 3rem;}
+			li > h2 {margin-bottom: 1.6rem;}
+			.guide-wrap li {margin-top: 5rem;}
+			.color-guide span[class*="color"] {display: flex;align-items: center;justify-content: center;width: 6rem;height: 6rem;margin-right: 10px;border-radius: 50%;font-size: 12px;}
+			.color-guide p {font-size: 13px;}
+			.color-guide div + p {margin-top: 1.6rem;}
+			.main-color {background-color: #286EF0;color: #fff;}
+			.sub-color.s1 {background-color: #01D4E5;color: #fff;}
+			.sub-color.s2 {background-color: #F2F7FF;color: #286EF0;}
+			.base-color.b1 {background-color: #222;color: #fff;}
+			.base-color.b2 {background-color: #666;color: #fff;}
+			.base-color.b3 {background-color: #ddd;color: #fff;}
+
+		</style>
+	</head>
+	<body>
+		<div class="base-skip"></div>
+		<div class="base-wrap">
+			<header class="base-header"></header>
+			<div class="base-body">
+				<main class="base-main">
+					<h1 class="h-1">guide doc</h1>
+					<ul class="guide-wrap">
+						<li class="color-guide">
+							<h2 class="h-2">color</h2>
+							<p>main color</p>
+							<div class="fx-wrap" data-align="start" data-valign="center">
+								<span class="main-color">#286EF0</span>
+							</div>
+							<p>sub color</p>
+							<div class="fx-wrap" data-align="start" data-valign="center">
+								<span class="sub-color s1">#01D4E5</span>
+								<span class="sub-color s2">#286EF0</span>
+							</div>
+							<p>base color</p>
+							<div class="fx-wrap" data-align="start" data-valign="center">
+								<span class="base-color b1">#222222</span>
+								<span class="base-color b2">#666666</span>
+								<span class="base-color b3">#DDDDDD</span>
+							</div>
+						</li>
+						<li>
+							<h2 class="h-2">font & heading</h2>
+							<p>한글 (Notosans) <span>정보 연동하기</span></p>
+							<p>영문, 숫자 (Roboto) <span class="en-font">AELKSHER 19870825</span></p>
+							<!-- (h-1, h-2, h-3 , fs-l, fs-m, fs-s)class 사용 -->
+							<p class="h-1">건강검진 정보를<br>연동해주세요</p>
+							<p class="h-2">발급된 서비스 코드로<br>분석이 시작됩니다.</p>
+							<p class="h-3">전조증상 체크</p>
+							<div class="fx-wrap" data-align="justify" data-valign="center">
+								<h3 class="title">카카오 인증</h3>
+								<button class="btn-close"></span>
+							</div>
+							<p class="fs-l">잘 모르겠어요..</p>
+							<p class="fs-m">[필수] 건강검진 연동 개인정보 동의</p>
+							<p class="fs-s">이전에 검진분석을 한 적이 있으세요?</p>
+						</li>
+						<li>
+							<h2 class="h-2">form</h2>
+							<div class="form-wrap">
+								<div class="fx-item ui-form" data-flex="1-1-1">
+									<div class="form-label">
+										<label class="form-item-label" for="test_a0_1">Label Text</label>
+										<div class="form-label-util">
+											<div class="bul-star">
+												<div>필수입력</div>
+											</div>
+										</div>
+									</div>
+								
+									<div class="form-item">
+										<input type="text" id="test_a0_1" class="inp-base" value="AELKSHER" placeholder="placeholder text" data-pdr="10"
+											pdr="10" data-pdl="10" style="padding-right: 10px;">
+									</div>
+								
+									<div class="from-info">
+										<div class="bul-error" aria-live="polite">
+											<div>Error Text</div>
+										</div>
+										<div class="bul-info">
+											<div>Helper Text</div>
+										</div>
+									</div>
+								</div>
+								<div class="fx-wrap" data-align="justify">
+									<div class="fx-item ui-form" data-flex="1-1-1">
+										<div class="form-label">
+											<label class="form-item-label" for="test_a0_1">Label Text</label>
+										</div>
+							
+										<div class="form-item">
+											<input type="text" id="test_a0_1" class="inp-base" value="AELKSHER" placeholder="placeholder text"
+												data-pdr="10" pdr="10" data-pdl="10" style="padding-right: 10px;">
+										</div>
+							
+										<div class="from-info">
+											<div class="bul-error" aria-live="polite">
+												<div>Error Text</div>
+											</div>
+											<div class="bul-info">
+												<div>Helper Text</div>
+											</div>
+										</div>
+									</div>
+							
+									<div class="fx-item ui-form" data-flex="1-1-1">
+										<div class="form-label">
+											<label class="form-item-label" for="test_a0_2">Label Text</label>
+											<div class="form-label-util">
+												<a href="#" class="btn-base-s">
+													<span>링크</span>
+												</a>
+											</div>
+										</div>
+							
+										<div class="form-item">
+											<input type="text" id="test_a0_2" class="inp-base" value="" placeholder="placeholder text" data-pdr="10"
+												pdr="10" data-pdl="10" style="padding-right: 10px;">
+										</div>
+							
+										<div class="from-info">
+											<div class="bul-info">
+												<div>Helper Text</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<h2 class="h-2">radio button</h2>
+							<div class="fx-wrap" data-align="center" data-valign="center">
+								<div class="lb-radio">
+									<input id="radio-1" name="radio" type="radio">
+									<label for="radio-1" class="radio-label"><span>radio3</span></label>
+								</div>
+								<div class="lb-radio">
+									<input id="radio-2" name="radio" type="radio">
+									<label for="radio-2" class="radio-label"><span>radio3</span></label>
+									<span>ladio</span>
+								</div>
+								<div class="lb-radio">
+									<input id="radio-3" name="radio" type="radio">
+									<label for="radio-3" class="radio-label"><span>radio3</span></label>								
+								</div>
+								<!-- <div class="radio">
+									<input id="radio-2" name="radio" type="radio">
+									<label for="radio-2" class="radio-label">Unchecked</label>
+								</div>
+								<div class="radio">
+									<input id="radio-3" name="radio" type="radio" disabled>
+									<label for="radio-3" class="radio-label">Disabled</label>
+								</div> -->
+							</div>
+						</li>
+					</ul>
+                </main>
+				<aside class="base-aside"></aside>
+			</div>
+			<footer class="base-footer"></footer>
+		</div>
+	</body>
+</html>
