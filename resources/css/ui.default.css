@@ -14,7 +14,6 @@
 	--gray300:#E0E0E0;	/*box-line[dark]*/
 	--gray200:#DDDDDD;	/*box-line, input-line, table-line*/
 	--gray100:#F5F5F5;	/*table-thead-th-bg*/
-	--gray50:#FAFAFA;	/*box-bg[dark], table-tbody-th-bg, button-text-primary*/
 
 	--white:#ffffff;	/*input-bg, box-bg, table-td-bg, button-bg*/
 	
@@ -23,9 +22,6 @@
 	--error: #FF6262;
 	--success: #3182f6;
 	--link: #6296df;
-
-	/* modal */
-	--system-txt:#fff;
 
 	/*table*/
 	--gray600-table:#757575;	/*table-line[dark]*/
@@ -51,6 +47,7 @@
 	--button-line:#DDDDDD;
 	--button-active:#286EF0;
 	--button-bg:#ffffff;
+	--button-pointbg:#F2F7FF;
 
 	/* text size */
 	--text-xxl: 3.0rem;
@@ -62,7 +59,7 @@
 	--text-xxs: 1.2rem;
 
 	/* etc */
-	--shadow: rgba(0,0,0,0.1);
+	--shadow: rgba(0,0,0,0.06);
 
 	/* code */
 	--code-bg: #212121;
