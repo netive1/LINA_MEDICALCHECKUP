@@ -241,7 +241,7 @@ select::-ms-expand {
 	align-items: center;
 	height: 5rem;
 	background-color: var(--gray700);
-	color:var(--gray50);
+	color:var(--gray100);
 	width:100%;
 	position: fixed;
 	left:0;
@@ -368,26 +368,6 @@ h6 {
 	white-space: nowrap;
 	word-break: normal;
 }
-
-/* google material icons */
-.material-icons {
-	font-family: 'Material Icons';
-	font-weight: normal;
-	font-style: normal;
-	font-size: var(--text-l);
-	display: block;
-	line-height: 1;
-	text-transform: none;
-	letter-spacing: normal;
-	word-wrap: normal;
-	white-space: nowrap;
-	direction: ltr;
-	-webkit-font-smoothing: antialiased;
-	text-rendering: optimizeLegibility;
-	-moz-osx-font-smoothing: grayscale;
-	font-feature-settings: 'liga';
-}
-
 /* [base] Space ---------------------------------------------------------------------------*/
 
 
@@ -397,24 +377,6 @@ textarea,
 input {
 	-webkit-appearance: none;
 	-webkit-border-radius: 0;
-}
-
-/* Removes the clear button from date inputs */
-input[type="date"]::-webkit-clear-button {
-	display: none;
-}
-
-input[type="date"]::-webkit-inner-spin-button {
-	display: none;
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator {
-	display: none;
-}
-
-input[type="date"] {
-	appearance: none;
-	-webkit-appearance: none;
 }
 
 /* radio & checkbox */
@@ -432,7 +394,7 @@ input[type="checkbox"] {
 	margin: 0;
 }
 
-.lb-radio,
+/* .lb-radio,
 .lb-check {
 	position: relative;
 	display: inline-flex;
@@ -474,14 +436,14 @@ input[type="checkbox"] {
 	border: .6rem solid var(--primary);
 }
 
-/* .lb-radio.activated:before,
+.lb-radio.activated:before,
 .lb-check.activated:before,
 .lb-radio:hover:before,
 .lb-check:hover:before,
 .lb-radio:focus:before,
 .lb-check:focus:before {
 	box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.7);
-} */
+}
 
 :checked+.lb-radio,
 :checked+.lb-check,
@@ -528,7 +490,7 @@ input[type="checkbox"] {
 	padding-top: 1rem;
 	vertical-align: top;
 	cursor: pointer;
-}
+} */
 
 /* input text */
 select,
@@ -554,7 +516,7 @@ select.inp-base {
 }
 
 .inp-base:focus {
-	border-color: var(--gray50);
+	border-color: var(--gray100);
 }
 
 .inp-base::-webkit-search-cancel-button {
@@ -1017,8 +979,8 @@ select.off:focus+.ui-select-btn:after {
 /* sheet */
 .sheet-bottom.datepicker .datepicker-wrap {
 	padding: 1rem;
-	background: var(--gray50);
-	border: 1px solid var(--gray50);
+	background: var(--gray100);
+	border: 1px solid var(--gray100);
 	box-shadow: 0 0.3rem 0.3rem var(--shadow);
 	position: relative;
 	z-index: 1;
@@ -1109,7 +1071,7 @@ select.off:focus+.ui-select-btn:after {
 .test-bottom {
 	position: relative;
 	height: 15rem;
-	background: var(--gray50);
+	background: var(--gray100);
 }
 
 .test-bottom .btn-wrap.bottom {
@@ -1361,7 +1323,7 @@ a.btn-base-l {
 }
 
 .tbl-base table>tbody>tr>th {
-	background: var(--gray50-table);
+	background: var(--gray100-table);
 	font-weight: 500;
 	color: var(--gray800);
 }
@@ -1415,7 +1377,7 @@ a.btn-base-l {
 }
 
 .tbl-list>table>tbody>tr>th {
-	background: var(--gray50-table);
+	background: var(--gray100-table);
 	font-weight: 500;
 	color: var(--gray800);
 }
@@ -2500,3 +2462,72 @@ p > a {
         visibility: hidden;
     }
 }
+/* radio */
+
+.radio, .chkbox {
+  margin: 0.5rem;
+}
+.radio input[type=radio] + .radio-label:before,
+.chkbox input[type=checkbox] + .chkbox-label:before {
+	position: relative;
+	top: -0.2rem;
+	display: inline-block;
+	width: 2.4rem;
+	height: 2.4rem;
+	margin-right: 0.8rem;
+	text-align: center;
+	vertical-align: top;
+	/* transition: all 0.25s ease; */
+	background: url(../img/common/ico-chkbox.svg) no-repeat;
+	cursor: pointer;
+	content: "";
+}
+.radio input[type=radio]:checked + .radio-label:before,
+.chkbox input[type=checkbox]:checked + .chkbox-label:before {
+  background-image: url(../img/common/ico-chkbox-on.svg);
+}
+.radio input[type=radio]:disabled + .radio-label:before,
+.chkbox input[type=checkbox]:disabled + .chkbox-label:before {
+  background-image: url(../img/common/ico-chkbox.svg);
+  opacity: 0.5;
+}
+.radio input[type=radio] + .radio-label:empty:before,
+.chkbox input[type=checkbox] + .chkbox-label:empty:before {
+  margin-right: 0;
+}
+
+/* txt radio */
+.radio.radio-type-txt input[type=radio] + .radio-label:before {
+	color: var(--gray200);
+	background: var(--white);
+	border: 1px solid var(--button-line);
+	border-radius: 1rem;
+	width: 15rem;
+	height: 60px;
+	text-align: center;
+	transition: all 0.25s ease;
+}
+.radio.radio-type-txt input[type=radio] + .radio-label {
+	position: relative;
+}
+.radio.radio-type-txt input[type=radio] + .radio-label > span {
+	position: absolute;
+	top: 1.5rem;
+	left: 6rem;
+	color: var(--gray200);
+	font-size: var(--text-m);
+	font-weight: 700;
+}
+
+.radio.radio-type-txt input[type=radio]:checked + .radio-label:before {
+	background: var(--button-pointbg);
+	border: 1px solid var(--primary);
+	border-radius: 1rem;
+	min-width: 15rem;
+	text-align: center;
+}
+.radio.radio-type-txt input[type=radio]:checked + .radio-label > span {
+	color: var(--primary);
+}
+
+/* img radio */
