@@ -1,18 +1,21 @@
 @charset "utf-8";
 
-body { margin: 0; color: #222; font-family: sans-serif; font-size: 100%; font-weight: normal; line-height: normal; letter-spacing: -0.03125em; -webkit-text-size-adjust: none; }
-body:before { position: fixed; left: 0; top: 0; width: 100%; height: 0; content: ''; } /* fix webkit bug(scroll event delay) */
+/*
+	netive UI GUide : reset.css
+*/
+body { margin: 0; color: #222; font-size: 100%; font-family: sans-serif; font-weight: normal; line-height: normal; letter-spacing: -0.03125em; -webkit-text-size-adjust: none; }
+body:before { content: ''; position: fixed; left: 0; top: 0; width: 100%; height: 0; } /* fix webkit bug(scroll event delay) */
 
 div, span, p, strong, b, em, i, a, address,
 h1, h2, h3, h4, h5, h6,
 dl, dd, ul, ol,
-button, input, select, label, table, th, td,
+button, input, select, textarea, label, table, th, td,
 section, article, header, footer, aside, hgroup, menu, nav { box-sizing: border-box; }
 
-strong, b, em, i, address, h1, h2, h3, h4, h5, h6, pre { font: inherit; }
+strong, b, em, i, address, h1, h2, h3, h4, h5, h6, pre, code { font: inherit; }
 
 h1, h2, h3, h4, h5, h6,
-dl, dd,
+dl, dd, p, pre,
 input[type='radio'], input[type='checkbox'] { margin: 0; }
 
 ul, ol { margin: 0; padding: 0; list-style: none; }
@@ -34,7 +37,10 @@ input[type='text'],
 input[type='password'],
 input[type='number'],
 input[type='search'],
-select, textarea { color: inherit; font: inherit; letter-spacing: inherit; }
+input[type='tel'],
+select, textarea { color: inherit; font: inherit; letter-spacing: inherit; border-radius: 0; }
+input[type='date'],
+input[type='month'] { padding: 0; background-color: transparent; color: inherit; font: inherit; font-size: 15px; border: 0; }
 
 button,
 input[type='button'], 
@@ -42,6 +48,7 @@ input[type='submit'] { padding: 0; background-color: transparent; border: 0; cur
 input[type='text'],
 input[type='password'],
 input[type='number'],
+input[type='tel'],
 input[type='search'] { padding: 0; background-color: transparent; border-width: 1px; border-style: solid; }
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
@@ -50,5 +57,11 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 input[type=text]::-ms-clear,
 input[type=number]::-ms-clear,
 input[type=search]::-ms-clear,
-input[type='password']::-ms-reveal { display:none; }
+input[type=date]::-ms-clear,
+input[type='password']::-ms-reveal { display: none; }
 
+/* input 자동완성 배경색 제거 */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active { box-shadow: 0 0 0 30px #fff inset !important; }
