@@ -16,49 +16,61 @@
         <main class="base-main">
           <div class="tit-wrap">
             <h1 class="h-1">건강검진 정보를<br>연동해주세요</h1>
-            <p class="fs-m">건강검진 결과 및 건강분석 서비스 이용을<br>위한 약관에 동의해 주세요.</p>
+            <p class="fs-m">건강검진 결과 및 건강 분석 서비스 이용을 위한<br>약관에 동의해 주세요.</p>
           </div>
           <div class="ui-chkgroup" id="agreeAllChk">
-              <div class="chk-all">
-                <div class="ez-chkbox"><input type="checkbox" id="allChk"></div>
-                <label for="allChk">[필수] 건강검진 연동 개인정보 동의</label>
-                <button type="button" class="btn-more active"><span class="hidden">더보기</span></button>
+              <div class="all-chked">
+                <div class="chkbox">
+                  <input type="checkbox" id="allChk" name="chkbox">
+                  <label for="allChk" class="chkbox-label">[필수] 건강검진 연동을 위한 개인정보 동의</label>
+                </div>
+                <button type="button" class="btn-more"><span class="hidden">더보기</span></button>
               </div>
-              <div class="chklist">
+              <div class="chklist" style="display: none;">
                 <ul>
                     <li>
-                      <div class="ez-chkbox"><input type="checkbox" id="chk1"></div>
-                      <label for="chk1"> 건강정보(민감정보) 수집/이용 동의</label>
+                      <div class="chkbox">
+                        <input type="checkbox" id="chk1" name="chkbox">
+                        <label for="chk1" class="chkbox-label">건강정보(민감정보) 수집/이용 동의</label>
+                      </div>
                       <button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
-                        <span class="hidden">내용보기</span>
+                        <span>보기</span>
                       </button>
                     </li>
                     <li>
-                      <div class="ez-chkbox"><input type="checkbox" id="chk2"></div>
-                      <label for="chk2">개인정보 제3자 제공 동의</label>
+                      <div class="chkbox">
+                        <input type="checkbox" id="chk2" name="chkbox">
+                        <label for="chk2" class="chkbox-label">개인정보 제3자 제공 동의</label>
+                      </div>
                       <button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
-                        <span class="hidden">내용보기</span>
+                        <span>보기</span>
                       </button>
                     </li>
                     <li>
-                      <div class="ez-chkbox"><input type="checkbox" id="chk3"></div>
-                      <label for="chk3">건강정보(민감정보) 수집/이용 동의</label>
+                      <div class="chkbox">
+                        <input type="checkbox" id="chk3" name="chkbox">
+                        <label for="chk3" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
+                      </div>
                       <button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
-                        <span class="hidden">내용보기</span>
+                        <span>보기</span>
                       </button>
                     </li>
                     <li>
-                      <div class="ez-chkbox"><input type="checkbox" id="chk4"></div>
-                      <label for="chk4">건강정보(민감정보) 수집/이용 동의</label>
+                      <div class="chkbox">
+                        <input type="checkbox" id="chk4" name="chkbox">
+                        <label for="chk4" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
+                      </div>
                       <button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
-                        <span class="hidden">내용보기</span>
+                        <span>보기</span>
                       </button>
                     </li>
                     <li>
-                      <div class="ez-chkbox"><input type="checkbox" id="chk5"></div>
-                      <label for="chk5">건강정보(민감정보) 수집/이용 동의</label>
+                      <div class="chkbox">
+                        <input type="checkbox" id="chk5" name="chkbox">
+                        <label for="chk5" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
+                      </div>
                       <button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
-                        <span class="hidden">내용보기</span>
+                        <span>보기</span>
                       </button>
                     </li>
                 </ul>
@@ -68,7 +80,7 @@
       </div>
       <footer class="base-footer">
         <div class="btn-wrap">
-          <button type="button" class="btn-base-l primary">
+          <button type="button" class="btn-base-l primary" disabled>
             <span>동의하고 시작하기</span>
           </button>
         </div>
@@ -76,16 +88,6 @@
     </div>
     <script>
       $('#agreeAllChk').uiCheckAll();
-
-      $('.btn-more').click(function () {
-          $(this).toggleClass('active');
-
-          if ($(this).hasClass('active')) {
-            $('.chklist').fadeIn(300);
-          } else {
-            $('.chklist').fadeOut(300);
-          }
-        })
     </script>
   </body>
 </html>

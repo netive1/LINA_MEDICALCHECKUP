@@ -867,12 +867,12 @@
           o.gItemObj.prop('checked', $boolean);
           if ($boolean) {
             o.gCheckedLength = o.gLength;
-            $parent.addClass('ez-checked');
-            o.gItemObjParent.addClass('ez-checked');
+            $parent.addClass('chked');
+            o.gItemObjParent.addClass('chked');
           } else {
             o.gCheckedLength = 0;
-            $parent.removeClass('ez-checked');
-            o.gItemObjParent.removeClass('ez-checked');
+            $parent.removeClass('chked');
+            o.gItemObjParent.removeClass('chked');
           }
         },
         checkItemFn: function (v) {
@@ -883,59 +883,48 @@
 
           if ($boolean) {
             o.gCheckedLength = o.gCheckedLength + 1;
-            $parent.addClass('ez-checked');
+            $parent.addClass('chked');
           } else {
             o.gCheckedLength = o.gCheckedLength - 1;
-            $parent.removeClass('ez-checked');
+            $parent.removeClass('chked');
           }
 
           if (o.gCheckedLength === o.gLength) {
             o.gAllObj.prop('checked', true);
-            o.gAllObjParent.addClass('ez-checked');
+            o.gAllObjParent.addClass('chked');
           } else {
             o.gAllObj.prop('checked', false);
-            o.gAllObjParent.removeClass('ez-checked');
+            o.gAllObjParent.removeClass('chked');
           }
         },
         viewFn: function (v) {
           var o = this,
-            $t = $(v),
-            $parent = $t.parent();
-
-          if (!$parent.hasClass('active')) {
-            o.gList.removeClass('active actived');
-            o.gCnt.removeAttr('style');
-
-            $parent.addClass('active');
-            $parent.find('.agreementContent').animate({
-              height: $('.active .agreementScroll .inner').innerHeight() + 15
-            }, 250, function () {
-              $parent.addClass('actived');
-
-              // 활성화 후 페이지 스크롤
-              setTimeout(function () {
-                $plugins.pageScroll(o.gTarget);
-              }, 300);
-            });
+              $t = $(v),
+              $parent = $t.parent();
+          
+          $t.toggleClass('open');
+          
+          if (o.gBtn.hasClass('open')) {
+            console.log('open');
+            $parent.addClass('open');
+            o.gList.fadeIn(300);
           } else {
-            $parent.find('.agreementContent').animate({
-              height: 0
-            }, 250, function () {
-              $parent.removeClass('active actived');
-            });
+            console.log('close');
+            $parent.removeClass('open');
+            o.gList.fadeOut(300);
           }
         },
         init: function (v) {
           var o = this;
           o.gTarget = $(v);
-          o.gAllObjParent = o.gTarget.find('.chk-all .ez-chkbox');
+          o.gAllObjParent = o.gTarget.find('.all-chked .chkbox');
           o.gAllObj = o.gAllObjParent.find('input[type=checkbox]');
-          o.gItemObjParent = o.gTarget.find('.chklist .ez-chkbox');
+          o.gItemObjParent = o.gTarget.find('.chklist .chkbox');
           o.gItemObj = o.gItemObjParent.find('input[type=checkbox]');
           o.gLength = o.gItemObj.length;
-          o.gList = o.gTarget.find('.chklist > ul > li');
-          o.gCnt = o.gList.find('.agreementContent');
-          o.gBtn = o.gTarget.find('.chklist .ui-view');
+          o.gList = o.gTarget.find('.chklist');
+          o.gCnt = o.gList.find('.chkbox');
+          o.gBtn = o.gTarget.find('.all-chked .btn-more');
 
           // 전체 체크, 체크 해제
           o.gAllObj.on('click.allChk', function () {
@@ -947,9 +936,9 @@
             o.checkItemFn(this);
           });
 
-          //o.gBtn.on('click', function() {
-          // o.viewFn(this);
-          //});
+          o.gBtn.on('click', function() {           
+            o.viewFn(this);
+          });
         }
       }
       $plugins.uiCheckAll.init(this);

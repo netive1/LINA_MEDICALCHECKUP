@@ -150,18 +150,13 @@
 									<input type="radio" id="radio-txt2" name="radioTxt">
 									<label for="radio-txt2" class="radio-label"><span>여자</span></label>
 								</div>
+							</div>							
+							<!-- <div class="btn-wrap">
+								<a href="#none" class="btn-base">카카오 인증</a>
 							</div>
-							
-							<div class="fx-wrap" data-align="start" data-valign="center">
-								<div class="radio radio-type-img kakao">
-									<input type="radio" id="radio-img1" name="radioImg" checked>
-									<label for="radio-img1" class="radio-label"><span>카카오인증</span></label>
-								</div>
-								<div class="radio radio-type-img phone">
-									<input type="radio" id="radio-img2" name="radioImg">
-									<label for="radio-img2" class="radio-label"><span>휴대폰인증</span></label>
-								</div>
-							</div>
+							<div class="btn-wrap">
+								<a href="#none" class="btn-base">휴대폰 인증</a>
+							</div> -->
 						</li>
 						<li>
 							<h2 class="h-2">emoji radio</h2>
@@ -201,17 +196,17 @@
 						<li>
 							<h2 class="h-2">button</h2>
 							<div class="btn-wrap">
-								<button type="button" class="btn-base-l">
+								<button type="button" class="btn-base-l" disabled>
 									<span>카카오 인증 요청하기</span>
 								</button>
 							</div>
 							<div class="btn-wrap">
-								<button type="button" class="btn-base-l primary">
+								<button type="button" class="btn-base-l">
 									<span>다시 요청하기</span>
 								</button>
 							</div>
 							<div class="btn-wrap">
-								<button type="button" class="btn-base-l primary active">
+								<button type="button" class="btn-base-l primary">
 									<span>카카오 인증하기</span>
 								</button>
 							</div>
@@ -255,36 +250,59 @@
 						<li>
 							<h2 class="h-2">약관 동의 (all check)</h2>
 							<div class="ui-chkgroup" id="agreeAllChk">
-								<div class="chk-all">
-									<div class="ez-chkbox"><input type="checkbox" id="allChk"></div>
-									<label for="allChk">[필수] 건강검진 연동 개인정보 동의</label>
+								<div class="all-chked">
+									<div class="chkbox">
+										<input type="checkbox" id="allChk" name="chkbox">
+										<label for="allChk" class="chkbox-label">[필수] 건강검진 연동을 위한 개인정보 동의</label>
+									</div>
+									<button type="button" class="btn-more"><span class="hidden">더보기</span></button>
 								</div>
-								<div class="chklist">
+								<div class="chklist" style="display: none;">
 									<ul>
 										<li>
-											<div class="ez-chkbox"><input type="checkbox" id="chk1"></div>
-											<label for="chk1"> 건강정보(민감정보) 수집/이용 동의</label>
-											<button type="button" class="ui-btn" onclick ="location.href='../ga/LMO-007.html'"><span class="hidden">내용보기</span></button>
+											<div class="chkbox">
+												<input type="checkbox" id="chk1" name="chkbox">
+												<label for="chk1" class="chkbox-label">건강정보(민감정보) 수집/이용 동의</label>
+											</div>
+											<button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
+												<span>보기</span>
+											</button>
 										</li>
 										<li>
-											<div class="ez-chkbox"><input type="checkbox" id="chk2"></div>
-											<label for="chk2">개인정보 제3자 제공 동의</label>
-											<button type="button" class="ui-btn" onclick ="location.href='../ga/LMO-007.html'"><span class="hidden">내용보기</span></button>
+											<div class="chkbox">
+												<input type="checkbox" id="chk2" name="chkbox">
+												<label for="chk2" class="chkbox-label">개인정보 제3자 제공 동의</label>
+											</div>
+											<button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
+												<span>보기</span>
+											</button>
 										</li>
 										<li>
-											<div class="ez-chkbox"><input type="checkbox" id="chk3"></div>
-											<label for="chk3">건강정보(민감정보) 수집/이용 동의</label>
-											<button type="button" class="ui-btn" onclick ="location.href='../ga/LMO-007.html'"><span class="hidden">내용보기</span></button>
+											<div class="chkbox">
+												<input type="checkbox" id="chk3" name="chkbox">
+												<label for="chk3" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
+											</div>
+											<button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
+												<span>보기</span>
+											</button>
 										</li>
 										<li>
-											<div class="ez-chkbox"><input type="checkbox" id="chk4"></div>
-											<label for="chk4">건강정보(민감정보) 수집/이용 동의</label>
-											<button type="button" class="ui-btn" onclick ="location.href='../ga/LMO-007.html'"><span class="hidden">내용보기</span></button>
+											<div class="chkbox">
+												<input type="checkbox" id="chk4" name="chkbox">
+												<label for="chk4" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
+											</div>
+											<button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
+												<span>보기</span>
+											</button>
 										</li>
 										<li>
-											<div class="ez-chkbox"><input type="checkbox" id="chk5"></div>
-											<label for="chk5">건강정보(민감정보) 수집/이용 동의</label>
-											<button type="button" class="ui-btn" onclick ="location.href='../ga/LMO-007.html'"><span class="hidden">내용보기</span></button>
+											<div class="chkbox">
+												<input type="checkbox" id="chk5" name="chkbox">
+												<label for="chk5" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
+											</div>
+											<button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
+												<span>보기</span>
+											</button>
 										</li>
 									</ul>
 								</div>

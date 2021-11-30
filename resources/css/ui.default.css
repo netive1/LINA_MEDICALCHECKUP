@@ -17,7 +17,7 @@
 
 	--white:#ffffff;	/*input-bg, box-bg, table-td-bg, button-bg*/
 	
-	--primary: #286EF0; 	/*button-bg-primary, button-line-primary*/
+	--primary: #019AF9; 	/*button-bg-primary, button-line-primary*/
 	--secondary: #01D4E5;
 	--error: #FF6262;
 	--success: #3182f6;
@@ -42,10 +42,10 @@
 	--select-tit-bg:#212121;
 
 	/*button*/
-	--button-primary: #DDD; /*button-bg-primary, button-line-primary*/
+	--button-primary: #019AF9; /*button-bg-primary, button-line-primary*/
 	--button-txt: #666666;/*button-text*/
 	--button-line:#DDDDDD;
-	--button-active:#286EF0;
+	--button-active:#019AF9;
 	--button-bg:#ffffff;
 	--button-pointbg:#F2F7FF;
 

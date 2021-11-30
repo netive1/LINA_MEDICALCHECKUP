@@ -131,14 +131,18 @@ input[type="checkbox"] {
 	-webkit-appearance: none;
 	margin: 0;
 }
-/* radio */
-.chkbox {
-  margin: 0.5rem;
+/* chkbox */
+.chkbox label:before {
+	margin-right: 0.8rem;
 }
+.chkbox-label {
+	font-size: var(--text-s);
+}
+/* radio */
 .radio input[type=radio] + .radio-label:before,
 .chkbox input[type=checkbox] + .chkbox-label:before {
 	position: relative;
-	top: -0.2rem;
+	top: 0;
 	display: inline-block;
 	width: 2.4rem;
 	height: 2.4rem;
@@ -165,18 +169,20 @@ input[type="checkbox"] {
 
 /* radio txt type */
 [class*="radio-type-"] + [class*="radio-type-"] {
-	margin-left: 1.1rem;
+	margin-left: 1.2rem;
 }
-.radio-type-img + .radio-type-img {
-	margin-left: 1.5rem;
+.radio.radio-type-txt {
+	width: calc(100% - 0.6rem);
 }
 .radio.radio-type-txt input[type=radio] + .radio-label,
 .radio.radio-type-img input[type=radio] + .radio-label {
+	display: inline-block;
 	position: relative;
+	width: 100%;
 }
 .radio.radio-type-txt input[type=radio] + .radio-label:before,
 .radio.radio-type-img input[type=radio] + .radio-label:before {
-	width: 15rem;
+	width: 100%;
 	min-height: 60px;
 	color: var(--gray200);
 	background: var(--white);
@@ -392,21 +398,6 @@ textarea.inp-base {
 	padding: 3.8rem 0 3rem;
 }
 
-.btn-wrap.type-many {
-	width: calc(100% + 1rem);
-	margin-left: -0.5rem;
-	flex-wrap: wrap;
-
-}
-
-.btn-wrap.type-many [class*="btn-"] {
-	margin: 0.5rem;
-}
-
-.btn-wrap.type-many [class*="btn-"]+[class*="btn-"] {
-	margin-left: .5rem;
-}
-
 .btn-wrap [class*="btn-"] {
 	flex: 1 auto;
 }
@@ -445,17 +436,6 @@ textarea.inp-base {
 	flex: 0 0;
 }
 
-.test-bottom {
-	position: relative;
-	height: 15rem;
-	background: var(--gray100);
-}
-
-.test-bottom .btn-wrap.bottom {
-	position: absolute;
-}
-
-
 .btn-wrap.txta-r [class*="btn-base"] {
 	margin-right: 0;
 	margin-left: 1rem;
@@ -472,8 +452,8 @@ textarea.inp-base {
 	border-radius: 1rem;
 	font-size: var(--text-s);
 	font-weight: 500;
-	background: var(--button-bg);
-	color: var(--button-txt);
+	background: var(--white);
+	color: var(--gray900);
 	text-decoration: none;
 	line-height: 1;
 	vertical-align: top;
@@ -499,17 +479,31 @@ a[class*="btn-base"] {
 	background: var(--button-active);
 }
 
-[class*="btn-base"].disabled,
-[class*="btn-base"]:disabled {
-	opacity: 0.5;
+[class*="btn-base"].text {
+	border: 0;
+	font-weight: 500;
 	box-shadow: none;
-	cursor: default;
+	color: var(--gray900-button);
+	background: transparent;
 }
 
-[class*="btn-base"].disabled:hover,
-[class*="btn-base"].disabled:focus [class*="btn-base"]:disabled:hover,
-[class*="btn-base"]:disabled:focus {
-	background: var(--button-bg);
+[class*="btn-base"].primary {
+	border: 0;
+	background-color: var(--button-primary);
+	color: var(--white);
+	font-weight: 700;
+}
+
+[class*="btn-base"].text.primary {
+	border: 0;
+	background-color: var(--button-active);
+	color: var(--white);
+}
+
+[class*="btn-base"].disabled,
+[class*="btn-base"]:disabled {
+	background: var(--button-line);
+	color: var(--white);
 }
 
 /* base size */
@@ -539,32 +533,6 @@ a.btn-base-l {
 	padding: 0 1rem;
 }
 
-[class*="btn-base"].text {
-	border: 0;
-	font-weight: 500;
-	box-shadow: none;
-	color: var(--gray900-button);
-	background: transparent;
-}
-
-[class*="btn-base"].primary {
-	border: 0;
-	background-color: var(--button-primary);
-	color: var(--white);
-	font-weight: 700;
-}
-
-[class*="btn-base"].text.primary {
-	border: 0;
-	background-color: var(--button-active);
-	color: var(--white);
-}
-
-[class*="btn-base"].active {
-	background-color: var(--button-active);
-	color: var(--white);
-	font-weight: 700;
-}
 
 /* button icon style */
 .btn-close {
@@ -1550,21 +1518,10 @@ progress {
 }
 
 /*약관동의*/
-.ui-chkgroup {
-    position: relative;
-}
-.ui-chkgroup .ez-chkbox {
-    position: absolute;
-    opacity: 0;
-}
-.ui-chkgroup .chk-all {
-	position: relative;
-}
-.ui-chkgroup .chk-all label {
-    display: block;
+.ui-chkgroup .all-chked {
     position: relative;
 	width: 100%;
-    padding: 1.8rem 1.8rem 1.8rem 4.8rem;
+    padding: 1.8rem 1.8rem 1.8rem 1.8rem;
 	font-size: var(--text-s);
     font-weight: 500;
     background-color: var(--white);
@@ -1573,19 +1530,11 @@ progress {
 	box-shadow: 0.5rem 0.4rem 1.2rem rgba(0, 0, 0, 0.06);
     transition: all 0.3s ease-out;
 }
-.ui-chkgroup .chk-all label:before {
-    content: '';
-    position: absolute;
-    left: 1.6rem;
-    top: 50%;
-    width: 2.4rem;
-    height: 2.4rem;
-    margin-top: -1.2rem;
-    background: url(../img/common/ico-chkbox.svg) no-repeat;
-    background-size: 2.4rem auto;
-    transition: all 0.1s steps(5, start);
+
+.ui-chkgroup .all-chked.open {
+	border-color: var(--primary);
 }
-.ui-chkgroup .chk-all .btn-more {
+.ui-chkgroup .all-chked .btn-more {
 	position: absolute;
 	top: 50%;
 	right: 1.6rem;
@@ -1597,61 +1546,47 @@ progress {
 	transform: rotate(180deg);
 	transition: all 0.3s ease-in;
 }
-.ui-chkgroup .chk-all .btn-more.active {
+.ui-chkgroup .all-chked .btn-more.open {
 	transform: rotate(0deg);
 	transition: all 0.3s ease-in;
 }
-.ui-chkgroup .chk-all .ez-chkbox.ez-checked + label {
+.ui-chkgroup .all-chked .ez-chkbox.ez-checked + label {
     border-color: var(--gray900);
 }
-.ui-chkgroup .chk-all .ez-chkbox.ez-checked + label:before {
+.ui-chkgroup .all-chked .ez-chkbox.ez-checked + label:before {
     background-image: url(../img/common/ico-chkbox-on.svg);
 }
 
 .ui-chkgroup .chklist ul {
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 .ui-chkgroup .chklist li {
     position: relative;
+	line-height: 1.5;
 }
 .ui-chkgroup .chklist li label {
     display: block;
     position: relative;
-    padding: 1rem 1.5rem 1rem 3.5rem;
+    padding: 1rem 1.5rem 1rem 1.5rem;
     color: var(--gray700);
     font-size: var(--text-xs);
 }
-.ui-chkgroup .chklist li label:before {
-    content: '';
-    position: absolute;
-    left: 1.6rem;
-    top: 50%;
-    width: 1.2rem;
-    height: 0.8rem;
-    margin-top: -0.4rem;
-    background: url(../img/common/ico-chkbox-s.svg) no-repeat;
-	background-size: 100%;
-    transition: all 0.1s steps(3, start);
+.ui-chkgroup .chklist li .chkbox label:before {
+    background-image: url(../img/common/ico-chkbox-s.svg);
+	background-size: 1.2rem;
+	background-position: center;
 }
 
-.ui-chkgroup .chklist li .ez-chkbox.ez-checked + label:before {
+.ui-chkgroup .chklist li .chkbox input[type=checkbox]:checked + .chkbox-label:before {
 	background-image: url(../img/common/ico-chkbox-s-on.svg);	
 }
 
 .ui-chkgroup .chklist li .ui-btn {
-    position: absolute;
-    right: 1rem;
-    top: 0.7rem;
-    padding: 1rem 0.5rem;
-}
-.ui-chkgroup .chklist li .ui-btn:before {
-    content: '';
-    display: block;
-    width: 0.6rem;
-    height: 1.2rem;
-    background: url(../img/common/arr-right-gray.svg) no-repeat;
-    background-size: 100% auto;
-    transition: all 0.3s ease-out;
+	position: absolute;
+	right: 0;
+	top: 1rem;
+	font-size: var(--text-xs);
+	text-decoration: underline;
 }
 
 /* progress circle */
