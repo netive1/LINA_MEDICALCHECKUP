@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=yes">
+		<title>라이나생명 검진분석 서비스</title>
+		<link rel="stylesheet" href="../../resources/css/ui.base.css">
+		<link rel="canonical" href="">
+		<script src="../../resources/js/lib/jquery-3.6.0.min.js"></script>
+		<script src="../../resources/js/ui.common.js"></script>
+	</head>
+	<body>
+    <div class="base-wrap">
+      <div class="base-body">
+        <main class="base-main">
+          <progress id="" class="progress-base fixed" max="100" value="100">100%</progress>
+          <div class="tit-wrap">
+            <h1 class="h-1">미래에 예상 가능한<br>질병이 있다면<br>미리 준비하시겠어요?</h1>
+            <p class="fs-m">물론, 너무 심각하게<br>생각할 필요는 없어요!</p>
+          </div>
+          <div class="form-wrap">
+            <div class="form-item">
+              <div class="radio radio-type-emoji emoji2">
+                <input type="radio" id="radio-emoji1" name="radioEmoji">
+                <label for="radio-emoji1" class="radio-label"><span>지금 꼭…?</span></label>
+              </div>
+            </div>
+            <div class="form-item">
+              <div class="radio radio-type-emoji emoji5">
+                <input type="radio" id="radio-emoji2" name="radioEmoji">
+                <label for="radio-emoji2" class="radio-label"><span>대비해야죠!</span></label>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <footer class="base-footer">
+        <div class="fx-wrap" data-align="right" data-valign="center">
+          <a href="./LMO-004.html" class="btn-base text btn-skip2">
+            <span>건너뛰기</span>
+          </a>
+        </div>
+      </footer>
+    </div>
+    <script>
+      $('input[name="radioEmoji"]').change(function () {
+
+          $('input[name="radioEmoji"]').each(function () {        
+            var checked = $(this).prop('checked');  
+
+            if (checked) {
+              $('.form-item').css('opacity', '0.5');
+              $(this).parents('.form-item').css('opacity','1');
+            } 
+          });
+      });
+    </script>
+  </body>
+</html>

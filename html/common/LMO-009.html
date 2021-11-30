@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=yes">
+  <title>라이나생명 검진분석 서비스</title>
+  <link rel="stylesheet" href="../../resources/css/ui.base.css">
+  <link rel="canonical" href="">
+  <script src="../../resources/js/lib/jquery-3.6.0.min.js"></script>
+  <script src="../../resources/js/ui.common.js"></script>
+</head>
+
+<body>
+  <div class="base-wrap">
+    <header class="base-header">
+        <div class="header-wrap">
+            <div class="fx-wrap modal-tit" data-align="center" data-valign="center">
+                <h3>카카오 인증</h3>
+                <button class="btn-close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+    </header>
+    <div class="base-body">
+      <main class="base-main pdb-n">
+        <!-- 약관 동의 -->
+        <div class="ui-chkgroup" id="agreeAllChk">
+          <div class="chk-all">
+            <div class="ez-chkbox"><input type="checkbox" id="allChk"></div>
+            <label for="allChk">[필수] 건강검진 연동 개인정보 동의</label>
+            <button type="button" class="btn-more"><span class="hidden">더보기</span></button>
+          </div>
+          <div class="chklist" style="display: none;">
+            <ul>
+                <li>
+                  <div class="ez-chkbox"><input type="checkbox" id="chk1"></div>
+                  <label for="chk1"> 건강정보(민감정보) 수집/이용 동의</label>
+                  <button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
+                    <span class="hidden">내용보기</span>
+                  </button>
+                </li>
+                <li>
+                  <div class="ez-chkbox"><input type="checkbox" id="chk2"></div>
+                  <label for="chk2">개인정보 제3자 제공 동의</label>
+                  <button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
+                    <span class="hidden">내용보기</span>
+                  </button>
+                </li>
+                <li>
+                  <div class="ez-chkbox"><input type="checkbox" id="chk3"></div>
+                  <label for="chk3">건강정보(민감정보) 수집/이용 동의</label>
+                  <button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
+                    <span class="hidden">내용보기</span>
+                  </button>
+                </li>
+                <li>
+                  <div class="ez-chkbox"><input type="checkbox" id="chk4"></div>
+                  <label for="chk4">건강정보(민감정보) 수집/이용 동의</label>
+                  <button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
+                    <span class="hidden">내용보기</span>
+                  </button>
+                </li>
+                <li>
+                  <div class="ez-chkbox"><input type="checkbox" id="chk5"></div>
+                  <label for="chk5">건강정보(민감정보) 수집/이용 동의</label>
+                  <button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
+                    <span class="hidden">내용보기</span>
+                  </button>
+                </li>
+            </ul>
+          </div>
+        </div>
+        <!-- //약관 동의 -->
+        <!-- 입력 필드 -->
+        <div class="scroll-target">
+            <div class="form-wrap mgt-m">
+                <div class="form-label">
+                    <label for="input1" class="form-item-label">이름</label>
+                </div>
+                <div class="form-item">
+                    <input type="text" id="input1" class="inp-base" value="" placeholder="이름 입력">
+                </div>
+            </div>
+            <div class="form-wrap">
+                <div class="form-label">
+                    <label for="input2" class="form-item-label">생년월일</label>
+                </div>
+                <div class="form-item">
+                    <input type="number" id="input2" class="inp-base" value="" placeholder="숫자 8자리">
+                </div>
+            </div>
+            <div class="form-wrap">
+                <div class="form-label">
+                    <label for="input3" class="form-item-label">휴대폰 번호</label>
+                </div>
+                <div class="form-item">
+                    <input type="tel" id="input3" class="inp-base" value="" placeholder="-없이 입력">
+                </div>
+            </div>
+            <div class="form-wrap">
+                <div class="form-label">
+                    <label for="input3" class="form-item-label">성별</label>
+                </div>
+                <div class="form-item">
+                    <div class="fx-wrap" data-align="start" data-valign="center">
+                        <div class="radio radio-type-txt">
+                            <input type="radio" id="radio-txt1" name="radioTxt" checked="">
+                            <label for="radio-txt1" class="radio-label"><span>남자</span></label>
+                        </div>
+                        <div class="radio radio-type-txt">
+                            <input type="radio" id="radio-txt2" name="radioTxt">
+                            <label for="radio-txt2" class="radio-label"><span>여자</span></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- //입력 필드 -->
+            <div class="btn-area">
+              <div class="btn-wrap">
+                <button type="button" id="" class="btn-base-l btn-confirm">
+                  <span>카카오 인증 요청하기</span>
+                </button>
+              </div>
+            </div>
+        </div>
+      </main>
+    </div>
+  </div>
+<script>
+    $('#agreeAllChk').uiCheckAll();
+
+    $('.btn-more').click(function () {
+        $(this).toggleClass('active');
+
+        if ($(this).hasClass('active')) {
+            $('.chklist').fadeIn(300);
+        } else {
+            $('.chklist').fadeOut(300);
+        }
+    }) 
+    </script>
+
+    <script>
+        $(".btn-confirm").click(function () {
+            $('html, body').animate({
+                scrollTop: $('.scroll-target').offset().top
+            }, 500);
+        });
+    </script>
+
+</script>
+</body>
+
+</html>
