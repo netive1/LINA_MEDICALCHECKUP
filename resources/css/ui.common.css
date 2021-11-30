@@ -159,7 +159,6 @@ em {
 	font-weight: 500;
 }
 
-.a11y-hidden,
 legend,
 .hidden,
 .hide {
@@ -200,6 +199,7 @@ caption * {
 input {
 	-webkit-appearance: none;
 	-webkit-border-radius: 0;
+	border-radius: 0;
 }
 
 [type="search"]::-webkit-search-cancel-button,
@@ -216,6 +216,7 @@ select {
 	cursor: pointer;
 	-webkit-appearance: none;
 	-webkit-border-radius: 0;
+	border-radius: 0;
 }
 
 select::-ms-expand {
@@ -223,33 +224,10 @@ select::-ms-expand {
 }
 
 /* z index */
-.base-skip {
-	position: fixed;
-	z-index: 2;
-}
-
 .base-wrap {
 	position: relative;
 	z-index: 0;
 }
-
-.skip {
-	width:100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 5rem;
-	background-color: var(--gray700);
-	color:var(--gray100);
-	width:100%;
-	position: fixed;
-	left:0;
-	top:-5rem;
-}
-.skip:focus {
-	top:0;
-}
-
 
 /* gap */
 .pdt-n {
@@ -369,6 +347,7 @@ textarea,
 input {
 	-webkit-appearance: none;
 	-webkit-border-radius: 0;
+	border-radius: 0;
 }
 
 /* radio & checkbox */
