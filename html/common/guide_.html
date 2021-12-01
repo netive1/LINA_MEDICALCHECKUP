@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=yes">
+		<title>라이나생명 검진분석 서비스</title>
+		<link rel="stylesheet" href="../../resources/css/ui.base.css">
+		<link rel="stylesheet" href="../../resources/css/ui.plugins.css">
+
+		<link rel="canonical" href="">
+		<script src="../../resources/js/lib/jquery-3.6.0.min.js"></script>
+		<script src="../../resources/js/lib/circle-progress.js"></script> <!--circle-progress lib-->
+		<script src="../../resources/js/ui.global.js"></script>
+		<script> window.MSInputMethodContext && document.documentMode && document.write('<script src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js"><\/script>');</script>
+		<style>
+			h1 {margin-bottom: 1.6rem;}
+			.base-main {padding: 5rem 3rem;}
+			li > h2 {margin-bottom: 1.6rem;}
+			.guide-wrap li {margin-top: 5rem;}
+			.chklist li {margin-top: initial;}
+			.color-guide span[class*="color"] {display: flex;align-items: center;justify-content: center;width: 6rem;height: 6rem;margin-right: 10px;border-radius: 50%;font-size: 12px;}
+			.color-guide p {font-size: 13px;}
+			.color-guide div + p {margin-top: 1.6rem;}
+			.main-color {background-color: #286EF0;color: #fff;}
+			.sub-color.s1 {background-color: #01D4E5;color: #fff;}
+			.sub-color.s2 {background-color: #F2F7FF;color: #286EF0;}
+			.base-color.b1 {background-color: #222;color: #fff;}
+			.base-color.b2 {background-color: #666;color: #fff;}
+			.base-color.b3 {background-color: #ddd;color: #fff;}
+			.etc-color.e1 {background-color: #09BFAD;color: #fff;}
+			.etc-color.e2 {background-color: #FF6262;color: #fff;}
+		</style>
+	</head>
+	<body>
+		<div class="base-skip"></div>
+		<div class="base-wrap">
+			<header class="base-header"></header>
+			<div class="base-body">
+				<main class="base-main">
+					<h1 class="h-1">guide doc</h1>
+					<ul class="guide-wrap">
+						<li>
+							<h2 class="h-2">progress bar</h2>
+							<progress id="" class="progress-base" max="100" value="70">70%</progress>
+							<div class="progress-wrap">
+								<div class="fx-wrap" data-align="justify" data-valign="center">
+									<span class="txt">실제 나이</span><span class="age">40세</span>
+								</div>
+								<div class="progress-cont progress" data-progress-percent="50">
+									<div class="progress-bar progress"></div>
+								</div>
+							</div>
+							<div class="progress-circle-wrap mgt-m">
+								<div class="progress-circle"></div>
+							</div>
+						</li>
+						<li class="color-guide">
+							<h2 class="h-2">color</h2>
+							<p>main color</p>
+							<div class="fx-wrap" data-align="start" data-valign="center">
+								<span class="main-color">#286EF0</span>
+							</div>
+							<p>sub color</p>
+							<div class="fx-wrap" data-align="start" data-valign="center">
+								<span class="sub-color s1">#01D4E5</span>
+								<span class="sub-color s2">#286EF0</span>
+							</div>
+							<p>base color</p>
+							<div class="fx-wrap" data-align="start" data-valign="center">
+								<span class="base-color b1">#222222</span>
+								<span class="base-color b2">#666666</span>
+								<span class="base-color b3">#DDDDDD</span>
+							</div>
+							<p>etc color</p>
+							<div class="fx-wrap" data-align="start" data-valign="center">
+								<span class="etc-color e1">#09BFAD</span>
+								<span class="etc-color e2">#FF6262</span>
+							</div>
+						</li>
+						<li>
+							<h2 class="h-2">title</h2>
+							<div class="fx-wrap modal-tit" data-align="center" data-valign="center">
+								<h3>카카오 인증</h3>
+								<button class="btn-close"></span>
+							</div>
+						</li>
+						<li>
+							<h2 class="h-2">font & heading</h2>
+							<p>한글 (Notosans) <span>정보 연동하기</span></p>
+							<p>영문, 숫자 (Roboto) <span class="en-font">AELKSHER 19870825</span></p>
+							<!-- (h-1, h-2, h-3 , fs-l, fs-m, fs-s)class 사용 -->
+							<h1 class="h-1">건강검진 정보를<br>연동해주세요</h1>
+							<h2 class="h-2">발급된 서비스 코드로<br>분석이 시작됩니다.</h2>
+							<h3 class="h-3">전조증상 체크</h3>						
+							<p class="fs-l">잘 모르겠어요..</p>
+							<p class="fs-m">[필수] 건강검진 연동 개인정보 동의</p>
+							<p class="fs-s">이전에 검진분석을 한 적이 있으세요?</p>						
+						</li>				
+						<li>
+							<h2 class="h-2">form</h2>
+							<div class="form-wrap">
+								<div class="form-label">
+									<label for="input1" class="form-item-label">이름</label>
+								</div>
+								<div class="form-item">
+									<input type="text" id="input1" class="inp-base" value="" placeholder="이름 입력" />
+								</div>
+							</div>
+							<div class="form-wrap">
+								<div class="form-label"><label for="input2" class="form-item-label">레이블</label></div>
+								<div class="form-item">
+									<input type="text" id="input2" class="inp-base on" value="텍스트 입력" placeholder="placeholder text" />
+								</div>
+							</div>
+							<div class="form-wrap">
+								<div class="form-label">
+									<label class="form-item-label" for="test_a0_1">휴대폰 번호</label>
+								</div>
+								
+								<div class="form-item">
+									<input type="text" id="test_a0_1" class="inp-base error" value="010dwa" placeholder="- 없이 입력" />
+								</div>
+								<div class="from-info">
+									<div class="bul-error" aria-live="polite">
+										<div>숫자를 입력해주세요</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<h2 class="h-2">checkBox</h2>
+							<div class="fx-wrap" data-align="start" data-valign="center">
+								<div class="chkbox">
+									<input type="checkbox" id="chkbox1" name="chkbox" checked>
+									<label for="chkbox1" class="chkbox-label">chkbox 1</label>
+								</div>
+								<div class="chkbox">
+									<input type="checkbox" id="chkbox2" name="chkbox">
+									<label for="chkbox2" class="chkbox-label">chkbox 2</label>
+								</div>
+							</div>		
+						</li>
+						<li>
+							<h2 class="h-2">radio</h2>
+							<div class="fx-wrap" data-align="start" data-valign="center">
+								<div class="radio radio-type-txt">
+									<input type="radio" id="radio-txt1" name="radioTxt" checked>
+									<label for="radio-txt1" class="radio-label"><span>남자</span></label>
+								</div>
+								<div class="radio radio-type-txt">
+									<input type="radio" id="radio-txt2" name="radioTxt">
+									<label for="radio-txt2" class="radio-label"><span>여자</span></label>
+								</div>
+							</div>							
+							<!-- <div class="btn-wrap">
+								<a href="#none" class="btn-base">카카오 인증</a>
+							</div>
+							<div class="btn-wrap">
+								<a href="#none" class="btn-base">휴대폰 인증</a>
+							</div> -->
+						</li>
+						<li>
+							<h2 class="h-2">emoji radio</h2>
+							<div class="form-wrap">
+								<div class="form-item">
+									<div class="radio radio-type-emoji emoji1">
+										<input type="radio" id="radio-emoji1" name="radioEmoji" checked>
+										<label for="radio-emoji1" class="radio-label"><span>별로예요..</span></label>
+									</div>
+								</div>
+								<div class="form-item">
+									<div class="radio radio-type-emoji emoji2">
+										<input type="radio" id="radio-emoji2" name="radioEmoji">
+										<label for="radio-emoji2" class="radio-label"><span>지금 꼭…?</span></label>
+									</div>
+								</div>
+								<div class="form-item">
+									<div class="radio radio-type-emoji emoji3">
+										<input type="radio" id="radio-emoji3" name="radioEmoji">
+										<label for="radio-emoji3" class="radio-label"><span>좋아요!</span></label>
+									</div>
+								</div>
+								<div class="form-item">
+									<div class="radio radio-type-emoji emoji4">
+										<input type="radio" id="radio-emoji4" name="radioEmoji">
+										<label for="radio-emoji4" class="radio-label"><span>잘 모르겠어요..</span></label>
+									</div>
+								</div>
+								<div class="form-item">
+									<div class="radio radio-type-emoji emoji5">
+										<input type="radio" id="radio-emoji5" name="radioEmoji">
+										<label for="radio-emoji5" class="radio-label"><span>대비해야죠!</span></label>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<h2 class="h-2">button</h2>
+							<div class="btn-wrap">
+								<button type="button" class="btn-base-l" disabled>
+									<span>카카오 인증 요청하기</span>
+								</button>
+							</div>
+							<div class="btn-wrap">
+								<button type="button" class="btn-base-l">
+									<span>다시 요청하기</span>
+								</button>
+							</div>
+							<div class="btn-wrap">
+								<button type="button" class="btn-base-l primary">
+									<span>카카오 인증하기</span>
+								</button>
+							</div>
+
+							<div class="form-wrap form-inbtn">
+								<div class="fx-wrap" data-align="justify" data-valign="center">
+									<div class="fx-item ui-form" data-flex="2-1-1">
+										<div class="form-label">
+											<label class="form-item-label" for="test_a0_1">휴대폰 번호</label>
+										</div>
+										<div class="form-item">
+											<input type="text" id="test_a0_1" class="inp-base" value="01012345678" placeholder="- 없이 입력" />
+										</div>
+									</div>
+									<div class="fx-item ui-form" data-flex="2-1-1">
+										<div class="btn-wrap">
+											<button type="button" class="btn-base-l fs-m">
+												<span>인증번호 재발송</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="fx-wrap mgt-m" data-align="center" data-valign="center">
+								<a href="#none" class="btn-base text btn-skip">
+									<span>건너뛰기</span>
+								</a>
+							</div>
+							<div class="fx-wrap" data-align="right" data-valign="center">
+								<a href="#none" class="btn-base text btn-skip2">
+									<span>건너뛰기</span>
+								</a>
+							</div>
+						</li>
+						<li>
+							<h2 class="h-2">modal, alert</h2>	
+                    <div>서비스 코드 유효기간은 <span class="date">2021.12.31</span> 까지 입니다.</div>
+							<button type="button" class="btn-base btn-base-s mgt-s" onclick="netive.modal.show({ 
+								id:'modalId', 
+								src:'guide_modal.html' 
+								});">modal</button>
+							<button type="button" class="btn-base btn-base-s mgt-s" onclick="netive.modal.show({
+								type : 'alert',
+								sMessage: '<strong>Please</strong> <br>check the information you entered again.',
+								sBtnConfirmTxt: 'Ok',
+								sClass: 'type-alert',
+								sConfirmCallback: function(){ console.log('alert ok'); netive.modal.hideSystem(); }
+								});">alert</button>
+						</li>
+						<li>
+							<h2 class="h-2">약관 동의 (all check)</h2>
+							<div class="ui-chkgroup" id="agreeAllChk">
+								<div class="all-chked">
+									<div class="chkbox">
+										<input type="checkbox" id="allChk" name="chkbox">
+										<label for="allChk" class="chkbox-label">[필수] 건강검진 연동을 위한 개인정보 동의</label>
+									</div>
+									<button type="button" class="btn-more"><span class="hidden">더보기</span></button>
+								</div>
+								<div class="chklist" style="display: none;">
+									<ul>
+										<li>
+											<div class="chkbox">
+												<input type="checkbox" id="chk1" name="chkbox">
+												<label for="chk1" class="chkbox-label">건강정보(민감정보) 수집/이용 동의</label>
+											</div>
+											<button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
+												<span>보기</span>
+											</button>
+										</li>
+										<li>
+											<div class="chkbox">
+												<input type="checkbox" id="chk2" name="chkbox">
+												<label for="chk2" class="chkbox-label">개인정보 제3자 제공 동의</label>
+											</div>
+											<button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
+												<span>보기</span>
+											</button>
+										</li>
+										<li>
+											<div class="chkbox">
+												<input type="checkbox" id="chk3" name="chkbox">
+												<label for="chk3" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
+											</div>
+											<button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
+												<span>보기</span>
+											</button>
+										</li>
+										<li>
+											<div class="chkbox">
+												<input type="checkbox" id="chk4" name="chkbox">
+												<label for="chk4" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
+											</div>
+											<button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
+												<span>보기</span>
+											</button>
+										</li>
+										<li>
+											<div class="chkbox">
+												<input type="checkbox" id="chk5" name="chkbox">
+												<label for="chk5" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
+											</div>
+											<button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
+												<span>보기</span>
+											</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<h2 class="h-2">box</h2>
+							<div class="box-base">
+								<dl>
+									<dt>생체나이에 따른<br>예상의료비</dt>
+									<dd>
+										<em>연간 의료비</em><span>120,000원</span>
+									</dd>
+									<dd>
+										<em>연간 의료비 증가액</em><span>50,000원</span>
+									</dd>
+									<dd>
+										<em>외래 일수 / 통원 일수</em><span>10일 / 4일</span>
+									</dd>
+								</dl>
+								
+							</div>
+						</li>
+					</ul>
+                </main>
+				<aside class="base-aside"></aside>
+			</div>
+			<footer class="base-footer"></footer>
+		</div>
+		
+		<!-- modal (bottom) -->
+		
+		<!-- //modal (bottom) -->
+		
+		<!-- modal (alert) -->
+		<div id="alertId" class="ui-alert">
+			<p class="msg">서비스 코드를<br>다시 확인해 주세요.</p>
+			<div class="btn-wrap">
+				<button type="button" class="btn-base-l primary active btn-close"><span>확인</span></button>
+			</div>
+		</div>
+		<!-- //modal (alert) -->
+
+		<script>
+			// $('.progress').uiProgressbar();
+			// $('#agreeAllChk').uiCheckAll();
+		</script>
+
+		<script>
+			// new CircleProgress('.progress-circle-wrap .progress-circle', {
+			// 	max: 100,
+			// 	value: 60,
+			// 	textFormat: 'percent',
+			// });
+		</script>
+	</body>
+</html>
