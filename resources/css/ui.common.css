@@ -298,7 +298,7 @@ select.inp-base {
 	display: none;
 }
 
-.inp-base.on {
+input[type='text'].inp-base.on {
 	border-color: var(--gray900);
 }
 
