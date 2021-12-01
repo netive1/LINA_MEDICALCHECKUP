@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="ko">
-
-<head>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=yes">
@@ -10,55 +9,51 @@
     <link rel="canonical" href="">
     <script src="../../resources/js/lib/jquery-3.6.0.min.js"></script>
     <script src="../../resources/js/ui.common.js"></script>
-</head>
-
-<body>
-    <main class="base-splash">
-        <div class="base-splash-inner">
-            <h1 class="logo"><img src="../../resources/img/common/logo.svg" alt="logo"></h1>
-            <div class="base-splash-title">
-                <h1>건강검진 분석으로<br>질병 전조증상을<br>알아볼 수 있다면?</h1>
-                <p>라이나생명<br>건강검진 분석 서비스</p>
-                <!-- <button type="button" class="btn-base btn-base-s mgt-s" onclick="$plugins.modal.init('#scAutoModal');">모달창 실행</button> -->
-            </div>
-        </div>
-    </main>
+  </head>
+  <body>
+    <div class="base-wrap base-splash">
+      <div class="base-body">
+        <main class="base-main">
+          <h1 class="logo"><img src="../../resources/img/common/logo.svg" alt="logo"></h1>
+          <div class="tit-wrap">
+            <h2 class="h-2">건강검진 분석으로<br><strong>질병 별 위험도를<br>알아볼 수 있다면?</strong></h2>
+            <p>라이나생명<br>건강검진 분석 서비스</p>
+          </div>
+        </main>
+      </div>
+    </div>
 
     <div id="scCustomModal" class="ui-modal bottom">
-        <!--모달 기본 위치값은 center 'bottom' class 삭제 시 기본 스타일적용됨 -->
-        <div class="modal-head">
-            <h1>
-                서비스 코드를<br> 입력해주세요
-                <span class="primary-color">.</span>
-            </h1>
-            <!-- <button type="button" class="btn-close" onclick="$plugins.modal.hideModal();"><span class="hidden">확인</span></button> -->
+      <!--모달 기본 위치값은 center 'bottom' class 삭제 시 기본 스타일적용됨 -->
+      <div class="modal-head">
+          <h1>서비스 코드를<br> 입력해주세요.</h1>
+      </div>
+      <div class="modal-cont">
+        <div class="form-wrap">
+          <div class="form-item">
+            <input type="text" class="inp-base" value="AELKSHER" placeholder="서비스코드" />
+          </div>
         </div>
-        <div class="modal-cont">
-            <div class="form-wrap">
-                <div class="form-item">
-                    <input type="text" class="inp-base" value="AELKSHER" placeholder="서비스코드" />
-                </div>
-            </div>
-            <div class="bul-wrap">
-                <div class="bul-info">
-                    <div>서비스 코드를 복사해 오시면 편리합니다.</div>
-                </div>
-                <div class="bul-info">
-                    <div>서비스 코드 유효기간은 <span class="date">2021.12.31</span> 까지 입니다.</div>
-                </div>
-            </div>
-            <div class="btn-wrap mgt-s">
-                <button class="btn-base-l primary active" type="button">
-                    <span>시작하기</span>
-                </button>
-            </div>
+        <div class="bul-wrap">
+          <div class="bul-info">
+            <div>서비스 코드를 복사해 오시면 편리합니다.</div>
+          </div>
+          <div class="bul-info">
+            <div>서비스 코드 유효기간은 <span class="date">2021.12.31</span> 까지 입니다.</div>
+          </div>
         </div>
+        <div class="btn-wrap mgt-l">
+          <button type="button" class="btn-base-l primary">
+            <span>시작하기</span>
+          </button>
+        </div>
+      </div>
     </div>
     <script>
-        $(document).ready(function () {
-            $plugins.modal.init('#scCustomModal');
-        });
+      $(document).ready(function () {
+        $plugins.modal.init('#scCustomModal');
+      });
     </script>
-</body>
+  </body>
 
 </html>

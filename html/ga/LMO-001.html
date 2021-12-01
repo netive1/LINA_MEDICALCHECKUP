@@ -1,35 +1,32 @@
 <!doctype html>
 <html lang="ko">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=yes">
-		<title>라이나생명 검진분석 서비스</title>
-		<link rel="stylesheet" href="../../resources/css/ui.base.css">
-		<link rel="canonical" href="">
-		<script src="../../resources/js/lib/jquery-3.6.0.min.js"></script>
-		<script src="../../resources/js/ui.common.js"></script>
-	</head>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=yes">
+    <title>라이나생명 검진분석 서비스</title>
+    <link rel="stylesheet" href="../../resources/css/ui.base.css">
+    <link rel="canonical" href="">
+    <script src="../../resources/js/lib/jquery-3.6.0.min.js"></script>
+    <script src="../../resources/js/ui.common.js"></script>
+  </head>
 	<body>
-    <main class="base-splash">
-      <div class="base-splash-inner">
-        <h1 class="logo"><img src="../../resources/img/common/logo.svg" alt="logo"></h1>
-        <div class="base-splash-title">
-          <h1>건강검진 분석으로<br>질병 전조증상을<br>알아볼 수 있다면?</h1>
-          <p>라이나생명<br>건강검진 분석 서비스</p>
-          <!-- <button type="button" class="btn-base btn-base-s mgt-s" onclick="$plugins.modal.init('#scAutoModal');">서비스 코드 자동 입력 모달 실행</button> -->
-        </div>
+    <div class="base-wrap base-splash">
+      <div class="base-body">
+        <main class="base-main">
+          <h1 class="logo"><img src="../../resources/img/common/logo.svg" alt="logo"></h1>
+          <div class="tit-wrap">
+            <h2 class="h-2">건강검진 분석으로<br><strong>질병 별 위험도를<br>알아볼 수 있다면?</strong></h2>
+            <p>라이나생명<br>건강검진 분석 서비스</p>
+          </div>
+        </main>
       </div>
-    </main>
+    </div>
 
-    <div id="scAutoModal" class="ui-modal bottom">
+    <div id="scAutoModal" class="ui-modal bottom sc-modal">
         <!--모달 기본 위치값은 center 'bottom' class 삭제 시 기본 스타일적용됨 -->
         <div class="modal-head">
-          <h1>
-            발급된 서비스 코드로<br>분석이 시작됩니다
-            <span class="primary-color">.</span>
-          </h1>
-          <!-- <button type="button" class="btn-close" onclick="$plugins.modal.hideModal();"><span class="hidden">확인</span></button> -->
+          <h1>발급된 서비스 코드로<br>분석이 시작됩니다.</h1>
         </div>
         <div class="modal-cont">
           <div class="form-wrap">
@@ -42,16 +39,20 @@
               <div>서비스 코드 유효기간은 <span class="date">2021.12.31</span> 까지 입니다.</div>
             </div>
           </div>
-          <p class="fs-s ta-c mgt-xxl"><a href="#none">이전에 검진분석을 한 적이 있으세요?</a></p>
-          <div class="btn-wrap mgt-s">
-            <button class="btn-base-l primary active" type="button">
+          <div class="btn-wrap mgt-l">
+            <button type="button" class="btn-base-l primary">
               <span>시작하기</span>
             </button>
           </div>
-          <div class="fx-wrap mgt-m" data-align="center" data-valign="center">
-            <a href="#none" class="btn-base text btn-skip">
-              <span>건너뛰기</span>
-            </a>
+          <div class="fx-wrap mgt-m" data-align="justify" data-valign="center">
+            <p class="fs-s">
+              <a href="#none">이전에 검진분석을 한 적이 있으세요?</a>
+            </p>
+            <div class="btn-wrap btn-skip">
+              <a href="#none" class="btn-base text">
+                <span>건너뛰기</span>
+              </a>
+            </div>
           </div>
       </div>
     </div>
