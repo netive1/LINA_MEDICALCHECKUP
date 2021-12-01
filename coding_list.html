@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=0">
+  <title>라이나생명 건강검진 분석 서비스 코딩리스트</title>
+  <style type="text/css">
+    * {margin: 0;padding: 0;box-sizing: border-box;}
+    body {min-width: 1024px;padding: 0;font-family: 'Noto Sans KR', sans-serif;font-size: 12px;}
+    a {color: #57606a;text-decoration: none;}
+    a:hover {color: #e34c26 !important;}
+    caption {display: none;}
+    .ui-codinglist {padding: 20px 415px 20px 20px;}
+    .ui-codinglist h1 {margin: 10px 0;font-size: 22px;letter-spacing: -1px;color: #286EF0;}
+    .ui-codinglist .title-wrap {display: flex;justify-content: space-between;align-items: center;}
+    .ui-codinglist .info-wrap {text-align: right;}
+    .ui-codinglist .info-wrap span {position: relative;display: inline-block;padding: 0 10px 0 20px;font-weight: 700;}
+    .ui-codinglist .info-wrap span:before {display: block;position: absolute;top: 3px;left: 0;width: 12px;height: 12px;background-color: #e4e4e4;content: "";}
+    .ui-codinglist .info-wrap span:last-child {padding-right: 0;}
+    .ui-codinglist .cont {padding: 16px 0;}
+    .ui-codinglist h2 {display: flex;align-items: center;padding: 8px 15px;background-color: #f6f8fa;color: #24292f;font-size: 14px;border: 1px solid #d0d7de;border-radius: 6px 6px 0 0;}
+    .ui-codinglist h2 span {font-weight: normal;font-size: 13px;}
+    .ui-codinglist h2 div {margin-left: 6px;}
+    .ui-codinglist h2 div span {font-size: 13px;}
+    .ui-codinglist h2 div span:before {display: inline-block;width: 10px;height: 10px;margin-right: 6px;content: "";}
+    .ui-codinglist h2 div span+span:not(.modify_end) {margin-left: 20px;}
+    .ui-codinglist h2 div span.line {font-weight: 400;color: #999;}
+    .ui-codinglist h2 div span.line:before {display: none;}
+    .ui-codinglist h2 div span.modify_end {color: #ff8a18;}
+    .ui-codinglist h2 div span.modify_end:before {display: none;}
+    .ui-codinglist h2 em {color: #b8c6d6;font-weight: 400;font-style: normal;}
+    .ui-codinglist .rate {display: block;color: #57606a;font-size: 12px;text-align: right;}
+    .ui-codinglist .rate span {color: #db4e69;}
+    .ui-codinglist .rate strong {font-weight: 500;}
+
+    .ui-codinglist .table-wrap {border: 1px solid #d8dee4;border-top: 0;border-radius: 0 0 6px 6px;}
+    .ui-codinglist .table-wrap + h2 {margin-top: 16px;}
+    .ui-codinglist table {width: 100%;border-spacing: 0;border-collapse: collapse;border-radius: 0 0 6px 6px;overflow: hidden;}
+    .ui-codinglist table thead th {padding: 6px 0;border-top: 0;background: #f6f8fa;font-size: 12px;font-weight: 500;}
+    .ui-codinglist table tbody td {padding: 6px 10px;color: #57606a;font-size: 12px;border: 1px solid #eee;}
+    .ui-codinglist table tbody td a {cursor: pointer;}
+    .ui-codinglist table tbody td:last-child:before {display: inline-block;width: 10px;height: 10px;margin-right: 6px;content: "";}
+    .ui-codinglist table tbody tr:hover td {background-color: #f9f9f9;}
+    .ui-codinglist table tbody tr.hidden td {background-color: #f9f9f9;color: #bbb;text-decoration: line-through;}
+    .ui-codinglist table tbody tr.hidden td:last-child:before {display: none;}
+    .ui-codinglist table tbody td.text_center {text-align: center;}
+    .ui-codinglist table tbody td:first-child, .ui-codinglist table tbody td:last-child {text-align: center;}
+    .ui-codinglist table .col01 {width: 40px;}
+    .ui-codinglist table .col02 {width: 12%;}
+    .ui-codinglist table .col03 {width: 15%;}
+    .ui-codinglist table .col04 {width: 15%;}
+    .ui-codinglist table .col05 {width: 14%;}
+    .ui-codinglist table .col06 {width: 12%;}
+    .ui-codinglist table .col07 {width: 9%;}
+    .ui-codinglist table .col08 {width: auto;}
+    .ui-codinglist table .col09 {width: 50px;}
+    .ui-codinglist table .colEndDate {width: 100px;text-align: center;}
+    .ui-codinglist table tbody tr.pb_end td a,
+    .ui-codinglist table tbody tr.confirm_end td a,
+    .ui-codinglist table tbody tr.modify_end td a {
+    color: #57606a;
+    }
+    .ui-codinglist table tbody tr.pb_end td:last-child:before,
+    .ui-codinglist .info-wrap span.pb_end:before,
+    .ui-codinglist h2 div span.pb_end:before {
+    background-color: #fd8c73;
+    }
+    .ui-codinglist table tbody tr.confirm_end td:last-child:before,
+    .ui-codinglist .info-wrap span.confirm_end:before,
+    .ui-codinglist h2 div span.confirm_end:before {
+    background-color: #0969da;
+    }
+    .ui-codinglist table tbody tr.modify_end td:last-child:before,
+    .ui-codinglist .info-wrap span.modify_end:before,
+    .ui-codinglist h2 div span.modify_end:before {
+    background-color: #216e39;
+    box-sizing: border-box;
+    }
+    .ui-codinglist table tbody tr.hidden td a {color: #bbb;}
+    .ui-codinglist table tbody tr.off td {background-color: #e8e8e8;}
+    .ui-codinglist table tbody tr.off:hover td {background-color: #e8e8e8;}
+
+    .ui-codinglist-mobile {position: fixed;top: 50px;right: 20px;height: 100%;display: flex;z-index: 999000;}
+    .ui-codinglist-iframe {width: 375px;height: 812px;background: #fff;border: none;border-radius: 50px;box-shadow: 3px 23px 50px 0 rgb(0 0 0 / 10%);}
+
+    /*mobile*/
+    @media all and (max-width:768px) {
+      body {padding: 0;}
+      .ui-codinglist {width: 100%;padding: 20px;}
+      .ui-codinglist .cont {width: 100%;overflow-x: scroll;}
+      .ui-codinglist h1 {margin: 0 0 15px;font-size: 18px;font-weight: 700;}
+      .ui-codinglist h2 {font-size: 13px;}
+      .ui-codinglist .info-wrap {display: none;}
+      .ui-codinglist .rate {font-size: 12px;text-align: left;word-break: keep-all;}
+      .ui-codinglist .rate > * {font-size: 12px !important;}
+      table th,table td {white-space: nowrap;}
+      .ui-codinglist table tbody td {padding: 6px 10px;}
+      .ui-codinglist-mobile {display: none;}
+    }
+  </style>
+
+  <script src="resources/js/lib/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.ui-codinglist .pc-tbl a').on('mouseover', function () {
+        $('.ui-codinglist-mobile').addClass('pc-mode');
+
+        if($('.ui-codinglist-mobile').hasClass('pc-mode')) {
+          $('.ui-codinglist-mobile').fadeOut();
+        } else {
+          $('.ui-codinglist-mobile').removeClass('pc-mode');
+        }
+      });
+
+      $('.ui-codinglist .mobile-tbl a').on('mouseover', function () {
+        console.log($(this).attr('href'));
+        $('.ui-codinglist-mobile').fadeIn();
+        $('#codingListIframe').attr('src', $(this).attr('href'));
+      });
+
+      $(".ui-codinglist .cont").each(function () {
+        $(this).find("table tbody tr:not(.hidden)").each(function (index) {
+          $("td:first-child", this).text(index + 1);
+        });
+        $tr = $(this).find("table tbody tr:not(.hidden)");
+        $trIng = $(this).find("table tbody tr.pb_end:not(.hidden)");
+        $trEnd = $(this).find("table tbody tr.confirm_end:not(.hidden)");
+        $(".rate").html("<strong>총</strong> : " + $tr.length + "p &nbsp;<strong>잔여</strong> : " + ($tr.length - ($trIng.length + $trEnd.length)) + "p &nbsp;<strong>진행</strong> : " + ($trIng.length + $trEnd.length) + "p (<span>" + parseInt(($trIng.length + $trEnd.length) / $tr.length * 100) + "%</span>) &nbsp;<strong>완료</strong> : " + $trEnd.length + "p (<span>" + parseInt($trEnd.length / $tr.length * 100) + "%</span>)");
+      });
+
+      $('.ui-codinglist h2').each(function () {
+        $(this).append('<div></div>');
+        $(this).children('div').append("<span class=\"line\">" + "(" + $(this).next('.table-wrap').find("tbody tr:not(.hidden)").length + ")</span>");
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $('td').on('click', function () {
+        $(this).parent('tr').css('background', '#fff964');
+      });
+      if ($('html').hasClass('ui-m')) {
+        $('tr.off.hidden').hide();
+      }
+    });
+  </script>
+</head>
+
+<body>
+  <div class="ui-codinglist">
+    <div class="title-wrap">
+      <h1>라이나생명 건강검진 분석 서비스 코딩리스트</h1>
+
+      <div class="info-wrap">
+        <span class=""> :퍼블리싱 완료</span>
+        <span class="modify_end"> :수정 완료</span>
+        <span class="confirm_end"> :최종 완료</span>
+      </div>
+    </div>
+
+    <div class="rate"></div>
+
+    <div class="cont">
+      <!-- guide -->
+      <h2 id="section00">guide</h2>
+      <div class="table-wrap">
+        <table class="mobile-tbl"> 
+          <colgroup>
+            <col span="1" class="col01">
+            <col span="1" class="col02">
+            <col span="1" class="col03">
+            <col span="1" class="col04">
+            <col span="1" class="col05">
+            <col span="1" class="col06">
+            <col span="1" class="col07">
+            <col span="1" class="colEndDate">
+            <col span="1" class="col08">
+            <col span="1" class="col09">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">NO</th>
+              <th scope="col">1depth</th>
+              <th scope="col">2depth</th>
+              <th scope="col">3depth</th>
+              <th scope="col">4depth</th>
+              <th scope="col">5depth</th>
+              <th scope="col">화면 ID</th>
+              <th scope="col">종료일</th>
+              <th scope="col">비고</th>
+              <th scope="col">상태</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="">
+              <td></td>
+              <td>guide</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/common/guide.html" target="_blank">guide</a></td>
+              <td class="text_center"></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- //guide -->
+      <!-- 공통 -->
+      <h2 id="section01">공통</h2>
+      <div class="table-wrap">
+        <table class="mobile-tbl">
+          <colgroup>
+            <col span="1" class="col01">
+            <col span="1" class="col02">
+            <col span="1" class="col03">
+            <col span="1" class="col04">
+            <col span="1" class="col05">
+            <col span="1" class="col06">
+            <col span="1" class="col07">
+            <col span="1" class="colEndDate">
+            <col span="1" class="col08">
+            <col span="1" class="col09">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">NO</th>
+              <th scope="col">1depth</th>
+              <th scope="col">2depth</th>
+              <th scope="col">3depth</th>
+              <th scope="col">4depth</th>
+              <th scope="col">5depth</th>
+              <th scope="col">화면 ID</th>
+              <th scope="col">종료일</th>
+              <th scope="col">비고</th>
+              <th scope="col">상태</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="">
+              <td></td>
+              <td>Splash</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/common/LMO-000.html" target="_blank">LMO-000</a></td>
+              <td class="text_center">2021-12-07</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Confirm_MW_본인인증</td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/common/LMO-008.html" target="_blank">LMO-008</a></td>
+              <td class="text_center">2021-12-06</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Confirm_MW_본인인증_카카오_default</td>
+              <td></td>
+              <td class="text_center"><a href="./html/common/LMO-009.html" target="_blank">LMO-009</a></td>
+              <td class="text_center">2021-12-06</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Confirm_MW_본인인증_카카오_active</td>
+              <td></td>
+              <td class="text_center"><a href="./html/common/LMO-010.html" target="_blank">LMO-010</a></td>
+              <td class="text_center">2021-12-06</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>(팝업)카카오 인증오류 Alert</td>
+              <td class="text_center"><a href="./html/common/LMO-011.html" target="_blank">LMO-011</a></td>
+              <td class="text_center">2021-12-06</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Confirm_MW_본인인증_휴대폰_default</td>
+              <td></td>
+              <td class="text_center"><a href="./html/common/LMO-012.html" target="_blank">LMO-012</a></td>
+              <td class="text_center">2021-12-06</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Confirm_MW_본인인증_휴대폰_active</td>
+              <td></td>
+              <td class="text_center"><a href="./html/common/LMO-013.html" target="_blank">LMO-013</a></td>
+              <td class="text_center">2021-12-06</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>인증번호 입력</td>
+              <td class="text_center"><a href="./html/common/LMO-014.html" target="_blank">LMO-014</a></td>
+              <td class="text_center">2021-12-06</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>(팝업)인증번호 발송 Alert</td>
+              <td class="text_center"><a href="./html/common/LMO-015.html" target="_blank">LMO-015</a></td>
+              <td class="text_center">2021-12-06</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>(팝업)인증오류 Alert</td>
+              <td class="text_center"><a href="./html/common/LMO-016.html" target="_blank">LMO-016</a></td>
+              <td class="text_center">2021-12-06</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Loding</td>
+              <td></td>
+              <td class="text_center"><a href="./html/common/LMO-017.html" target="_blank">LMO-017</a></td>
+              <td class="text_center">2021-12-10</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Contents_MW_Main_상세</td>
+              <td class="text_center"><a href="./html/common/LMO-019.html" target="_blank">LMO-019</a></td>
+              <td class="text_center">2021-12-10</td>
+              <td>동일 내용으로 1벌만 제작, 페이지 내 레이어 팝업</td>
+              <td></td>
+            </tr>        
+          </tbody>
+        </table>
+      </div>
+      <!-- //공통 -->
+      <!-- GA 채널 flow -->
+      <h2 id="section02">1. GA 채널 Flow &nbsp;<span> GA 설계사가 보낸 카카오알림톡/문자 화면 ID 으로 진입하는 case</span></h2>
+      <div class="table-wrap">
+        <table class="mobile-tbl">
+          <colgroup>
+            <col span="1" class="col01">
+            <col span="1" class="col02">
+            <col span="1" class="col03">
+            <col span="1" class="col04">
+            <col span="1" class="col05">
+            <col span="1" class="col06">
+            <col span="1" class="col07">
+            <col span="1" class="colEndDate">
+            <col span="1" class="col08">
+            <col span="1" class="col09">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">NO</th>
+              <th scope="col">1depth</th>
+              <th scope="col">2depth</th>
+              <th scope="col">3depth</th>
+              <th scope="col">4depth</th>
+              <th scope="col">5depth</th>
+              <th scope="col">화면 ID</th>
+              <th scope="col">종료일</th>
+              <th scope="col">비고</th>
+              <th scope="col">상태</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td>서비스 코드 자동 입력</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/ga/LMO-001.html" target="_blank">LMO-001</a></td>
+              <td class="text_center">2021-12-07</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Entry_1_건강상태 선택</td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/ga/LMO-002.html" target="_blank">LMO-002</a></td>
+              <td class="text_center">2021-12-08</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Entry_2_질병 대비 선택</td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/ga/LMO-003.html" target="_blank">LMO-003</a></td>
+              <td class="text_center">2021-12-08</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Entry_3_정보 연동</td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/ga/LMO-004.html" target="_blank">LMO-004</a></td>
+              <td class="text_center">2021-12-08</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Policy_MW_GA_필수약관 동의_default</td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/ga/LMO-005.html" target="_blank">LMO-005</a></td>
+              <td class="text_center">2021-12-09</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Policy_MW_GA_필수약관 동의_active</td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/ga/LMO-006.html" target="_blank">LMO-006</a></td>
+              <td class="text_center">2021-12-09</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Policy_MW_GA_필수약관 동의_Contents</td>
+              <td></td>
+              <td class="text_center"><a href="./html/ga/LMO-007.html" target="_blank">LMO-007</a></td>
+              <td class="text_center">2021-12-09</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Contents_MW_Main</td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/ga/LMO-018.html" target="_blank">LMO-018</a></td>
+              <td class="text_center">2021-12-10</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td>서비스 코드 직접 입력</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/ga/LMO-020.html" target="_blank">LMO-020</a></td>
+              <td class="text_center">2021-12-07</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td>서비스 코드 만료 안내</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/ga/LMO-021.html" target="_blank">LMO-021</a></td>
+              <td class="text_center">2021-12-07</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- //GA 채널 flow -->
+
+      <!-- Hybrid 채널 flow -->
+      <h2 id="section03">2. Hybrid 채널 Flow &nbsp;<span>CareLink 메뉴를 통해 라이나생명 MW 채널로 진입하는 case</span></h2>
+      <div class="table-wrap">
+        <table class="mobile-tbl">
+          <colgroup>
+            <col span="1" class="col01">
+            <col span="1" class="col02">
+            <col span="1" class="col03">
+            <col span="1" class="col04">
+            <col span="1" class="col05">
+            <col span="1" class="col06">
+            <col span="1" class="col07">
+            <col span="1" class="colEndDate">
+            <col span="1" class="col08">
+            <col span="1" class="col09">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">NO</th>
+              <th scope="col">1depth</th>
+              <th scope="col">2depth</th>
+              <th scope="col">3depth</th>
+              <th scope="col">4depth</th>
+              <th scope="col">5depth</th>
+              <th scope="col">화면 ID</th>
+              <th scope="col">종료일</th>
+              <th scope="col">비고</th>
+              <th scope="col">상태</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td>Landing page_MW_Main</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/hybrid/LMO-022.html" target="_blank">LMO-022</a></td>
+              <td class="text_center">2021-12-08</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Policy_MW_HB_필수약관 동의_default</td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/hybrid/LMO-023.html" target="_blank">LMO-023</a></td>
+              <td class="text_center">2021-12-09</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Policy_MW_HB_필수약관 동의_active</td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/hybrid/LMO-024.html" target="_blank">LMO-024</a></td>
+              <td class="text_center">2021-12-09</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Policy_MW_HB_필수약관 동의_Contents</td>
+              <td></td>
+              <td class="text_center"><a href="./html/hybrid/LMO-025.html" target="_blank">LMO-025</a></td>
+              <td class="text_center">2021-12-09</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Contents_MW_Main</td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/hybrid/LMO-026.html" target="_blank">LMO-026</a></td>
+              <td class="text_center">2021-12-10</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Policy_필수약관 동의_GA 상품 설계</td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/hybrid/LMO-027.html" target="_blank">LMO-027</a></td>
+              <td class="text_center">2021-12-09</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Close_화면 종료 안내</td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/hybrid/LMO-028.html" target="_blank">LMO-028</a></td>
+              <td class="text_center">2021-12-08</td>
+              <td></td>
+              <td></td>
+            </tr>            
+          </tbody>
+        </table>
+      </div>
+      <!-- //Hybrid 채널 flow -->
+
+      <!-- PC Web Process -->
+      <h2 id="section03">3. PC Web Process &nbsp;<span>CareLink의 메뉴를 통해 라이나생명 PC 채널로 진입하는 case</span></h2>
+      <div class="table-wrap">
+        <table class="pc-tbl">
+          <colgroup>
+            <col span="1" class="col01">
+            <col span="1" class="col02">
+            <col span="1" class="col03">
+            <col span="1" class="col04">
+            <col span="1" class="col05">
+            <col span="1" class="col06">
+            <col span="1" class="col07">
+            <col span="1" class="colEndDate">
+            <col span="1" class="col08">
+            <col span="1" class="col09">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">NO</th>
+              <th scope="col">1depth</th>
+              <th scope="col">2depth</th>
+              <th scope="col">3depth</th>
+              <th scope="col">4depth</th>
+              <th scope="col">5depth</th>
+              <th scope="col">화면 ID</th>
+              <th scope="col">종료일</th>
+              <th scope="col">비고</th>
+              <th scope="col">상태</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="">
+              <td></td>
+              <td>Landing page_PC_main</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/pc/LPC-000.html" target="_blank">LPC-000</a></td>
+              <td class="text_center">2021-12-15</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td>Policy_PC_필수약관 동의_default</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/PC/LPC-001.html" target="_blank">LPC-001</a></td>
+              <td class="text_center">2021-12-13</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td>Policy_PC_HB_필수약관 동의_active</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/pc/LPC-002.html" target="_blank">LPC-002</a></td>
+              <td class="text_center">2021-12-13</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td>Policy_PC_HB_필수약관 동의_공통</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/pc/LPC-003.html" target="_blank">LPC-003</a></td>
+              <td class="text_center">2021-12-13</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Confirm_PC_본인인증_ 카카오_default</td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/pc/LPC-004.html" target="_blank">LPC-004</a></td>
+              <td class="text_center">2021-12-14</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Confirm_PC_본인인증_ 카카오_active</td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/LINA-CHECKUP-104.html" target="_blank">LPC-005</a></td>
+              <td class="text_center">2021-12-14</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Confirm_PC_본인인증_ 카카오_인증요청 안내</td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/pc/LPC-006.html" target="_blank">LPC-006</a></td>
+              <td class="text_center">2021-12-14</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>(팝업)인증오류 Alert</td>
+              <td></td>
+              <td class="text_center"><a href="./html/pc/LPC-007.html" target="_blank">LPC-007</a></td>
+              <td class="text_center">2021-12-14</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Confirm_PC_본인인증_ 휴대폰_default</td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/pc/LPC-008.html" target="_blank">LPC-008</a></td>
+              <td class="text_center">2021-12-14</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Confirm_PC_본인인증_ 휴대폰_active</td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/pc/LPC-009.html" target="_blank">LPC-009</a></td>
+              <td class="text_center">2021-12-14</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Confirm_PC_본인인증_ 휴대폰_인증번호 안내</td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/pc/LPC-010.html" target="_blank">LPC-010</a></td>
+              <td class="text_center">2021-12-14</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>(팝업)휴대폰 인증오류 Alert</td>
+              <td></td>
+              <td class="text_center"><a href="./html/pc/LPC-011.html" target="_blank">LPC-011</a></td>
+              <td class="text_center">2021-12-14</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>공통_PC_Loding</td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/pc/LPC-012.html" target="_blank">LPC-012</a></td>
+              <td class="text_center">2021-12-17</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Contents_PC_Main</td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/pc/LPC-013.html" target="_blank">LPC-013</a></td>
+              <td class="text_center">2021-12-17</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>(팝업)Contents_PC_상세</td>
+              <td></td>
+              <td class="text_center"><a href="./html/pc/LPC-014.html" target="_blank">LPC-014</a></td>
+              <td class="text_center">2021-12-17</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Policy_PC_필수약관 동의_GA 상품 설계</td>
+              <td></td>
+              <td class="text_center"><a href="./html/pc/LPC-015.html" target="_blank">LPC-015</a></td>
+              <td class="text_center">2021-12-17</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Close_PC_화면 종료 안내</td>
+              <td></td>
+              <td class="text_center"><a href="./html/pc/LPC-016.html" target="_blank">LPC-016</a></td>
+              <td class="text_center">2021-12-17</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- //PC Web Process -->
+
+      <!-- GA 설계사 분석화면 -->
+      <h2 id="section03">4. GA 설계사 분석화면</h2>
+      <div class="table-wrap">
+        <table class="pc-tbl">
+          <colgroup>
+            <col span="1" class="col01">
+            <col span="1" class="col02">
+            <col span="1" class="col03">
+            <col span="1" class="col04">
+            <col span="1" class="col05">
+            <col span="1" class="col06">
+            <col span="1" class="col07">
+            <col span="1" class="colEndDate">
+            <col span="1" class="col08">
+            <col span="1" class="col09">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">NO</th>
+              <th scope="col">1depth</th>
+              <th scope="col">2depth</th>
+              <th scope="col">3depth</th>
+              <th scope="col">4depth</th>
+              <th scope="col">5depth</th>
+              <th scope="col">화면 ID</th>
+              <th scope="col">종료일</th>
+              <th scope="col">비고</th>
+              <th scope="col">상태</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="">
+              <td></td>
+              <td>Homepage PC_인증코드 입력 화면</td>
+              <td>(팝업)상담신청 알림</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/planner/LGA-000.html" target="_blank">LGA-000</a></td>
+              <td class="text_center">2021-12-17</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Homepage PC_고객검진분석 상세</td>
+              <td></td>
+              <td></td>
+              <td class="text_center"><a href="./html/planner/LGA-001.html" target="_blank">LGA-001</a></td>
+              <td class="text_center">2021-12-17</td>
+              <td></td>
+              <td></td>
+            </tr>         
+          </tbody>
+        </table>
+      </div>
+      <!-- //GA 설계사 분석화면 -->
+      <div class="ui-codinglist-mobile on">
+        <iframe id="codingListIframe" title="mobile preview" class="ui-codinglist-iframe type-ipx" src=""></iframe>
+      </div>
+    </div>
+</body>
+
+</html>
