@@ -1037,7 +1037,7 @@ a.ui-acco-btn:after {
     width: 100%;
     height: 100%;
     opacity: 0;
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, .6);
 }
 .ui-modal.open .ui-modal-dim{
     opacity: 1;
@@ -1066,15 +1066,14 @@ a.ui-acco-btn:after {
     align-items: flex-end;
     overflow: hidden;
 }
-
 .ui-modal-wrap {
-    max-width: 90rem;
-    opacity: 0;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     position: relative;
+    max-width: 90rem;
+    width: 100%;
+    opacity: 0;
     z-index: 1;
-    background: var(--white);
     margin: 2rem;
+    background: var(--white);    
 }
 .ui-modal.open .ui-modal-wrap{
     opacity: 1;
@@ -1161,7 +1160,7 @@ a.ui-acco-btn:after {
 
 .ui-modal.close.ps-bottom .ui-modal-wrap {
     animation-name: slideUpOut;
-    animation-duration: .2s;
+    animation-duration: .5s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
@@ -1169,7 +1168,7 @@ a.ui-acco-btn:after {
 
 .ui-modal.open.ps-bottom .ui-modal-wrap {
     animation-name: slideUpIn;
-    animation-duration: .2s;
+    animation-duration: .5s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
@@ -1177,7 +1176,7 @@ a.ui-acco-btn:after {
 
 .ui-modal.close.ps-center.type-system .ui-modal-wrap {
     animation-name: slideDownOut;
-    animation-duration: .2s;
+    animation-duration: .5s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
@@ -1185,7 +1184,7 @@ a.ui-acco-btn:after {
 
 .ui-modal.open.ps-center.type-system .ui-modal-wrap {
     animation-name: slideDownIn;
-    animation-duration: .2s;
+    animation-duration: .5s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
@@ -1205,18 +1204,35 @@ a.ui-acco-btn:after {
 .ui-modal.type-system .ui-modal-wrap {
     width: auto;
     text-align: center;
-    font-size: var(--text-s);
-    
+    font-size: var(--text-xs);
+    border-radius: 2rem;
+    overflow: hidden;
+}
+.ui-modal.type-system .ui-modal-body {
+    padding: 3.6rem 2.4rem 2.6rem;
 }
 .ui-modal.type-system .ui-modal-body,
 .ui-modal.type-system .ui-modal-footer {
-    background: var(--primary);
-    color:var(--system-txt);
+    background: var(--white);
+    color:var(--gray900);
     max-width:100% !important;
+}
+.ui-modal.type-system .ui-modal-footer {
+    padding: 0 2.4rem 2.8rem;
+}
+.ui-modal.type-system .ui-modal-wrap p {
+    color: var(--gray800);
 }
 
 .ui-modal.type-system .ui-modal-wrap strong {
-    font-weight: 900;
+    display: block;
+    margin-bottom: 1.2rem;
+    color: var(--gray900);
+    font-size: var(--text-m);
+    font-weight: 700;
+}
+.ui-modal.type-system .ui-modal-wrap .btn-wrap [class*="btn-base"] {
+    min-height: 6rem;
 }
 
 .ui-modal-header {
@@ -1224,40 +1240,27 @@ a.ui-acco-btn:after {
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 4rem;
-    background: var(--gray900);
-
-    padding: .8rem 3.5rem 1.2rem 1.6rem;
-    border-bottom: 1px solid var(--gray200);
+    padding: 3.2rem 2.4rem 1rem; 
+    background: var(--white);    
 }
 
 .ui-modal-header h1 {
-    font-size: var(--text-m);
-    font-weight: 500;
-    color: var(--white);
+    color: var(--gray900);
+   	font-size: var(--text-xl);
+	font-weight: 700;
 }
-
-.ui-modal-header .btn-close {
-    position: absolute;
-    right: .8rem;
-    top: .8rem;
-    border: 0;
-    font-family: 'Material Icons';
-    color: var(--white);
-}
-
 .ui-modal-body {
     position: relative;
     margin-top: 0;
-    padding: 1.5rem;
-    background: var(--gray50);
+    padding: 1.4rem 2.4rem 3rem;
+    background: var(--white);
 }
 
 .ui-modal-footer {
     position: relative;
     margin-top: 0;
-    padding: 1rem 1.5rem;
-    background: var(--gray50);
+    padding: 0 2.4rem 3.6rem;
+    background: var(--white);
 }
 
 .ui-modal-footer .btn-wrap {
@@ -1269,9 +1272,9 @@ a.ui-acco-btn:after {
     padding-right: 0;
 }
 
-.ui-m .ui-modal-wrap {
+/* .ui-m .ui-modal-wrap {
     margin: 2rem;
-}
+} */
 
 .ui-m .ui-modal.ps-top .ui-modal-wrap {
     margin-top: 0;
@@ -1307,10 +1310,6 @@ a.ui-acco-btn:after {
     top: auto;
 }
 
-.ui-m .ui-modal-footer {
-    padding: 10px 15px;
-}
-
 .ui-m .ui-modal.ps-top .ui-modal-wrap,
 .ui-m .ui-modal.ps-bottom .ui-modal-wrap {
     margin: 0;
@@ -1319,29 +1318,9 @@ a.ui-acco-btn:after {
 .ui-m .ui-modal.open.ps-top .ui-modal-wrap {
     top: 0;
 }
-
-.ui-m .ui-modal.open.ps-bottom .ui-modal-wrap {
-    bottom: 0;
-}
-
 .ui-m .ui-modal.ps-center.is-over .ui-modal-wrap {
     margin: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ui scroll bar : base */
 .ui-scrollbar {
