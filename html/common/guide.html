@@ -75,9 +75,13 @@
 									<div class="progress-bar progress"></div>
 								</div>
 							</div>
-							<div class="progress-circle-wrap mgt-m">
+							<!-- <div class="progress-circle-wrap mgt-m">
 								<div class="progress-circle"></div>
-							</div>
+							</div> -->
+							<div class="circle" data-value="0.9" data-size="60" data-thickness="20" data-animation-start-value="1.0" data-fill="{
+							    &quot;color&quot;: &quot;rgba(0, 0, 0, .3)&quot;,
+							    &quot;image&quot;: &quot;http://i.imgur.com/pT0i89v.png&quot;
+							  }" data-reverse="true"></div>
 						</section>			
 						<section>
 							<h2 class="h-2">title</h2>
@@ -357,10 +361,12 @@
 			 $('.progress-wrap .progress').uiProgressbar();
 		</script>
 		<script>
-			new CircleProgress('.progress-circle-wrap .progress-circle', {
-				max: 100,
-				value: 60,
-				textFormat: 'percent',
+		$('.circle').circleProgress({
+				value: 0.75,
+				size: 80,
+				fill: {
+					gradient: ["red", "orange"]
+				}
 			});
 		</script>
 	</body>

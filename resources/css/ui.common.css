@@ -599,6 +599,16 @@ a[class*="btn-base"] {
 	background-size: 4px 8px;
 }
 
+.btn-remove {
+	position: absolute;
+	top: 1.8rem;
+	right: 6.2rem;
+	display: none;
+	width: 2.3rem;
+	height: 2.3rem;
+	background: url(../img/common/ico-round-close.svg) center right /100% no-repeat;
+}
+
 
 [class*="btn-base"].btn-skip2 {
 	position: relative;
@@ -1227,10 +1237,10 @@ progress {
 .form-inbtn.validate .valtime {
 	position: absolute;
 	top: 2rem;
-	right: 2rem;
+	right: 2rem;	
 	font-family: 'Roboto';
 	color: var(--error);
-	font-size: var(--text-s);
+	font-size: var(--text-xs);
 }
 .form-inbtn.validate .inp-base {
 	padding-right: 7rem;

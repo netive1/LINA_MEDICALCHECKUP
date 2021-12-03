@@ -187,7 +187,8 @@
                     <label class="form-item-label" for="test_a0_1">인증번호</label>
                   </div>
                   <div class="form-item">
-                    <input type="tel" id="test_a0_1" class="inp-base" value="568498" maxlength="6" placeholder="숫자 6자리 입력">
+                    <input type="tel" id="test_a0_1" class="inp-base inp-validate" value="" maxlength="6" placeholder="숫자 6자리 입력">
+                    <button type="button" class="btn-remove"><span class="hidden">초기화</span></button>
                     <span class="valtime">02:50</span>
                   </div>
                 </div>
@@ -219,6 +220,22 @@
     </div>
     <script>
       $('#agreeAllChk').uiCheckAll();
+
+      //인증번호 필드 초기화
+      $('.btn-remove').click(function () {
+        $(this).prev().val('');
+        $(this).parent().addClass('empty');
+        $('.btn-remove').fadeOut();
+      });
+
+      $('.inp-validate').keyup(function () {
+        $('.btn-remove').fadeIn();
+        if ($(this).val() == '') {
+          $(this).parent().addClass('empty');
+        } else {
+          $(this).parent().removeClass('empty');
+        }
+      });
     </script>
   </body>
 </html>
