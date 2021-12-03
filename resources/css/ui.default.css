@@ -61,9 +61,8 @@
 	/* etc */
 	--shadow: rgba(0,0,0,0.06);
 
-	/* code */
-	--code-bg: #212121;
-	--code-text: #FAFAFA;
+	/* bg */
+	--contbg: #F0F4F7;
 }
 
 :root.ui-m {
