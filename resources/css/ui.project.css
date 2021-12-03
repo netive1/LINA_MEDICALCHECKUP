@@ -19,14 +19,14 @@
 	position: relative;
 	z-index: 0;
 	width: 100%;
-	padding: 10rem 3rem 14rem;
+	padding: 9rem 2.4rem 3.6rem;
 }
 
 .base-footer {
 	position: fixed;
 	bottom: 0;
 	width: 100%;
-	padding: 2rem 3rem;
+	padding: 2rem 2.4rem 3.6rem;
 	background-color: var(--white);
 }
 
@@ -34,7 +34,7 @@
 .header-wrap {
 	position:relative;
 	width: 100%;
-	padding: 4rem 3rem 3rem;
+	padding: 4rem 2.4rem 2.6rem;
 	margin: 0 auto;
 	font-size: 0;
 	z-index: 2;
@@ -57,11 +57,23 @@ p {
 }
 
 .tit-wrap {
-	margin: 0 0 2.7rem;
+	margin: 0 0 4.4rem;
 }
 
-.tit-wrap p {
-	margin: 2.4rem 0 0;
+.tit-wrap .h-1 {
+	font-weight: 400;
+}
+
+.tit-wrap .h-1 strong {
+	font-weight: 700;
+}
+
+.tit-wrap .h-1 + p {
+	margin-top: 2.4rem;
+}
+
+.tit-wrap .h-2 + p {
+	margin-top: 1.6rem;
 }
 
 /* heading */
@@ -105,10 +117,6 @@ p {
 	margin: 1.2rem 0 0.4rem;
 }
 
-.h-2.b {
-	font-weight: 900;
-}
-
 /* text */
 .fs-s {
 	font-size:var(--text-xs);
@@ -130,71 +138,90 @@ p {
 
 /*splash*/
 .base-splash {
-	position: relative;
 	width: 100%;
 	min-height: 100vh;
 	min-height: -webkit-fill-available;
-	/* height: calc(var(--vh, 1vh) * 100); */
-	margin: 0;
-	padding: 0 4rem;
-	background: linear-gradient(to bottom, #2b6def, #5e5de5) no-repeat;
+	background: var(--white);
 }
 .base-splash:after {
 	position: absolute;
 	right: 4rem;
-	bottom: 12.7rem;
+	bottom: 15vh;
 	display: inline-block;
-	width: 17.6rem;
-	height: 17.6rem;
+	width: 15.4rem;
+	height: 17.4rem;
 	background: url(../img/bg-splash-obj.png) center/100% no-repeat;
 	content: '';
 }
-.base-splash-inner {
-	padding: 5.7rem 0;
+.base-splash .base-body {
+	height: 100%;
+	min-height: 100vh;
+	padding: 0 2.4rem;
 }
-.base-splash .logo img {
-	width: 8.3rem;
-	height: 2.1rem;
-}
-.base-splash .base-splash-title {
-	padding-top: 8.5rem;
-}
-.base-splash .base-splash-title h1 {
-	color: var(--white);
-	font-size: var(--text-xxl);
-	font-weight: 900;
-}
-.base-splash .base-splash-title p {
-	margin-top: 3.2rem;
-	color: var(--white);
-	font-size: var(--text-s);
+.base-splash .base-main {
+	height: 100%;
+	padding: 6.7vh 0 0;
 }
 
-/* bg img setting */
+.base-splash .logo img {
+	width: 9.5rem;
+	height: 2.4rem;
+}
+.base-splash .tit-wrap {
+	padding-top: 10vh;
+}
+.base-splash .tit-wrap .h-2 {
+	font-size: var(--text-xxl);
+	font-weight: 400;
+}
+.base-splash .tit-wrap p {
+	margin-top: 3.2rem;
+}
+
+/* 약관 동의 */
+.base-terms .base-main {
+	padding-top: 12rem;
+}
+.base-terms .base-main .tit-wrap {
+	margin-bottom: 1.8rem;
+}
+.base-terms .base-main .desc {
+	font-size: var(--text-xs);
+	line-height: 2.4rem;
+}
+
+/* Entry_3 정보 연동 */
 .base-main.bg-chkup-1 {
-	min-height: calc(100vh - 12rem);
-	background: url('../img/bg-chkup-1.png') right 3rem bottom 8.9rem no-repeat;
-	background-size: 16.4rem;
+	padding: 20vh 2.4rem 0;
+	min-height: 100vh;
+	background: url('../img/bg-chkup-1.png') center bottom 28vh no-repeat;
+	background-size: 15.8rem 13.2rem;
+}
+.base-main.bg-chkup-1 .h-2 {
+	font-size: 2.6rem;
 }
 
 /* 카카오 인증 */
 .kakao-process {
-	margin: 3.3rem 0 3.8rem;
+	margin: 2.6rem 0 1.6rem;
+	padding: 2.4rem;
+	background-color: var(--gray300);
+	border-radius: 1rem;
 }
 .kakao-process .img-wrap {
 	position: relative;
 	text-align: center;
 }
 .kakao-process .img-wrap img {
-	width: 6.8rem;
-	height: 6.8rem;
+	width: 5.8rem;
+	height: 5.8rem;
 }
 .kakao-process .img-wrap:before {
 	position: absolute;
 	left: 0;
-	top: 3rem;
+	top: 2.3rem;
 	display: inline-block;
-	width: 0.6rem;
+	width: .6rem;
 	height: 1.2rem;
 	background: url(../img/common/arr-right.svg) no-repeat;
 	background-size: 100%;
@@ -205,10 +232,50 @@ p {
 } 
 .kakao-process .img-wrap span {
 	display: block;
-	margin-top: 1.2rem;
-	color: var(--gray900);
-	font-size: var(--text-xs);
+	margin-top: .6rem;
+	color: var(--gray800);
+	font-size: var(--text-xxs);
 }
 .form-tel .radio.radio-type-txt input[type=radio] + .radio-label:before {
 	width: 7rem;
+}
+
+/* modal detail style */
+.ui-modal .ui-modal-tit:focus {
+	outline: 0;
+	border: 0;
+}
+.ui-modal .btn-wrap + .fx-wrap > p {
+	min-width: 80%;
+}
+.ui-modal .bul-wrap + .btn-wrap {
+	margin-top: 3.2rem;
+}
+
+.ui-modal .form-wrap + .bul-wrap {
+	margin-top: 1.6rem;
+}
+
+.ui-modal.type-system .ui-modal-wrap {
+	max-width: 100%;
+	width: 100%;
+}
+
+.ui-modal.ps-bottom .ui-modal-body {
+    max-width: 100% !important;
+}
+.ui-modal.open.ps-bottom .ui-modal-wrap {
+    bottom: 0;
+    border-radius: 3.4rem 3.4rem 0 0;
+    overflow: hidden;
+}
+/* page popup */
+.modal-tit h3 {
+	color: var(--gray900);
+	font-size: var(--text-s);
+	font-weight: 700;
+}
+.modal-tit .btn-close {
+	position: absolute;
+	right: 0;
 }

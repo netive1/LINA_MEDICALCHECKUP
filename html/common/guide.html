@@ -8,7 +8,8 @@
 		<link rel="stylesheet" href="../../resources/css/ui.base.css">
 		<link rel="canonical" href="">
 		<script src="../../resources/js/lib/jquery-3.6.0.min.js"></script>
-		<script src="../../resources/js/lib/circle-progress.js"></script> <!--circle-progress lib-->
+		<script src="../../resources/js/lib/circle-progress.js"></script> <!--progressbar lib-->
+		<script src="../../resources/js/ui.global.js"></script>
 		<script src="../../resources/js/ui.common.js"></script>
 		<script> window.MSInputMethodContext && document.documentMode && document.write('<script src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js"><\/script>');</script>
 		<style>
@@ -21,14 +22,15 @@
 			.color-guide span[class*="color"] {display: flex;align-items: center;justify-content: center;width: 6rem;height: 6rem;margin-right: 10px;border-radius: 50%;font-size: 12px;}
 			.color-guide p {font-size: 13px;}
 			.color-guide div + p {margin-top: 1.2rem;}
-			.main-color {background-color: #286EF0;color: #fff;}
+			.main-color {background-color: #019AF9;color: #fff;}
 			.sub-color.s1 {background-color: #01D4E5;color: #fff;}
-			.sub-color.s2 {background-color: #F2F7FF;color: #286EF0;}
+			.sub-color.s2 {background-color: #F2F7FF;color: #019AF9;}
 			.base-color.b1 {background-color: #222;color: #fff;}
 			.base-color.b2 {background-color: #666;color: #fff;}
 			.base-color.b3 {background-color: #ddd;color: #fff;}
 			.etc-color.e1 {background-color: #09BFAD;color: #fff;}
 			.etc-color.e2 {background-color: #FF6262;color: #fff;}
+			.mgt-l div {margin-top: 1rem;}
 		</style>
 	</head>
 	<body>
@@ -43,7 +45,7 @@
 							<h2 class="h-2">color</h2>
 							<p>main color</p>
 							<div class="fx-wrap" data-align="start" data-valign="center">
-								<span class="main-color">#286EF0</span>
+								<span class="main-color">#019AF9</span>
 							</div>
 							<p>sub color</p>
 							<div class="fx-wrap" data-align="start" data-valign="center">
@@ -65,7 +67,7 @@
 						<section>
 							<h2 class="h-2">progress bar</h2>
 							<progress id="" class="progress-base" max="100" value="70">70%</progress>
-							<div class="progress-wrap">
+							<div class="progress-wrap mgt-l">
 								<div class="fx-wrap" data-align="justify" data-valign="center">
 									<span class="txt">실제 나이</span><span class="age">40세</span>
 								</div>
@@ -73,9 +75,13 @@
 									<div class="progress-bar progress"></div>
 								</div>
 							</div>
-							<div class="progress-circle-wrap mgt-m">
+							<!-- <div class="progress-circle-wrap mgt-m">
 								<div class="progress-circle"></div>
-							</div>
+							</div> -->
+							<div class="circle" data-value="0.9" data-size="60" data-thickness="20" data-animation-start-value="1.0" data-fill="{
+							    &quot;color&quot;: &quot;rgba(0, 0, 0, .3)&quot;,
+							    &quot;image&quot;: &quot;http://i.imgur.com/pT0i89v.png&quot;
+							  }" data-reverse="true"></div>
 						</section>			
 						<section>
 							<h2 class="h-2">title</h2>
@@ -92,7 +98,7 @@
 							<h1 class="h-1">건강검진 정보를<br>연동해주세요</h1>
 							<h2 class="h-2">발급된 서비스 코드로<br>분석이 시작됩니다.</h2>
 							<h3 class="h-3">전조증상 체크</h3>						
-							<p class="fs-l">잘 모르겠어요..</p>
+							<p class="fs-l">잘 모르겠어요</p>
 							<p class="fs-m">[필수] 건강검진 연동 개인정보 동의</p>
 							<p class="fs-s">이전에 검진분석을 한 적이 있으세요?</p>						
 						</section>				
@@ -118,7 +124,7 @@
 								</div>
 								
 								<div class="form-item">
-									<input type="text" id="test_a0_1" class="inp-base error" value="010dwa" placeholder="- 없이 입력" />
+									<input type="tel" id="test_a0_1" class="inp-base error" value="010dwa" placeholder="- 없이 입력" />
 								</div>
 								<div class="from-info">
 									<div class="bul-error" aria-live="polite">
@@ -152,12 +158,18 @@
 									<label for="radio-txt2" class="radio-label"><span>여자</span></label>
 								</div>
 							</div>							
-							<!-- <div class="btn-wrap">
-								<a href="#none" class="btn-base">카카오 인증</a>
+							<div class="btn-area">
+								<div class="btn-wrap">
+									<a href="#none" class="btn-base-link btn-kakao">
+										<span>카카오인증</span>
+									</a>
+								</div>
+								<div class="btn-wrap">
+									<a href="#none" class="btn-base-link btn-phone">
+										<span>휴대폰인증</span>
+									</a>
+								</div>
 							</div>
-							<div class="btn-wrap">
-								<a href="#none" class="btn-base">휴대폰 인증</a>
-							</div> -->
 							<h2 class="h-2 mgt-m">emoji radio</h2>
 							<div class="form-wrap">
 								<div class="form-item">
@@ -181,7 +193,7 @@
 								<div class="form-item">
 									<div class="radio radio-type-emoji emoji4">
 										<input type="radio" id="radio-emoji4" name="radioEmoji">
-										<label for="radio-emoji4" class="radio-label"><span>잘 모르겠어요..</span></label>
+										<label for="radio-emoji4" class="radio-label"><span>잘 모르겠어요</span></label>
 									</div>
 								</div>
 								<div class="form-item">
@@ -210,8 +222,8 @@
 								</button>
 							</div>
 
-							<div class="form-wrap form-inbtn">
-								<div class="fx-wrap" data-align="justify" data-valign="center">
+							<div class="form-wrap form-inbtn mgt-l">
+								<div class="fx-wrap" data-align="justify" data-valign="bottom">
 									<div class="fx-item ui-form" data-flex="2-1-1">
 										<div class="form-label">
 											<label class="form-item-label" for="test_a0_1">휴대폰 번호</label>
@@ -223,28 +235,42 @@
 									<div class="fx-item ui-form" data-flex="2-1-1">
 										<div class="btn-wrap">
 											<button type="button" class="btn-base-l fs-m">
-												<span>인증번호 재발송</span>
+												<span>인증번호 재전송</span>
 											</button>
 										</div>
 									</div>
 								</div>
 							</div>
-
-							<div class="fx-wrap mgt-m" data-align="center" data-valign="center">
-								<a href="#none" class="btn-base text btn-skip">
-									<span>건너뛰기</span>
-								</a>
-							</div>
-							<div class="fx-wrap" data-align="right" data-valign="center">
-								<a href="#none" class="btn-base text btn-skip2">
-									<span>건너뛰기</span>
-								</a>
+							<div class="mgt-l">
+								<div class="btn-wrap btn-skip">
+									<a href="#none" class="btn-base text">
+										<span>건너뛰기</span>
+									</a>
+								</div>
+								<div class="fx-wrap" data-align="right" data-valign="center">
+									<a href="#none" class="btn-base text btn-skip2">
+										<span>건너뛰기</span>
+									</a>
+								</div>
 							</div>
 						</section>
 						<section>
-							<h2 class="h-2">modal, alert</h2>	
-							<button type="button" class="btn-base btn-base-s mgt-s" onclick="$plugins.modal.init('#modalId');">modal</button>
-							<button type="button" class="btn-base btn-base-s mgt-s" onclick="$plugins.alert('alertId', '서비스 코드를<br>다시 확인해 주세요.');">alert</button>
+							<h2 class="h-2">modal, alert</h2>
+							<button type="button" class="btn-base btn-base-l"
+								onclick="netive.modal.show({ id:'LMO001', src:'LMO-MODAL.html', ps: 'bottom' });">LMO001
+							</button>
+							<button type="button" class="btn-base btn-base-l"
+								onclick="netive.modal.show({ id:'LMO020', src:'LMO-MODAL.html', ps: 'bottom' });">LMO020
+							</button>
+							<button type="button" class="btn-base btn-base-l" onclick="netive.modal.show({ 
+								type : 'alert', 
+								sMessage: '<p><strong>서비스 코드의 사용 기간이<br>만료되었습니다.</strong>설계사를 통해 다시 발급해 주시기 바랍니다.</p>', 
+								sBtnConfirmTxt: '확인', 
+								sConfirmCallback: function(){ 
+									console.log('close'); netive.modal.hideSystem();
+								}
+							});">alert
+							</button>
 						</section>
 						<section>
 							<h2 class="h-2">약관 동의 (all check)</h2>
@@ -330,58 +356,17 @@
 			</div>
 			<footer class="base-footer"></footer>
 		</div>
-		<!-- modal (bottom) -->
-		<div id="modalId" class="ui-modal bottom">
-			<!--모달 기본 위치값은 center 'bottom' class 삭제 시 기본 스타일적용됨 -->
-			<div class="modal-head">
-				<h1>
-					서비스 코드를<br> 입력해주세요
-					<span class="primary-color">.</span>
-				</h1>
-				<!-- <button type="button" class="btn-close" onclick="$plugins.modal.hideModal();"><span class="hidden">확인</span></button> -->
-			</div>
-			<div class="modal-cont">
-				<div class="form-wrap">
-					<div class="form-item">
-						<input type="text" class="inp-base" value="AELKSHER" placeholder="서비스코드" />
-					</div>
-				</div>
-				<div class="bul-wrap">
-					<div class="bul-info">
-						<div>서비스 코드를 복사해 오시면 편리합니다.</div>
-					</div>
-					<div class="bul-info">
-						<div>서비스 코드 유효기간은 <span class="date">2021.12.31</span> 까지 입니다.</div>
-					</div>
-				</div>
-				<div class="btn-wrap mgt-s">
-					<button class="btn-base-l primary active" type="button">
-						<span>시작하기</span>
-					</button>
-				</div>
-			</div>
-		</div>
-		<!-- //modal (bottom) -->
-		
-		<!-- modal (alert) -->
-		<div id="alertId" class="ui-alert">
-			<p class="msg">서비스 코드를<br>다시 확인해 주세요.</p>
-			<div class="btn-wrap">
-				<button type="button" class="btn-base-l primary active btn-close"><span>확인</span></button>
-			</div>
-		</div>
-		<!-- //modal (alert) -->
-
 		<script>
-			$('.progress').uiProgressbar();
-			$('#agreeAllChk').uiCheckAll();
+			 $('#agreeAllChk').uiCheckAll();
+			 $('.progress-wrap .progress').uiProgressbar();
 		</script>
-
 		<script>
-			new CircleProgress('.progress-circle-wrap .progress-circle', {
-				max: 100,
-				value: 60,
-				textFormat: 'percent',
+		$('.circle').circleProgress({
+				value: 0.75,
+				size: 80,
+				fill: {
+					gradient: ["red", "orange"]
+				}
 			});
 		</script>
 	</body>

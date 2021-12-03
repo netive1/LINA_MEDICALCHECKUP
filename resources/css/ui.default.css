@@ -7,11 +7,11 @@
 
 	--gray900:#222222;	/*헤드라인 텍스트*/
 	--gray800:#666666;	/*본문 텍스트, button-text*/
-	--gray700:#666666;	/*서브 텍스트, label, button-line*/
+	--gray700:#8D8D8D;	/*서브 텍스트, label, button-line*/
 	--gray600:#757575;	/*disabled 텍스트, input-placeholder, table-line[dark]*/
 	--gray500:#9E9E9E;	/*input-bg-acitve*/
 	--gray400:#BDBDBD;	
-	--gray300:#E0E0E0;	/*box-line[dark]*/
+	--gray300:#F7F7F7;	/*box-line[dark]*/
 	--gray200:#DDDDDD;	/*box-line, input-line, table-line*/
 	--gray100:#F3F3F3;	/*table-thead-th-bg*/
 
@@ -47,7 +47,7 @@
 	--button-line:#DDDDDD;
 	--button-active:#019AF9;
 	--button-bg:#ffffff;
-	--button-pointbg:#F2F7FF;
+	--button-pointbg:#F2FAFF;
 
 	/* text size */
 	--text-xxl: 3.0rem;
