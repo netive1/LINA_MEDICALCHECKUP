@@ -10,6 +10,7 @@
   <link rel="canonical" href="">
   <script src="../../resources/js/lib/jquery-3.6.0.min.js"></script>
   <script src="../../resources/js/ui.global.js"></script>
+  <script src="../../resources/js/ui.common.js"></script>
   <script> window.MSInputMethodContext && document.documentMode && document.write('<script src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js"><\/script>');</script>
 </head>
 
@@ -28,11 +29,13 @@
   <script>
     $(document).ready(function () {
       // 서비스 코드 직접 입력
-      netive.modal.show({
-        id: 'LMO020',
-        ps: 'bottom',
-        src: '../common/LMO-MODAL.html'
-      });
+      setTimeout(function () {
+        netive.modal.show({
+          id: 'LMO020',
+          ps: 'bottom',
+          src: '../common/LMO-MODAL.html'
+        });
+      }, 1000);
       //서비스 코드 오 입력시 alert (임시로 setTimeout 처리함)
       setTimeout(function () {
         netive.modal.show({
@@ -44,7 +47,7 @@
             console.log('close'); netive.modal.hideSystem();
           }
         });
-      }, 1000);
+      }, 2500);
     });
   </script>
 </body>

@@ -23,16 +23,62 @@
             </h1>
             <p>국민건강보험공단 정보를 통해<br>데이터 분석중입니다.</p>
           </div>
-          <div class="circle-progress"></div>
+          <div class="circle-progress-wrap">
+            <div class="circle-progress">
+              <div class="box"><div class="head"></div></div>
+              <div class="emoji"></div>
+              <div class="text">
+                <em class="percent"></em>
+                <span>%</span>
+              </div>
+            </div>
+          </div>
         </main>
       </div>
     </div>
     <script>
-      new CircleProgress('.circle-progress', {
-        textFormat: 'percent',
+      netive.common.progress = {
+        init : function(opt){
+          const max = Number(opt.max);
+          const val = Number(opt.val);
+          const circleprogress = document.querySelector('.circle-progress');
+          const emoji = document.querySelector('.circle-progress .emoji');
+          const box = document.querySelector('.circle-progress .box');
+          const percent = document.querySelector('.circle-progress .percent');
+
+          
+          setTimeout(function(){
+            box.style.transform = 'rotate(' + (360 * val / 100) + 'deg)';
+            box.style.opacity = 1;
+          },0);
+          
+          percent.innerHTML = val;
+
+          if (val > 100) {
+            circleprogress.classList.add('n5');
+          } else if (val > 80) {
+            circleprogress.classList.add('n4');
+          } else if (val > 60) {
+            circleprogress.classList.add('n3');
+          } else if (val > 40) {
+            circleprogress.classList.add('n2');
+          } else {
+            circleprogress.classList.add('n1');
+          }
+
+          new CircleProgress('.circle-progress', {
+            // textFormat: 'percent',
+            max: max,
+            value: val,
+          });         
+
+        }
+      }
+
+      netive.common.progress.init({
         max: 100,
-        value: 75,
-      });
+        val: 75
+      })
     </script>
   </body>
 </html>

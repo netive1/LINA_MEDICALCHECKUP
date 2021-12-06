@@ -1,3 +1,29 @@
+; (function (win, doc, jQuery, undefined) {
+
+  'use strict';
+ 
+  netive.common = {};
+
+  netive.common.stepUp = function () {
+    console.log('동작');
+    const wrap = document.querySelector('html, body');
+    const stepHide = document.querySelector('.step-toggle[data-toggle="hide"]');
+    const stepShow = document.querySelector('.step-toggle[data-toggle="show"]');
+    const header = document.querySelector('.header-wrap');
+
+    stepHide.classList.add('show');
+    stepShow.classList.add('hide');
+
+    wrap.scrollTo({
+      top: stepHide.getBoundingClientRect().top + document.documentElement.scrollTop - header.offsetHeight,
+      behavior: 'smooth'
+    });
+  }
+
+  
+
+})(window, document, $);
+
 // 공통 약관 전체선택
 $.fn.uiCheckAll = function () {
   return this.each(function () {
@@ -51,11 +77,11 @@ $.fn.uiCheckAll = function () {
       },
       viewFn: function (v) {
         var o = this,
-            $t = $(v),
-            $parent = $t.parent();
-        
+          $t = $(v),
+          $parent = $t.parent();
+
         $t.toggleClass('open');
-        
+
         if (o.gBtn.hasClass('open')) {
           $parent.addClass('open');
           o.gList.fadeIn(300);
@@ -86,7 +112,7 @@ $.fn.uiCheckAll = function () {
           o.checkItemFn(this);
         });
 
-        o.gBtn.on('click', function() {           
+        o.gBtn.on('click', function () {
           o.viewFn(this);
         });
       }
