@@ -78,7 +78,11 @@
 							<div class="circle-progress"></div>
 						</section>	
 						<section>
-							<h2 class="h-2">title</h2>
+							<h2 class="h-2">title</h2>			
+							<div class="tit-wrap">
+								<h2 class="h-1">건강검진 분석으로<br><strong class="highlight">질병 별 위험도를</strong><br>알아볼 수 있다면?</h2>
+								<p class="fs-m">라이나생명<br>건강검진 분석 서비스</p>
+							</div>
 							<div class="fx-wrap modal-tit" data-align="center" data-valign="center">
 								<h3>카카오 인증</h3>
 								<button class="btn-close"></span>
@@ -88,13 +92,14 @@
 							<h2 class="h-2">font & heading</h2>
 							<p>한글 (Notosans) <span>정보 연동하기</span></p>
 							<p>영문, 숫자 (Roboto) <span class="en-font">AELKSHER 19870825</span></p>
-							<!-- (h-1, h-2, h-3 , fs-l, fs-m, fs-s)class 사용 -->
-							<h1 class="h-1">지금 데이터를 통해<br><strong>건강 분석 진행 중이에요</strong></h1>
-							<h2 class="h-2">발급된 서비스 코드로<br>분석이 시작됩니다.</h2>
-							<h3 class="h-3">전조증상 체크</h3>						
-							<p class="fs-l">잘 모르겠어요</p>
-							<p class="fs-m">[필수] 건강검진 연동 개인정보 동의</p>
-							<p class="fs-s">이전에 검진분석을 한 적이 있으세요?</p>						
+							<!-- (h-1, h-2, h-3 , fs-l, fs-m, fs-s)class 사용 -->		
+							<div class="mgt-s">		
+								<h1 class="h-1 m">고혈압</h1>						
+								<h3 class="h-3">전조증상 체크</h3>						
+								<p class="fs-l">잘 모르겠어요</p>
+								<p class="fs-m b">고혈압은 심장, 뇌에 혈액을 공급하는<br>혈관의 변화로 장기 기능에 영향을 줍니다.</p>
+								<p class="fs-s">고혈압은 뚜렷한 증상이 없어 무언의 살인자라고<br>하며, 합병증이 발생해야 증상이 나타납니다.<br>최고혈압(140이상), 최저혈압(90이상)인 경우<br>고혈압으로 분류합니다.</p>						
+							</div>
 						</section>				
 						<section>
 							<h2 class="h-2">form</h2>
@@ -129,16 +134,14 @@
 						</section>
 						<section>
 							<h2 class="h-2">checkBox</h2>
-							<div class="fx-wrap" data-align="start" data-valign="center">
-								<div class="chkbox">
-									<input type="checkbox" id="chkbox1" name="chkbox" checked>
-									<label for="chkbox1" class="chkbox-label">chkbox 1</label>
-								</div>
-								<div class="chkbox">
-									<input type="checkbox" id="chkbox2" name="chkbox">
-									<label for="chkbox2" class="chkbox-label">chkbox 2</label>
-								</div>
-							</div>		
+							<div class="chkbox">
+								<input type="checkbox" id="chkbox1" name="chkbox" checked>
+								<label for="chkbox1" class="chkbox-label">[필수] 건강검진 연동 개인정보 동의</label>
+							</div>
+							<div class="chkbox mgt-s">
+								<input type="checkbox" id="chkbox2" name="chkbox">
+								<label for="chkbox2" class="chkbox-label">[필수] 건강검진 연동 개인정보 동의</label>
+							</div>	
 						</section>
 						<section>
 							<h2 class="h-2">radio</h2>
@@ -228,7 +231,7 @@
 									</div>
 									<div class="fx-item ui-form" data-flex="2-1-1">
 										<div class="btn-wrap">
-											<button type="button" class="btn-base-l fs-m">
+											<button type="button" class="btn-base-l">
 												<span>인증번호 재전송</span>
 											</button>
 										</div>
@@ -242,7 +245,7 @@
 									</a>
 								</div>
 								<div class="fx-wrap" data-align="right" data-valign="center">
-									<a href="#none" class="btn-base text btn-skip2">
+									<a href="#none" class="btn-base text highlight">
 										<span>건너뛰기</span>
 									</a>
 								</div>
@@ -258,7 +261,7 @@
 							</button>
 							<button type="button" class="btn-base btn-base-l" onclick="netive.modal.show({ 
 								type : 'alert', 
-								sMessage: '<p><strong>서비스 코드의 사용 기간이<br>만료되었습니다.</strong>설계사를 통해 다시 발급해 주시기 바랍니다.</p>', 
+								sMessage: '<p><strong>휴대폰 번호가 일치하지 않습니다.</strong>올바르게 기입되어 있는지<br>다시 확인해 주세요.</p>', 
 								sBtnConfirmTxt: '확인', 
 								sConfirmCallback: function(){ 
 									console.log('close'); netive.modal.hideSystem();
@@ -272,7 +275,7 @@
 								<div class="all-chked">
 									<div class="chkbox">
 										<input type="checkbox" id="allChk" name="chkbox">
-										<label for="allChk" class="chkbox-label">[필수] 건강검진 연동 개인정보 동의</label>
+										<label for="allChk" class="chkbox-label">[필수] 카카오 인증을 위한 개인정보 동의</label>
 									</div>
 									<button type="button" class="btn-more"><span class="hidden">더보기</span></button>
 								</div>

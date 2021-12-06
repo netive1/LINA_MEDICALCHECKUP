@@ -19,28 +19,32 @@
       <main class="base-main">
         <h1 class="logo"><img src="../../resources/img/common/logo.svg" alt="logo"></h1>
         <div class="tit-wrap">
-          <h2 class="h-2">건강검진 분석으로<br><strong>질병 별 위험도를<br>알아볼 수 있다면?</strong></h2>
+          <h2 class="h-1">건강검진 분석으로<br><strong class="highlight">질병 별 위험도를</strong><br>알아볼 수 있다면?</h2>
           <p>라이나생명<br>건강검진 분석 서비스</p>
-            <button type="button" class="btn-base mgt-m" onclick="netive.modal.show({ 
-                type : 'alert', 
-                sMessage: '<p><strong>서비스 코드를<br>다시 확인해 주세요.</strong></p>', 
-                sBtnConfirmTxt: '확인', 
-                sConfirmCallback: function(){ 
-                  console.log('close'); netive.modal.hideSystem();
-                }
-              });">서비스 코드 안내 alert
-            </button>
         </div>
       </main>
     </div>
   </div>
   <script>
     $(document).ready(function () {
+      // 서비스 코드 직접 입력
       netive.modal.show({
         id: 'LMO020',
         ps: 'bottom',
         src: '../common/LMO-MODAL.html'
       });
+      //서비스 코드 오 입력시 alert (임시로 setTimeout 처리함)
+      setTimeout(function () {
+        netive.modal.show({
+          type: 'alert',
+          sMessage: '<strong>서비스 코드를<br>다시 확인해 주세요.</strong>',
+          sBtnConfirmTxt: '확인',
+          sClass: 'type-alert',
+          sConfirmCallback: function () {
+            console.log('close'); netive.modal.hideSystem();
+          }
+        });
+      }, 1000);
     });
   </script>
 </body>

@@ -85,9 +85,8 @@
           </div>
           <!-- //약관 동의 -->
           <!-- 입력 필드 -->
-          <div class="scroll-area">
-            <div class="form-wrap mgt-m">
-              <div class="form-label">
+          <div class="form-wrap mgt-m">
+            <div class="form-label">
                 <label for="input1" class="form-item-label">이름</label>
               </div>
               <div class="form-item">
@@ -99,7 +98,7 @@
                 <label for="input2" class="form-item-label">생년월일</label>
               </div>
               <div class="form-item">
-                <input type="number" id="input2" class="inp-base" value="19870825" placeholder="숫자 8자리">
+                <input type="number" id="input2" class="inp-base" value="19870825" placeholder="숫자 8자리" maxlength="8">
               </div>
             </div>
             <div class="form-wrap">
@@ -133,29 +132,30 @@
                 </div>
               </div>
             </div>
-            <div class="fx-wrap kakao-process" data-align="justify" data-valign="center">
-              <div class="fx-item img-wrap">
-                <img src="../../resources/img/ico-kakaoprosess-1.png" alt="">
-                <span>카카오톡<br>인증 요청 확인</span>
+            <div class="scroll-area" style="display: none;">
+              <div class="fx-wrap kakao-process" data-align="justify" data-valign="center">
+                <div class="fx-item img-wrap">
+                  <img src="../../resources/img/ico-kakaoprosess-1.png" alt="">
+                  <span>카카오톡<br>인증 요청 확인</span>
+                </div>
+                <div class="fx-item img-wrap">
+                  <img src="../../resources/img/ico-kakaoprosess-2.png" alt="">
+                  <span>카카오톡<br>본인인증 완료</span>
+                </div>
+                <div class="fx-item img-wrap">
+                  <img src="../../resources/img/ico-kakaoprosess-3.png" alt="">
+                  <span>카카오 인증하기<br>버튼 클릭</span>
+                </div>
               </div>
-              <div class="fx-item img-wrap">
-                <img src="../../resources/img/ico-kakaoprosess-2.png" alt="">
-                <span>카카오톡<br>본인인증 완료</span>
+              <div class="from-info">
+                <div class="bul-info" aria-live="polite">
+                  <div>인증 요청이 오지 않았을 경우, 다시 요청하기를<br>눌러 주세요.</div>
+                </div>
               </div>
-              <div class="fx-item img-wrap">
-                <img src="../../resources/img/ico-kakaoprosess-3.png" alt="">
-                <span>카카오 인증하기<br>버튼 클릭</span>
-              </div>
-            </div>
-            <div class="from-info">
-              <div class="bul-info" aria-live="polite">
-                <div>인증 요청이 오지 않았을 경우, 다시 요청하기를<br>눌러 주세요.</div>
-              </div>
-            </div>
           </div>
           <!-- //입력 필드 -->
           <div class="btn-area mgt-l">
-            <div class="btn-wrap">
+            <div class="btn-wrap request" style="display: none;">
               <button type="button" id="" class="btn-base-l">
                 <span>다시 요청하기</span>
               </button>          
@@ -173,9 +173,16 @@
       $('#agreeAllChk').uiCheckAll();
 
       $(".btn-confirm").click(function () {
+        var scrollTarget = $('.scroll-area'),
+            btnRequest = $('.request');
+
+        scrollTarget.fadeIn();
+
         $('html, body').animate({
-          scrollTop: $('.base-main').offset().top
+          scrollTop: scrollTarget.offset().top
         }, 500);
+        btnRequest.fadeIn();
+
       });
     </script>
   </body>

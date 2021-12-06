@@ -16,7 +16,27 @@
 	width: 15.4rem;
 	height: 17.4rem;
 	background: url(../img/bg-splash-obj.png) center/100% no-repeat;
+	animation-name: slideRightIn;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
 	content: '';
+}
+@keyframes slideRightIn {
+    0% {
+        display: block;
+    }
+
+    1% {
+        right: -10rem;
+        opacity: 0;
+    }
+
+    100% {
+        right: 4rem;
+        opacity: 1;
+    }
 }
 .base-splash .base-body {
 	height: 100%;
@@ -34,20 +54,22 @@
 .base-splash .tit-wrap {
 	padding-top: 10vh;
 }
-.base-splash .tit-wrap .h-2 {
-	font-size: var(--text-xxl);
-	font-weight: 400;
-}
-.base-splash .tit-wrap p {
-	margin-top: 3.2rem;
-}
 
 /* [COMMON] 약관 동의 */
+.base-terms .header-wrap {
+	padding-top: 5rem;
+}
+.base-terms .header-wrap .btn-base {
+	position: absolute;
+	right: 2.4rem;
+	min-height: 2rem;
+	padding: 0;
+}
 .base-terms .base-main {
-	padding-top: 12rem;
+	padding-top: 11rem;
 }
 .base-terms .base-main .tit-wrap {
-	margin-bottom: 1.8rem;
+	margin-bottom: 1.6rem;
 }
 .base-terms .base-main .desc {
 	font-size: var(--text-xs);
@@ -56,25 +78,21 @@
 .ui-chkgroup .all-chked {
 	position: relative;
 	width: 100%;
-	padding: 1.8rem;
+	padding: 0 0 2rem;
 	font-size: var(--text-s);
 	font-weight: 500;
 	background-color: var(--white);
-	border: 1px solid var(--button-line);
-	border-radius: 1rem;
-	box-shadow: 0.5rem 0.4rem 1.2rem rgba(0, 0, 0, 0.06);
+	border-bottom: 1px solid var(--button-line);
+	/* box-shadow: 0.5rem 0.4rem 1.2rem rgba(0, 0, 0, 0.06); */
 	transition: all 0.3s ease-out;
-}
-.ui-chkgroup .all-chked.open {
-	border-color: var(--gray900);
 }
 .ui-chkgroup .all-chked .btn-more {
 	position: absolute;
 	top: 50%;
-	right: 1.6rem;
+	right: .4rem;
 	width: 1.2rem;
 	height: 1.2rem;
-	margin-top: -0.6rem;
+	margin-top: -1.6rem;
 	background: url(../img/common/arr-top.svg) center no-repeat;
 	background-size: 1.2rem auto;
 	transform: rotate(180deg);
@@ -91,7 +109,7 @@
     background-image: url(../img/common/ico-chkbox-on.svg);
 }
 .ui-chkgroup .chklist ul {
-	margin-top: 2rem;
+	margin-top: 1rem;
 }
 .ui-chkgroup .chklist li {
 	position: relative;
@@ -100,15 +118,15 @@
 .ui-chkgroup .chklist li label {
     display: block;
     position: relative;
-    padding: 1rem 2rem;
+    padding: 1rem .4rem;
     color: var(--gray800);
     font-size: var(--text-xs);
 }
 .ui-chkgroup .chklist li .chkbox label:before {
 	width: 1.2rem;
-	margin-right: 1rem;
+	margin-right: .8rem;
 	background-image: url(../img/common/ico-chkbox-s.svg);
-	background-size: 1.2rem 0.8rem;
+	background-size: 1.2rem .8rem;
 	background-position: center;
 }
 
@@ -117,8 +135,10 @@
 }
 .ui-chkgroup .chklist li .ui-btn {
 	position: absolute;
-	right: 1.6rem;
+	right: 0;
 	top: .8rem;
+	width: 5rem;
+	text-align: center;
 	padding: .3rem 1.2rem .4rem;
 	font-size: var(--text-xs);
 	background-color: var(--gray100);
@@ -137,8 +157,8 @@
 .base-main.bg-chkup-1 {
 	padding: 18vh 2.4rem 0;
 	min-height: 100vh;
-	background: url('../img/bg-chkup-1.png') center bottom 28vh no-repeat;
-	background-size: 15.8rem 13.2rem;
+	background: url('../img/bg-chkup-1.png') center bottom 23vh no-repeat;
+	background-size: 15.8rem 12.8rem;
 }
 .base-main[class*="bg-chkup-"] .h-2 {
 	font-size: 2.6rem;
@@ -197,7 +217,7 @@
 
 /* 카카오 인증 */
 .kakao-process {
-	margin: 2.6rem 0 1.6rem;
+	margin: 2.4rem 0 1.6rem;
 	padding: 2.4rem;
 	background-color: var(--gray300);
 	border-radius: 1rem;
@@ -226,7 +246,7 @@
 } 
 .kakao-process .img-wrap span {
 	display: block;
-	margin-top: .6rem;
+	margin-top: .8rem;
 	color: var(--gray800);
 	font-size: var(--text-xxs);
 }
@@ -257,7 +277,7 @@
 }
 .ui-modal.open.ps-bottom .ui-modal-wrap {
     bottom: 0;
-    border-radius: 3.4rem 3.4rem 0 0;
+    border-radius: 2.4rem 2.4rem 0 0;
     overflow: hidden;
 }
 /* page popup */
