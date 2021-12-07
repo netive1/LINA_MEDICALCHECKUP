@@ -50,7 +50,7 @@ strong {
 	margin-top: 1.6rem !important;
 }
 .mgt-m {
-	margin-top: 2.4rem !important;
+	margin-top: 2.2rem !important;
 }
 .mgt-l {
 	margin-top: 3.2rem !important;
@@ -113,14 +113,11 @@ strong {
 	position: relative;
 	z-index: 0;
 	width: 100%;
-	padding: 11vh 2.4rem 3.6rem;
+	padding: 10rem 2.4rem 3.6rem;
 }
 .base-footer {
-	position: fixed;
-	bottom: 0;
 	width: 100%;
 	padding: 2rem 2.4rem 3.6rem;
-	background-color: var(--white);
 }
 .base-footer .skip {
 	margin-bottom: 1.6rem;
@@ -129,7 +126,7 @@ strong {
 .header-wrap {
 	position:relative;
 	width: 100%;
-	padding: 4rem 2.4rem 2.6rem;
+	padding: 5rem 2.4rem 2.6rem;
 	margin: 0 auto;
 	font-size: 0;
 	z-index: 2;
@@ -178,6 +175,8 @@ p {
 	color: var(--gray900);
 	font-size: var(--text-xxl);
 	font-weight: 900;
+	letter-spacing: -0.145rem;
+	line-height: 1.45;
 	margin: 0;
 }
 .h-2 {
@@ -210,6 +209,7 @@ p {
 }
 .fs-m {
 	font-size:var(--text-s);
+	line-height: 1.45;
 }
 .fs-l {
 	font-size:var(--text-m);
@@ -435,7 +435,7 @@ textarea.inp-base {
 	align-items: flex-end;
 	width: 100%;
 	min-height: 2.6rem;
-	margin-bottom: 1.2rem;
+	margin-bottom: 1rem;
 	color: var(--gray900);
 	font-weight: 500;
 }
@@ -478,7 +478,7 @@ textarea.inp-base {
 	font-size: var(--text-xs);
 }
 .form-wrap + .form-wrap {
-	margin-top: 2.8rem;
+	margin-top: 2.6rem;
 }
 .form-item + .from-info {
 	margin-top: 1.2rem;
@@ -530,7 +530,7 @@ textarea.inp-base {
 	width: 100%;
 }
 .btn-wrap + .btn-wrap {
-	margin-top: 1.6rem;
+	margin-top: 1.8rem;
 }
 .btn-area {
 	margin-top: 3rem;
@@ -662,6 +662,7 @@ textarea.inp-base {
 	height: 1.9rem;
 	background: url(../img/common/btn-close.svg) no-repeat;
 	background-size: 100%;
+	z-index: 3;
 }
 .btn-prev {
 	display: flex;
@@ -683,10 +684,10 @@ textarea.inp-base {
 }
 .btn-phone:before {
 	position: absolute;
-	left: 2.6rem;
+	left: 2.4rem;
 	display: inline-block;
-	width: 4.2rem;
-	height: 4.2rem;
+	width: 4.6rem;
+	height: 4.6rem;
 	background: url(../img/common/ico-phone.png) no-repeat;
 	background-size: 100%;
 	content: '';
@@ -1231,8 +1232,8 @@ progress {
 /* progress circle */
 .circle-progress{
 	position: relative;
-	width: 18rem;
-	height: 18rem;
+	width: 18.5rem;
+	height: 18.5rem;
 	margin: 2rem auto;
 }
 .circle-progress-value {
