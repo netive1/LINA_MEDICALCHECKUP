@@ -40,29 +40,33 @@
                 <label for="radio-emoji3" class="radio-label"><span>좋아요!</span></label>
               </div>
             </div>
-          </div>   
+          </div>  
         </main>
       </div>
-      <div class="base-footer">
+      <footer class="base-footer">
         <div class="fx-wrap skip" data-align="right" data-valign="center">
           <a href="./LMO-004.html" class="btn-base text highlight">
             <span>건너뛰기</span>
           </a>
         </div>
-      </div>
+      </footer>
     </div>
     <script>
-      $('input[name="radioEmoji"]').change(function () {
+      ;(function (win, doc, $, undefined) {
+        'use strict';
 
-        $('input[name="radioEmoji"]').each(function () {
-          var checked = $(this).prop('checked');
+        $('input[name="radioEmoji"]').change(function () {
 
-          if (checked) {
-            $('.form-item').css('opacity', '0.5');
-            $(this).parents('.form-item').css('opacity', '1');
-          }
+          $('input[name="radioEmoji"]').each(function () {
+            var checked = $(this).prop('checked');
+
+            if (checked) {
+              $('.form-item').css('opacity', '0.5');
+              $(this).parents('.form-item').css('opacity', '1');
+            }
+          });
         });
-      });
+      })(window, document, jQuery);
     </script>
   </body>
 </html>

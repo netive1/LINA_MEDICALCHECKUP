@@ -272,16 +272,16 @@
 						<section>
 							<h2 class="h-2">약관 동의 (all check)</h2>
 
-							<div class="ui-acco" id="idName" >
-								<div class="ui-acco-wrap ui-chkgroup" id="agreeAllChk">
+							<div id="accoTerms" class="ui-acco">
+								<div id="agreeAllChk" class="ui-acco-wrap ui-chkgroup">
 									<div class="ui-acco-tit">
-										<div class="all-chked" style="position: relative; z-index: 2;">
+										<div class="all-chked">
 											<div class="chkbox">
 												<input type="checkbox" id="allChk" name="chkbox">
 												<label for="allChk" class="chkbox-label">[필수] 카카오 인증을 위한 개인정보 동의</label>
 											</div>
 										</div>
-										<button type="button" class="ui-acco-btn" style="position: absolute;">
+										<button type="button" class="ui-acco-btn">
 											<span class="hidden">acco1</span> 
 										</button>
 									</div>
@@ -294,7 +294,7 @@
 															<input type="checkbox" id="chk1" name="chkbox">
 															<label for="chk1" class="chkbox-label">건강정보(민감정보) 수집/이용 동의</label>
 														</div>
-														<button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
+														<button type="button" class="ui-btn" onclick="netive.modal.show({ id:'LMO007', src:'LMO-POPUP.html', full: true });">
 															<span>보기</span>
 														</button>
 													</li>
@@ -303,7 +303,7 @@
 															<input type="checkbox" id="chk2" name="chkbox">
 															<label for="chk2" class="chkbox-label">개인정보 제3자 제공 동의</label>
 														</div>
-														<button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
+														<button type="button" class="ui-btn">
 															<span>보기</span>
 														</button>
 													</li>
@@ -312,7 +312,7 @@
 															<input type="checkbox" id="chk3" name="chkbox">
 															<label for="chk3" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
 														</div>
-														<button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
+														<button type="button" class="ui-btn">
 															<span>보기</span>
 														</button>
 													</li>
@@ -321,7 +321,7 @@
 															<input type="checkbox" id="chk4" name="chkbox">
 															<label for="chk4" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
 														</div>
-														<button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
+														<button type="button" class="ui-btn">
 															<span>보기</span>
 														</button>
 													</li>
@@ -330,7 +330,7 @@
 															<input type="checkbox" id="chk5" name="chkbox">
 															<label for="chk5" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
 														</div>
-														<button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
+														<button type="button" class="ui-btn">
 															<span>보기</span>
 														</button>
 													</li>
@@ -339,24 +339,7 @@
 										</div>
 									</div>
 								</div>
-
-								<div class="ui-acco-wrap">
-									<div class="ui-acco-tit">
-										<button type="button" class="ui-acco-btn">
-											<span>acco1</span> 
-										</button>
-									</div>
-									<div class="ui-acco-pnl">
-										<div class="ui-acco-pnl-wrap">
-											<p>...</p>
-										</div>
-									</div>
-								</div>
 							</div>
-
-							
-
-							
 						</section>
 						<section>
 							<h2 class="h-2">box</h2>
@@ -401,11 +384,36 @@
 			<!-- <footer class="base-footer"></footer> -->
 		</div>
 		<script>
-			 $('#agreeAllChk').uiCheckAll();
+			$('#agreeAllChk').uiCheckAll({
+				callback: function (v) {
+					console.log(v);
+				}
+			});
+			// $('#agreeAllChk').uiCheckAll({
+			// 		callback: function () {
+			// 			$('#btnConfirm').prop('disabled', false);
+			// 			console.log('callback');
+			// 			// allchk시 아코디언 닫힘
+			// 			// netive.accordion.toggle({
+			// 			//   id: 'accoLMO005',
+			// 			//   current: [0],
+			// 			//   state: 'close'
+			// 			// });
+			// 		},
+			// 		callbackCancel: function () {
+			// 			$('#btnConfirm').prop('disabled', true);
+			// 			// allchk시 아코디언 열림
+			// 			//  netive.accordion.toggle({
+			// 			//   id: 'accoLMO005',
+			// 			//   current: [0],
+			// 			//   state: 'open'
+			// 			// });
+			// 		}
+			// 	});
 			 $('.progress-wrap .progress').uiProgressbar();
 
 			 netive.accordion.init({ 
-				id:'idName', 
+				id:'accoTerms', 
 				current:[0], 
 				callback:function(v){
 					console.log(v);

@@ -113,14 +113,14 @@ strong {
 	position: relative;
 	z-index: 0;
 	width: 100%;
-	padding: 10rem 2.4rem 3.6rem;
+	padding: 5rem 2.4rem 3.6rem;
 }
 .base-footer {
 	width: 100%;
 	padding: 2rem 2.4rem 3.6rem;
 }
-.base-footer .skip {
-	margin-bottom: 1.6rem;
+.base-header + .base-body > .base-main{
+	padding-top: 10rem;
 }
 /* header */
 .header-wrap {
@@ -142,7 +142,7 @@ strong {
 	content:"";
 }
 .base-header.bg .header-wrap {
-	padding: .4rem 2.4rem;
+	padding: 0 2.4rem;
 	background: #EDF8FF;
 }
 .base-header.bg .logo-xcarelink img {
@@ -155,7 +155,7 @@ p {
 	line-height:1.5;
 }
 .tit-wrap {
-	margin: 0 0 4rem;
+	margin: 0 0 2.8rem;
 }
 .tit-wrap .h-1,
 .tit-wrap .h-2 {
@@ -166,7 +166,7 @@ p {
 	font-weight: 700;
 }
 .tit-wrap .h-1 + p {
-	margin-top: 2.4rem;
+	margin-top: 2rem;
 }
 .tit-wrap .h-2 + p {
 	margin-top: 1.6rem;
@@ -346,11 +346,11 @@ input[type="checkbox"] {
 	display: block;
 	width: 100%;
 	height: 6.8rem;
-	padding: 0.5rem 0;
+	padding: 0.2rem 0;
 	background-size: 6.8rem;
 	background-position: 1.3rem center;
 	border: 1px solid var(--gray200);
-	border-radius: 2rem;
+	border-radius: 1.8rem;
 }
 .radio-type-emoji input[type=radio]:checked + .radio-label:before {
 	color: var(--primary);	
@@ -478,13 +478,13 @@ textarea.inp-base {
 	font-size: var(--text-xs);
 }
 .form-wrap + .form-wrap {
-	margin-top: 2.6rem;
+	margin-top: 2.8rem;
 }
 .form-item + .from-info {
 	margin-top: 1.2rem;
 }
 .form-item +.form-item {
-	margin-top: 1.8rem;
+	margin-top: 1.6rem;
 }
 .form-item > .fx-wrap {
 	width: 100%;
@@ -530,7 +530,7 @@ textarea.inp-base {
 	width: 100%;
 }
 .btn-wrap + .btn-wrap {
-	margin-top: 1.8rem;
+	margin-top: 1.6rem;
 }
 .btn-area {
 	margin-top: 3rem;
@@ -617,13 +617,13 @@ textarea.inp-base {
 }
 .btn-base-link {
 	position: relative;
-	min-height: 8rem;
+	min-height: 7.4rem;
 	padding-left: 8.6rem;
 	color: var(--gray900);
 	font-size: var(--text-m);
 	font-weight: 500;
 	border: 1px solid var(--button-line);
-	border-radius: 2rem;
+	border-radius: 1.8rem;
 	justify-content: flex-start;
 }
 .btn-base-link.on ,
@@ -718,7 +718,7 @@ textarea.inp-base {
 .highlight {
 	position: relative;
 	color: var(--primary) !important;
-	font-weight: 700 !important;
+	font-weight: 500 !important;
 	z-index: 1;
 }
 .highlight:before {
@@ -1277,7 +1277,14 @@ progress {
 }
 
 /* pc layout*/
-/* [class*="ui-d"] .base-main {
-	max-width: 60rem;
+[class*="size-desktop"] .base-main {
+	max-width: 30%;
 	padding: 11.6rem 0 16rem;
-} */
+}
+
+[class*="size-desktop"]  .base-footer {
+	width: 100%;
+	max-width: 30%;
+	margin: 0 auto;
+	padding: 0;
+}

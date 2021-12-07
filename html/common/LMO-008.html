@@ -35,9 +35,14 @@
       </div>
     </div>
     <script>
-      $('.btn-area .btn-base-link').click(function () {
-        $(this).toggleClass('on');
-      })
+      ;(function (win, doc, $, undefined) {
+          'use strict';
+
+          $('.btn-area .btn-base-link').click(function () {
+            $(this).toggleClass('on');
+          })
+
+      })(window, document, jQuery);    
     </script>
   </body>
 </html>

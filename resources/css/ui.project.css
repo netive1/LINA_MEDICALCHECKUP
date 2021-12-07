@@ -8,11 +8,16 @@
 	min-height: -webkit-fill-available;
 	background: var(--white);
 }
-.base-splash:after {
+.base-splash .base-body {
+	height: 100%;
+	min-height: 100vh;
+	padding: 0 2.4rem;
+}
+.base-splash .base-body:after {
 	position: absolute;
 	right:-10rem;
-	 opacity: 0;
-	bottom: 12.2rem;
+	bottom: 15.2rem;
+	opacity: 0;
 	display: block;
 	width: 15.4rem;
 	height: 17.4rem;
@@ -35,24 +40,20 @@
         opacity: 1;
     }
 }
-.base-splash .base-body {
-	height: 100%;
-	min-height: 100vh;
-	padding: 0 2.4rem;
-}
 .base-splash .base-main {
 	height: 100%;
-	padding: 4.5rem 0 0;
+	min-height: 100%;
+	padding: 5rem 0 0;
 }
 .base-splash .logo img {
 	width: 9.5rem;
 	height: 2.4rem;
 }
 .base-splash .tit-wrap {
-	padding-top: 7.5rem;
+	padding-top: 4.8rem;
 }
 .base-splash .tit-wrap .h-1 + p {
-	margin-top: 2.2rem;
+	margin-top: 1.8rem;
 }
 
 /* [COMMON] 약관 동의 */
@@ -77,39 +78,26 @@
 }
 .ui-chkgroup .all-chked {
 	position: relative;
-	width: 100%;
-	padding: 0 0 1.8rem;
+	display: flex;
+	align-items: center;
+	width: calc(100% - 2rem);
+	min-height: 4.2rem;
 	font-size: var(--text-s);
 	font-weight: 500;
-	background-color: var(--white);
-	border-bottom: 1px solid var(--button-line);
-	/* box-shadow: 0.5rem 0.4rem 1.2rem rgba(0, 0, 0, 0.06); */
-	transition: all 0.3s ease-out;
+	z-index: 2;
 }
 .ui-chkgroup .all-chked .chkbox-label {
-	letter-spacing: -0.07rem;
-}
-.ui-chkgroup .all-chked .btn-more {
-	position: absolute;
-	top: 50%;
-	right: 0;
-	width: 1.2rem;
-	height: 1.2rem;
-	margin-top: -1.6rem;
-	background: url(../img/common/arr-top.svg) center no-repeat;
-	background-size: 1.2rem auto;
-	transform: rotate(180deg);
-	transition: all 0.3s ease-in;
-}
-.ui-chkgroup .all-chked .btn-more.open {
-	transform: rotate(0deg);
-	transition: all 0.3s ease-in;
+	font-weight: 500;
 }
 .ui-chkgroup .all-chked .ez-chkbox.ez-checked + label {
     border-color: var(--gray900);
 }
 .ui-chkgroup .all-chked .ez-chkbox.ez-checked + label:before {
     background-image: url(../img/common/ico-chkbox-on.svg);
+}
+.ui-chkgroup .all-chked .chkbox {
+	display: block;
+	width: 100%;
 }
 .ui-chkgroup .chklist ul {
 	margin-top: 1rem;
@@ -132,6 +120,10 @@
 	background-size: 1.2rem .8rem;
 	background-position: center;
 }
+.ui-chkgroup .chklist li .chkbox input[type=checkbox]:disabled + label:before {
+	opacity: 1;
+	background-image: url(../img/common/ico-chkbox-s.svg);
+}
 
 .ui-chkgroup .chklist li .chkbox input[type=checkbox]:checked + .chkbox-label:before {
 	background-image: url(../img/common/ico-chkbox-s-on.svg);	
@@ -153,7 +145,7 @@
 
 /* [COMMON] LOADING */
 .base-loading {
-	min-height: 100vh;
+	min-height: 100%;
 }
 .base-loading .tit-wrap {
 	text-align: center;
@@ -162,7 +154,7 @@
 	margin: 0 auto;
 }
 .base-loading .circle-progress-wrap {
-	margin-top: 13rem;
+	margin-top: 8rem;
 }
 .circle-progress .box{
 	position: absolute;
@@ -195,7 +187,7 @@
 .circle-progress .text {
 	position: absolute;
 	left: 50%;
-	bottom: -8rem;
+	bottom: -6rem;
 	transform: translateX(-50%);
 	font-family: 'Roboto';
 	color: var(--gray900);
@@ -212,8 +204,8 @@
 	position: absolute;
 	top:50%;
 	left:50%;
-	width:11.6rem;
-	height: 11.6rem;
+	width:11.2rem;
+	height: 11.2rem;
 	background: url(../img/progress-emoji-1.png) center/100% no-repeat;
 	transform: translate(-50%, -50%);
 }
@@ -232,24 +224,18 @@
 .vh .base-body {
 	flex: 1;
 }
-.vh .base-main {
-	height: 100%;
-}
-.vh .base-footer {
-
-}
 /* Entry_1~2 상태 선택 */
 .state-wrap {
-	padding-bottom: 0;
+	padding-bottom: 6rem;
 }
 /* Entry_3 정보 연동 */
-.bg-chkup-1 {
-	background: url('../img/bg-chkup-1.png') center bottom 9rem no-repeat;
+.bg-chkup {
+	padding-bottom: 14rem;
+	background: url('../img/bg-chkup-1.png') center bottom no-repeat;
 	background-size: 15.8rem 12.8rem;
 }
-.base-main[class*="bg-chkup-"] .h-2 {
-	font-size: 2.6rem;
-	font-weight: 400;
+.bg-chkup .logo-txt  + .tit-wrap {
+	margin-top: 2rem;
 }
 
 /* main (결과 화면) */
@@ -287,14 +273,10 @@
 }
 
 /* 모바일 GA hybrid */
-.bg-chkup-2 {
-	background: url('../img/bg-chkup-1.png') center bottom 9.4rem no-repeat;
-	background-size: 15.8rem 12.8rem;
-}
-
 /* 상담 예약 완료 */
 .bg-complete {
-	background: url('../img/bg-complete.png') center bottom 14rem no-repeat;
+	padding-bottom: 17rem;
+	background: url('../img/bg-complete.png') center bottom no-repeat;
 	background-size: 15.2rem 13.4rem;
 }
 
@@ -338,6 +320,11 @@
 }
 
 /*** [COMMON] UI-MODAL ***/
+.ui-modal-header .btn-close {
+	position: absolute;
+	top: 2.7rem;
+	right: 2.4rem;
+}
 .ui-modal .ui-modal-tit:focus {
 	outline: 0;
 	border: 0;
@@ -363,7 +350,16 @@
     border-radius: 2.4rem 2.4rem 0 0;
     overflow: hidden;
 }
-/* page popup */
+/* layer popup(full) */
+.type-full .ui-modal-header {
+	padding-top: 5rem;
+}
+.type-full .ui-modal-body {
+	padding-top: .8rem;
+}
+.type-full .desc {
+	font-size: var(--text-xs);
+}
 .modal-tit h3 {
 	color: var(--gray900);
 	font-size: var(--text-s);
@@ -376,3 +372,25 @@
 .step-toggle[data-toggle="hide"],
 .step-toggle.hide{display: none;}
 .step-toggle.show{display: block;}
+.ui-acco {
+	margin-bottom: 3rem;
+}
+.ui-acco-btn {
+	position: absolute;
+	padding: 0;
+	min-height: 4.2rem;
+}
+.ui-acco-btn:after {
+	top: 0;
+	right: 0;
+	width: 2rem;
+	height: 4.2rem;
+	margin-top: 0;
+	background: url(../img/common/arr-bottom.svg) center no-repeat;
+	background-size: 1.2rem;
+	content: '';
+}
+.ui-acco-btn[aria-expanded="true"]:after {
+	background-image: url(../img/common/arr-top.svg);
+	content: '';
+}

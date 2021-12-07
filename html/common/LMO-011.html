@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="ko">
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,62 +25,73 @@
     <div class="base-body">
       <main class="base-main">
         <!-- 약관 동의 -->
-        <div id="agreeAllChk" class="ui-chkgroup mgt-m">
-          <div class="all-chked">
-            <div class="chkbox">
-              <input type="checkbox" id="allChk" name="chkbox" checked>
-              <label for="allChk" class="chkbox-label">[필수] 카카오 인증을 위한 개인정보 동의</label>
+        <div id="accoLMO011" class="ui-acco">
+          <div id="agreeAllChk" class="ui-acco-wrap ui-chkgroup">
+            <div class="ui-acco-tit">
+              <div class="all-chked">
+                <div class="chkbox">
+                  <input type="checkbox" id="allChk" name="chkbox" checked>
+                  <label for="allChk" class="chkbox-label">[필수] 카카오 인증을 위한 개인정보 동의</label>
+                </div>
+              </div>
+              <button type="button" class="ui-acco-btn">
+                <span class="hidden">더보기</span>
+              </button>
             </div>
-            <button type="button" class="btn-more"><span class="hidden">더보기</span></button>
-          </div>
-          <div class="chklist" style="display: none;">
-            <ul>
-              <li>
-                <div class="chkbox">
-                  <input type="checkbox" id="chk1" name="chkbox" checked>
-                  <label for="chk1" class="chkbox-label">건강정보(민감정보) 수집/이용 동의</label>
+            <div class="ui-acco-pnl">
+              <div class="ui-acco-pnl-wrap">
+                <div class="chklist">
+                  <ul>
+                    <li>
+                      <div class="chkbox">
+                        <input type="checkbox" id="chk1" name="chkbox" disabled checked>
+                        <label for="chk1" class="chkbox-label">건강정보(민감정보) 수집/이용 동의</label>
+                      </div>
+                      <button type="button" class="ui-btn"
+                        onclick="netive.modal.show({ id:'LMO007', src:'../common/LMO-POPUP.html', full: true});">
+                        <span>보기</span>
+                      </button>
+                    </li>
+                    <li>
+                      <div class="chkbox">
+                        <input type="checkbox" id="chk2" name="chkbox" disabled checked>
+                        <label for="chk2" class="chkbox-label">개인정보 제3자 제공 동의</label>
+                      </div>
+                      <button type="button" class="ui-btn">
+                        <span>보기</span>
+                      </button>
+                    </li>
+                    <li>
+                      <div class="chkbox">
+                        <input type="checkbox" id="chk3" name="chkbox" disabled checked>
+                        <label for="chk3" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
+                      </div>
+                      <button type="button" class="ui-btn">
+                        <span>보기</span>
+                      </button>
+                    </li>
+                    <li>
+                      <div class="chkbox">
+                        <input type="checkbox" id="chk4" name="chkbox" disabled checked>
+                        <label for="chk4" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
+                      </div>
+                      <button type="button" class="ui-btn">
+                        <span>보기</span>
+                      </button>
+                    </li>
+                    <li>
+                      <div class="chkbox">
+                        <input type="checkbox" id="chk5" name="chkbox" disabled checked>
+                        <label for="chk5" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
+                      </div>
+                      <button type="button" class="ui-btn">
+                        <span>보기</span>
+                      </button>
+                    </li>
+                  </ul>
                 </div>
-                <button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
-                  <span>보기</span>
-                </button>
-              </li>
-              <li>
-                <div class="chkbox">
-                  <input type="checkbox" id="chk2" name="chkbox" checked>
-                  <label for="chk2" class="chkbox-label">개인정보 제3자 제공 동의</label>
-                </div>
-                <button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
-                  <span>보기</span>
-                </button>
-              </li>
-              <li>
-                <div class="chkbox">
-                  <input type="checkbox" id="chk3" name="chkbox" checked>
-                  <label for="chk3" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
-                </div>
-                <button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
-                  <span>보기</span>
-                </button>
-              </li>
-              <li>
-                <div class="chkbox">
-                  <input type="checkbox" id="chk4" name="chkbox" checked>
-                  <label for="chk4" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
-                </div>
-                <button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
-                  <span>보기</span>
-                </button>
-              </li>
-              <li>
-                <div class="chkbox">
-                  <input type="checkbox" id="chk5" name="chkbox" checked>
-                  <label for="chk5" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
-                </div>
-                <button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
-                  <span>보기</span>
-                </button>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
         <!-- //약관 동의 -->
@@ -107,10 +117,9 @@
             <label for="input3" class="form-item-label">휴대폰 번호</label>
           </div>
           <div class="form-item">
-            <input type="tel" id="input3" class="inp-base error" value="010dwa |" placeholder="-없이 입력">
+            <input type="tel" id="input3" class="inp-base error" value="01012345678" placeholder="-없이 입력">
           </div>
           <!-- 오 입력시 'error' class 부여 -->
-
           <div class="from-info">
             <div class="bul-error" aria-live="polite">
               <div>숫자를 입력해주세요</div>
@@ -134,7 +143,6 @@
             </div>
           </div>
         </div>
-
         <div class="step-toggle show" data-toggle="hide">
           <div class="scroll-area">
             <div class="fx-wrap kakao-process" data-align="justify" data-valign="center">
@@ -157,7 +165,7 @@
               </div>
             </div>
           </div>
-          <div class="btn-area mgt-m hide">
+          <div class="btn-area mgt-m">
             <div class="btn-wrap request">
               <button type="button" id="" class="btn-base-l">
                 <span>다시 요청하기</span>
@@ -172,30 +180,34 @@
         </div>
 
         <!-- //입력 필드 -->
-        <div class="step-toggle btn-area mgt-m" data-toggle="show">
+        <div class="step-toggle btn-area mgt-m hide" data-toggle="show">
           <div class="btn-wrap">
-            <button type="button" id="" class="btn-base-l btn-confirm primary" onclick="netive.common.stepUp();">
+            <button type="button" id="" class="btn-base-l btn-confirm" onclick="netive.common.stepUp();">
               <span>카카오 인증 요청하기</span>
             </button>
           </div>
         </div>
-
       </main>
     </div>
   </div>
   <script>
-    // ;(function (win, doc, $,  undefined) {
+    ; (function (win, doc, $, undefined) {
+      'use strict';
 
-    //     'use strict';
+      $('#agreeAllChk').uiCheckAll({
+        callback: function (v) {
+          console.log(v);
+        }
+      });
 
+      netive.accordion.init({
+        id: 'accoLMO011',
+        current: null,
+        callback: function (v) {
+          console.log(v);
+        }
+      });
 
-
-    // })(window, document, jQuery);
-
-    $('#agreeAllChk').uiCheckAll();
-  </script>
-  <script>
-    $(document).ready(function () {
       // 본인인증 오류 alert
       netive.modal.show({
         type: 'alert',
@@ -206,7 +218,8 @@
           console.log('close'); netive.modal.hideSystem();
         }
       });
-    });
+
+    })(window, document, jQuery);
   </script>
 </body>
 </html>

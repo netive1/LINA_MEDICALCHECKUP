@@ -68,7 +68,10 @@
 })(window, document, $);
 
 // 공통 약관 전체선택
-$.fn.uiCheckAll = function () {
+$.fn.uiCheckAll = function (opt) {
+	const callback = opt.callback;
+	const callbackCancel = opt.callbackCancel;
+
 	return this.each(function () {
 		$uiCheckAll = {
 			gTarget: null,
@@ -90,10 +93,12 @@ $.fn.uiCheckAll = function () {
 					o.gCheckedLength = o.gLength;
 					$parent.addClass('chked');
 					o.gItemObjParent.addClass('chked');
+					callback !== undefined ? callback() : '';
 				} else {
 					o.gCheckedLength = 0;
 					$parent.removeClass('chked');
 					o.gItemObjParent.removeClass('chked');
+					callbackCancel !== undefined ? callbackCancel() : '';
 				}
 			},
 			checkItemFn: function (v) {
