@@ -1,134 +1,228 @@
-; (function (win, doc, jQuery, undefined) {
+;(function (win, doc, jQuery, undefined) {
 
-  'use strict';
- 
-  netive.common = {};
+	'use strict';
 
-  netive.common.stepUp = function () {
-    console.log('동작');
-    const wrap = document.querySelector('html, body');
-    const stepHide = document.querySelector('.step-toggle[data-toggle="hide"]');
-    const stepShow = document.querySelector('.step-toggle[data-toggle="show"]');
-    const header = document.querySelector('.header-wrap');
+	netive.common = {
+		stepUp: function(){
+			const wrap = document.querySelector('html, body');
+			const stepHide = document.querySelector('.step-toggle[data-toggle="hide"]');
+			const stepShow = document.querySelector('.step-toggle[data-toggle="show"]');
+			const header = document.querySelector('.header-wrap');
 
-    stepHide.classList.add('show');
-    stepShow.classList.add('hide');
+			stepHide.classList.add('show');
+			stepShow.classList.add('hide');
 
-    wrap.scrollTo({
-      top: stepHide.getBoundingClientRect().top + document.documentElement.scrollTop - header.offsetHeight,
-      behavior: 'smooth'
-    });
-  }
+			wrap.scrollTo({
+				top: stepHide.getBoundingClientRect().top + document.documentElement.scrollTop - header.offsetHeight,
+				behavior: 'smooth'
+			});
+		},
+		progress: function(opt){
+			const max = Number(opt.max);
+			const val = Number(opt.val);
+			const circleprogress = document.querySelector('.circle-progress');
+			const emoji = document.querySelector('.circle-progress .emoji');
+			const box = document.querySelector('.circle-progress .box');
+			const percent = document.querySelector('.circle-progress .percent');
 
-  
+			setTimeout(function () {
+				box.style.transform = 'rotate(' + (360 * val / 100) + 'deg)';
+				box.style.opacity = 1;
+			}, 0);
 
+			let n = 0;
+
+			function countUp() {
+				if (val >= n) {
+					percent.innerHTML = n;
+					n = n + 1;
+					console.log(n);
+					setTimeout(function () {
+						countUp();
+					}, 1);
+				}
+			}
+			countUp();
+
+			if (val > 100) {
+				circleprogress.classList.add('n5');
+			} else if (val > 80) {
+				circleprogress.classList.add('n4');
+			} else if (val > 60) {
+				circleprogress.classList.add('n3');
+			} else if (val > 40) {
+				circleprogress.classList.add('n2');
+			} else {
+				circleprogress.classList.add('n1');
+			}
+
+			new CircleProgress('.circle-progress', {
+				// textFormat: 'percent',
+				max: max,
+				value: val,
+			});
+		}
+	};
+
+	// netive.common.stepUp = function () {
+	// 	console.log('동작');
+		
+	// }
+
+	// netive.common.progress = {
+	// 	init: function (opt) {
+	// 		const max = Number(opt.max);
+	// 		const val = Number(opt.val);
+	// 		const circleprogress = document.querySelector('.circle-progress');
+	// 		const emoji = document.querySelector('.circle-progress .emoji');
+	// 		const box = document.querySelector('.circle-progress .box');
+	// 		const percent = document.querySelector('.circle-progress .percent');
+
+	// 		setTimeout(function () {
+	// 			box.style.transform = 'rotate(' + (360 * val / 100) + 'deg)';
+	// 			box.style.opacity = 1;
+	// 		}, 0);
+
+	// 		let n = 0;
+
+	// 		function countUp() {
+	// 			if (val >= n) {
+	// 				percent.innerHTML = n;
+	// 				n = n + 1;
+	// 				console.log(n);
+	// 				setTimeout(function () {
+	// 					countUp();
+	// 				}, 1);
+	// 			}
+	// 		}
+	// 		countUp();
+
+	// 		if (val > 100) {
+	// 			circleprogress.classList.add('n5');
+	// 		} else if (val > 80) {
+	// 			circleprogress.classList.add('n4');
+	// 		} else if (val > 60) {
+	// 			circleprogress.classList.add('n3');
+	// 		} else if (val > 40) {
+	// 			circleprogress.classList.add('n2');
+	// 		} else {
+	// 			circleprogress.classList.add('n1');
+	// 		}
+
+	// 		new CircleProgress('.circle-progress', {
+	// 			// textFormat: 'percent',
+	// 			max: max,
+	// 			value: val,
+	// 		});
+	// 	}
+	// }
 })(window, document, $);
 
 // 공통 약관 전체선택
 $.fn.uiCheckAll = function () {
-  return this.each(function () {
-    $uiCheckAll = {
-      gTarget: null,
-      gAllObj: null,
-      gItemObj: null,
-      gLength: null,
-      gCheckedLength: 0,
-      gList: null,
-      gCnt: null,
-      gBtn: null,
-      checkAllFn: function (v) {
-        var o = this,
-          $t = $(v),
-          $boolean = $t.is(':checked'),
-          $parent = $t.parent();
+	return this.each(function () {
+		$uiCheckAll = {
+			gTarget: null,
+			gAllObj: null,
+			gItemObj: null,
+			gLength: null,
+			gCheckedLength: 0,
+			gList: null,
+			gCnt: null,
+			gBtn: null,
+			checkAllFn: function (v) {
+				var o = this,
+					$t = $(v),
+					$boolean = $t.is(':checked'),
+					$parent = $t.parent();
 
-        o.gItemObj.prop('checked', $boolean);
-        if ($boolean) {
-          o.gCheckedLength = o.gLength;
-          $parent.addClass('chked');
-          o.gItemObjParent.addClass('chked');
-        } else {
-          o.gCheckedLength = 0;
-          $parent.removeClass('chked');
-          o.gItemObjParent.removeClass('chked');
-        }
-      },
-      checkItemFn: function (v) {
-        var o = this,
-          $t = $(v),
-          $boolean = $t.is(':checked'),
-          $parent = $t.parent();
+				o.gItemObj.prop('checked', $boolean);
+				if ($boolean) {
+					o.gCheckedLength = o.gLength;
+					$parent.addClass('chked');
+					o.gItemObjParent.addClass('chked');
+				} else {
+					o.gCheckedLength = 0;
+					$parent.removeClass('chked');
+					o.gItemObjParent.removeClass('chked');
+				}
+			},
+			checkItemFn: function (v) {
+				var o = this,
+					$t = $(v),
+					$boolean = $t.is(':checked'),
+					$parent = $t.parent();
 
-        if ($boolean) {
-          o.gCheckedLength = o.gCheckedLength + 1;
-          $parent.addClass('chked');
-        } else {
-          o.gCheckedLength = o.gCheckedLength - 1;
-          $parent.removeClass('chked');
-        }
+				if ($boolean) {
+					o.gCheckedLength = o.gCheckedLength + 1;
+					$parent.addClass('chked');
+				} else {
+					o.gCheckedLength = o.gCheckedLength - 1;
+					$parent.removeClass('chked');
+				}
 
-        if (o.gCheckedLength === o.gLength) {
-          o.gAllObj.prop('checked', true);
-          o.gAllObjParent.addClass('chked');
-        } else {
-          o.gAllObj.prop('checked', false);
-          o.gAllObjParent.removeClass('chked');
-        }
-      },
-      viewFn: function (v) {
-        var o = this,
-          $t = $(v),
-          $parent = $t.parent();
+				if (o.gCheckedLength === o.gLength) {
+					o.gAllObj.prop('checked', true);
+					o.gAllObjParent.addClass('chked');
+				} else {
+					o.gAllObj.prop('checked', false);
+					o.gAllObjParent.removeClass('chked');
+				}
+			},
+			viewFn: function (v) {
+				var o = this,
+					$t = $(v),
+					$parent = $t.parent();
 
-        $t.toggleClass('open');
+				$t.toggleClass('open');
 
-        if (o.gBtn.hasClass('open')) {
-          $parent.addClass('open');
-          o.gList.fadeIn(300);
-        } else {
-          $parent.removeClass('open');
-          o.gList.fadeOut(300);
-        }
-      },
-      init: function (v) {
-        var o = this;
-        o.gTarget = $(v);
-        o.gAllObjParent = o.gTarget.find('.all-chked .chkbox');
-        o.gAllObj = o.gAllObjParent.find('input[type=checkbox]');
-        o.gItemObjParent = o.gTarget.find('.chklist .chkbox');
-        o.gItemObj = o.gItemObjParent.find('input[type=checkbox]');
-        o.gLength = o.gItemObj.length;
-        o.gList = o.gTarget.find('.chklist');
-        o.gCnt = o.gList.find('.chkbox');
-        o.gBtn = o.gTarget.find('.all-chked .btn-more');
+				if (o.gBtn.hasClass('open')) {
+					$parent.addClass('open');
+					o.gList.fadeIn(300);
+				} else {
+					$parent.removeClass('open');
+					o.gList.fadeOut(300);
+				}
+			},
+			init: function (v) {
+				var o = this;
+				o.gTarget = $(v);
+				o.gAllObjParent = o.gTarget.find('.all-chked .chkbox');
+				o.gAllObj = o.gAllObjParent.find('input[type=checkbox]');
+				o.gItemObjParent = o.gTarget.find('.chklist .chkbox');
+				o.gItemObj = o.gItemObjParent.find('input[type=checkbox]');
+				o.gLength = o.gItemObj.length;
+				o.gList = o.gTarget.find('.chklist');
+				o.gCnt = o.gList.find('.chkbox');
+				o.gBtn = o.gTarget.find('.all-chked .btn-more');
 
-        // 전체 체크, 체크 해제
-        o.gAllObj.on('click.allChk', function () {
-          o.checkAllFn(this);
-        });
+				// 전체 체크, 체크 해제
+				o.gAllObj.on('click.allChk', function () {
+					o.checkAllFn(this);
+				});
 
-        // 개별 체크
-        o.gItemObj.on('click.itemChk', function () {
-          o.checkItemFn(this);
-        });
+				// 개별 체크
+				o.gItemObj.on('click.itemChk', function () {
+					o.checkItemFn(this);
+				});
 
-        o.gBtn.on('click', function () {
-          o.viewFn(this);
-        });
-      }
-    }
-    $uiCheckAll.init(this);
-  });
+				o.gBtn.on('click', function () {
+					o.viewFn(this);
+				});
+			}
+		}
+		$uiCheckAll.init(this);
+	});
 }
 
 //progressbar
 $.fn.uiProgressbar = function () {
-  var getPercent = ($('.progress-cont').data('progress-percent') / 100);
-  var getProgressWrapWidth = $('.progress-cont').width();
-  var progressTotal = getPercent * getProgressWrapWidth;
-  var animationLength = 100;
+	var getPercent = ($('.progress-cont').data('progress-percent') / 100);
+	var getProgressWrapWidth = $('.progress-cont').width();
+	var progressTotal = getPercent * getProgressWrapWidth;
+	var animationLength = 100;
 
-  $('.progress-bar').stop().animate({
-    left: progressTotal
-  }, animationLength);
+	$('.progress-bar').stop().animate({
+		left: progressTotal
+	}, animationLength);
 }
