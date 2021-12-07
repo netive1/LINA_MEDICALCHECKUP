@@ -64,58 +64,7 @@
 		}
 	};
 
-	// netive.common.stepUp = function () {
-	// 	console.log('동작');
-		
-	// }
-
-	// netive.common.progress = {
-	// 	init: function (opt) {
-	// 		const max = Number(opt.max);
-	// 		const val = Number(opt.val);
-	// 		const circleprogress = document.querySelector('.circle-progress');
-	// 		const emoji = document.querySelector('.circle-progress .emoji');
-	// 		const box = document.querySelector('.circle-progress .box');
-	// 		const percent = document.querySelector('.circle-progress .percent');
-
-	// 		setTimeout(function () {
-	// 			box.style.transform = 'rotate(' + (360 * val / 100) + 'deg)';
-	// 			box.style.opacity = 1;
-	// 		}, 0);
-
-	// 		let n = 0;
-
-	// 		function countUp() {
-	// 			if (val >= n) {
-	// 				percent.innerHTML = n;
-	// 				n = n + 1;
-	// 				console.log(n);
-	// 				setTimeout(function () {
-	// 					countUp();
-	// 				}, 1);
-	// 			}
-	// 		}
-	// 		countUp();
-
-	// 		if (val > 100) {
-	// 			circleprogress.classList.add('n5');
-	// 		} else if (val > 80) {
-	// 			circleprogress.classList.add('n4');
-	// 		} else if (val > 60) {
-	// 			circleprogress.classList.add('n3');
-	// 		} else if (val > 40) {
-	// 			circleprogress.classList.add('n2');
-	// 		} else {
-	// 			circleprogress.classList.add('n1');
-	// 		}
-
-	// 		new CircleProgress('.circle-progress', {
-	// 			// textFormat: 'percent',
-	// 			max: max,
-	// 			value: val,
-	// 		});
-	// 	}
-	// }
+	
 })(window, document, $);
 
 // 공통 약관 전체선택
