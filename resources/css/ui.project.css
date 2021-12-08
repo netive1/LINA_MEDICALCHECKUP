@@ -4,19 +4,17 @@
 /* [common] 스플래시 화면 */
 .base-splash {
 	width: 100%;
-	min-height: 100vh;
-	min-height: -webkit-fill-available;
+	height: 100%;
 	background: var(--white);
 }
 .base-splash .base-body {
 	height: 100%;
-	min-height: 100vh;
-	padding: 0 2.4rem;
+	overflow: hidden;
 }
 .base-splash .base-body:after {
 	position: absolute;
 	right:-10rem;
-	bottom: 15.2rem;
+	bottom: 6.9rem;
 	opacity: 0;
 	display: block;
 	width: 15.4rem;
@@ -39,11 +37,6 @@
         right: 4rem;
         opacity: 1;
     }
-}
-.base-splash .base-main {
-	height: 100%;
-	min-height: 100%;
-	padding: 5rem 0 0;
 }
 .base-splash .logo img {
 	width: 9.5rem;
@@ -215,18 +208,10 @@
 .circle-progress.n2 .emoji{background-image: url(../img/progress-emoji-1.png);}
 .circle-progress.n1 .emoji{background-image: url(../img/progress-emoji-1.png);}
 
-/* intro */
-.vh {
-	display: flex; 
-	flex-direction: column; 
-	min-height: 100vh;
-}
-.vh .base-body {
-	flex: 1;
-}
 /* Entry_1~2 상태 선택 */
 .state-wrap {
-	padding-bottom: 6rem;
+	min-height: 25.4rem;
+	margin-bottom: 6rem;
 }
 /* Entry_3 정보 연동 */
 .bg-chkup {
@@ -240,11 +225,8 @@
 
 /* main (결과 화면) */
 .base-wrap.result {
-	min-height: 100vh;
+	min-height: 100%;
 	background: var(--primary);
-}
-.base-wrap.result .base-main {
-	padding: 10rem 2.4rem 0;
 }
 .base-wrap.result .tit-wrap {
 	padding-bottom: 10rem;
@@ -355,7 +337,7 @@
 	padding-top: 5rem;
 }
 .type-full .ui-modal-body {
-	padding-top: .8rem;
+	padding: .8rem 2.4rem 3.6rem;
 }
 .type-full .desc {
 	font-size: var(--text-xs);
@@ -373,7 +355,7 @@
 .step-toggle.hide{display: none;}
 .step-toggle.show{display: block;}
 .ui-acco {
-	margin-bottom: 3rem;
+	margin-bottom: 4.8rem;
 }
 .ui-acco-btn {
 	position: absolute;
