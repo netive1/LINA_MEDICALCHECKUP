@@ -14,8 +14,7 @@
 			function act(){
 				const wh = window.innerHeight;
 				elMain.style.minHeight = wh + 'px';
-				document.querySelector('#size').textContent = wh;
-				console.log(wh, elMain.offsetHeight);
+
 				if (wh < elMain.offsetHeight) {
 					el_html.classList.add('is-scroll');
 				} else {
