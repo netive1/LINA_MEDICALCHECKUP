@@ -3,6 +3,26 @@
 	'use strict';
 
 	netive.common = {
+		init: function(){
+            netive.common.pageMinHeight();
+		},
+		pageMinHeight: function(){
+			const el_html = doc.querySelector('html');
+			const elMain = document.querySelector('.base-main');
+
+			window.addEventListener('resize', act);
+			function act(){
+				const wh = window.innerHeight;
+				elMain.style.minHeight = wh + 'px';
+
+				if (wh < elMain.offsetHeight) {
+					el_html.classList.add('is-scroll');
+				} else {
+					el_html.classList.remove('is-scroll');
+				}
+			}
+			act();
+		},
 		stepUp: function(){
 			const wrap = document.querySelector('html, body');
 			const stepHide = document.querySelector('.step-toggle[data-toggle="hide"]');
