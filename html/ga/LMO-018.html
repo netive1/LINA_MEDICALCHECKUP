@@ -93,7 +93,18 @@
     </div>
   </div>
   <script>
-    $('.progress-wrap .progress').uiProgressbar();
+    ;(function (win, doc, jQuery, undefined) {
+      'use strict';
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+          netive.common.init();
+          
+          $('.progress-wrap .progress').uiProgressbar();
+
+      });
+
+    })(window, document, $);
   </script>
 </body>
 </html>

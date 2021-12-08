@@ -4,7 +4,7 @@
 
 	netive.common = {
 		init: function(){
-            netive.common.pageMinHeight();
+			netive.common.pageMinHeight();
 		},
 		pageMinHeight: function(){
 			const el_html = doc.querySelector('html');

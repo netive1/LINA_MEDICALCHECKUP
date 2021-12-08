@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,16 +13,32 @@
   <script src="../../resources/js/ui.common.js"></script>
   <script> window.MSInputMethodContext && document.documentMode && document.write('<script src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js"><\/script>');</script>
 </head>
+
 <body>
+  <div class="base-wrap base-splash">
+    <div class="base-body">
+      <main class="base-main">
+      </main>
+    </div>
+  </div>
   <script>
-    $(document).ready(function () {
-      netive.modal.show({
-        id: 'LMO007',
-        ps: 'center',
-        src: '../common/LMO-POPUP.html',
-        full: true
+    ;(function (win, doc, jQuery, undefined) {
+      'use strict';
+
+      document.addEventListener("DOMContentLoaded", function () {
+
+        netive.common.init();
+
+        netive.modal.show({
+          id: 'LMO007',
+          ps: 'center',
+          src: '../common/LMO-POPUP.html',
+          full: true
+        });
       });
-    });
+
+    })(window, document, $);
   </script>
 </body>
+
 </html>

@@ -75,7 +75,18 @@
 								</div>
 							</div>
 							<progress id="" class="progress-base" max="100" value="70">70%</progress>
-							<div class="circle-progress"></div>
+							<div class="circle-progress-wrap">
+								<div class="circle-progress">
+									<div class="box">
+										<div class="head"></div>
+									</div>
+									<div class="emoji"></div>
+									<div class="text">
+										<em class="percent"></em>
+										<span>%</span>
+									</div>
+								</div>
+							</div>
 						</section>	
 						<section>
 							<h2 class="h-2">title</h2>			
@@ -384,48 +395,57 @@
 			<!-- <footer class="base-footer"></footer> -->
 		</div>
 		<script>
-			$('#agreeAllChk').uiCheckAll({
-				callback: function (v) {
-					console.log(v);
-				}
-			});
-			// $('#agreeAllChk').uiCheckAll({
-			// 		callback: function () {
-			// 			$('#btnConfirm').prop('disabled', false);
-			// 			console.log('callback');
-			// 			// allchk시 아코디언 닫힘
-			// 			// netive.accordion.toggle({
-			// 			//   id: 'accoLMO005',
-			// 			//   current: [0],
-			// 			//   state: 'close'
-			// 			// });
-			// 		},
-			// 		callbackCancel: function () {
-			// 			$('#btnConfirm').prop('disabled', true);
-			// 			// allchk시 아코디언 열림
-			// 			//  netive.accordion.toggle({
-			// 			//   id: 'accoLMO005',
-			// 			//   current: [0],
-			// 			//   state: 'open'
-			// 			// });
-			// 		}
-			// 	});
-			 $('.progress-wrap .progress').uiProgressbar();
+			;(function (win, doc, jQuery, undefined) {
+				'use strict';
 
-			 netive.accordion.init({ 
-				id:'accoTerms', 
-				current:[0], 
-				callback:function(v){
-					console.log(v);
-				} 
-			});
-		</script>
-		<script>
-			new CircleProgress('.circle-progress', {
-				textFormat: 'percent',
-				max: 100,
-				value: 60,
-			});
+				document.addEventListener("DOMContentLoaded", function () {
+
+					netive.common.init();
+
+					$('#agreeAllChk').uiCheckAll({
+						callback: function (v) {
+							console.log(v);
+						}
+					});
+					// $('#agreeAllChk').uiCheckAll({
+					// 		callback: function () {
+					// 			$('#btnConfirm').prop('disabled', false);
+					// 			console.log('callback');
+					// 			// allchk시 아코디언 닫힘
+					// 			// netive.accordion.toggle({
+					// 			//   id: 'accoLMO005',
+					// 			//   current: [0],
+					// 			//   state: 'close'
+					// 			// });
+					// 		},
+					// 		callbackCancel: function () {
+					// 			$('#btnConfirm').prop('disabled', true);
+					// 			// allchk시 아코디언 열림
+					// 			//  netive.accordion.toggle({
+					// 			//   id: 'accoLMO005',
+					// 			//   current: [0],
+					// 			//   state: 'open'
+					// 			// });
+					// 		}
+					// 	});
+					$('.progress-wrap .progress').uiProgressbar();
+
+					netive.accordion.init({ 
+						id:'accoTerms', 
+						current:[0], 
+						callback:function(v){
+							console.log(v);
+						} 
+					});
+
+					netive.common.progress({
+						max: 100,
+						val: 75
+					});
+
+				});
+
+			})(window, document, $);
 		</script>
 	</body>
 </html>

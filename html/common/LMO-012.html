@@ -204,24 +204,30 @@
       </div>
     </div>
     <script>
-      ;(function (win, doc, $, undefined) {
+      ;(function (win, doc, jQuery, undefined) {
         'use strict';
 
-        $('#agreeAllChk').uiCheckAll({
-          callback: function (v) {
-            console.log(v);
-          }
+        document.addEventListener("DOMContentLoaded", function () {
+
+          netive.common.init();
+
+          $('#agreeAllChk').uiCheckAll({
+            callback: function (v) {
+              console.log(v);
+            }
+          });
+
+          netive.accordion.init({
+            id: 'accoLMO012',
+            current: null,
+            callback: function (v) {
+              console.log(v);
+            }
+          });
+
         });
 
-        netive.accordion.init({
-          id: 'accoLMO012',
-          current: null,
-          callback: function (v) {
-            console.log(v);
-          }
-        });
-
-      })(window, document, jQuery);
+      })(window, document, $);
     </script>
   </body>
 </html>

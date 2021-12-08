@@ -25,15 +25,24 @@
       </div>
     </div>
     <script>
-      $(document).ready(function () {
-        setTimeout(function () {
-           netive.modal.show({
-            id: 'LMO001',
-            ps: 'bottom',
-            src: '../common/LMO-MODAL.html'
-          });
-        }, 1000);
-      });
+      ;(function (win, doc, jQuery, undefined) {
+        'use strict';
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+          netive.common.init();
+          
+          setTimeout(function () {
+            netive.modal.show({
+              id: 'LMO001',
+              ps: 'bottom',
+              src: '../common/LMO-MODAL.html'
+            });
+          }, 1000);
+
+        });
+
+      })(window, document, $);
     </script>
   </body>
 </html>

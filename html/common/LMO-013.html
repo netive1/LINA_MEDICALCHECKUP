@@ -230,47 +230,53 @@
       </div>
     </div>
     <script>
-      ; (function (win, doc, $, undefined) {
+      ;(function (win, doc, jQuery, undefined) {
         'use strict';
 
-        $('#agreeAllChk').uiCheckAll({
-          callback: function (v) {
-            console.log(v);
-          }
-        });
+        document.addEventListener("DOMContentLoaded", function () {
 
-        netive.accordion.init({
-          id: 'accoLMO013',
-          current: null,
-          callback: function (v) {
-            console.log(v);
-          }
-        });
+          netive.common.init();
+        
+          $('#agreeAllChk').uiCheckAll({
+            callback: function (v) {
+              console.log(v);
+            }
+          });
 
-        //인증번호 전송
-        $('.btn-send').click(function () {
-          $('.validate').addClass('show');
+          netive.accordion.init({
+            id: 'accoLMO013',
+            current: null,
+            callback: function (v) {
+              console.log(v);
+            }
+          });
 
-          $('.btn-confirm').click(function () {
-            $('.btn-send').html('인증번호 재전송');
-          })
-        });
-        //인증번호 필드 초기화
-        $('.btn-remove').click(function () {
-          $(this).prev().val('');
-          $(this).parent().addClass('empty');
-          $('.btn-remove').fadeOut();
-        });
-        $('.inp-validate').keyup(function () {
-          $('.btn-remove').fadeIn();
-          if ($(this).val() == '') {
+          //인증번호 전송
+          $('.btn-send').click(function () {
+            $('.validate').addClass('show');
+
+            $('.btn-confirm').click(function () {
+              $('.btn-send').html('인증번호 재전송');
+            })
+          });
+          //인증번호 필드 초기화
+          $('.btn-remove').click(function () {
+            $(this).prev().val('');
             $(this).parent().addClass('empty');
-          } else {
-            $(this).parent().removeClass('empty');
-          }
+            $('.btn-remove').fadeOut();
+          });
+          $('.inp-validate').keyup(function () {
+            $('.btn-remove').fadeIn();
+            if ($(this).val() == '') {
+              $(this).parent().addClass('empty');
+            } else {
+              $(this).parent().removeClass('empty');
+            }
+          });
+
         });
 
-      })(window, document, jQuery);
+      })(window, document, $);
     </script>
   </body>
 </html>

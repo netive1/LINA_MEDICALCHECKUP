@@ -215,8 +215,7 @@
 }
 /* Entry_3 정보 연동 */
 .bg-chkup {
-	padding-bottom: 14rem;
-	background: url('../img/bg-chkup-1.png') center bottom no-repeat;
+	background: url('../img/bg-chkup-1.png') center bottom 18.9rem no-repeat;
 	background-size: 15.8rem 12.8rem;
 }
 .bg-chkup .logo-txt  + .tit-wrap {
@@ -257,8 +256,7 @@
 /* 모바일 GA hybrid */
 /* 상담 예약 완료 */
 .bg-complete {
-	padding-bottom: 17rem;
-	background: url('../img/bg-complete.png') center bottom no-repeat;
+	background: url('../img/bg-complete.png') center no-repeat;
 	background-size: 15.2rem 13.4rem;
 }
 

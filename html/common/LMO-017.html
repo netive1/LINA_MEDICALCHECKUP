@@ -38,16 +38,18 @@
     </div>
     <script>
       ;(function (win, doc, jQuery, undefined) {
-
         'use strict';
 
         document.addEventListener("DOMContentLoaded", function(){
+
+          netive.common.init();
 
           //progress 실행
           netive.common.progress({
             max: 100,
             val: 75
           });
+          
         });
 
       })(window, document, $);

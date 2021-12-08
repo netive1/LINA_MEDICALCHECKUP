@@ -191,35 +191,38 @@
     </div>
   </div>
   <script>
-    ; (function (win, doc, $, undefined) {
+    ;(function (win, doc, jQuery, undefined) {
       'use strict';
 
-      $('#agreeAllChk').uiCheckAll({
-        callback: function (v) {
-          console.log(v);
-        }
+      document.addEventListener("DOMContentLoaded", function () {
+
+        $('#agreeAllChk').uiCheckAll({
+          callback: function (v) {
+            console.log(v);
+          }
+        });
+        //약관 동의
+        netive.accordion.init({
+          id: 'accoLMO011',
+          current: null,
+          callback: function (v) {
+            console.log(v);
+          }
+        });
+        // 본인인증 오류 alert
+        netive.modal.show({
+          type: 'alert',
+          sMessage: '<strong>카카오 인증을 확인해주세요.</strong>인증 요청이 오지 않았을 경우,<br>[다시 요청하기]를 눌러 주세요.',
+          sBtnConfirmTxt: '확인',
+          sClass: 'type-alert',
+          sConfirmCallback: function () {
+            console.log('close'); netive.modal.hideSystem();
+          }
+        });
+
       });
 
-      netive.accordion.init({
-        id: 'accoLMO011',
-        current: null,
-        callback: function (v) {
-          console.log(v);
-        }
-      });
-
-      // 본인인증 오류 alert
-      netive.modal.show({
-        type: 'alert',
-        sMessage: '<strong>카카오 인증을 확인해주세요.</strong>인증 요청이 오지 않았을 경우,<br>[다시 요청하기]를 눌러 주세요.',
-        sBtnConfirmTxt: '확인',
-        sClass: 'type-alert',
-        sConfirmCallback: function () {
-          console.log('close'); netive.modal.hideSystem();
-        }
-      });
-
-    })(window, document, jQuery);
+    })(window, document, $);
   </script>
 </body>
 </html>

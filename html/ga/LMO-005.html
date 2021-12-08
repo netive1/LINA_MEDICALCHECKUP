@@ -99,41 +99,45 @@
       </div>
     </div>
     <script>
-    ;(function (win, doc, $,  undefined) {
-      'use strict';
+      ;(function (win, doc, $,  undefined) {
+        'use strict';
 
-      $('#agreeAllChk').uiCheckAll({
-        callback: function () {
-          $('#btnConfirm').prop('disabled', false);
-          console.log('callback');
-          // allchk시 아코디언 닫힘
-          // netive.accordion.toggle({
-          //   id: 'accoLMO005',
-          //   current: [0],
-          //   state: 'close'
-          // });
-        },
-        callbackCancel: function () {
-          $('#btnConfirm').prop('disabled', true);
-          // allchk시 아코디언 열림
-          //  netive.accordion.toggle({
-          //   id: 'accoLMO005',
-          //   current: [0],
-          //   state: 'open'
-          // });
-        }
-      });
+        document.addEventListener("DOMContentLoaded", function () {
 
-      netive.accordion.init({
-        id: 'accoLMO005',
-        current: [0], //null (닫힘)
-        callback: function (v) {
-          console.log(v);
-        }
-      });
+          netive.common.init();
 
+          $('#agreeAllChk').uiCheckAll({
+            callback: function () {
+              $('#btnConfirm').prop('disabled', false);
+              console.log('callback');
+              // allchk시 아코디언 닫힘
+              // netive.accordion.toggle({
+              //   id: 'accoLMO005',
+              //   current: [0],
+              //   state: 'close'
+              // });
+            },
+            callbackCancel: function () {
+              $('#btnConfirm').prop('disabled', true);
+              // allchk시 아코디언 열림
+              //  netive.accordion.toggle({
+              //   id: 'accoLMO005',
+              //   current: [0],
+              //   state: 'open'
+              // });
+            }
+          });
 
-    })(window, document, jQuery);
+          netive.accordion.init({
+            id: 'accoLMO005',
+            current: [0], //null (닫힘)
+            callback: function (v) {
+              console.log(v);
+            }
+          });
+        });
+
+      })(window, document, jQuery);
     </script>
   </body>
 </html>

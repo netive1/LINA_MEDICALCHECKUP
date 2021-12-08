@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="ko">
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +12,6 @@
   <script src="../../resources/js/ui.common.js"></script>
   <script> window.MSInputMethodContext && document.documentMode && document.write('<script src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js"><\/script>');</script>
 </head>
-
 <body>
   <div class="base-wrap">
     <div class="base-body">
@@ -104,41 +102,46 @@
     </footer>
   </div>
   <script>
-    ; (function (win, doc, $, undefined) {
+    ;(function (win, doc, jQuery, undefined) {
       'use strict';
 
-      $('#agreeAllChk').uiCheckAll({
-        callback: function () {
-          $('#btnConfirm').prop('disabled', false);
-          console.log('callback');
-          // allchk시 아코디언 닫힘
-          // netive.accordion.toggle({
-          //   id: 'accoLMO027',
-          //   current: [0],
-          //   state: 'close'
-          // });
-        },
-        callbackCancel: function () {
-          $('#btnConfirm').prop('disabled', true);
-          // allchk시 아코디언 열림
-          //  netive.accordion.toggle({
-          //   id: 'accoLMO027',
-          //   current: [0],
-          //   state: 'open'
-          // });
-        }
+      document.addEventListener("DOMContentLoaded", function () {
+
+        netive.common.init();
+
+        $('#agreeAllChk').uiCheckAll({
+          callback: function () {
+            $('#btnConfirm').prop('disabled', false);
+            console.log('callback');
+            // allchk시 아코디언 닫힘
+            // netive.accordion.toggle({
+            //   id: 'accoLMO027',
+            //   current: [0],
+            //   state: 'close'
+            // });
+          },
+          callbackCancel: function () {
+            $('#btnConfirm').prop('disabled', true);
+            // allchk시 아코디언 열림
+            //  netive.accordion.toggle({
+            //   id: 'accoLMO027',
+            //   current: [0],
+            //   state: 'open'
+            // });
+          }
+        });
+
+        netive.accordion.init({
+          id: 'accoLMO027',
+          current: [0],
+          callback: function (v) {
+            console.log(v);
+          }
+        });
+
       });
 
-      netive.accordion.init({
-        id: 'accoLMO027',
-        current: [0],
-        callback: function (v) {
-          console.log(v);
-        }
-      });
-
-    })(window, document, jQuery);
+    })(window, document, $);
   </script>
 </body>
-
 </html>

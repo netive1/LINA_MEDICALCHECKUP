@@ -218,20 +218,31 @@
       </div>
     </div>
     <script>
-      $('#agreeAllChk').uiCheckAll();
-    </script>
-    <script>
-      $(document).ready(function () {
-        netive.modal.show({
-          type: 'alert',
-          sMessage: '<strong>휴대폰 번호가 일치하지 않습니다.</strong>올바르게 기입되어 있는지<br>다시 확인해 주세요.',
-          sBtnConfirmTxt: '확인',
-          sClass: 'type-alert',
-          sConfirmCallback: function () {
-            console.log('close'); netive.modal.hideSystem();
-          }
+      ;(function (win, doc, jQuery, undefined) {
+	      'use strict';
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+          netive.common.init();
+
+          $('#agreeAllChk').uiCheckAll({
+            callback: function () {
+              console.log('callback');
+            }
+          });
+
+          netive.modal.show({
+            type: 'alert',
+            sMessage: '<strong>휴대폰 번호가 일치하지 않습니다.</strong>올바르게 기입되어 있는지<br>다시 확인해 주세요.',
+            sBtnConfirmTxt: '확인',
+            sClass: 'type-alert',
+            sConfirmCallback: function () {
+              console.log('close'); netive.modal.hideSystem();
+            }
+          });
         });
-      });
+ 
+      })(window, document, $);
     </script>
   </body>
 </html>

@@ -25,7 +25,13 @@
       </div>
     </div>
     <script>
-        $(document).ready(function () {
+      ;(function (win, doc, jQuery, undefined) {
+        'use strict';
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+          netive.common.init();
+          
           setTimeout(function () {
             //서비스 코드 만료 안내 alert
               netive.modal.show({
@@ -39,6 +45,8 @@
             });
           }, 1000);  
         });
+
+      })(window, document, $);
     </script>
   </body>
 </html>

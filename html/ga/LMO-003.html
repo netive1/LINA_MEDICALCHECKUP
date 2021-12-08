@@ -47,16 +47,21 @@
       ;(function (win, doc, $, undefined) {
         'use strict';
 
-        $('input[name="radioEmoji"]').change(function () {
+        document.addEventListener("DOMContentLoaded", function () {
 
-          $('input[name="radioEmoji"]').each(function () {
-            var checked = $(this).prop('checked');
+          netive.common.init();
 
-            if (checked) {
-              $('.form-item').css('opacity', '0.5');
-              $(this).parents('.form-item').css('opacity', '1');
-            }
+          $('input[name="radioEmoji"]').change(function () {
+            $('input[name="radioEmoji"]').each(function () {
+              var checked = $(this).prop('checked');
+
+              if (checked) {
+                $('.form-item').css('opacity', '0.5');
+                $(this).parents('.form-item').css('opacity', '1');
+              }
+            });
           });
+
         });
       })(window, document, jQuery);
     </script>

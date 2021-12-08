@@ -20,15 +20,26 @@
             <h1 class="h-1"><span class="name">라인하님</span><br><strong>상담 예약이 완료되었습니다.</strong></h1>
             <p class="fs-m">곧 설계사가 연락드릴테니<br>조금만 기다려주세요!</p>
           </div>
+          <div class="btn-wrap bottom">
+            <button type="button" onclick="location.href='#none'" class="btn-base-l primary">
+              <span>닫기</span>
+            </button>
+          </div>
         </main>
       </div>
-      <footer class="base-footer">
-        <div class="btn-wrap">
-          <button type="button" onclick="location.href='#none'" class="btn-base-l primary">
-            <span>닫기</span>
-          </button>
-        </div>
-      </footer>
     </div>
+
+  <script>
+    ;(function (win, doc, jQuery, undefined) {
+      'use strict';
+
+      document.addEventListener("DOMContentLoaded", function () {
+
+        netive.common.init();
+
+      });
+
+    })(window, document, $);
+  </script>
   </body>
 </html>
