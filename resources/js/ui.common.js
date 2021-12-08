@@ -3,6 +3,18 @@
 	'use strict';
 
 	netive.common = {
+		init: function(){
+            netive.common.pageMinHeight();
+		},
+		pageMinHeight: function(){
+			const elMain = document.querySelector('.base-main');
+
+			window.addEventListener('resize', act);
+			function act(){
+				elMain.style.minHeight = window.innerHeight + 'px';
+			}
+			act();
+		},
 		stepUp: function(){
 			const wrap = document.querySelector('html, body');
 			const stepHide = document.querySelector('.step-toggle[data-toggle="hide"]');

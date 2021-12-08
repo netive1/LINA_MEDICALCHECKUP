@@ -4,19 +4,20 @@
 /* [common] 스플래시 화면 */
 .base-splash {
 	width: 100%;
-	min-height: 100vh;
-	min-height: -webkit-fill-available;
+	/* min-height: 100vh; */
+	/* min-height: -webkit-fill-available; */
 	background: var(--white);
 }
 .base-splash .base-body {
 	height: 100%;
-	min-height: 100vh;
+	/* min-height: 100vh; */
 	padding: 0 2.4rem;
+	overflow: hidden;
 }
 .base-splash .base-body:after {
 	position: absolute;
 	right:-10rem;
-	bottom: 15.2rem;
+	bottom: 5rem;
 	opacity: 0;
 	display: block;
 	width: 15.4rem;
