@@ -7,11 +7,20 @@
             netive.common.pageMinHeight();
 		},
 		pageMinHeight: function(){
+			const el_html = doc.querySelector('html');
 			const elMain = document.querySelector('.base-main');
 
 			window.addEventListener('resize', act);
 			function act(){
-				elMain.style.minHeight = window.innerHeight + 'px';
+				const wh = window.innerHeight;
+				elMain.style.minHeight = wh + 'px';
+				document.querySelector('#size').textContent = wh;
+				console.log(wh, elMain.offsetHeight);
+				if (wh < elMain.offsetHeight) {
+					el_html.classList.add('is-scroll');
+				} else {
+					el_html.classList.remove('is-scroll');
+				}
 			}
 			act();
 		},
