@@ -796,11 +796,10 @@ a.ui-acco-btn {
     width: 100%;
     height: 100%;
     margin: -1px 0 0;
+    padding: 0 0 1.8rem;
     border-bottom: 1px solid var(--gray200);
-    /* border-top: 1px solid var(--gray200); */
-    padding: 0;
     background: var(--white);
-    min-height: 4.2rem;
+    min-height: 2.4rem;
 }
 
 .ui-acco-tit-wrap {
@@ -1218,7 +1217,7 @@ a.ui-acco-btn:after {
     max-width:100% !important;
 }
 .ui-modal.type-system .ui-modal-footer {
-    padding: 0 2.4rem 2.8rem;
+    padding: 0 2.4rem 2.6rem;
 }
 .ui-modal.type-system .ui-modal-wrap p {
     color: var(--gray800);
@@ -1233,6 +1232,7 @@ a.ui-acco-btn:after {
 }
 .ui-modal.type-system .ui-modal-wrap .btn-wrap [class*="btn-base"] {
     min-height: 6rem;
+    font-size: var(--text-m);
 }
 
 .ui-modal-header {
@@ -1248,11 +1248,12 @@ a.ui-acco-btn:after {
     color: var(--gray900);
    	font-size: var(--text-xl);
 	font-weight: 700;
+    letter-spacing: -0.07rem;
 }
 .ui-modal-body {
     position: relative;
     margin-top: 0;
-    padding: 1.4rem 2.4rem 3.6rem;
+    padding: 1.4rem 2.4rem 2.4rem;
     background: var(--white);
 }
 

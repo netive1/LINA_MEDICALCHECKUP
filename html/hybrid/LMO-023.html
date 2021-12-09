@@ -9,8 +9,7 @@
   <link rel="canonical" href="">
   <script src="../../resources/js/lib/jquery-3.6.0.min.js"></script>
   <script src="../../resources/js/ui.global.js"></script>
-  <script src="../../resources/js/ui.common.js"></script>
-  <script> window.MSInputMethodContext && document.documentMode && document.write('<script src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js"><\/script>');</script>
+  <script src="../../resources/js/ui.common.js"></script>  
 </head>
 <body>
   <div class="base-wrap">
@@ -26,7 +25,7 @@
               <div class="all-chked">
                 <div class="chkbox">
                   <input type="checkbox" id="allChk" name="chkbox">
-                  <label for="allChk" class="chkbox-label">[필수] 건강검진 연동 개인정보 동의</label>
+                  <label for="allChk" class="chkbox-label">[필수] 건강검진 연동을 위한 개인정보 동의</label>
                 </div>
               </div>
               <button type="button" class="ui-acco-btn">
@@ -89,17 +88,15 @@
             </div>
           </div>
         </div>
+        <div class="btn-wrap bottom">
+          <!-- button 공통 비활성화 시 'disabled' attr 추가 -->
+          <button type="button" onclick="location.href='../common/LMO-008.html'" class="btn-base-l primary" id="btnConfirm"
+            disabled>
+            <span>동의하고 시작하기</span>
+          </button>
+        </div>
       </main>
     </div>
-    <footer class="base-footer">
-      <div class="btn-wrap">
-        <!-- button 공통 비활성화 시 'disabled' attr 추가 -->
-        <button type="button" onclick="location.href='../common/LMO-008.html'" class="btn-base-l primary"
-          id="btnConfirm" disabled>
-          <span>동의하고 시작하기</span>
-        </button>
-      </div>
-    </footer>
   </div>
   <script>
     ;(function (win, doc, jQuery, undefined) {
