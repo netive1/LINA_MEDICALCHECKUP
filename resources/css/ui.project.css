@@ -195,7 +195,7 @@
 }
 .circle-progress .text span {
 	font-size: var(--text-xl);
-	font-weight: 700;
+	font-weight: 400;
 }
 .emoji{
 	position: absolute;
