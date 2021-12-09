@@ -2805,8 +2805,8 @@ if (!Object.keys){
 			let mg = option.mg !== undefined ? option.mg : 20;
             let id = option.id;
             let remove = option.remove !== undefined ? option.remove : false;
-            console.log(endfocus ,  document.activeElement);
-            endfocus = endfocus === false ? document.activeElement : endfocus;
+
+			endfocus = endfocus === false ? document.activeElement : endfocus;
 			const scr_t = doc.documentElement.scrollTop;
 			let timer;
 			
@@ -2978,13 +2978,15 @@ if (!Object.keys){
 				elModalCancel && elModalCancel.addEventListener('click', sCancelCallback);
 			
 				//transition end event
-				elModalWrap.addEventListener('transitionend', modalTrEnd);
-				function modalTrEnd(){
-					if (!!full) {
-						elModal.classList.add('fix-header');
-						elModalBody.style.paddingTop = (headerH + 10)  + 'px';
-					}
-				}
+				//transitionend 모바일디바이스에서만 감지...
+				// elModalWrap.addEventListener('transitionend', modalTrEnd);
+				// function modalTrEnd(){
+				// 	console.log(11111);
+				// 	if (!!full) {
+				// 		elModal.classList.add('fix-header');
+				// 		elModalBody.style.paddingTop = (headerH + 10)  + 'px';
+				// 	}
+				// }
 
 				//resize event
 				let timerResize;
