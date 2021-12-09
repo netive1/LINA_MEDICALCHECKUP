@@ -29,13 +29,14 @@
 }
 @keyframes slideRightIn {
     0% {
-        right: -10rem;
-        opacity: 0;
+			bottom: 6.9rem;
+			right: -10rem;
+			opacity: 0;
     }
-
     100% {
-        right: 4rem;
-        opacity: 1;
+			bottom: 6.9rem;
+			right: 4rem;
+			opacity: 1;
     }
 }
 .base-splash .logo img {
@@ -73,8 +74,8 @@
 	position: relative;
 	display: flex;
 	align-items: center;
-	width: calc(100% - 2rem);
-	min-height: 4.2rem;
+	width: calc(100% - 2.5rem);
+	height: 100%;
 	font-size: var(--text-s);
 	font-weight: 500;
 	z-index: 2;
@@ -91,6 +92,7 @@
 .ui-chkgroup .all-chked .chkbox {
 	display: block;
 	width: 100%;
+	min-height: 2.4rem;
 }
 .ui-chkgroup .chklist ul {
 	margin-top: 1rem;
@@ -129,6 +131,7 @@
 	text-align: center;
 	padding: .3rem 1.2rem .4rem;
 	font-size: var(--text-xs);
+	font-weight: 500;
 	background-color: var(--gray100);
 	border-radius: .4rem;
 }
@@ -182,16 +185,17 @@
 	left: 50%;
 	bottom: -6rem;
 	transform: translateX(-50%);
-	font-family: 'Roboto';
 	color: var(--gray900);
+	font-family: 'Roboto';
+	font-weight: 700;
 }
 .circle-progress .text .percent {
-	font-family: 'Roboto';
 	font-size: 3.2rem;
 	font-weight: 700;
 }
 .circle-progress .text span {
 	font-size: var(--text-xl);
+	font-weight: 700;
 }
 .emoji{
 	position: absolute;
@@ -215,8 +219,11 @@
 }
 /* Entry_3 정보 연동 */
 .bg-chkup {
-	background: url('../img/bg-chkup-1.png') center bottom 18.9rem no-repeat;
+	background: url('../img/bg-chkup.png') center bottom 18.9rem no-repeat;
 	background-size: 15.8rem 12.8rem;
+}
+.bg-chkup .logo-txt .highlight {
+	font-weight: 500 !important;
 }
 .bg-chkup .logo-txt  + .tit-wrap {
 	margin-top: 2rem;
@@ -256,7 +263,7 @@
 /* 모바일 GA hybrid */
 /* 상담 예약 완료 */
 .bg-complete {
-	background: url('../img/bg-complete.png') center no-repeat;
+	background: url('../img/bg-complete.png') center bottom 22rem no-repeat;
 	background-size: 15.2rem 13.4rem;
 }
 
@@ -313,7 +320,7 @@
 	min-width: 80%;
 }
 .ui-modal .bul-wrap + .btn-wrap {
-	margin-top: 3.2rem;
+	margin-top: 2.8rem;
 }
 .ui-modal .form-wrap + .bul-wrap {
 	margin-top: 1.6rem;
@@ -353,24 +360,27 @@
 .step-toggle.hide{display: none;}
 .step-toggle.show{display: block;}
 .ui-acco {
-	margin-bottom: 4.8rem;
+	padding-top: .3rem;
+	margin-bottom: 3.2rem;
 }
-.ui-acco-btn {
+.ui-chkgroup .ui-acco-btn {
 	position: absolute;
 	padding: 0;
-	min-height: 4.2rem;
+	width: 2.5rem;
+	min-height: 2.4rem;
 }
-.ui-acco-btn:after {
+.ui-chkgroup .ui-acco-btn:after {
 	top: 0;
 	right: 0;
 	width: 2rem;
-	height: 4.2rem;
+	height: 2.4rem;
 	margin-top: 0;
 	background: url(../img/common/arr-bottom.svg) center no-repeat;
 	background-size: 1.2rem;
 	content: '';
 }
-.ui-acco-btn[aria-expanded="true"]:after {
+.ui-chkgroup .ui-acco-btn[aria-expanded="true"]:after {
+	top: -.2rem;
 	background-image: url(../img/common/arr-top.svg);
 	content: '';
 }
