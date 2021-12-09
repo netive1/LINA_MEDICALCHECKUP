@@ -7,9 +7,45 @@
 		<title>라이나생명 검진분석 서비스</title>
 		<link rel="stylesheet" href="../../resources/css/ui.base.css">
 		<link rel="canonical" href="">
-		<script src="../../resources/js/lib/jquery-3.6.0.min.js"></script>
-		<script src="../../resources/js/ui.common.js"></script>
+    <script src="../../resources/js/lib/jquery-3.6.0.min.js"></script>
+    <script src="../../resources/js/ui.global.js"></script>
+    <script src="../../resources/js/ui.common.js"></script>    
 	</head>
 	<body>
+    <div class="base-wrap">
+			<header class="base-header bg">
+				<div class="header-wrap">
+					<div class="fx-wrap modal-tit" data-align="center" data-valign="center">
+						<h1 class="logo-xcarelink"><img src="../../resources/img/common/logo-xcarelink.svg" alt=""></h1>				
+					</div>
+				</div>
+			</header>
+      <div class="base-body">
+        <main class="base-main bg-chkup">
+					<div class="logo-txt ta-c"><span class="fs-s highlight">라이나생명 건강검진 분석 서비스</span></div>
+					<div class="tit-wrap ta-c">
+            <h2 class="h-1">건강검진 분석으로<br><strong>생체나이와<br>질병 발생위험도를<br>알아볼게요!</strong></h2>
+            <p class="fs-m">그 전에 건강 검진 분석을 위해<br>정보 연동에 동의해 주세요!</p>
+          </div>
+          <div class="btn-wrap bottom">
+            <button type="button" onclick="location.href='LMO-007.html'" class="btn-base-l primary">
+              <span>정보 연동하고 시작하기</span>
+            </button>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script>
+      ;(function (win, doc, jQuery, undefined) {
+        'use strict';
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+          netive.common.init();
+
+        });
+
+      })(window, document, $);
+    </script>
   </body>
 </html>

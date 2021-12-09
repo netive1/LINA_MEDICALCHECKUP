@@ -9,8 +9,7 @@
     <link rel="canonical" href="">
     <script src="../../resources/js/lib/jquery-3.6.0.min.js"></script>
     <script src="../../resources/js/ui.global.js"></script>
-    <script src="../../resources/js/ui.common.js"></script>
-    <script> window.MSInputMethodContext && document.documentMode && document.write('<script src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js"><\/script>');</script>
+    <script src="../../resources/js/ui.common.js"></script>    
   </head>
   <body>
     <div class="base-wrap">
@@ -25,68 +24,79 @@
       <div class="base-body">
         <main class="base-main">
           <!-- 약관 동의 -->
-          <div id="agreeAllChk" class="ui-chkgroup mgt-m">
-            <div class="all-chked">
-              <div class="chkbox">
-                <input type="checkbox" id="allChk" name="chkbox">
-                <label for="allChk" class="chkbox-label">[필수] 휴대폰 인증을 위한 개인정보 동의</label>
+          <div id="accoLMO013" class="ui-acco">
+            <div id="agreeAllChk" class="ui-acco-wrap ui-chkgroup">
+              <div class="ui-acco-tit">
+                <div class="all-chked">
+                  <div class="chkbox">
+                    <input type="checkbox" id="allChk" name="chkbox" checked>
+                    <label for="allChk" class="chkbox-label">[필수] 휴대폰 인증을 위한 개인정보 동의</label>
+                  </div>
+                </div>
+                <button type="button" class="ui-acco-btn">
+                  <span class="hidden">더보기</span>
+                </button>
               </div>
-              <button type="button" class="btn-more"><span class="hidden">더보기</span></button>
-            </div>
-            <div class="chklist" style="display: none;">
-              <ul>
-                <li>
-                  <div class="chkbox">
-                    <input type="checkbox" id="chk1" name="chkbox">
-                    <label for="chk1" class="chkbox-label">건강정보(민감정보) 수집/이용 동의</label>
+              <div class="ui-acco-pnl">
+                <div class="ui-acco-pnl-wrap">
+                  <div class="chklist">
+                    <ul>
+                      <li>
+                        <div class="chkbox">
+                          <input type="checkbox" id="chk1" name="chkbox" disabled checked>
+                          <label for="chk1" class="chkbox-label">건강정보(민감정보) 수집/이용 동의</label>
+                        </div>
+                        <button type="button" class="ui-btn"
+                          onclick="netive.modal.show({ id:'LMO007', src:'../common/LMO-POPUP.html', full: true});">
+                          <span>보기</span>
+                        </button>
+                      </li>
+                      <li>
+                        <div class="chkbox">
+                          <input type="checkbox" id="chk2" name="chkbox" disabled checked>
+                          <label for="chk2" class="chkbox-label">개인정보 제3자 제공 동의</label>
+                        </div>
+                        <button type="button" class="ui-btn">
+                          <span>보기</span>
+                        </button>
+                      </li>
+                      <li>
+                        <div class="chkbox">
+                          <input type="checkbox" id="chk3" name="chkbox" disabled checked>
+                          <label for="chk3" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
+                        </div>
+                        <button type="button" class="ui-btn">
+                          <span>보기</span>
+                        </button>
+                      </li>
+                      <li>
+                        <div class="chkbox">
+                          <input type="checkbox" id="chk4" name="chkbox" disabled checked>
+                          <label for="chk4" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
+                        </div>
+                        <button type="button" class="ui-btn">
+                          <span>보기</span>
+                        </button>
+                      </li>
+                      <li>
+                        <div class="chkbox">
+                          <input type="checkbox" id="chk5" name="chkbox" disabled checked>
+                          <label for="chk5" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
+                        </div>
+                        <button type="button" class="ui-btn">
+                          <span>보기</span>
+                        </button>
+                      </li>
+                    </ul>
                   </div>
-                  <button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
-                    <span>보기</span>
-                  </button>
-                </li>
-                <li>
-                  <div class="chkbox">
-                    <input type="checkbox" id="chk2" name="chkbox">
-                    <label for="chk2" class="chkbox-label">개인정보 제3자 제공 동의</label>
-                  </div>
-                  <button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
-                    <span>보기</span>
-                  </button>
-                </li>
-                <li>
-                  <div class="chkbox">
-                    <input type="checkbox" id="chk3" name="chkbox">
-                    <label for="chk3" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
-                  </div>
-                  <button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
-                    <span>보기</span>
-                  </button>
-                </li>
-                <li>
-                  <div class="chkbox">
-                    <input type="checkbox" id="chk4" name="chkbox">
-                    <label for="chk4" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
-                  </div>
-                  <button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
-                    <span>보기</span>
-                  </button>
-                </li>
-                <li>
-                  <div class="chkbox">
-                    <input type="checkbox" id="chk5" name="chkbox">
-                    <label for="chk5" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
-                  </div>
-                  <button type="button" class="ui-btn" onclick="location.href='../ga/LMO-007.html'">
-                    <span>보기</span>
-                  </button>
-                </li>
-              </ul>
+                </div>
+              </div>
             </div>
           </div>
           <!-- //약관 동의 -->
           <!-- 입력 필드 -->
           <div class="scroll-target">
-            <div class="form-wrap mgt-m">
+            <div class="form-wrap">
                 <div class="form-label">
                   <label for="input1" class="form-item-label">이름</label>
                 </div>
@@ -173,7 +183,7 @@
                 </div>
                 <div class="fx-item ui-form" data-flex="1-1-1">
                   <div class="btn-wrap">
-                    <button type="button" class="btn-base-l fs-m">
+                    <button type="button" class="btn-base-l btn-send">
                       <span>인증번호 전송</span>
                     </button>
                   </div>
@@ -194,7 +204,7 @@
                 </div>
                 <div class="fx-item ui-form" data-flex="1-1-1">
                   <div class="btn-wrap">
-                    <button type="button" class="btn-base-l fs-m">
+                    <button type="button" class="btn-base-l btn-confirm">
                       <span>확인</span>
                     </button>
                   </div>
@@ -219,23 +229,53 @@
       </div>
     </div>
     <script>
-      $('#agreeAllChk').uiCheckAll();
+      ;(function (win, doc, jQuery, undefined) {
+        'use strict';
 
-      //인증번호 필드 초기화
-      $('.btn-remove').click(function () {
-        $(this).prev().val('');
-        $(this).parent().addClass('empty');
-        $('.btn-remove').fadeOut();
-      });
+        document.addEventListener("DOMContentLoaded", function () {
 
-      $('.inp-validate').keyup(function () {
-        $('.btn-remove').fadeIn();
-        if ($(this).val() == '') {
-          $(this).parent().addClass('empty');
-        } else {
-          $(this).parent().removeClass('empty');
-        }
-      });
+          netive.common.init();
+        
+          $('#agreeAllChk').uiCheckAll({
+            callback: function (v) {
+              console.log(v);
+            }
+          });
+
+          netive.accordion.init({
+            id: 'accoLMO013',
+            current: null,
+            callback: function (v) {
+              console.log(v);
+            }
+          });
+
+          //인증번호 전송
+          $('.btn-send').click(function () {
+            $('.validate').addClass('show');
+
+            $('.btn-confirm').click(function () {
+              $('.btn-send').html('인증번호 재전송');
+            })
+          });
+          //인증번호 필드 초기화
+          $('.btn-remove').click(function () {
+            $(this).prev().val('');
+            $(this).parent().addClass('empty');
+            $('.btn-remove').fadeOut();
+          });
+          $('.inp-validate').keyup(function () {
+            $('.btn-remove').fadeIn();
+            if ($(this).val() == '') {
+              $(this).parent().addClass('empty');
+            } else {
+              $(this).parent().removeClass('empty');
+            }
+          });
+
+        });
+
+      })(window, document, $);
     </script>
   </body>
 </html>

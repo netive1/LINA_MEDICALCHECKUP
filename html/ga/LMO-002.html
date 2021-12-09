@@ -9,7 +9,7 @@
 		<link rel="canonical" href="">
     <script src="../../resources/js/lib/jquery-3.6.0.min.js"></script>
     <script src="../../resources/js/ui.global.js"></script>
-    <script> window.MSInputMethodContext && document.documentMode && document.write('<script src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js"><\/script>');</script>
+    <script src="../../resources/js/ui.common.js"></script>    
 	</head>
 	<body>
     <div class="base-wrap">
@@ -20,7 +20,7 @@
             <h1 class="h-1">지금 스스로의<br><strong>건강상태를<br>어떻게 생각하세요?</strong></h1>
             <p class="fs-m">사실 고민할 필요도 없이<br>건강하다고 생각해야 가장 좋겠지요?</p>
           </div>
-          <div class="form-wrap">
+          <div class="form-wrap state-wrap">
             <div class="form-item">
               <div class="radio radio-type-emoji emoji1">
                 <input type="radio" id="radio-emoji1" name="radioEmoji" checked="">
@@ -40,28 +40,35 @@
               </div>
             </div>
           </div>
+          <div class="fx-wrap skip" data-align="right" data-valign="center">
+            <a href="./LMO-004.html" class="btn-base text highlight">
+              <span>건너뛰기</span>
+            </a>
+          </div>
         </main>
       </div>
-      <footer class="base-footer">
-        <div class="fx-wrap" data-align="right" data-valign="center">
-          <a href="./LMO-004.html" class="btn-base text btn-skip2">
-            <span>건너뛰기</span>
-          </a>
-        </div>
-      </footer>
     </div>
     <script>
-      $('input[name="radioEmoji"]').change(function () {
+      ;(function (win, doc, $, undefined) {
+        'use strict';
 
-        $('input[name="radioEmoji"]').each(function () {
-          var checked = $(this).prop('checked');
+        document.addEventListener("DOMContentLoaded", function () {
 
-          if (checked) {
-            $('.form-item').css('opacity', '0.5');
-            $(this).parents('.form-item').css('opacity', '1');
-          }
+          netive.common.init();
+
+          $('input[name="radioEmoji"]').change(function () {
+            $('input[name="radioEmoji"]').each(function () {
+              var checked = $(this).prop('checked');
+
+              if (checked) {
+                $('.form-item').css('opacity', '0.5');
+                $(this).parents('.form-item').css('opacity', '1');
+              }
+            });
+          });
+
         });
-      });
+      })(window, document, jQuery);
     </script>
   </body>
 </html>

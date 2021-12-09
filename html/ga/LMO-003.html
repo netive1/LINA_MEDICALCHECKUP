@@ -9,7 +9,7 @@
     <link rel="canonical" href="">
     <script src="../../resources/js/lib/jquery-3.6.0.min.js"></script>
     <script src="../../resources/js/ui.global.js"></script>
-    <script> window.MSInputMethodContext && document.documentMode && document.write('<script src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js"><\/script>');</script>
+    <script src="../../resources/js/ui.common.js"></script>    
 	</head>
 	<body>
     <div class="base-wrap">
@@ -20,7 +20,7 @@
             <h1 class="h-1">미래에 예상 가능한<br><strong>질병이 있다면<br>미리 준비하시겠어요?</strong></h1>
             <p class="fs-m">물론, 너무 심각하게<br>생각할 필요는 없어요!</p>
           </div>
-          <div class="form-wrap">
+          <div class="form-wrap state-wrap">
             <div class="form-item">
               <div class="radio radio-type-emoji emoji4">
                 <input type="radio" id="radio-emoji1" name="radioEmoji">
@@ -34,28 +34,35 @@
               </div>
             </div>
           </div>
+          <div class="fx-wrap skip" data-align="right" data-valign="center">
+            <a href="./LMO-004.html" class="btn-base text highlight">
+              <span>건너뛰기</span>
+            </a>
+          </div>
         </main>
       </div>
-      <footer class="base-footer">
-        <div class="fx-wrap" data-align="right" data-valign="center">
-          <a href="./LMO-004.html" class="btn-base text btn-skip2">
-            <span>건너뛰기</span>
-          </a>
-        </div>
-      </footer>
     </div>
     <script>
-      $('input[name="radioEmoji"]').change(function () {
+      ;(function (win, doc, $, undefined) {
+        'use strict';
 
-          $('input[name="radioEmoji"]').each(function () {        
-            var checked = $(this).prop('checked');  
+        document.addEventListener("DOMContentLoaded", function () {
 
-            if (checked) {
-              $('.form-item').css('opacity', '0.5');
-              $(this).parents('.form-item').css('opacity','1');
-            } 
+          netive.common.init();
+
+          $('input[name="radioEmoji"]').change(function () {
+            $('input[name="radioEmoji"]').each(function () {
+              var checked = $(this).prop('checked');
+
+              if (checked) {
+                $('.form-item').css('opacity', '0.5');
+                $(this).parents('.form-item').css('opacity', '1');
+              }
+            });
           });
-      });
+
+        });
+      })(window, document, jQuery);
     </script>
   </body>
 </html>

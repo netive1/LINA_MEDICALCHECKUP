@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=yes">
+  <title>라이나생명 검진분석 서비스</title>
+  <link rel="stylesheet" href="../../resources/css/ui.base.css">
+  <link rel="canonical" href="">
+  <script src="../../resources/js/lib/jquery-3.6.0.min.js"></script>
+  <script src="../../resources/js/ui.global.js"></script>
+  <script src="../../resources/js/ui.common.js"></script>  
+</head>
+<body>
+  <div class="base-wrap result">
+    <div class="base-body">
+      <main class="base-main">
+        <div class="tit-wrap">
+          <h1 class="h-1">
+            <strong><span class="name">라인하</span>님<br>건겅검진 분석 결과</strong>
+            <img src="../../resources/img/img-result-head.png" alt="">
+          </h1>
+          <p class="fs-m">2021년 건강검진 기준,<br>국민건강보험공단의 정보를<br>기반으로 분석되었습니다.</p>
+        </div>
+        <div class="content-area">
+          <div class="box-base">
+            <dl>
+              <dt class="h-3">나의 건강 나이</dt>
+              <dd>
+                <div class="progress-wrap">
+                  <div class="fx-wrap" data-align="justify" data-valign="center">
+                    <span class="txt">실제 나이</span>
+                    <div class="progress-cont progress c1" data-progress-percent="40">
+                      <div class="progress-bar progress"></div>
+                    </div>
+                    <span class="age">40세</span>
+                  </div>
+                </div>
+              </dd>
+              <dd>
+                <div class="progress-wrap">
+                  <div class="fx-wrap" data-align="justify" data-valign="center">
+                    <span class="txt">생체 나이</span>
+                    <div class="progress-cont progress c2" data-progress-percent="80">
+                      <div class="progress-bar progress"></div>
+                    </div>
+                    <span class="age">60세</span>
+                  </div>
+                </div>
+              </dd>
+              <dd>
+                <div class="fx-wrap" data-align="justify" data-valign="center">
+                  <span class="txt">노화속도</span>
+                  <span class="state">위험</span>
+                </div>
+              </dd>
+            </dl>
+            <hr class="hr-cont">
+            <div class="fx-wrap result-txt" data-align="start" data-valign="center">
+              <img src="../../resources/img/ico-result-1.png" alt="" class="img-s">
+              <p>생체 나이가 조금 높게 나왔어요.<br>건강을 조금 신경 써 볼까요?</p>
+            </div>
+          </div>
+          <h2 class="h-3">생체나이에 따른 예상의료비</h2>
+          <div class="box-base">
+            <div class="fx-wrap" data-align="justify" data-valign="center">
+              <div class="ta-c">
+                <div class="img-wrap"><img src="../../resources/img/img-result-obj-1.png" alt="" class="img-m"></div>
+                <span class="fs-xs">연간 의료비</span>
+                <strong class="fs-s primary-color">120,000원</strong>
+              </div>
+              <div class="ta-c">
+                <div class="img-wrap"><img src="../../resources/img/img-result-obj-2.png" alt="" class="img-m"></div>
+                <span class="fs-xs">연간 의료비 증가액</span>
+                <strong class="fs-s primary-color">500,000원</strong>
+              </div>
+              <div class="ta-c">
+                <div class="img-wrap"><img src="../../resources/img/img-result-obj-3.png" alt="" class="img-m"></div>
+                <span class="fs-xs">외래/통원 일수</span>
+                <strong class="fs-s primary-color">10일 / 4일</strong>
+              </div>
+            </div>
+          </div>
+          <div class="from-info">
+            <div class="bul-info" aria-live="polite">
+              <div>예상의료비는 생체나이 증감에 따라 향후 질병이<br>
+                발생할 확률에 기반해 제공하는 예측치입니다.</div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script>
+    ;(function (win, doc, jQuery, undefined) {
+      'use strict';
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+          netive.common.init();
+          
+          $('.progress-wrap .progress').uiProgressbar();
+
+      });
+
+    })(window, document, $);
+  </script>
+</body>
+</html>

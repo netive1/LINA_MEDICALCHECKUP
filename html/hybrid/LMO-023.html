@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=yes">
+  <title>라이나생명 검진분석 서비스</title>
+  <link rel="stylesheet" href="../../resources/css/ui.base.css">
+  <link rel="canonical" href="">
+  <script src="../../resources/js/lib/jquery-3.6.0.min.js"></script>
+  <script src="../../resources/js/ui.global.js"></script>
+  <script src="../../resources/js/ui.common.js"></script>  
+</head>
+<body>
+  <div class="base-wrap">
+    <div class="base-body">
+      <main class="base-main">
+        <div class="tit-wrap">
+          <h1 class="h-1"><strong>건강검진 정보를</strong><br>연동해주세요</h1>
+          <p class="fs-m">건강검진 결과 및 건강 분석 서비스 이용을 위한<br>약관에 동의해 주세요.</p>
+        </div>
+        <div id="accoLMO023" class="ui-acco">
+          <div id="agreeAllChk" class="ui-acco-wrap ui-chkgroup">
+            <div class="ui-acco-tit">
+              <div class="all-chked">
+                <div class="chkbox">
+                  <input type="checkbox" id="allChk" name="chkbox">
+                  <label for="allChk" class="chkbox-label">[필수] 건강검진 연동을 위한 개인정보 동의</label>
+                </div>
+              </div>
+              <button type="button" class="ui-acco-btn">
+                <span class="hidden">더보기</span>
+              </button>
+            </div>
+            <div class="ui-acco-pnl">
+              <div class="ui-acco-pnl-wrap">
+                <div class="chklist">
+                  <ul>
+                    <li>
+                      <div class="chkbox">
+                        <input type="checkbox" id="chk1" name="chkbox" disabled>
+                        <label for="chk1" class="chkbox-label">건강정보(민감정보) 수집/이용 동의</label>
+                      </div>
+                      <button type="button" class="ui-btn"
+                        onclick="netive.modal.show({ id:'LMO007', src:'../common/LMO-POPUP.html', full: true});">
+                        <span>보기</span>
+                      </button>
+                    </li>
+                    <li>
+                      <div class="chkbox">
+                        <input type="checkbox" id="chk2" name="chkbox" disabled>
+                        <label for="chk2" class="chkbox-label">개인정보 제3자 제공 동의</label>
+                      </div>
+                      <button type="button" class="ui-btn">
+                        <span>보기</span>
+                      </button>
+                    </li>
+                    <li>
+                      <div class="chkbox">
+                        <input type="checkbox" id="chk3" name="chkbox" disabled>
+                        <label for="chk3" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
+                      </div>
+                      <button type="button" class="ui-btn">
+                        <span>보기</span>
+                      </button>
+                    </li>
+                    <li>
+                      <div class="chkbox">
+                        <input type="checkbox" id="chk4" name="chkbox" disabled>
+                        <label for="chk4" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
+                      </div>
+                      <button type="button" class="ui-btn">
+                        <span>보기</span>
+                      </button>
+                    </li>
+                    <li>
+                      <div class="chkbox">
+                        <input type="checkbox" id="chk5" name="chkbox" disabled>
+                        <label for="chk5" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
+                      </div>
+                      <button type="button" class="ui-btn">
+                        <span>보기</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn-wrap bottom">
+          <!-- button 공통 비활성화 시 'disabled' attr 추가 -->
+          <button type="button" onclick="location.href='../common/LMO-008.html'" class="btn-base-l primary" id="btnConfirm"
+            disabled>
+            <span>동의하고 시작하기</span>
+          </button>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script>
+    ;(function (win, doc, jQuery, undefined) {
+      'use strict';
+
+      document.addEventListener("DOMContentLoaded", function () {
+
+        netive.common.init();
+
+        $('#agreeAllChk').uiCheckAll({
+          callback: function () {
+            $('#btnConfirm').prop('disabled', false);
+            console.log('callback');
+            // allchk시 아코디언 닫힘
+            // netive.accordion.toggle({
+            //   id: 'accoLMO023',
+            //   current: [0],
+            //   state: 'close'
+            // });
+          },
+          callbackCancel: function () {
+            $('#btnConfirm').prop('disabled', true);
+            // allchk시 아코디언 열림
+            //  netive.accordion.toggle({
+            //   id: 'accoLMO023',
+            //   current: [0],
+            //   state: 'open'
+            // });
+          }
+        });
+
+        netive.accordion.init({
+          id: 'accoLMO023',
+          current: [0],
+          callback: function (v) {
+            console.log(v);
+          }
+        });
+
+      });
+
+    })(window, document, $);
+  </script>
+</body>
+</html>

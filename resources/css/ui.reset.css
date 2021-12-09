@@ -26,7 +26,7 @@ body {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	-webkit-tap-highlight-color: transparent;
 	word-break: keep-all;
-	letter-spacing: -0.044rem;
+	letter-spacing: -0.05rem;
 }
 
 div, span, p, strong, b, em, i, a, address,

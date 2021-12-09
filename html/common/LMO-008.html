@@ -9,14 +9,14 @@
     <link rel="canonical" href="">
     <script src="../../resources/js/lib/jquery-3.6.0.min.js"></script>
     <script src="../../resources/js/ui.global.js"></script>
-    <script> window.MSInputMethodContext && document.documentMode && document.write('<script src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js"><\/script>');</script>
+    <script src="../../resources/js/ui.common.js"></script>    
   </head>
   <body>
     <div class="base-wrap">
       <div class="base-body">
         <main class="base-main">
           <div class="tit-wrap">
-            <h1 class="h-1"><strong>본인인증 방법을<br>선택해주세요.</strong></h1>
+            <h1 class="h-1"><strong>본인인증 방법을</strong><br>선택해주세요</h1>
             <p class="fs-m">본인이 맞는지 확인하는 절차입니다.<br>한 번만 진행하니 걱정마세요.</p>
           </div>
           <div class="btn-area">
@@ -34,5 +34,21 @@
         </main>
       </div>
     </div>
+
+    <script>
+      ; (function (win, doc, jQuery, undefined) {
+        'use strict';
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+          netive.common.init();
+          
+          $('.btn-base-link').click(function () {
+            $(this).toggleClass('on');
+          });
+        });
+
+      })(window, document, $);
+    </script>
   </body>
 </html>
