@@ -195,7 +195,7 @@
 }
 .circle-progress .text span {
 	font-size: var(--text-xl);
-	font-weight: 700;
+	font-weight: 400;
 }
 .emoji{
 	position: absolute;
@@ -235,7 +235,7 @@
 	background: var(--primary);
 }
 .base-wrap.result .tit-wrap {
-	padding-bottom: 10rem;
+	padding-bottom: 7.8rem;
 	color: var(--white);
 }
 .base-wrap.result .tit-wrap .h-1 {
@@ -253,11 +253,15 @@
 	padding: 0 2.4rem 9.4rem;
 	background: var(--contbg);
 }
-.base-wrap.result .content-area .box-base:nth-child(1) {
-	top: -10rem;
+.base-wrap.result .content-area .box-area {
+	position: relative;
+	top: -6.8rem;
 }
 .base-wrap.result .box-base .ta-c span {
 	font-weight: 500;
+}
+.base-wrap.result .box-base + h2 {
+	margin: 3.6rem 0 1.4rem;
 }
 
 /* 모바일 GA hybrid */

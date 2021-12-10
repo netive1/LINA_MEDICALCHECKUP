@@ -199,8 +199,9 @@ p {
 	font-weight: 500;
 }
 .h-4 {
+	color: var(--gray900);
 	font-size: var(--text-m);
-	font-weight: 700;
+	font-weight: 500;
 }
 [class*="h-"].m {
 	font-weight: 500;
@@ -292,43 +293,31 @@ input[type="checkbox"] {
 [class*="radio-type-"] + [class*="radio-type-"] {
 	margin-left: 1.2rem;
 }
-.radio.radio-type-txt {
-	width: 100%;
+
+.radio-type-txt {
+	width: calc(100% - .6rem)
 }
-.radio.radio-type-txt input[type=radio] + .radio-label,
-.radio.radio-type-img input[type=radio] + .radio-label {
-	display: inline-block;
-	position: relative;
-	width: 100%;
-	height: 100%;
+.radio-type-txt > .radio {
+  display: none;
 }
-.radio.radio-type-txt input[type=radio] + .radio-label:before,
-.radio.radio-type-img input[type=radio] + .radio-label:before {
+.radio-type-txt > .radio-txt {
+  display: inline-block;
 	width: 100%;
-	min-height: 58px;
-	color: var(--gray200);
-	background: var(--white);
-	border: 1px solid var(--button-line);
-	border-radius: 1rem;
-	text-align: center;
-	transition: all 0.25s ease;
-}
-.radio.radio-type-txt input[type=radio] + .radio-label > span,
-.radio.radio-type-img input[type=radio] + .radio-label > span {
-	position: absolute;
-	top: 50%;
-	left: 50%;
+  margin-right: .6rem;
+  padding: 1.6rem 0 1.5rem;
+  border: solid 1px var(--button-line);
+  border-radius: 1rem;
 	color: var(--gray200);
 	font-size: var(--text-m);
 	font-weight: 700;
-	transform: translate(-50%, -50%);
+  background: var(--white);
+	text-align: center;
+  cursor: pointer;
 }
-.radio.radio-type-txt input[type=radio]:checked + .radio-label:before,
-.radio.radio-type-img input[type=radio]:checked + .radio-label:before {
-	border: 1px solid var(--primary);
-}
-.radio.radio-type-txt input[type=radio]:checked + .radio-label > span {
+.radio-type-txt .radio:checked ~ .radio-txt {
+	
 	color: var(--primary);
+  border-color: var(--primary);
 }
 
 /* radio type(img) */
@@ -759,43 +748,77 @@ textarea.inp-base {
 	border-radius: 2rem;
 	box-shadow: 0 0.4rem 1.8rem rgba(195, 195, 195, 0.25);
 }
-.box-base dl dt {
-	margin-bottom: 1.2rem;
-}
-.box-base dl dd {
-	font-size: var(--text-s);
-}
-.box-base dl dd span {
-	color: var(--gray800);
-}
-.box-base dl dd + dd {
-	margin-top: 1rem;
-}
-.box-base .progress-cont {
-	min-width: 17.2rem;
-}
-.box-base .fx-wrap .txt {
-	min-width: 5.3rem;
-	font-size: var(--text-xs);
-	font-weight: 500;
-}
-.box-base .fx-wrap .age {
-	color: var(--gray800);
-	font-size: var(--text-xs);
-}
-.box-base .fx-wrap .state {
-	color: var(--error);
-	font-size: var(--text-xs);
-}
-.box-base .result-txt {
-	font-size: var(--text-xs);
-}
-.box-base .result-txt img {
-	margin-right: 1.1rem;
-}
 .box-base + .from-info {
 	padding-left: .6rem;
 	margin-top: 2rem;
+}
+.box-base.info dl dt {
+	margin-bottom: 1.2rem;
+}
+.box-base.info dl dd {
+	font-size: var(--text-s);
+}
+.box-base.info dl dd span {
+	color: var(--gray800);
+}
+.box-base.info dl dd + dd {
+	margin-top: 1rem;
+}
+.box-base.info .progress-wrap .progress-cont {
+	min-width: 17.2rem;
+}
+.box-base.info .fx-wrap .txt {
+	min-width: 5.4rem;
+	color: var(--gray900);
+	font-size: var(--text-xs);
+	font-weight: 500;
+}
+.box-base.info .progress-wrap .fx-wrap .age {
+	color: var(--gray800);
+	font-size: var(--text-xs);
+}
+.box-base.info .fx-wrap .state {
+	width: 4rem;
+	padding: .2rem 0;
+	color: var(--white);
+	font-size: var(--text-xs);
+	font-weight: 500;
+	text-align: center;
+	background: #4792EF;
+	border-radius: .5rem;
+}
+.box-base.info .fx-wrap .state.state-1 {
+	background-color: #4792EF;
+}
+.box-base.info .fx-wrap .state.state-2 {
+	background-color: #01D4E5;
+}
+.box-base.info .fx-wrap .state.state-3 {
+	background-color: #A1DE52;
+}
+.box-base.info .fx-wrap .state.state-4 {
+	background-color: #FFD600;
+}
+.box-base.info .fx-wrap .state.state-5 {
+	background-color: #FF8A01;
+}
+.box-base.info .fx-wrap .state.state-6 {
+	background-color: #FF6262;
+}
+.box-base.info .result-txt {
+	font-size: var(--text-xs);
+}
+.box-base.info .result-txt img {
+	margin-right: 1.1rem;
+}
+.box-base.list .fx-wrap img {
+	margin-right: 1.6rem;
+}
+.box-base.list .fx-wrap .txt-wrap span {
+	display: block;
+}
+.box-base.list li + li {
+	margin-top: 2.4rem;
 }
 
 /*** BULLET ***/
@@ -1282,7 +1305,7 @@ progress {
 	height: auto;
 }
 .img-m {
-	width: 5.8rem;
+	width: 6.4rem;
 	height: auto;
 }
 .img-s {

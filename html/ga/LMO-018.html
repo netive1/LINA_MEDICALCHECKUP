@@ -23,68 +23,139 @@
           <p class="fs-m">2021년 건강검진 기준,<br>국민건강보험공단의 정보를<br>기반으로 분석되었습니다.</p>
         </div>
         <div class="content-area">
-          <div class="box-base">
-            <dl>
-              <dt class="h-3">나의 건강 나이</dt>
-              <dd>
-                <div class="progress-wrap">
-                  <div class="fx-wrap" data-align="justify" data-valign="center">
-                    <span class="txt">실제 나이</span>
-                    <div class="progress-cont progress c1" data-progress-percent="40">
-                      <div class="progress-bar progress"></div>
+          <div class="box-area">
+            <div class="box-base info">
+              <dl>
+                <dt class="h-3">나의 건강 나이</dt>
+                <dd>
+                  <div class="progress-wrap">
+                    <div class="fx-wrap" data-align="justify" data-valign="center">
+                      <span class="txt">실제 나이</span>
+                      <div class="progress-cont progress c1" data-progress-percent="40">
+                        <div class="progress-bar progress"></div>
+                      </div>
+                      <span class="age">40세</span>
                     </div>
-                    <span class="age">40세</span>
                   </div>
-                </div>
-              </dd>
-              <dd>
-                <div class="progress-wrap">
-                  <div class="fx-wrap" data-align="justify" data-valign="center">
-                    <span class="txt">생체 나이</span>
-                    <div class="progress-cont progress c2" data-progress-percent="80">
-                      <div class="progress-bar progress"></div>
+                </dd>
+                <dd>
+                  <div class="progress-wrap">
+                    <div class="fx-wrap" data-align="justify" data-valign="center">
+                      <span class="txt">생체 나이</span>
+                      <div class="progress-cont progress c2" data-progress-percent="80">
+                        <div class="progress-bar progress"></div>
+                      </div>
+                      <span class="age">60세</span>
                     </div>
-                    <span class="age">60세</span>
                   </div>
-                </div>
-              </dd>
-              <dd>
-                <div class="fx-wrap" data-align="justify" data-valign="center">
-                  <span class="txt">노화속도</span>
-                  <span class="state">위험</span>
-                </div>
-              </dd>
-            </dl>
-            <hr class="hr-cont">
-            <div class="fx-wrap result-txt" data-align="start" data-valign="center">
-              <img src="../../resources/img/ico-result-1.png" alt="" class="img-s">
-              <p>생체 나이가 조금 높게 나왔어요.<br>건강을 조금 신경 써 볼까요?</p>
-            </div>
-          </div>
-          <h2 class="h-3">생체나이에 따른 예상의료비</h2>
-          <div class="box-base">
-            <div class="fx-wrap" data-align="justify" data-valign="center">
-              <div class="ta-c">
-                <div class="img-wrap"><img src="../../resources/img/img-result-obj-1.png" alt="" class="img-m"></div>
-                <span class="fs-xs">연간 의료비</span>
-                <strong class="fs-s primary-color">120,000원</strong>
-              </div>
-              <div class="ta-c">
-                <div class="img-wrap"><img src="../../resources/img/img-result-obj-2.png" alt="" class="img-m"></div>
-                <span class="fs-xs">연간 의료비 증가액</span>
-                <strong class="fs-s primary-color">500,000원</strong>
-              </div>
-              <div class="ta-c">
-                <div class="img-wrap"><img src="../../resources/img/img-result-obj-3.png" alt="" class="img-m"></div>
-                <span class="fs-xs">외래/통원 일수</span>
-                <strong class="fs-s primary-color">10일 / 4일</strong>
+                </dd>
+                <dd>
+                  <div class="fx-wrap" data-align="justify" data-valign="center">
+                    <span class="txt">노화속도</span>
+                    <span class="state state-2">주의</span>
+                    <!-- 
+                      [등급 별 class guide]
+                      양호 state-1 , 주의 state-2, 경고 state-3, 위험 state-4, 중위험 state-5, 고위험 state-6 
+                    -->
+                  </div>
+                </dd>
+              </dl>
+              <hr class="hr-cont">
+              <div class="fx-wrap result-txt" data-align="start" data-valign="top">
+                <img src="../../resources/img/ico-result-1.png" alt="" class="img-s">
+                <p>생체 나이가 조금 높게 나왔어요.<br>긴장을 늦추지 말고<br>건강을 조금 신경 써 볼까요?</p>
               </div>
             </div>
-          </div>
-          <div class="from-info">
-            <div class="bul-info" aria-live="polite">
-              <div>예상의료비는 생체나이 증감에 따라 향후 질병이<br>
-                발생할 확률에 기반해 제공하는 예측치입니다.</div>
+            <h2 class="h-4">생체나이에 따른 예상의료비</h2>
+            <div class="box-base list">
+              <ul>
+                <li>
+                  <div class="fx-wrap" data-align="start" data-valign="center">
+                   <img src="../../resources/img/img-result-obj-1.png" alt="" class="img-m">
+                    <div class="txt-wrap">
+                      <span class="fs-s">연간 의료비</span>
+                      <strong class="primary-color">120,000원</strong>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="fx-wrap" data-align="start" data-valign="center">
+                    <img src="../../resources/img/img-result-obj-2.png" alt="" class="img-m">
+                    <div class="txt-wrap">
+                      <span class="fs-s">연간 의료비 증가액</span>
+                      <strong class="primary-color">500,000원</strong>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="fx-wrap" data-align="start" data-valign="center">
+                    <img src="../../resources/img/img-result-obj-3.png" alt="" class="img-m">
+                    <div class="txt-wrap">
+                      <span class="fs-s">외래/통원 일수</span>
+                      <strong class="primary-color">10일 / 4일</strong>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <h2 class="h-4">질변분류에 따른 현재 상태</h2>
+            <div class="box-base box-progressbar">
+              <ul>
+                <li>
+                  <div class="fx-wrap" data-align="start" data-valign="center">
+                    <div class="img-wrap"><img src="../../resources/img/img-disease-ty-1.png" alt="" class="img-m"></div>
+                    <div>
+                      <div class="txt-wrap">
+                        <span class="fs-s">연간 의료비</span>
+                        <button type="button" class="btn-base-s">자세히</button>
+                      </div>
+                      <div class="progress-wrap">
+                        <div class="progress-cont progress c1" data-progress-percent="70">
+                          <div class="progress-bar progress"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="fx-wrap" data-align="start" data-valign="center">
+                    <div class="img-wrap"><img src="../../resources/img/img-disease-ty-2.png" alt="" class="img-m"></div>
+                    <div>
+                      <div class="txt-wrap">
+                        <span class="fs-s">심장질환</span>
+                        <button type="button" class="btn-base-s">자세히</button>
+                      </div>
+                      <div class="progress-wrap">
+                        <div class="progress-cont progress c1" data-progress-percent="70">
+                          <div class="progress-bar progress"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="fx-wrap" data-align="start" data-valign="center">
+                    <div class="img-wrap"><img src="../../resources/img/img-disease-ty-3.png" alt="" class="img-m"></div>
+                    <div>
+                      <div class="txt-wrap">
+                        <span class="fs-s">뇌질환</span>
+                        <button type="button" class="btn-base-s">자세히</button>
+                      </div>
+                      <div class="progress-wrap">
+                        <div class="progress-cont progress c1" data-progress-percent="70">
+                          <div class="progress-bar progress"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="from-info">
+              <div class="bul-info" aria-live="polite">
+                <div>예상의료비는 생체나이 증감에 따라 향후 질병이<br>
+                  발생할 확률에 기반해 제공하는 예측치입니다.</div>
+              </div>
             </div>
           </div>
         </div>
