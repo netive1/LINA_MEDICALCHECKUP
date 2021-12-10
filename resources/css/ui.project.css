@@ -457,6 +457,11 @@
 	margin: 1rem 0 0;
 }
 /* Contents_MW_Main_상세 */
+.result-detail {
+	position: relative;
+	top: -5rem;
+	padding: 0 2.4rem;
+}
 .result-detail .base-wrap.result {
 	position: relative;
 }
@@ -530,8 +535,28 @@
 	line-height: 1.7rem;
 	transform: translateX(-50%);
 } 
+.result-graph {
+	margin: 2rem 0;
+}
 .result-graph .grpah-txt {
 	margin-top: 2.8rem;
+}
+.result-graph .circle-progress {
+	margin: 0 auto;
+	width: 15.4rem;
+	height: 15.4rem;
+}
+.result-graph  .circle-progress .text {
+	top: 6rem;
+	bottom: auto;
+}
+.result-graph  .circle-progress .text .percent {
+	font-size: 3rem;
+}
+.result-graph  .circle-progress .text span {
+	position: relative;
+	top: -1rem;
+	font-size: var(--text-s);
 }
 .result-graph .grpah-txt p:nth-child(1) {
 	color: var(--gray900);

@@ -1312,16 +1312,27 @@ progress {
 }
 .ui-modal.bg .ui-modal-header {
 	background: var(--primary);
-	padding: 2.6rem 3em 7.4rem;
+	padding: 2.6rem 3em 0;
 }
 .ui-modal.bg .ui-modal-header .ui-modal-tit {
 	color: var(--white);
 	font-size: var(--text-s);
 	text-align: center;
 }
-.ui-modal.bg  .ui-modal-header .btn-close {
+.ui-modal.bg .ui-modal-header .btn-close {
 	right: 3rem;
 	background-image: url(../img/common/btn-close-white.svg);
+}
+.ui-modal.bg .ui-modal-body {
+	padding: 0;
+	background: #F1F8FD;
+}
+.ui-modal.bg .ui-modal-body:before {
+	display: inline-block;
+	width: 100%;
+	height: 7.4rem;
+	background: var(--primary);
+	content: '';
 }
 
 .ui-modal .ui-modal-tit:focus {
