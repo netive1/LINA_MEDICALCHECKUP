@@ -556,7 +556,7 @@
 	width: 15.4rem;
 	height: 15.4rem;
 }
-.result-graph .circle-progress::before{
+/* .result-graph .circle-progress::before{
 	content: "";
 	display: block;
 	width:100%;
@@ -566,7 +566,7 @@
 	box-shadow: 0 .4rem .4rem rgba(0, 0, 0, .2);
 	position: absolute;
 	top:0;
-}
+} */
 .result-graph .circle-progress .text {
 	top: 2.4rem;
 	bottom: auto;
