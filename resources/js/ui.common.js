@@ -39,36 +39,50 @@
 		},
 		progressBar: function () {
 			const el = document.querySelectorAll('.ui-progressbar');
-			const levelTxt = ['양호', '주의', '경고', '위험', '중위험', '고위험'];
+			const level = [0, 20, 40, 60, 80, 100];
+			const levelTxt = ['양호', '주의', '경고', '위험', '고위험'];
+			let ps = [];
 			
 			document.addEventListener('scroll', act);
 
 			for (let i = 0, len = el.length; i < len; i++) {
 				const that = el[i];
 				const per = that.dataset.percent;
-				if (per < 15) { state(that, 1, per); }
-				else if (per < 30) { state(that, 2, per); }
-				else if (per < 45) { state(that, 3, per); }
-				else if (per < 60) { state(that, 4, per); }
-				else if (per < 85) { state(that, 5, per); }
-				else { state(that, 6, per); }
+				ps.push(that.getBoundingClientRect().top.toFixed(0));
+
+				for (let j = 0, len2 = level.length; j < len2; j++) {
+					if (Number(per) < Number(level[j])) {
+						state(that, j, per);
+						break;
+					}
+				}
 			}
 
-			function state(a, b, d) {
+			function state(a, b, c) {
 				const el_level = a.querySelector('.ui-progressbar-level');
 				const el_item = a.querySelector('.ui-progressbar-item');
 				
-				console.log(a, levelTxt[b - 1]);
-				a.classList.add('state-' + b);
-				el_level.textContent = levelTxt[b - 1];
-				el_item.style.width = d + '%';
+				if (!!el_level) {
+					a.classList.add('state-' + b);
+					el_level.textContent = levelTxt[b - 1]
+				}
+				el_item.dataset.per = c;
+				el_item.setAttribute('aria-label', c + '%');
 			}
-
 
 			function act() {
-				console.log(11111);
-			}
+				const sc = document.documentElement.scrollTop + window.innerHeight - 100;
+				
+				for (let i = 0, len = el.length; i < len; i++) {
+					const that = el[i];
+					const el_item = that.querySelector('.ui-progressbar-item');
 
+					if (sc > Number(ps[i])) {
+						el_item.style.width = el_item.dataset.per + '%';
+					}
+				}
+			}
+			act();
 		},
 		progress: function(opt){
 			const max = Number(opt.max);

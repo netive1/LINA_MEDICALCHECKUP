@@ -1212,8 +1212,11 @@ progress {
 	right: 0;	
 }
 .progress {
+	position:relative;
+	background-color: var(--gray100);
 	width: 100%;
 	height: 1rem;
+	border-radius: .5rem;
 }
 
 
@@ -1250,8 +1253,12 @@ progress {
 }
 .ui-progressbar .ui-progressbar-item {
 	position: absolute;
+	width:0;
 	left: 0;
 	height: 100%;
+	border-radius:5px;
+	transition: width 0.4s ease-out;
+	transition-delay: 0.5s;
 }
 .ui-progressbar .progress-cont {
 	position: relative;
