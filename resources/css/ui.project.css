@@ -384,6 +384,16 @@
 	width: 100%;
 	height: auto;
 }
+.img-myhealthage::before{
+	content: "";
+	display: block;
+	width:11.7rem;
+	height: 8.7rem;
+	background: url(../../resources/img/myhealthage.png) no-repeat 0 0 / 100%;
+	position: absolute;
+	top:-7.8rem;
+	right:1rem;
+}
 .ui-progressbar{
 	width: 100%;
 	display: flex;
