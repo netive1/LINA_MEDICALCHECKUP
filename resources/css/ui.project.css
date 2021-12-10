@@ -470,7 +470,7 @@
 .result-detail {
 	position: relative;
 	top: 1rem;
-	padding: 0 2.4rem;
+	padding: 0 2.4rem 2.4rem;
 }
 .result-detail .base-wrap.result {
 	position: relative;
