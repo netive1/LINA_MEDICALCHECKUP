@@ -546,6 +546,9 @@
 	width: 15.4rem;
 	height: 15.4rem;
 }
+.result-graph .circle-progress {
+	
+}
 .result-graph  .circle-progress .text {
 	top: 6rem;
 	bottom: auto;
