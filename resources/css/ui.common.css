@@ -1245,6 +1245,18 @@ progress {
 	font-weight: 700;
 	font: 3.2rem;
 }
+.result-graph .circle-progress-circle {
+	stroke-width:1.2rem;
+	stroke: #fafafa;
+	
+}
+.result-graph .circle-progress-value {
+	stroke-width: 1.2rem;
+	stroke-linecap: round;
+	stroke: rgb(255, 98, 98);
+	-webkit-filter: drop-shadow( .5rem .5rem 1rem rgba(255, 98, 98, .5));
+  	filter: drop-shadow( .5rem .5rem 1rem rgba(255, 98, 98, .5));
+}
 
 /* progressbar */
 .ui-progressbar .progress-cont {

@@ -109,19 +109,20 @@
 					box.style.opacity = 1;
 				}
 			}, 0);
+			
+			percent.innerHTML = val;
+			// let n = 0;
 
-			let n = 0;
-
-			function countUp() {
-				if (val >= n) {
-					percent.innerHTML = n;
-					n = n + 1;
-					setTimeout(function () {
-						countUp();
-					}, 1);
-				}
-			}
-			countUp();
+			// function countUp() {
+			// 	if (Number(val) >= n) {
+			// 		percent.innerHTML = n;
+			// 		n = Number(n + 0.1).toFixed(3);
+			// 		setTimeout(function () {
+			// 			countUp();
+			// 		}, 1);
+			// 	}
+			// }
+			// countUp();
 
 			if (val > 100) {
 				circleprogress.classList.add('n5');
