@@ -340,6 +340,7 @@
 	font-size: var(--text-xs);
 }
 .box-base.info .fx-wrap .state {
+	display: inline-block;
 	width: 4rem;
 	padding: .2rem 0;	
 	color: var(--white);
@@ -406,4 +407,78 @@
 
 .box-base.disease .progress-wrap .progress-cont {
 	margin: 1rem 0 0;
+}
+
+/* Contents_MW_Main_상세 */
+.result-detail .base-wrap.result {
+	position: relative;
+}
+.result-detail.box-area {
+
+}
+.result-detail .box-base .info .state {
+	width: auto;
+	border-radius: 1.2rem;
+	padding: .2rem 1.5rem;
+}
+.result-detail .box-base .info .name em {
+	display: block;
+	color: var(--gray900);
+	font-size: 2.6rem;
+}
+.result-detail .box-base .info img {
+	width: 5.2rem;
+	height: 5.2rem;
+}
+.result-detail .box-base .info .step {
+	position: relative;
+	width: 100%;
+	height: 6.4rem;
+	margin-top: 1.6rem;
+}
+
+.result-detail .box-base .info .step .state {
+	position: relative;
+	width: calc(100% / 5);
+	height: 1rem;
+	padding: 0;	
+	border-radius: 0;
+}
+.result-detail .box-base .info .step .state.on:before {
+	position: absolute;
+	top: -2.4rem;
+	left: 50%;
+	display: inline-block;
+	width: 1.4rem;
+	height: 1.4rem;
+	background: url(../img/common/ico-mark.svg) center/100% no-repeat;
+	transform: translateX(-50%);
+	content: '';
+}
+.result-detail .box-base .info .step .state:after {
+	position: absolute;
+	top: -.7rem;
+	right: 0;
+	display: inline-block;
+	height: 2.4rem;
+	border: 1px dashed var(--gray200);
+	content: '';
+}
+.result-detail .box-base .info .step .state:first-child {
+	border-radius: .5rem 0 .0 .5rem;
+}
+.result-detail .box-base .info .step .state:last-child {
+	border-radius: 0 .5rem .5rem 0;
+}
+.result-detail .box-base .info .step .state:last-child:after {
+	display: none;
+}
+.result-detail .box-base .info .step .state span {
+	position: absolute;
+	left: 50%;
+	bottom: -2.7rem;
+	color: var(--gray900);
+	font-size: var(--text-xxs);
+	line-height: 1.7rem;
+	transform: translateX(-50%);
 }

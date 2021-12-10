@@ -780,12 +780,8 @@ textarea.inp-base {
 	background-color: #FFD600;
 }
 .state.state-5 {
-	background-color: #FF8A01;
-}
-.state.state-6 {
 	background-color: #FF6262;
 }
-
 
 /*** BULLET ***/
 .div-wrap>[class*="bul-"]:first-child {
@@ -1309,6 +1305,20 @@ progress {
 	top: 2.7rem;
 	right: 2.4rem;
 }
+.ui-modal.bg .ui-modal-header {
+	background: var(--primary);
+	padding: 2.6rem 3em 7.4rem;
+}
+.ui-modal.bg .ui-modal-header .ui-modal-tit {
+	color: var(--white);
+	font-size: var(--text-s);
+	text-align: center;
+}
+.ui-modal.bg  .ui-modal-header .btn-close {
+	right: 3rem;
+	background-image: url(../img/common/btn-close-white.svg);
+}
+
 .ui-modal .ui-modal-tit:focus {
 	outline: 0;
 	border: 0;
@@ -1381,6 +1391,7 @@ progress {
 	background-image: url(../img/common/arr-top.svg);
 	content: '';
 }
+
 
 /* pc layout*/
 [class*="size-desktop"] .base-main {
