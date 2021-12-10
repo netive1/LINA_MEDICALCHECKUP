@@ -627,6 +627,7 @@
 }
 .result-detail .h-3 > img {
 	position: absolute;
+	top:0;
 	right: 0;
 	margin-left: .4rem;;
 }
