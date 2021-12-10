@@ -355,7 +355,7 @@
 	font-size: var(--text-xs);
 }
 .box-base.info .result-txt img {
-	margin-right: 1.1rem;
+	margin-right: 1.6rem;
 }
 .box-base.list .fx-wrap img {
 	margin-right: 1.6rem;
@@ -370,11 +370,9 @@
 	margin-top: 2.4rem;
 }
 .box-base.disease li {
-	display: flex;
-	align-items: center;
 	width: 100%;
 	padding: 2.4rem 0;
-	border-bottom: 1px solid var(--gray200);
+	border-bottom: 1px solid var(--gray100);
 }
 .box-base.disease li:first-child {
 	padding-top: 0;
@@ -437,7 +435,7 @@
 .box-base.disease .state {
 	position: absolute;
 	left: -.3rem;
-	bottom: -.6rem;
+	bottom: -.8rem;
 	width: 5.4rem;
 	height: 2.4rem;
 	padding: .1rem 0 .2rem;	
@@ -445,16 +443,28 @@
 }
 .box-base.disease .progress-wrap  {
 	width: calc(100% - 6rem);
-	padding-top: 1.2rem;
 }
 .box-base.disease .progress-wrap .txt-wrap {
 	display: flex;
 	justify-content: space-between;
 	color: var(--gray900);
 }
+.box-base.disease .progress-wrap .txt-wrap .fs-xs {
+	display: block;
+	color: var(--gray800);
+	font-size: var(--text-xxs);
+	font-weight: 400;
+}
 
 .box-base.disease .progress-wrap .progress-cont {
 	margin: 1rem 0 0;
+}
+.box-base.disease .progress-wrap .btn-more {
+	height: 2.6rem;
+}
+.box-base.disease .ui-progressbar {
+	display: flex;
+	align-items: flex-start;
 }
 /* Contents_MW_Main_상세 */
 .result-detail {
@@ -546,15 +556,39 @@
 	width: 15.4rem;
 	height: 15.4rem;
 }
-.result-graph .circle-progress {
-	
+.result-graph .circle-progress-value {
+	stroke-width: 1rem;
+	stroke: #FF6262;
 }
 .result-graph  .circle-progress .text {
-	top: 6rem;
+	top: 6.2rem;
 	bottom: auto;
 }
 .result-graph  .circle-progress .text .percent {
+	position: relative;
 	font-size: 3rem;
+}
+.result-graph  .circle-progress .text.up:before {
+	position: absolute;
+	top: -2rem;;
+	left: 50%;
+	display: inline-block;
+	width: 1.7rem;
+	height: 2.1rem;
+	background: url(../img/common/ico-graph-high.png) center/100% no-repeat;
+	transform: translateX(-50%);
+	content: '';
+}
+.result-graph  .circle-progress .text.low:before {
+	position: absolute;
+	top: -2rem;;
+	left: 50%;
+	display: inline-block;
+	width: 1.7rem;
+	height: 2.1rem;
+	background: url(../img/common/ico-graph-low.png) center/100% no-repeat;
+	transform: translateX(-50%);
+	content: '';
 }
 .result-graph  .circle-progress .text span {
 	position: relative;
