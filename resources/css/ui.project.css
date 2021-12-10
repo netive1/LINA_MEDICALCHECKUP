@@ -577,15 +577,25 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding-top:2rem
 }
 .result-graph .circle-progress .text.up::before{
 	content:"";
 	display: block;
 	position:absolute;
-	top:10%;
-	width:2rem;
-	height: 3rem;
-	background: url(../../resources/img/common/);
+	top:2rem;
+	width:1.8rem;
+	height: 21rem;
+	background: url(../../resources/img/common/ico-graph-high.png) no-repeat 50% 0 / 100%;
+}
+.result-graph .circle-progress .text.down::before{
+	content:"";
+	display: block;
+	position:absolute;
+	top:2rem;
+	width:1.8rem;
+	height: 21rem;
+	background: url(../../resources/img/common/ico-graph-low.png) no-repeat 50% 0 / 100%;
 }
 .result-graph .circle-progress .text .percent {
 	font-size: 3rem;
