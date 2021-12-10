@@ -37,6 +37,39 @@
 				behavior: 'smooth'
 			});
 		},
+		progressBar: function () {
+			const el = document.querySelectorAll('.ui-progressbar');
+			const levelTxt = ['양호', '주의', '경고', '위험', '중위험', '고위험'];
+			
+			document.addEventListener('scroll', act);
+
+			for (let i = 0, len = el.length; i < len; i++) {
+				const that = el[i];
+				const per = that.dataset.percent;
+				if (per < 15) { state(that, 1, per); }
+				else if (per < 30) { state(that, 2, per); }
+				else if (per < 45) { state(that, 3, per); }
+				else if (per < 60) { state(that, 4, per); }
+				else if (per < 85) { state(that, 5, per); }
+				else { state(that, 6, per); }
+			}
+
+			function state(a, b, d) {
+				const el_level = a.querySelector('.ui-progressbar-level');
+				const el_item = a.querySelector('.ui-progressbar-item');
+				
+				console.log(a, levelTxt[b - 1]);
+				a.classList.add('state-' + b);
+				el_level.textContent = levelTxt[b - 1];
+				el_item.style.width = d + '%';
+			}
+
+
+			function act() {
+				console.log(11111);
+			}
+
+		},
 		progress: function(opt){
 			const max = Number(opt.max);
 			const val = Number(opt.val);
