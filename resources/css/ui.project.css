@@ -575,7 +575,7 @@
 	top:10%;
 	width:2rem;
 	height: 3rem;
-	background: url(../../resources/img/);
+	background: url(../../resources/img/common/);
 }
 .result-graph .circle-progress .text .percent {
 	font-size: 3rem;
