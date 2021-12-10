@@ -85,12 +85,23 @@
 			act();
 		},
 		progress: function(opt){
+			const id = opt.id;
 			const max = Number(opt.max);
 			const val = Number(opt.val);
-			const circleprogress = document.querySelector('.circle-progress');
-			const emoji = document.querySelector('.circle-progress .emoji');
-			const box = document.querySelector('.circle-progress .box');
-			const percent = document.querySelector('.circle-progress .percent');
+			const circleprogress = document.querySelector('#' + id);
+			const emoji = circleprogress.querySelector('.emoji');
+			const box = circleprogress.querySelector('.box');
+			const percent = circleprogress.querySelector('.percent');
+
+			// const elbody = document.querySelector('.ui-modal-body');
+			// console.log(elbody.scrollTop + window.innerHeight);
+
+			// elbody.addEventListener('scroll', act);
+			// function act() {
+			// 	const sc = elbody.scrollTop;
+				
+			// 	console.log(sc);
+			// }
 
 			setTimeout(function () {
 				if (!!box) {
@@ -105,7 +116,6 @@
 				if (val >= n) {
 					percent.innerHTML = n;
 					n = n + 1;
-					console.log(n);
 					setTimeout(function () {
 						countUp();
 					}, 1);
@@ -124,8 +134,7 @@
 			} else {
 				circleprogress.classList.add('n1');
 			}
-
-			new CircleProgress('.circle-progress', {
+			new CircleProgress('#' + id, {
 				// textFormat: 'percent',
 				max: max,
 				value: val,
