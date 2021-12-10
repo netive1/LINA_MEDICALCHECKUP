@@ -2834,7 +2834,7 @@ if (!Object.keys){
 				} else {
 					act();
 				}
-                console.log(endfocus);
+
 				endfocus.dataset.focus = id;
 			} else {
 				//system modal

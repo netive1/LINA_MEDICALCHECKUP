@@ -93,6 +93,16 @@
 			const box = circleprogress.querySelector('.box');
 			const percent = circleprogress.querySelector('.percent');
 
+			// const elbody = document.querySelector('.ui-modal-body');
+			// console.log(elbody.scrollTop + window.innerHeight);
+
+			// elbody.addEventListener('scroll', act);
+			// function act() {
+			// 	const sc = elbody.scrollTop;
+				
+			// 	console.log(sc);
+			// }
+
 			setTimeout(function () {
 				if (!!box) {
 					box.style.transform = 'rotate(' + (360 * val / 100) + 'deg)';
@@ -106,7 +116,6 @@
 				if (val >= n) {
 					percent.innerHTML = n;
 					n = n + 1;
-					console.log(n);
 					setTimeout(function () {
 						countUp();
 					}, 1);
