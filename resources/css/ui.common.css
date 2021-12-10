@@ -780,12 +780,8 @@ textarea.inp-base {
 	background-color: #FFD600;
 }
 .state.state-5 {
-	background-color: #FF8A01;
-}
-.state.state-6 {
 	background-color: #FF6262;
 }
-
 
 /*** BULLET ***/
 .div-wrap>[class*="bul-"]:first-child {
@@ -1253,6 +1249,7 @@ progress {
 /* progressbar */
 .ui-progressbar .progress-cont {
 	width: 100%;
+	height: .8rem;
 	background-color: var(--gray100);
 }
 .ui-progressbar .ui-progressbar-item {
@@ -1283,9 +1280,6 @@ progress {
 	background: #FFD600;
 }
 .ui-progressbar.state-5 .ui-progressbar-item {
-	background: #FF8A01;
-}
-.ui-progressbar.state-6 .ui-progressbar-item {
 	background: #FF6262;
 }
 
@@ -1316,6 +1310,20 @@ progress {
 	top: 2.7rem;
 	right: 2.4rem;
 }
+.ui-modal.bg .ui-modal-header {
+	background: var(--primary);
+	padding: 2.6rem 3em 7.4rem;
+}
+.ui-modal.bg .ui-modal-header .ui-modal-tit {
+	color: var(--white);
+	font-size: var(--text-s);
+	text-align: center;
+}
+.ui-modal.bg  .ui-modal-header .btn-close {
+	right: 3rem;
+	background-image: url(../img/common/btn-close-white.svg);
+}
+
 .ui-modal .ui-modal-tit:focus {
 	outline: 0;
 	border: 0;
@@ -1388,6 +1396,7 @@ progress {
 	background-image: url(../img/common/arr-top.svg);
 	content: '';
 }
+
 
 /* pc layout*/
 [class*="size-desktop"] .base-main {
