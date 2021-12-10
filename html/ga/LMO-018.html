@@ -33,8 +33,10 @@
 									<div class="progress-wrap">
 										<div class="fx-wrap" data-align="justify" data-valign="center">
 											<span class="txt">실제 나이</span>
-											<div class="progress-cont progress c1" data-progress-percent="40">
-												<div class="progress-bar progress"></div>
+											<div class="progress-cont progress c1 ui-progressbar" data-percent="40">
+												<div class="progress-bar progress">
+													<div class="ui-progressbar-item" aria-label=""></div>
+												</div>
 											</div>
 											<span class="age">40세</span>
 										</div>
@@ -44,8 +46,10 @@
 									<div class="progress-wrap">
 										<div class="fx-wrap" data-align="justify" data-valign="center">
 											<span class="txt">생체 나이</span>
-											<div class="progress-cont progress" data-progress-percent="80">
-												<div class="progress-bar progress"></div>
+											<div class="progress-cont progress c2 ui-progressbar" data-percent="60">
+												<div class="progress-bar progress">
+													<div class="ui-progressbar-item" aria-label=""></div>
+												</div>
 											</div>
 											<span class="age">60세</span>
 										</div>
@@ -56,9 +60,9 @@
 										<span class="txt">노화속도</span>
 										<span class="state state-2">주의</span>
 										<!-- 
-                      [등급 별 class guide]
-                      양호 state-1 , 주의 state-2, 경고 state-3, 위험 state-4, 중위험 state-5, 고위험 state-6 
-                    -->
+										[등급 별 class guide]
+										양호 state-1 , 주의 state-2, 경고 state-3, 위험 state-4, 중위험 state-5, 고위험 state-6 
+										-->
 									</div>
 								</dd>
 							</dl>
@@ -68,6 +72,7 @@
 								<p>생체 나이가 조금 높게 나왔어요.<br>긴장을 늦추지 말고<br>건강을 조금 신경 써 볼까요?</p>
 							</div>
 						</div>
+
 						<h2 class="h-4">생체나이에 따른 예상의료비</h2>
 						<div class="box-base list">
 							<ul>
@@ -100,11 +105,13 @@
 								</li>
 							</ul>
 						</div>
+
 						<h2 class="h-4">질병분류에 따른 현재 상태</h2>
 						<div class="box-base disease">
 							<ul>
+								<!-- [0,15,30,45,60,85,100] -->
 								<li>
-									<div class="ui-progressbar" data-percent="70">
+									<div class="ui-progressbar" data-percent="10">
 										<div class="img-wrap">
 											<img src="../../resources/img/img-disease-ty-1.png" alt="">
 											<span class="ui-progressbar-level"></span>
@@ -112,7 +119,8 @@
 										<div class="progress-wrap">
 											<div class="txt-wrap">
 												<span class="fs-m b">1차성 질환(노인성 질환)</span>
-												<button type="button" class="btn-base-s btn-more" onclick="netive.modal.show({
+												<button type="button" class="btn-base-s btn-more" onclick="
+												netive.modal.show({
 													id: 'LMO019',
 													ps: 'center',
 													src: './LMO-019.html',
@@ -125,8 +133,9 @@
 										</div>
 									</div>
 								</li>
+
 								<li>
-									<div class="ui-progressbar" data-percent="90">
+									<div class="ui-progressbar" data-percent="20">
 										<div class="img-wrap">
 											<img src="../../resources/img/img-disease-ty-2.png" alt="">
 											<span class="ui-progressbar-level"></span>
@@ -141,69 +150,102 @@
 												full: true
 												});"><span>자세히</span></button>
 											</div>
-										</div>
-										<div class="progress-cont progress">
-											<div class="ui-progressbar-item" aria-label=""></div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="img-wrap">
-										<img src="../../resources/img/img-disease-ty-3.png" alt="">
-										<span class="state state-2">주의</span>
-									</div>
-									<div class="progress-wrap">
-										<div class="txt-wrap">
-											<span class="fs-m b">뇌질환</span>
-											<a href="./LMO-019.html" class="btn-base-s btn-more">자세히</a>
-										</div>
-										<div class="progress-cont progress state-2" data-progress-percent="70">
-											<div class="progress-bar progress"></div>
+											<div class="progress-cont progress">
+												<div class="ui-progressbar-item" aria-label=""></div>
+											</div>
 										</div>
 									</div>
 								</li>
+
 								<li>
-									<div class="img-wrap">
-										<img src="../../resources/img/img-disease-ty-4.png" alt="">
-										<span class="state state-4">위험</span>
-									</div>
-									<div class="progress-wrap">
-										<div class="txt-wrap">
-											<span class="fs-m b">고혈압·당뇨 합병증</span>
-											<a href="./LMO-019.html" class="btn-base-s btn-more">자세히</a>
+									<div class="ui-progressbar" data-percent="30">
+										<div class="img-wrap">
+											<img src="../../resources/img/img-disease-ty-3.png" alt="">
+											<span class="ui-progressbar-level"></span>
 										</div>
-										<div class="progress-cont progress state-4" data-progress-percent="80">
-											<div class="progress-bar progress"></div>
+										<div class="progress-wrap">
+											<div class="txt-wrap">
+												<span class="fs-m b">뇌질환</span>
+												<button type="button" class="btn-base-s btn-more" onclick="netive.modal.show({
+												id: 'LMO019',
+												ps: 'center',
+												src: './LMO-019.html',
+												full: true
+												});"><span>자세히</span></button>
+											</div>
+											<div class="progress-cont progress">
+												<div class="ui-progressbar-item" aria-label=""></div>
+											</div>
 										</div>
 									</div>
 								</li>
+
 								<li>
-									<div class="img-wrap">
-										<img src="../../resources/img/img-disease-ty-5.png" alt="">
-										<span class="state state-1">양호</span>
-									</div>
-									<div class="progress-wrap">
-										<div class="txt-wrap">
-											<span class="fs-m b">상해</span>
-											<a href="./LMO-019.html" class="btn-base-s btn-more">자세히</a>
+									<div class="ui-progressbar" data-percent="50">
+										<div class="img-wrap">
+											<img src="../../resources/img/img-disease-ty-4.png" alt="">
+											<span class="ui-progressbar-level"></span>
 										</div>
-										<div class="progress-cont progress state-1" data-progress-percent="30">
-											<div class="progress-bar progress"></div>
+										<div class="progress-wrap">
+											<div class="txt-wrap">
+												<span class="fs-m b">고혈압·당뇨 합병증</span>
+												<button type="button" class="btn-base-s btn-more" onclick="netive.modal.show({
+												id: 'LMO019',
+												ps: 'center',
+												src: './LMO-019.html',
+												full: true
+												});"><span>자세히</span></button>
+											</div>
+											<div class="progress-cont progress">
+												<div class="ui-progressbar-item" aria-label=""></div>
+											</div>
 										</div>
 									</div>
 								</li>
+
 								<li>
-									<div class="img-wrap">
-										<img src="../../resources/img/img-disease-ty-6.png" alt="">
-										<span class="state state-1">양호</span>
-									</div>
-									<div class="progress-wrap">
-										<div class="txt-wrap">
-											<span class="fs-m b">암</span>
-											<a href="./LMO-019.html" class="btn-base-s btn-more">자세히</a>
+									<div class="ui-progressbar" data-percent="70">
+										<div class="img-wrap">
+											<img src="../../resources/img/img-disease-ty-5.png" alt="">
+											<span class="ui-progressbar-level"></span>
 										</div>
-										<div class="progress-cont progress state-1" data-progress-percent="30">
-											<div class="progress-bar progress"></div>
+										<div class="progress-wrap">
+											<div class="txt-wrap">
+												<span class="fs-m b">상해</span>
+												<button type="button" class="btn-base-s btn-more" onclick="netive.modal.show({
+												id: 'LMO019',
+												ps: 'center',
+												src: './LMO-019.html',
+												full: true
+												});"><span>자세히</span></button>
+											</div>
+											<div class="progress-cont progress">
+												<div class="ui-progressbar-item" aria-label=""></div>
+											</div>
+										</div>
+									</div>
+								</li>
+
+							
+								<li>
+									<div class="ui-progressbar" data-percent="90">
+										<div class="img-wrap">
+											<img src="../../resources/img/img-disease-ty-6.png" alt="">
+											<span class="ui-progressbar-level"></span>
+										</div>
+										<div class="progress-wrap">
+											<div class="txt-wrap">
+												<span class="fs-m b">암</span>
+												<button type="button" class="btn-base-s btn-more" onclick="netive.modal.show({
+												id: 'LMO019',
+												ps: 'center',
+												src: './LMO-019.html',
+												full: true
+												});"><span>자세히</span></button>
+											</div>
+											<div class="progress-cont progress">
+												<div class="ui-progressbar-item" aria-label=""></div>
+											</div>
 										</div>
 									</div>
 								</li>

@@ -328,6 +328,7 @@
 }
 .box-base.info .progress-wrap .progress-cont {
 	min-width: 17.2rem;
+	margin: 0 .5rem;
 }
 .box-base.info .fx-wrap .txt {
 	min-width: 5.4rem;
@@ -383,6 +384,41 @@
 	width: 100%;
 	height: auto;
 }
+.ui-progressbar{
+	width: 100%;
+	display: flex;
+}
+.progress.c1 .ui-progressbar-item{
+	background-color: #aaa;
+}
+.progress.c2 .ui-progressbar-item{
+	background-color: var(--primary);
+}
+.state-1 .ui-progressbar-level{
+	background-color: #4792EF;
+}
+.state-2 .ui-progressbar-level{
+	background-color: #01D4E5;
+}
+.state-3 .ui-progressbar-level{
+	background-color: #A1DE52;
+}
+.state-4 .ui-progressbar-level{
+	background-color: #FFD600;
+}
+.state-5 .ui-progressbar-level{
+	background-color: #FF8A01;
+}
+.state-6 .ui-progressbar-level{
+	background-color: #FF6262;
+}
+.ui-progressbar-level{
+	color: var(--white);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    text-align: center;
+}
+.ui-progressbar-level,
 .box-base.disease .state {
 	position: absolute;
 	left: -.3rem;
