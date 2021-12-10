@@ -459,7 +459,7 @@
 /* Contents_MW_Main_상세 */
 .result-detail {
 	position: relative;
-	top: -5rem;
+	top: 1rem;
 	padding: 0 2.4rem;
 }
 .result-detail .base-wrap.result {
