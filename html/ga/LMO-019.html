@@ -23,45 +23,95 @@
                             <li class="state state-5"><span>고위험</span></li>
                         </ul>
                     </div>
-                    <div class="circle-progress-wrap">
-                        <div class="circle-progress">
-                            <div class="box">
-                                <div class="head"></div>
-                            </div>
-                            <div class="emoji"></div>
-                            <div class="text">
-                                <em class="percent"></em>
-                                <span>%</span>
+                    <div class="result-graph">
+                        <div class="circle-progress-wrap">
+                            <div class="circle-progress">
+                                <div class="text">
+                                    <em class="percent"></em>
+                                    <span>%</span>
+                                </div>
                             </div>
                         </div>
+                        <p class="graph-caption">OO대 대비고혈압 발생 위험도</p>
+                        <div class="grpah-txt">
+                            <p class="fs-m m">고혈압은 심장, 뇌에 혈액을 공급하는<br>
+                                혈관의 변화로 장기 기능에 영향을 줍니다.</p>
+                            <p class="fs-m">고혈압은 뚜렷한 증상이 없어 무언의 살인자라고 하며, 합병증이 발생해야 증상이 나타납니다.
+                                최고혈압(140이상), 최저혈압(90이상)인 경우
+                                고혈압으로 분류합니다.</p>
+                        </div>
+                    </div>               
+                    <hr class="hr-cont">
+                    <h2 class="h-3">전조증상 체크 <img src="../../resources/img/ico-pencil.png" alt="" class="img-xs"></h2>
+                    <ul class="disease-chklist">
+                        <li>아침에 일어나면 뒤통수 부위에 두통이 있다</li>
+                        <li>피로감이 심해졌다</li>
+                        <li>어지럽고 가슴이 두근거린다</li>
+                        <li>코피가 쉽게 난다</li>
+                        <li>눈이 침침해졌다</li>
+                    </ul>
+                </div>
+
+                <div class="box-base">
+                    <div class="info">
+                        <div class="fx-wrap" data-align="justify" data-valign="bottom">
+                            <div class="name">
+                                <span class="state state-4">위험</span>
+                                <em>당뇨</em>
+                            </div>
+                            <img src="../../resources/img/ico-step-disease-4.png" alt="">
+                        </div>
+                        <ul class="fx-wrap step" data-align="center" data-valign="center">
+                            <li class="state state-1"><span>양호</span></li>
+                            <li class="state state-2"><span>주의</span></li>
+                            <li class="state state-3"><span>경고</span></li>
+                            <li class="state state-4 on"><span>위험</span></li>
+                            <li class="state state-5"><span>고위험</span></li>
+                        </ul>
                     </div>
+                    <div class="result-graph">
+                        <div class="circle-progress-wrap">
+                            <div class="circle-progress">
+                                <div class="text">
+                                    <em class="percent"></em>
+                                    <span>%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="graph-caption">OO대 대비 당뇨 발생 위험도</p>
+                        <div class="grpah-txt">
+                            <p class="fs-m m">거의 모든 당뇨병 환자는 체질과 좋지 않은<br>
+                            생활습관의 상호작용으로 발생합니다.</p>
+                            <p class="fs-m">당뇨는 비만, 노화, 식사습관, 스트레스 등의 원인
+                            으로 생깁니다. 200~250mg/dl 혈당이면 갈증,
+                            다뇨, 피로감, 다식 등의 자각 증상을 느낄 수
+                            있습니다.</p>
+                        </div>
+                    </div>
+                    <hr class="hr-cont">
+                    <h2 class="h-3">전조증상 체크 <img src="../../resources/img/ico-pencil.png" alt="" class="img-xs"></h2>
+                    <ul class="disease-chklist">
+                        <li>소변을 자주 본다</li>
+                        <li>물을 많이 마시게 된다</li>
+                        <li>배가 자주 고프고 음식을 많이 먹는다</li>
+                        <li>살이 점점 빠진다</li>
+                        <li>충분히 잠을 자도 피곤하다</li>
+                    </ul>
                 </div>
 
                 <div class="from-info">
                     <div class="bul-info" aria-live="polite">
-                        <div>예상의료비는 생체나이 증감에 따라 향후 질병이<br>발생할 확률에 기반해 제공하는 예측치입니다.</div>
+                        <div>이 분석 결과는 참고용으로, 실제 건강검진의<br>
+                        전문적인 분석은 의사 상담을 받으시길 권유드립니다.</div>
                     </div>
+                </div>
+                <div class="btn-wrap">
+                    <button type="button" class="btn-base-l primary">
+                        <span>다른 질환도 확인하기</span>
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<script>
-    ; (function (win, doc, jQuery, undefined) {
-        'use strict';
-
-        document.addEventListener("DOMContentLoaded", function () {
-
-            netive.common.init();
-
-            //progress 실행
-            netive.common.progress({
-                max: 100,
-                val: 75
-            });
-
-        });
-
-    })(window, document, $);
-</script>

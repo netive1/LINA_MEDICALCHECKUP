@@ -93,8 +93,10 @@
 			const percent = document.querySelector('.circle-progress .percent');
 
 			setTimeout(function () {
-				box.style.transform = 'rotate(' + (360 * val / 100) + 'deg)';
-				box.style.opacity = 1;
+				if (!!box) {
+					box.style.transform = 'rotate(' + (360 * val / 100) + 'deg)';
+					box.style.opacity = 1;
+				}
 			}, 0);
 
 			let n = 0;

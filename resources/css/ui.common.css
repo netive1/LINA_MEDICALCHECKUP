@@ -1249,6 +1249,7 @@ progress {
 /* progressbar */
 .ui-progressbar .progress-cont {
 	width: 100%;
+	height: .8rem;
 	background-color: var(--gray100);
 }
 .ui-progressbar .ui-progressbar-item {
@@ -1279,9 +1280,6 @@ progress {
 	background: #FFD600;
 }
 .ui-progressbar.state-5 .ui-progressbar-item {
-	background: #FF8A01;
-}
-.ui-progressbar.state-6 .ui-progressbar-item {
 	background: #FF6262;
 }
 
