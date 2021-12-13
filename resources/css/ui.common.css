@@ -125,9 +125,15 @@ strong {
 .base-header + .base-body > .bg-chkup{
 	background-position: center bottom 13rem;
 }
-/* .is-scroll .base-body {
+.is-scroll .base-body {
 	position: static;
-} */
+}
+/* position */
+.ps-bottom {
+	position: absolute;
+	bottom: 0;
+	padding-bottom: 2.4rem;
+}
 
 /* header */
 .header-wrap {
@@ -263,8 +269,9 @@ input[type="checkbox"] {
 /* radio type(default) */
 .radio input[type=radio] + .radio-label:before,
 .chkbox input[type=checkbox] + .chkbox-label:before {
-	position: relative;
-	top: 0;
+	position: absolute;
+	top: 50%;
+	left: 0;
 	display: inline-block;
 	width: 2.4rem;
 	height: 2.4rem;
@@ -272,6 +279,7 @@ input[type="checkbox"] {
 	vertical-align: top;
 	background: url(../img/common/ico-chkbox.svg) no-repeat;
 	cursor: pointer;
+	transform: translateY(-50%);
 	content: "";
 }
 .radio input[type=radio]:checked + .radio-label:before,
@@ -396,9 +404,6 @@ input.inp-base::-webkit-input-placeholder {
 select.inp-base {
 	padding: 0 1rem;
 }
-/* .inp-base:focus {
-	color: var(--gray900);
-} */
 .inp-base::-webkit-search-cancel-button {
 	display: none;
 }
@@ -536,6 +541,9 @@ textarea.inp-base {
 .btn-area {
 	margin-top: 3rem;
 }
+.btn-area.step-toggle {
+	margin-top: 1.6rem;
+}
 .btn-wrap [class*="btn-"] {
 	flex: 1 auto;
 }
@@ -618,6 +626,9 @@ textarea.inp-base {
 	color: var(--white);
 	background: var(--button-line) !important;
 }
+[class*="btn-base"].thick {
+	border: 2px solid var(--button-line);
+}
 .btn-base-link {
 	position: relative;
 	min-height: 7.4rem;
@@ -692,6 +703,16 @@ textarea.inp-base {
 	width: 4.2rem;
 	height: 4.2rem;
 	background: url(../img/common/ico-phone.png) no-repeat;
+	background-size: 100%;
+	content: '';
+}
+.btn-pass:before {
+	position: absolute;
+	left: 2.4rem;
+	display: inline-block;
+	width: 4.2rem;
+	height: 4.2rem;
+	background: url(../img/common/ico-pass.png) no-repeat;
 	background-size: 100%;
 	content: '';
 }
@@ -1423,6 +1444,20 @@ progress {
 	content: '';
 }
 
+/* small device 대응 */
+@media all and (max-width:360px) {
+	.from-info .bul-info {
+		display: inline-block !important;
+		padding-left: 2.4rem !important;
+	}
+	.from-info .bul-info:before {
+		position: absolute;
+		left: 0;
+	}
+	.from-info div > .br{
+		display: none;
+	}
+}
 
 /* pc layout*/
 [class*="size-desktop"] .base-main {
