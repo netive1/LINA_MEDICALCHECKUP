@@ -9,22 +9,12 @@
 	<link rel="stylesheet" href="../../resources/css/ui.planner.css">
 	<link rel="canonical" href="">
 	<script src="../../resources/js/lib/jquery-3.6.0.min.js"></script>
-	<script src="../../resources/js/ui.common.js"></script>
-	<style>
-		.grid {
-			position: absolute;
-			opacity: .5;
-			top:-45px;
-			width:100%;
-			height: 100%;
-			background: url(../../resources/img/planner/LGA-001_grid.png) no-repeat 50% 0;
-		}
-	</style>
+
+	
 </head>
 	
 <body>
-	<div class="grid"></div>
-	<div class="base-wrap checkup-report">
+	<div class="base-wrap checkup-report" style="opacity: 1;">
 		<header class="base-header">
 			<h1 class="logo"><img src="../../resources/img/planner/logo.png" alt="라이나생명"></h1>
 		</header>
@@ -56,8 +46,8 @@
 					<h3 class="tit">검진 분석에 따른 건강나이</h3>
 				</div>
 				
-				<div class="group-box">
-					<div class="graph-age">
+				<div class="group-box fx-wrap" style="height: 329px;">
+					<div class="graph-age fx-item">
 						<dl>
 							<div class="graph-age-item n1" data-age="24">
 								<dt>실제나이</dt>
@@ -70,7 +60,7 @@
 						</dl>
 						<div class="graph-age-line"></div>
 					</div>
-					<div>
+					<div class="fx-item">
 						<h4>노화속도</h4>
 						<div class="tbl-base">
 							<table>
@@ -112,7 +102,7 @@
 						</div>
 						<p>[참고]건강 노화 나이 등급표</p>
 
-					</div>
+					</divc>
 				</div>
 			</section>
 			<!-- //검진 분석에 따른 건강나이 -->
@@ -129,26 +119,26 @@
 					</div>
 				</div>
 				
-				<div class="group-box">
-					<div class="">
-						<div class="tbl-base">
+				<div class="group-box ">
+					<div class="fx-wrap">
+						<div class="tbl-base fx-item type-b">
 							<table>
 								<caption>
 									구분(비만체형나이,성장나이,폐나이), 주요요인, 검사결과, 신체나이, 위험등급 분류로 생체나이 위험률 분석정보입니다.
 								</caption>
 								<colgroup>
-									<col>
-									<col>
-									<col>
-									<col>
-									<col>
+									<col style="width:10.2rem">
+									<col style="width:auto">
+									<col style="width:6rem">
+									<col style="width:6rem">
+									<col style="width:10rem">
 								</colgroup>
 								<thead>
 									<tr>
 										<th scope="col">구분</th>
 										<th scope="col">주요요인</th>
+										<th scope="col">검사결과</th>
 										<th scope="col">신체나이</th>
-										<th scope="col">주요요인</th>
 										<th scope="col">위험등급</th>
 									</tr>
 								</thead>
@@ -157,10 +147,9 @@
 								<tbody class="type-obesity">
 									<tr>
 										<th scope="rowgroup" rowspan="5">
-											비만체형<wbr>나이
+											비만체형<br>나이
 										</th>
-										<th scope="row">
-											체질량지수<br>
+										<th scope="row">체질량지수<br>
 											<span>BMI</span>
 										</th>
 										<td>0.8</td>
@@ -294,7 +283,7 @@
 								<!-- //성장나이 -->
 
 								<!-- 폐나이 -->
-								<tbody class="type-growth">
+								<tbody class="type-lung">
 									<tr>
 										<th scope="rowgroup" rowspan="2">
 											폐나이
@@ -325,17 +314,17 @@
 							</table>
 						</div>
 
-						<div class="tbl-base">
+						<div class="tbl-base fx-item type-b">
 							<table>
 								<caption>
 									구분(간나이,췌장나이,신장나이), 주요요인, 검사결과, 신체나이, 위험등급 분류로 생체나이 위험률 분석정보입니다.
 								</caption>
 								<colgroup>
-									<col>
-									<col>
-									<col>
-									<col>
-									<col>
+									<col style="width:10.2rem">
+									<col style="width:auto">
+									<col style="width:6rem">
+									<col style="width:6rem">
+									<col style="width:10rem">
 								</colgroup>
 								<thead>
 									<tr>
@@ -348,7 +337,7 @@
 								</thead>
 
 								<!-- 간나이 -->
-								<tbody class="type-obesity">
+								<tbody class="type-liver">
 									<tr>
 										<th scope="rowgroup" rowspan="9">
 											간나이
@@ -445,7 +434,7 @@
 								<!-- //간나이 -->
 
 								<!-- 췌장나이 -->
-								<tbody class="type-growth">
+								<tbody class="type-pancreas">
 									<tr>
 										<th scope="rowgroup" rowspan="7">
 											췌장나이
@@ -474,10 +463,10 @@
 								</tbody>
 								<!-- //췌장나이 -->
 
-								<!-- 폐나이 -->
-								<tbody class="type-growth">
+								<!-- 신장나이 -->
+								<tbody class="type-kidney">
 									<tr>
-										<th scope="rowgroup" rowspan="2">
+										<th scope="rowgroup" rowspan="3">
 											신장나이
 										</th>
 										<th scope="row">
@@ -513,15 +502,17 @@
 										</td>
 									</tr>
 								</tbody>
-								<!-- //폐나이 -->
+								<!-- //신장나이 -->
 							</table>
 						</div>
 					</div>
+
+					<p class="bul-care">
+						생체나이는 건강과 노화를 측정하는 것으로 질병과 관련해서 해석하면 안됩니다.<br>
+						따라서 질병이 있더라도 생체나이는 좋을 수 있고, 질병이 없더라도 생체나이는 나쁠 수 있습니다.
+					</p>
 				</div>		
-				<p class="bul-care">
-					생체나이는 건강과 노화를 측정하는 것으로 질병과 관련해서 해석하면 안됩니다.<br>
-					따라서 질병이 있더라도 생체나이는 좋을 수 있고, 질병이 없더라도 생체나이는 나쁠 수 있습니다.
-				</p>
+				
 			
 			</section>
 			<!-- //비만 체형 및 주요 장기의 생체나이 위험률 분석 -->
@@ -533,16 +524,16 @@
 				</div>
 				
 				<div class="group-box">
-					<div class="tbl-base">
+					<div class="tbl-base type-b">
 						<table>
 							<caption>
 								질병(1차성 질환(노인성),심장,뇌,암종), 위험도, 상대적 발병률 분석정보입니다.
 							</caption>
 							<colgroup>
-								<col>
-								<col>
-								<col>
-								<col>
+								<col style="width:16.2rem;">
+								<col style="width:18.2rem;">
+								<col style="width:56.4rem;">
+								<col style="width:auto;">
 							</colgroup>
 							<thead>
 								<tr>
@@ -569,8 +560,12 @@
 										1차성 질환<br>(노인성)
 									</th>
 									<th scope="row">고혈압</th>
-									<td>
-										<div aria-label="양호" class="bar lv-1"></div>
+									<td class="pd-n">
+										<div aria-label="양호" class="bar lv-1">
+											<div class="bar-wrap">
+												<span></span><span></span><span></span><span></span><span></span><span></span>
+											</div>
+										</div>
 									</td>
 									<td>
 										<em>40%</em>
@@ -578,8 +573,12 @@
 								</tr>
 								<tr>
 									<th scope="row">당뇨</th>
-									<td>
-										<div aria-label="주의" class="bar lv-2"></div>
+									<td class="pd-n">
+										<div aria-label="주의" class="bar lv-2">
+											<div class="bar-wrap">
+												<span></span><span></span><span></span><span></span><span></span><span></span>
+											</div>
+										</div>
 									</td>
 									<td>
 										<em>40%</em>
@@ -587,8 +586,12 @@
 								</tr>
 								<tr>
 									<th scope="row">고지혈증</th>
-									<td>
-										<div aria-label="경고" class="bar lv-3"></div>
+									<td class="pd-n">
+										<div aria-label="경고" class="bar lv-3">
+											<div class="bar-wrap">
+												<span></span><span></span><span></span><span></span><span></span><span></span>
+											</div>
+										</div>
 									</td>
 									<td>
 										<em>40%</em>
@@ -596,8 +599,12 @@
 								</tr>
 								<tr>
 									<th scope="row">비만</th>
-									<td>
-										<div aria-label="위험" class="bar lv-4"></div>
+									<td class="pd-n">
+										<div aria-label="위험" class="bar lv-4">
+											<div class="bar-wrap">
+												<span></span><span></span><span></span><span></span><span></span><span></span>
+											</div>
+										</div>
 									</td>
 									<td>
 										<em>40%</em>
@@ -613,8 +620,12 @@
 										심장
 									</th>
 									<th scope="row">허혈성심장질환</th>
-									<td>
-										<div aria-label="중위험" class="bar lv-5"></div>
+									<td class="pd-n">
+										<div aria-label="주위험" class="bar lv-5">
+											<div class="bar-wrap">
+												<span></span><span></span><span></span><span></span><span></span><span></span>
+											</div>
+										</div>
 									</td>
 									<td>
 										<em>40%</em>
@@ -630,8 +641,12 @@
 										뇌
 									</th>
 									<th scope="row">뇌졸중</th>
-									<td>
-										<div aria-label="고위험" class="bar lv-6"></div>
+									<td class="pd-n">
+										<div aria-label="고위험" class="bar lv-6">
+											<div class="bar-wrap">
+												<span></span><span></span><span></span><span></span><span></span><span></span>
+											</div>
+										</div>
 									</td>
 									<td>
 										<em>40%</em>
@@ -639,8 +654,12 @@
 								</tr>
 								<tr>
 									<th scope="row">치매</th>
-									<td>
-										<div aria-label="주의" class="bar lv-2"></div>
+									<td class="pd-n">
+										<div aria-label="경고" class="bar lv-3">
+											<div class="bar-wrap">
+												<span></span><span></span><span></span><span></span><span></span><span></span>
+											</div>
+										</div>
 									</td>
 									<td>
 										<em>40%</em>
@@ -656,8 +675,12 @@
 										암종
 									</th>
 									<th scope="row">간암</th>
-									<td>
-										<div aria-label="고위험" class="bar lv-6"></div>
+									<td class="pd-n">
+										<div aria-label="경고" class="bar lv-3">
+											<div class="bar-wrap">
+												<span></span><span></span><span></span><span></span><span></span><span></span>
+											</div>
+										</div>
 									</td>
 									<td>
 										<em>40%</em>
@@ -665,8 +688,12 @@
 								</tr>
 								<tr>
 									<th scope="row">위암</th>
-									<td>
-										<div aria-label="주의" class="bar lv-2"></div>
+									<td class="pd-n">
+										<div aria-label="경고" class="bar lv-3">
+											<div class="bar-wrap">
+												<span></span><span></span><span></span><span></span><span></span><span></span>
+											</div>
+										</div>
 									</td>
 									<td>
 										<em>40%</em>
@@ -674,8 +701,12 @@
 								</tr>
 								<tr>
 									<th scope="row">대장암</th>
-									<td>
-										<div aria-label="주의" class="bar lv-2"></div>
+									<td class="pd-n">
+										<div aria-label="경고" class="bar lv-3">
+											<div class="bar-wrap">
+												<span></span><span></span><span></span><span></span><span></span><span></span>
+											</div>
+										</div>
 									</td>
 									<td>
 										<em>40%</em>
@@ -683,8 +714,12 @@
 								</tr>
 								<tr>
 									<th scope="row">대장점막내암</th>
-									<td>
-										<div aria-label="주의" class="bar lv-2"></div>
+									<td class="pd-n">
+										<div aria-label="경고" class="bar lv-3">
+											<div class="bar-wrap">
+												<span></span><span></span><span></span><span></span><span></span><span></span>
+											</div>
+										</div>
 									</td>
 									<td>
 										<em>40%</em>
@@ -692,8 +727,12 @@
 								</tr>
 								<tr>
 									<th scope="row">췌장암</th>
-									<td>
-										<div aria-label="주의" class="bar lv-2"></div>
+									<td class="pd-n">
+										<div aria-label="경고" class="bar lv-3">
+											<div class="bar-wrap">
+												<span></span><span></span><span></span><span></span><span></span><span></span>
+											</div>
+										</div>
 									</td>
 									<td>
 										<em>40%</em>
@@ -701,8 +740,12 @@
 								</tr>
 								<tr>
 									<th scope="row">전립선암</th>
-									<td>
-										<div aria-label="주의" class="bar lv-2"></div>
+									<td class="pd-n">
+										<div aria-label="경고" class="bar lv-3">
+											<div class="bar-wrap">
+												<span></span><span></span><span></span><span></span><span></span><span></span>
+											</div>
+										</div>
 									</td>
 									<td>
 										<em>40%</em>
@@ -710,8 +753,12 @@
 								</tr>
 								<tr>
 									<th scope="row">방광암</th>
-									<td>
-										<div aria-label="주의" class="bar lv-2"></div>
+									<td class="pd-n">
+										<div aria-label="경고" class="bar lv-3">
+											<div class="bar-wrap">
+												<span></span><span></span><span></span><span></span><span></span><span></span>
+											</div>
+										</div>
 									</td>
 									<td>
 										<em>40%</em>
@@ -719,8 +766,12 @@
 								</tr>
 								<tr>
 									<th scope="row">유방암</th>
-									<td>
-										<div aria-label="주의" class="bar lv-2"></div>
+									<td class="pd-n">
+										<div aria-label="경고" class="bar lv-3">
+											<div class="bar-wrap">
+												<span></span><span></span><span></span><span></span><span></span><span></span>
+											</div>
+										</div>
 									</td>
 									<td>
 										<em>40%</em>
@@ -728,8 +779,12 @@
 								</tr>
 								<tr>
 									<th scope="row">자궁암</th>
-									<td>
-										<div aria-label="주의" class="bar lv-2"></div>
+									<td class="pd-n">
+										<div aria-label="경고" class="bar lv-3">
+											<div class="bar-wrap">
+												<span></span><span></span><span></span><span></span><span></span><span></span>
+											</div>
+										</div>
 									</td>
 									<td>
 										<em>40%</em>
@@ -737,8 +792,12 @@
 								</tr>
 								<tr>
 									<th scope="row">난소암</th>
-									<td>
-										<div aria-label="주의" class="bar lv-2"></div>
+									<td class="pd-n">
+										<div aria-label="경고" class="bar lv-3">
+											<div class="bar-wrap">
+												<span></span><span></span><span></span><span></span><span></span><span></span>
+											</div>
+										</div>
 									</td>
 									<td>
 										<em>40%</em>
@@ -746,8 +805,12 @@
 								</tr>
 								<tr>
 									<th scope="row">갑상선암</th>
-									<td>
-										<div aria-label="주의" class="bar lv-2"></div>
+									<td class="pd-n">
+										<div aria-label="경고" class="bar lv-3">
+											<div class="bar-wrap">
+												<span></span><span></span><span></span><span></span><span></span><span></span>
+											</div>
+										</div>
 									</td>
 									<td>
 										<em>40%</em>
