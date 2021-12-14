@@ -32,21 +32,21 @@
                 <li class="ui-acco-wrap" data-n="0">
                   <div class="ui-acco-tit">
                     <div id="exeAcco1Btn0" class="chkbox ui-acco-btn">
-                      <input type="checkbox" id="chk0" name="chkbox">
+                      <input type="checkbox" id="chk0" name="chkbox" checked>
                       <label for="chk0" class="chkbox-label">건강정보(민감정보) 수집/이용 동의</label>
                     </div>
                   </div>
                   <div id="exeAcco1Pnl0" class="ui-acco-pnl" data-n="0">
-                    <div class="ui-acco-pnl-wrap">
+                    <div class="ui-acco-pnl-wrap scroll custom">
                       <p>귀하는 개인(신용)정보의 수집. 이용 및 조회, 제공에 관한 동의를 거부하실 수 있으며, 개인의 신용도 등을 평가하기 위한 목적 이외의 개인(신용)정보 제공 동의는 철회할 수 있습니다. 다만, 본 동의는 ‘보험계약
-                      인수심사, 체결, 이행, 유지, 관리’를 위해 필수적인 사항이므로 동의를 거부하시는 경우 관련 업무 수행이 불가능합니다.</p>
+                    인수심사, 체결, 이행, 유지, 관리’를 위해 필수적인 사항이므로 동의를 거부하시는 경우 관련 업무 수행이 불가능합니다.</p>
                     </div>
                   </div>
                 </li>
                 <li class="ui-acco-wrap" data-n="1">
                   <div class="ui-acco-tit">
                     <div id="exeAcco1Btn1" class="chkbox ui-acco-btn">
-                      <input type="checkbox" id="chk1" name="chkbox">
+                      <input type="checkbox" id="chk1" name="chkbox" checked>
                       <label for="chk1" class="chkbox-label">개인정보 제3자 제공 동의</label>
                     </div>
                   </div>
@@ -61,7 +61,7 @@
                 <li class="ui-acco-wrap" data-n="2">
                   <div class="ui-acco-tit">
                     <div id="exeAcco1Btn2" class="chkbox ui-acco-btn">
-                      <input type="checkbox" id="chk2" name="chkbox">
+                      <input type="checkbox" id="chk2" name="chkbox" checked>
                       <label for="chk2" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
                     </div>
                   </div>
@@ -76,7 +76,7 @@
                 <li class="ui-acco-wrap" data-n="3">
                   <div class="ui-acco-tit">
                     <div id="exeAcco1Btn3" class="chkbox ui-acco-btn">
-                      <input type="checkbox" id="chk3" name="chkbox">
+                      <input type="checkbox" id="chk3" name="chkbox" checked>
                       <label for="chk3" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
                     </div>
                   </div>
@@ -91,7 +91,7 @@
                 <li class="ui-acco-wrap" data-n="4">
                   <div class="ui-acco-tit">
                     <div id="exeAcco1Btn4" class="chkbox ui-acco-btn">
-                      <input type="checkbox" id="chk4" name="chkbox">
+                      <input type="checkbox" id="chk4" name="chkbox" checked>
                       <label for="chk4" class="chkbox-label">건강정보(민감정보) 제3자 제공 동의</label>
                     </div>
                   </div>
@@ -105,17 +105,17 @@
                 </li>                  
             </ul>
             <div class="all-chked">
-              <div class="chkbox">
-                <input type="checkbox" id="allChk" name="chkbox"> <!-- onclick="netive.accordion.toggle({ id:'exeAcco1', current: 'all' })"-->
+              <div class="chkbox chked">
+                <input type="checkbox" id="allChk" name="chkbox" checked> <!-- onclick="netive.accordion.toggle({ id:'exeAcco1', current: 'all' })"-->
                 <label for="allChk" class="chkbox-label">모두 동의하기</label>
               </div>
             </div>
-            </div>
-            <div class="btn-wrap btn-half">
+          </div>
+          <div class="btn-wrap btn-half">
               <!-- button 공통 비활성화 시 'disabled' attr 추가 -->
-                <button type="button" onclick="location.href='./LPC-000.html'" class="btn-base-l"><span>이전</span></button>
-                <button type="button" id="btnConfirm" onclick="location.href='./LPC-002.html'" class="btn-base-l primary" disabled><span>다음</span></button>
-            </div>
+              <button type="button" onclick="location.href='./LPC-000.html'" class="btn-base-l"><span>이전</span></button>
+              <button type="button" id="btnConfirm" onclick="location.href='./LPC-002.html'" class="btn-base-l primary"><span>다음</span></button>
+          </div>
         </main>
       </div>
     </div>
@@ -139,7 +139,7 @@
 
           netive.accordion.init({
             id: 'exeAcco1',
-            current: null,
+            current: [0],
             callback: function (v) {
               console.log(v);
             }

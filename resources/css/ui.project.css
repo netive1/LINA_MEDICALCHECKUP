@@ -19,7 +19,7 @@
 	display: block;
 	width: 15.4rem;
 	height: 17.4rem;
-	background: url(../img/bg-splash-obj.png) center/100% no-repeat;
+	background: url(../img/mo/bg-splash-obj.png) center/100% no-repeat;
 	animation-name: slideRightIn;
 	animation-duration: 1s;
 	animation-iteration-count: 1;
@@ -249,14 +249,14 @@
 	left:50%;
 	width:11.2rem;
 	height: 11.2rem;
-	background: url(../img/progress-emoji-1.png) center/100% no-repeat;
+	background: url(../img/mo/progress-emoji-1.png) center/100% no-repeat;
 	transform: translate(-50%, -50%);
 }
-.circle-progress.n5 .emoji{background-image: url(../img/progress-emoji-1.png);}
-.circle-progress.n4 .emoji{background-image: url(../img/progress-emoji-1.png);}
-.circle-progress.n3 .emoji{background-image: url(../img/progress-emoji-1.png);}
-.circle-progress.n2 .emoji{background-image: url(../img/progress-emoji-1.png);}
-.circle-progress.n1 .emoji{background-image: url(../img/progress-emoji-1.png);}
+.circle-progress.n5 .emoji{background-image: url(../img/mo/progress-emoji-1.png);}
+.circle-progress.n4 .emoji{background-image: url(../img/mo/progress-emoji-1.png);}
+.circle-progress.n3 .emoji{background-image: url(../img/mo/progress-emoji-1.png);}
+.circle-progress.n2 .emoji{background-image: url(../img/mo/progress-emoji-1.png);}
+.circle-progress.n1 .emoji{background-image: url(../img/mo/progress-emoji-1.png);}
 
 /* Entry_1~2 상태 선택 */
 .state-wrap {
@@ -265,7 +265,7 @@
 }
 /* Entry_3 정보 연동 */
 .bg-chkup {
-	background: url('../img/bg-chkup.png') center bottom 18.9rem no-repeat;
+	background: url('../img/mo/bg-chkup.png') center bottom 18.9rem no-repeat;
 	background-size: 15.8rem 12.8rem;
 }
 .bg-chkup .logo-txt .highlight {
@@ -319,7 +319,7 @@
 /* 모바일 GA hybrid */
 /* 상담 예약 완료 */
 .bg-complete {
-	background: url('../img/bg-complete.png') center bottom 22rem no-repeat;
+	background: url('../img/mo/bg-complete.png') center bottom 22rem no-repeat;
 	background-size: 15.2rem 13.4rem;
 }
 
@@ -402,7 +402,7 @@
 	display: block;
 	width:11.7rem;
 	height: 8.7rem;
-	background: url(../../resources/img/myhealthage.png) no-repeat 0 0 / 100%;
+	background: url(../../resources/img/mo/myhealthage.png) no-repeat 0 0 / 100%;
 	position: absolute;
 	top:-7.8rem;
 	right:1rem;
