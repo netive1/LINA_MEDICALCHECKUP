@@ -83,3 +83,32 @@
   font-weight: 700;
   font-style: normal;
 }
+
+/* roboto */
+@font-face {
+font-family: "Noto Sans KR";
+src: url('../fonts/roboto/Roboto-Regular.woff2') format('woff2'),
+      url('../fonts/roboto/Roboto-Regular.woff') format('woff'),
+      url('../fonts/roboto/Roboto-Regular.ttf') format('truetype');
+font-weight: 400;
+unicode-range: U+0030-0039;
+font-style: normal;
+}
+@font-face {
+font-family: "Noto Sans KR";
+src: url('../fonts/roboto/Roboto-Bold.woff2') format('woff2'),
+      url('../fonts/roboto/Roboto-Bold.woff') format('woff'),
+      url('../fonts/roboto/Roboto-Bold.ttf') format('truetype');
+font-weight: 500;
+unicode-range: U+0030-0039;
+font-style: normal;
+}
+@font-face {
+font-family: "Noto Sans KR";
+src: url('../fonts/roboto/Roboto-Black.woff2') format('woff2'),
+      url('../fonts/roboto/Roboto-Black.woff') format('woff'),
+      url('../fonts/roboto/Roboto-Black.ttf') format('truetype');
+font-weight: 700;
+unicode-range: U+0030-0039;
+font-style: normal;
+}
