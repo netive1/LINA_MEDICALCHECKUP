@@ -1463,7 +1463,9 @@ progress {
 	}
 }
 
-/* pc layout*/
+/************* 
+  PC STYLE 
+*************/
 .pc .base-header .header-wrap {
 	padding: .9rem 0;
 	box-shadow: .4rem .4rem 1.6rem rgba(195,195,195,0.25);
@@ -1744,22 +1746,43 @@ progress {
 	font-size: var(--text-l);
 }
 /*main*/
-.base-wrap.result.pc .base-header + .base-body .base-main {
+.pc.result .base-header + .base-body .base-main {
 	padding: 10rem 0 0;
 }
-.base-wrap.result.pc .base-body {
+.pc.result .base-body {
 	max-width: 100%;
 }
-.base-wrap.result.pc .content-area {
+.pc.result .content-area {
 	margin: 0;
 	background: #F1F8FD url(../img/pc/common/logo-gray.svg) bottom 4.8rem center no-repeat;
 }
-.base-wrap.result.pc .tit-wrap , 
-.base-wrap.result.pc .box-area{
+.pc.result .tit-wrap , 
+.pc.result .box-area{
 	max-width: 43.4rem;
 	margin: 0 auto;
 }
-.base-wrap.result.pc .content-area .box-area {
+.pc.result .content-area .box-area {
 	top: -3.8rem;
 	padding-bottom: 5rem;
+}
+/*splash*/
+.pc.base-splash {
+
+}
+.pc.base-splash .base-body {
+	max-width: 86.2rem;
+}
+.pc.base-splash .base-body:after {
+	top: 15.5rem;
+	bottom: auto;
+	width: 44.8rem;
+	height: 43rem;
+	background: url(../img/pc/bg-splash-obj.png) center/100% no-repeat;
+}
+.pc.base-splash .logo-txt {
+	font-size: 2rem;
+	color: var(--primary);
+}
+.pc.base-splash .logo-txt strong {
+	display: block;
 }
