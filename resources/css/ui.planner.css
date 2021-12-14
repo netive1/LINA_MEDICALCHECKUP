@@ -910,6 +910,39 @@ h6 {
     padding:3.3rem 3rem;
 	background:#fff;
 }
+.graph-age .lv{
+	position: absolute;
+	z-index: 5;
+	top:1rem;
+	right: -7rem;
+	width: 12rem;
+	height: 10rem;
+	border: .2rem solid #ccc;
+	border-radius: 1.6rem;
+	padding-top: 1.6rem;;
+}
+.graph-age .lv > *{
+	display: block;
+	text-align: center;
+	width:100%;
+}
+.graph-age .lv span{
+	font-size: 1.6rem;
+	font-weight: 600;
+}
+.graph-age .lv strong{
+	font-size: 3.2rem;
+	line-height: 1.1;
+	font-weight: 600;
+}
+.graph-age .lv.n1{border-color:#4792EF;}
+.graph-age .lv.n2{border-color:#F4C243;}
+.graph-age .lv.n3{border-color:#01D4E5;}
+.graph-age .lv.n4{border-color:#FF6262;}
+.graph-age .lv.n1 strong{color:#4792EF;}
+.graph-age .lv.n2 strong{color:#F4C243;}
+.graph-age .lv.n3 strong{color:#01D4E5;}
+.graph-age .lv.n4 strong{color:#FF6262;}
 .graph-age{
 	height: 33rem;
 }
@@ -1079,7 +1112,7 @@ h6 {
 	}
 	.group-subject{margin-bottom: 0.6rem;}
 	.btn-print,
-	.btn-wrap
+	.btn-wrap,
 	.base-header{display:none !important;}
 	.checkup-report .base-body{padding-top: 0 !important;}
 	.group-sec{margin-top:2rem}

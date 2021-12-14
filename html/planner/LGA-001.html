@@ -49,6 +49,10 @@
 					
 					<div class="group-box graph-age">
 						<div class="graph-age-bg">
+							<div class="lv n3">
+								<span>건강등급</span>
+								<strong></strong>
+							</div>
 							<div class="graph-age-txt">
 								<div class="graph-age-item n1">
 									<div class="age-txt">실제나이</div>
@@ -847,6 +851,8 @@
 				graph: function(opt){
 					const age = opt.age;
 					const bodyAge = opt.bodyage;
+					const level = doc.querySelector('.graph-age .lv');
+					const text = level.querySelector('strong');
 					const itemA1 = doc.querySelector('.graph-age-item.n1');
 					const itemA2 = doc.querySelector('.graph-age-item.n2');
 					const itemB1 = doc.querySelector('.graph-age-p.n1');
@@ -859,12 +865,34 @@
 					itemB2.style.left = bodyAge + '%';
 					bar.style.left = age + '%';
 					bar.style.width = (bodyAge - age) + '%';
+
+					level.classList.remove('n1');
+					level.classList.remove('n2');
+					level.classList.remove('n3');
+					level.classList.remove('n4');
+
+					switch (opt.level) {
+						case '양호':
+							level.classList.add('n1');
+							break;
+						case '경고':
+							level.classList.add('n2');
+							break;
+						case '주의':
+							level.classList.add('n3');
+							break;
+						case '위험':
+							level.classList.add('n4');
+							break;
+					}
+					text.textContent = opt.level;
 				}
 			}
 
 			document.addEventListener("DOMContentLoaded", function () {
 
 				UIcheckupReport.graph({
+					level: '주의', //'양호', '경고'. '주의', '위험'
 					age: 24,
 					bodyage: 40
 				});
