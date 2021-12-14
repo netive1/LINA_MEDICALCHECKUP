@@ -43,7 +43,7 @@
                                 <li class="ui-acco-wrap" data-n="0">
                                     <div class="ui-acco-tit">
                                         <div id="exeAcco1Btn0" class="chkbox ui-acco-btn">
-                                            <input type="checkbox" id="chk0" name="chkbox" checked>
+                                            <input type="checkbox" id="chk0" name="chkbox">
                                             <label for="chk0" class="chkbox-label">건강정보(민감정보) 수집/이용 동의</label>
                                         </div>
                                     </div>
@@ -58,7 +58,7 @@
                                 <li class="ui-acco-wrap" data-n="1">
                                     <div class="ui-acco-tit">
                                         <div id="exeAcco1Btn1" class="chkbox ui-acco-btn">
-                                            <input type="checkbox" id="chk1" name="chkbox" checked>
+                                            <input type="checkbox" id="chk1" name="chkbox">
                                             <label for="chk1" class="chkbox-label">개인정보 제3자 제공 동의</label>
                                         </div>
                                     </div>
@@ -74,7 +74,7 @@
                             </ul>
                             <div class="all-chked">
                                 <div class="chkbox">
-                                    <input type="checkbox" id="allChk" name="chkbox" checked>
+                                    <input type="checkbox" id="allChk" name="chkbox">
                                     <label for="allChk" class="chkbox-label">모두 동의하기</label>
                                 </div>
                             </div>
@@ -92,7 +92,7 @@
                                 <label for="input1" class="form-item-label">이름</label>
                             </div>
                             <div class="form-item">
-                                <input type="text" id="input1" class="inp-base" value="라인하" placeholder="이름 입력">
+                                <input type="text" id="input1" class="inp-base" value="" placeholder="이름 입력">
                             </div>
                         </div>
                         <div class="form-wrap">
@@ -100,7 +100,7 @@
                                 <label for="input2" class="form-item-label">생년월일</label>
                             </div>
                             <div class="form-item">
-                                <input type="number" id="input2" class="inp-base" value="19870825" placeholder="숫자 8자리">
+                                <input type="number" id="input2" class="inp-base" value="" placeholder="숫자 8자리">
                             </div>
                         </div>
                         <div class="form-wrap">
@@ -114,7 +114,7 @@
                                         <span class="radio-txt">남자</span>
                                     </label>
                                     <label class="radio-label radio-type-txt">
-                                        <input type="radio" name="radioGender" class="radio" checked>
+                                        <input type="radio" name="radioGender" class="radio">
                                         <span class="radio-txt">여자</span>
                                     </label>
                                 </div>
@@ -125,7 +125,7 @@
                                 <label for="input3" class="form-item-label">휴대폰 번호</label>
                             </div>
                             <div class="form-item">
-                                <input type="tel" id="input3" class="inp-base" value="01012345678" placeholder="-없이 입력">
+                                <input type="tel" id="input3" class="inp-base" value="" placeholder="-없이 입력">
                             </div>
                             <!-- 오 입력시 'error' class 부여 -->
                             <!-- <div class="from-info">
@@ -178,7 +178,7 @@
                         </div>
                     </section>
                     <!-- //카카오 인증 -->
-                    <section class="ui-tab-pnl" data-tab="1"> 
+                    <section class="ui-tab-pnl" data-tab="1">
                         <h3 class="ui-tab-tit">[필수] PASS 인증을 위한 개인정보 동의</h3>
                         <!-- 약관 동의 -->
                         <div id="agreeAllChk2" class="ui-chkgroup">
@@ -366,7 +366,7 @@
 
                 netive.tab.init({
                     id: 'certifiedTab',
-                    current: 0,
+                    current: 1,
                     onePanel: false,
                     effect: false,
                     callback: function (v) {
@@ -376,7 +376,7 @@
 
                 netive.tab.toggle({
                     id: 'certifiedTab',
-                    current: 0,
+                    current: 1,
                     callback: function (v) {
                         console.log(v);
                     }

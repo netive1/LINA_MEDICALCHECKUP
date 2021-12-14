@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=yes">
+    <title>라이나생명 검진분석 서비스</title>
+    <link rel="stylesheet" href="../../resources/css/ui.base.css">
+    <link rel="canonical" href="">
+    <script src="../../resources/js/lib/jquery-3.6.0.min.js"></script>
+    <!--progress lib-->
+    <script src="../../resources/js/ui.global.js"></script>
+    <script src="../../resources/js/ui.common.js"></script>
+</head>
+<body>
+    <div class="base-wrap result pc">
+        <header class="base-header">
+            <div class="header-wrap">
+                <div class="fx-wrap modal-tit" data-align="center" data-valign="center">
+                    <h1 class="logo-xcarelink"><img src="../../resources/img/common/logo-xcarelink.svg" alt=""></h1>
+                </div>
+            </div>
+        </header>
+        <div class="base-body">
+            <main class="base-main">
+                <div class="tit-wrap">
+                    <h1 class="h-1">
+                        <strong><span class="name">라인하</span>님<br>건강검진 분석 결과</strong>
+                        <img src="../../resources/img/mo/img-result-head.png" alt="">
+                    </h1>
+                    <p class="fs-m"><span class="date">2021</span>년 건강검진 기준,<br>국민건강보험공단의 정보를<br>기반으로 분석되었습니다.</p>
+                </div>
+                <div class="content-area">
+                    <div class="box-area">
+                        <div class="bax-wrap">
+                            <div class="box-base info">
+                                <dl>
+                                    <dt class="h-3">나의 건강 나이</dt>
+                                    <dd>
+                                        <div class="progress-wrap img-myhealthage">
+                                            <div class="fx-wrap" data-align="justify" data-valign="center">
+                                                <span class="txt">실제 나이</span>
+                                                <div class="progress-cont progress c1 ui-progressbar" data-percent="40">
+                                                    <div class="progress-bar progress">
+                                                        <div class="ui-progressbar-item" aria-label=""></div>
+                                                    </div>
+                                                </div>
+                                                <span class="age">40세</span>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                        <div class="progress-wrap">
+                                            <div class="fx-wrap" data-align="justify" data-valign="center">
+                                                <span class="txt">생체 나이</span>
+                                                <div class="progress-cont progress c2 ui-progressbar" data-percent="60">
+                                                    <div class="progress-bar progress">
+                                                        <div class="ui-progressbar-item" aria-label=""></div>
+                                                    </div>
+                                                </div>
+                                                <span class="age">60세</span>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                        <div class="fx-wrap" data-align="justify" data-valign="center">
+                                            <span class="txt">건강등급</span>
+                                            <span class="state state-1">양호</span>
+                                            <!-- 
+                                                [등급 별 class guide]
+                                                양호 state-1 , 주의 state-2, 경고 state-3, 위험 state-4, 중위험 state-5, 고위험 state-6 
+                                                -->
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <hr class="hr-cont">
+                                <div class="fx-wrap result-txt" data-align="start" data-valign="top">
+                                    <img src="../../resources/img/mo/ico-step-age-1.png" alt="" class="img-s">
+                                    <p>실제 나이보다 건강하게 나왔어요!<br>그래도 매년 검진으로 체크하는 것,<br>잊지 마세요!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-wrap">
+                            <h2 class="h-4">생체나이에 따른 예상의료비</h2>
+                            <div class="box-base list">
+                                <ul>
+                                    <li>
+                                        <div class="fx-wrap" data-align="start" data-valign="center">
+                                            <img src="../../resources/img/mo/img-result-obj-1.png" alt="" class="img-m">
+                                            <div class="txt-wrap">
+                                                <span class="fs-s">연간 의료비</span>
+                                                <strong class="primary-color">120,000원</strong>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="fx-wrap" data-align="start" data-valign="center">
+                                            <img src="../../resources/img/mo/img-result-obj-2.png" alt="" class="img-m">
+                                            <div class="txt-wrap">
+                                                <span class="fs-s">연간 의료비 증가액</span>
+                                                <strong class="primary-color">500,000원</strong>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="fx-wrap" data-align="start" data-valign="center">
+                                            <img src="../../resources/img/mo/img-result-obj-3.png" alt="" class="img-m">
+                                            <div class="txt-wrap">
+                                                <span class="fs-s">외래/통원 일수</span>
+                                                <strong class="primary-color">10일 / 4일</strong>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="from-info">
+                                <div class="bul-info" aria-live="polite">
+                                    <div>예상의료비는 생체나이 증감에 따라 제공하는 예측치입니다.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-wrap">
+                            <h2 class="h-4">질병분류에 따른 현재 상태</h2>
+                            <div class="box-base disease">
+                                <ul>
+                                    <!-- [0, 20, 40, 60, 80, 100] -->
+                                    <li>
+                                        <div class="ui-progressbar" data-percent="10">
+                                            <div class="img-wrap">
+                                                <img src="../../resources/img/mo/img-disease-ty-1.png" alt="">
+                                                <span class="ui-progressbar-level"></span>
+                                            </div>
+                                            <div class="progress-wrap">
+                                                <div class="txt-wrap">
+                                                    <span class="fs-s m">1차성 질환 <span class="fs-xs">(노인성 질환)</span></span>
+                                                    <button type="button" class="btn-base-s btn-more" onclick="
+                                                        netive.modal.show({
+                                                            id: 'LMO026-POP1',
+                                                            ps: 'center',
+                                                            src: './LMO-026-POP1.html',
+                                                            full: true,
+                                                            callback: function(){
+                                                                
+                                                                netive.common.progress({
+                                                                    id: 'pgb1',
+                                                                    max: 100,
+                                                                    val: 54.2
+                                                                });
+
+                                                                netive.common.progress({
+                                                                    id: 'pgb2',
+                                                                    max: 100,
+                                                                    val: 30.2
+                                                                });
+                                                            }
+                                                        });"><span>자세히</span></button>
+                                                </div>
+                                                <div class="progress-cont progress">
+                                                    <div class="ui-progressbar-item" aria-label=""></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ui-progressbar" data-percent="80">
+                                            <div class="img-wrap">
+                                                <img src="../../resources/img/mo/img-disease-ty-2.png" alt="">
+                                                <span class="ui-progressbar-level"></span>
+                                            </div>
+                                            <div class="progress-wrap">
+                                                <div class="txt-wrap">
+                                                    <span class="fs-s m">심장질환<span class="fs-xs">(심근경색증,
+                                                            허혈성심장질환)</span></span>
+                                                    <button type="button" class="btn-base-s btn-more" onclick="netive.modal.show({
+                                                        id: 'LMO026-POP2',
+                                                        ps: 'center',
+                                                        src: './LMO-026-POP2.html',
+                                                        full: true
+                                                        });"><span>자세히</span></button>
+                                                </div>
+                                                <div class="progress-cont progress">
+                                                    <div class="ui-progressbar-item" aria-label=""></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ui-progressbar" data-percent="40">
+                                            <div class="img-wrap">
+                                                <img src="../../resources/img/mo/img-disease-ty-3.png" alt="">
+                                                <span class="ui-progressbar-level"></span>
+                                            </div>
+                                            <div class="progress-wrap">
+                                                <div class="txt-wrap">
+                                                    <span class="fs-s m">뇌질환<span class="fs-xs">(뇌졸증, 치매)</span></span>
+                                                    <button type="button" class="btn-base-s btn-more" onclick="netive.modal.show({
+                                                        id: 'LMO026-POP3',
+                                                        ps: 'center',
+                                                        src: './LMO-026-POP3.html',
+                                                        full: true
+                                                        });"><span>자세히</span></button>
+                                                </div>
+                                                <div class="progress-cont progress">
+                                                    <div class="ui-progressbar-item" aria-label=""></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ui-progressbar" data-percent="60">
+                                            <div class="img-wrap">
+                                                <img src="../../resources/img/mo/img-disease-ty-6.png" alt="">
+                                                <span class="ui-progressbar-level"></span>
+                                            </div>
+                                            <div class="progress-wrap">
+                                                <div class="txt-wrap">
+                                                    <span class="fs-s m">암</span>
+                                                    <button type="button" class="btn-base-s btn-more" onclick="netive.modal.show({
+                                                        id: 'LMO026-POP4',
+                                                        ps: 'center',
+                                                        src: './LMO0-26-POP4.html',
+                                                        full: true
+                                                        });"><span>자세히</span></button>
+                                                </div>
+                                                <div class="progress-cont progress">
+                                                    <div class="ui-progressbar-item" aria-label=""></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="from-info">
+                                <div class="bul-info" aria-live="polite">
+                                    <div>이 분석 결과는 참고용으로, 실제 건강검진의 전문적인 분석은 의사 상담을<br> 받으시길 권유드립니다.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script>
+        ;(function (win, doc, jQuery, undefined) {
+            'use strict';
+
+            document.addEventListener("DOMContentLoaded", function () {
+
+                netive.common.init();
+                netive.common.progressBar();
+
+
+                $('.progress-wrap .progress').uiProgressbar();
+
+            });
+
+        })(window, document, $);
+    </script>
+</body>
+</html>

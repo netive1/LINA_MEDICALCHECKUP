@@ -1473,22 +1473,46 @@ progress {
 	height: 4.2rem;
 }
 .pc .base-body {
-	max-width: 50.3rem;
+	max-width: 43.4rem;
 	margin: 0 auto;
 }
-
 .pc .base-header + .base-body .base-main {
 	padding: 16rem 0 10rem;
 }
-
 .pc .base-footer {
-	width: 100%;
-	max-width: 43.4rem;
-	margin: 0 auto;
+	width: 100%;	
 	padding: 0;
+	background: var(--gray400);
+}
+.pc .base-footer .base-footer-inner {
+	max-width: 76rem;
+	padding: 4.5rem 0 7.8rem;
+	margin: 0 auto;
+}
+.pc .base-footer .footer-logo {
+	width: 9rem;
+	height: 2.3rem;
+}
+.pc .base-footer address {
+	margin-top: 2rem;
+	color: var(--gray700);
+	font-style: normal;
+	font-size: 1.3rem;
+}
+.pc .base-footer address span {
+	margin-right: 1.5rem;
+}
+.pc .base-footer .copyright {
+	color: var(--gray800);
+	font-size: 1.3rem;
 }
 .pc .form-wrap {
 	margin-top: 3.2rem;
+}
+
+/* button */
+.pc .btn-area {
+	margin: 4.4rem 0;
 }
 .pc .btn-base-link {
 	min-height: 8rem;
@@ -1507,6 +1531,11 @@ progress {
 	border-color: var(--gray800);
 	background: var(--gray800);
 }
+
+/*title & typo*/
+.pc p {
+	letter-spacing: -0.07rem;
+}
 .pc .tit-wrap {
 	margin-bottom: 3.6rem;
 }
@@ -1515,17 +1544,37 @@ progress {
 	font-weight: 200;
 }
 
+/*scrollbar*/
+.pc .scroll { 
+	overflow-y: scroll; 
+}
+.pc .scroll.custom::-webkit-scrollbar { 
+    width: .4rem; 
+}
+.pc .scroll.custom::-webkit-scrollbar-track { 
+    background-color: var(--gray200);
+    border-width: 0;
+}
+.pc .scroll.custom::-webkit-scrollbar-thumb {
+    border-radius: .4rem;
+    background-color: var(--gray200);
+    border-style: solid;
+    border-color: transparent;
+    border-width: .1rem;
+    background-clip: padding-box;
+}
+.pc .scroll.custom::-webkit-scrollbar-button,
+.pc .scroll.custom::-webkit-scrollbar-track-piece,
+.pc .scroll.custom::-webkit-scrollbar-corner,
+.pc .scroll.custom::-webkit-resizer { display: none; }
+
+/*accordion*/
 .pc .ui-acco {
+	padding: 0;
 	margin-bottom: 2.4rem;
 }
 .pc .ui-acco + .from-info {
 	margin-bottom: 0;
-}
-.pc .ui-chkgroup .h-3 {
-	font-size: var(--text-m);
-	padding-bottom: 2.2rem;
-	margin-bottom: 1rem;
-	border-bottom: 1px solid var(--gray200);
 }
 .pc .ui-acco .ui-acco-btn {
 	padding: 1.4rem 0;
@@ -1575,13 +1624,13 @@ progress {
 }
 .pc .ui-chkgroup .ui-acco-btn {
 	position: static;
-	width: auto;
+	width: calc(100% - 6rem);
 }
-.pc .ui-chkgroup .ui-acco-tit {
+.pc .ui-acco-tit {
 	padding: 0;
 	border: 0;
 }
-.pc .ui-acco .ui-acco-btn:after {
+.pc .ui-chkgroup .ui-acco-btn:after {
 	top: 50%;
 	right: 0;
 	display: inline-block;
@@ -1599,40 +1648,118 @@ progress {
 	transform: translateY(-50%);
 	content: '보기';
 }
-
 .pc .ui-acco-wrap .chkbox input[type=checkbox] + .chkbox-label:before {
-	/* position: static;
-	transform: initial; */
 	background: url(../img/common/ico-chkbox-s.svg) center no-repeat;
 }
 .pc .ui-acco-wrap .chkbox[aria-expanded="true"] input[type=checkbox] + .chkbox-label:before {
 	background-image: url(../img/common/ico-chkbox-s-on.svg);
 }
 
-.pc .btn-area {
-	margin: 4.4rem 0;
+/* 인증 화면 (카카오/pass)*/
+.pc .step-toggle > .tit-wrap {
+	margin-top: 10rem;
 }
-/* different cases */
-.pc .scroll { 
-	overflow-y: scroll; 
+.pc .kakao-process {
+	padding: 3.4rem 3.1rem;
+	border-radius: 1.4rem;
 }
-.pc .scroll.custom::-webkit-scrollbar { 
-    width: .4rem; 
+.pc .kakao-process .img-wrap img {
+	width: 7.7rem;
+	height: 7.7rem;
 }
-.pc .scroll.custom::-webkit-scrollbar-track { 
-    background-color: var(--gray200);
-    border-width: 0;
+.pc .kakao-process .img-wrap:before {
+	top: 3rem;
+	width: .8rem;
+	height: 1.6rem;
+	background: url(../img/pc/common/arr-right.svg) center/100% no-repeat;
 }
-.pc .scroll.custom::-webkit-scrollbar-thumb {
-    border-radius: .4rem;
-    background-color: var(--gray200);
-    border-style: solid;
-    border-color: transparent;
-    border-width: .1rem;
-    background-clip: padding-box;
+.pc .kakao-process .img-wrap span {
+	font-size: var(--text-xs);
 }
-/* hidden elements */
-.pc .scroll.custom::-webkit-scrollbar-button,
-.pc .scroll.custom::-webkit-scrollbar-track-piece,
-.pc .scroll.custom::-webkit-scrollbar-corner,
-.pc .scroll.custom::-webkit-resizer { display: none; }
+/*tab*/
+.pc .ui-tab-pnl {
+	padding: 4.7rem 0;
+}
+.pc .ui-tab-btns:after {
+	display: none;
+}
+.pc .ui-tab-tit {
+	color: var(--gray900);
+	font-size: var(--text-m);
+	font-weight: 500;
+    padding-bottom: 2.2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--gray200);
+}
+.pc .ui-tab-btns .btn-wrap {
+	flex-wrap: wrap;
+}
+.pc .ui-tab-btns .btn-wrap button {
+	width: 100%;
+}
+.pc .ui-tab-btns .btn-wrap [class*="btn-"] + [class*="btn-"] {
+	margin: 1.8rem 0 0;
+}
+.pc .ui-tab-btn.selected {
+	color: var(--primary);
+	border: 1px solid var(--primary);
+	box-shadow: .8rem .8rem 2.6rem rgb(1,154,249,0.14);
+}
+.pc .ui-tab-btn.selected:focus,
+.pc .btn-base-link:focus {
+	border-color: var(--primary);
+	box-shadow: .8rem .8rem 2.6rem rgb(1,154,249,0.14);
+}
+
+/*modal & layerpop*/
+[class*="size-desktop"] .ui-modal .ui-modal-wrap {
+	max-width: 43.4rem;
+}
+[class*="size-desktop"] .ui-modal .ui-modal-body {
+	padding: 5.4rem 2.4rem 3.2rem;
+	color: var(--gray800);
+	font-size: var(--text-s);
+}
+[class*="size-desktop"] .ui-modal .ui-modal-wrap strong {
+	font-size: var(--text-l);
+}
+
+/*loding 화면*/
+.pc .tit-wrap .h-1 {
+	font-size: var(--text-xl);
+}
+.pc.base-loading .base-body {
+	max-width: 76rem;
+}
+.pc.base-loading .tit-wrap .h-1 {
+	font-size: var(--text-xxl);
+}
+.pc.base-loading .tit-wrap p {
+	font-size: var(--text-m);
+}
+.pc .circle-progress .text .percent {
+	font-size: var(--text-xl);
+}
+.pc .circle-progress .text span {
+	font-size: var(--text-l);
+}
+/*main*/
+.base-wrap.result.pc .base-header + .base-body .base-main {
+	padding: 10rem 0 0;
+}
+.base-wrap.result.pc .base-body {
+	max-width: 100%;
+}
+.base-wrap.result.pc .content-area {
+	margin: 0;
+	background: #F1F8FD url(../img/pc/common/logo-gray.svg) bottom 4.8rem center no-repeat;
+}
+.base-wrap.result.pc .tit-wrap , 
+.base-wrap.result.pc .box-area{
+	max-width: 43.4rem;
+	margin: 0 auto;
+}
+.base-wrap.result.pc .content-area .box-area {
+	top: -3.8rem;
+	padding-bottom: 5rem;
+}

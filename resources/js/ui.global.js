@@ -471,9 +471,9 @@ if (!Object.keys){
 
 			return _i;
 		},
-		toggleSlide: function(opt) {
-			const el = opt.el;
-			const state = opt.state;
+		toggleSlide: function(option) {
+			const el = option.el;
+			const state = option.state;
 			let n;
 
 			if (state === 'toggle') {
@@ -842,7 +842,7 @@ if (!Object.keys){
 					const s = areaH * Number(attrStart) / 100;
 					const e = areaH * Number(attrEnd) / 100;
 
-					if (opt.area !== 'window') {
+					if (option.area !== 'window') {
 						start = (start + areaT) - (baseT + areaT);
 						end = (end + areaT) - (baseT + areaT);
 					}
@@ -933,12 +933,12 @@ if (!Object.keys){
 	}
     
 	Global.cookie = {
-		set: function(opt){
-            const name = opt.name;
-            const value = opt.value;
-            const term = opt.term;
-            const path = opt.path;
-            const domain = opt.domain;
+		set: function(option){
+            const name = option.name;
+            const value = option.value;
+            const term = option.term;
+            const path = option.path;
+            const domain = option.domain;
 
 			let cookieset = name + '=' + value + ';';
 			let expdate;
@@ -970,7 +970,7 @@ if (!Object.keys){
 	}
 
 	Global.form = {
-		init: function(opt){
+		init: function(option){
 			const el_inps = doc.querySelectorAll('.inp-base');
 
             for (let i = 0, len = el_inps.length; i < len; i++) {
@@ -1258,8 +1258,8 @@ if (!Object.keys){
 	}
 
 	Global.rangeSlider = {
-		init: function(opt){
-			const id = opt.id;
+		init: function(option){
+			const id = option.id;
 			const el_range = document.querySelector('.ui-range[data-id="'+ id +'"]');
 			const el_from = el_range.querySelector('.ui-range-inp[data-range="from"]');
 			const el_to = el_range.querySelector('.ui-range-inp[data-range="to"]');
@@ -1297,9 +1297,9 @@ if (!Object.keys){
 				});
 			}
 		},
-		rangeFrom: function(opt){
-			const id = opt.id;
-			const v = opt.value;
+		rangeFrom: function(option){
+			const id = option.id;
+			const v = option.value;
 			const el_range = document.querySelector('.ui-range[data-id="'+ id +'"]');
 			const el_from = el_range.querySelector('.ui-range-inp[data-range="from"]');
 			const el_to = el_range.querySelector('.ui-range-inp[data-range="to"]');
@@ -1318,7 +1318,7 @@ if (!Object.keys){
 
 			let from_value = +el_from.value;
 			
-			if (opt.type !== 'single') {
+			if (option.type !== 'single') {
 				if (+el_to.value - from_value < 0) {
 					from_value = +el_to.value - 0;
 					el_from.value = from_value;
@@ -1352,9 +1352,9 @@ if (!Object.keys){
 				}
 			}
 		},
-		rangeTo: function(opt){
-			const id = opt.id;
-			const v = opt.value;
+		rangeTo: function(option){
+			const id = option.id;
+			const v = option.value;
 			const el_range = document.querySelector('.ui-range[data-id="'+ id +'"]');
 			const el_from = el_range.querySelector('.ui-range-inp[data-range="from"]');
 			const el_to = el_range.querySelector('.ui-range-inp[data-range="to"]');
@@ -1399,14 +1399,14 @@ if (!Object.keys){
 	}
 
 	Global.sheets = {
-		dim: function(opt){
-            const show = opt.show;
-            const callback = opt.callback;
+		dim: function(option){
+            const show = option.show;
+            const callback = option.callback;
 
             let dim;
 
  			if (show) {
-				const sheet = doc.querySelector('.sheet-bottom[data-id="'+opt.id+'"]');
+				const sheet = doc.querySelector('.sheet-bottom[data-id="'+option.id+'"]');
 				sheet.insertAdjacentHTML('beforeend', '<div class="sheet-dim"></div>');
 
 				dim = doc.querySelector('.sheet-dim');
@@ -1418,10 +1418,10 @@ if (!Object.keys){
 				dim.classList.remove('on');
 			}
 		},
-		bottom: function(opt){
-            const id = opt.id;
-            const state = opt.state;
-            const callback = opt.callback;
+		bottom: function(option){
+            const id = option.id;
+            const state = option.state;
+            const callback = option.callback;
 			const el_base = doc.querySelector('#'+ id);
 			let el_sheet = doc.querySelector('[data-id*="'+id+'"]');
 			const scr_t = doc.documentElement.scrollTop;
@@ -1761,7 +1761,7 @@ if (!Object.keys){
 
 				// for (let opt of opts) {
 				// 	//console.log(a.selected && Global.parts.getIndex(a));
-				// 	n = opt.selected && Global.parts.getIndex(opt);
+				// 	n = option.selected && Global.parts.getIndex(option);
 				// }
 
 				that.dataset.sct = doc.documentElement.scrollTop;
@@ -1915,8 +1915,8 @@ if (!Object.keys){
                         const el_opt = el_opts[i];
 						console.log(el_opt);
 			
-						el_opt.addEventListener('click', Global.select.optClick);
-						el_opt.addEventListener('mouseover',  Global.select.selectOver);
+						el_option.addEventListener('click', Global.select.optClick);
+						el_option.addEventListener('mouseover',  Global.select.selectOver);
 					}
 					
 					el_wrap.addEventListener('mouseleave', selectLeave);
@@ -2151,8 +2151,8 @@ if (!Object.keys){
 
 			doc.removeEventListener('click', Global.select.back);
 		},
-		act: function(opt){
-			const id = opt.id;
+		act: function(option){
+			const id = option.id;
 			const el_select = doc.querySelector('#' + id);
 			const el_opts = el_select.querySelectorAll('option');
 			const el_uiSelect = el_select.closest('.ui-select');
@@ -2161,9 +2161,9 @@ if (!Object.keys){
 			const el_btnopts = el_uiSelect.querySelectorAll('.ui-select-opt');
 
 			// var dataCallback = el_select.data('callback'),
-			// 	callback = opt.callback === undefined ? dataCallback === undefined ? false : dataCallback : opt.callback,
-			let current = opt.current;
-			const org = opt.original === undefined ? false : opt.original;
+			// 	callback = option.callback === undefined ? dataCallback === undefined ? false : dataCallback : option.callback,
+			let current = option.current;
+			const org = option.original === undefined ? false : option.original;
 
 			if (el_uiSelect.dataset.current !== undefined) {
 				current = el_uiSelect.dataset.current;
@@ -2191,7 +2191,7 @@ if (!Object.keys){
             for (let i = 0, len = el_btnopts.length; i < len; i++) {
                 const el_btnopt = el_btnopts[i];
 
-                el_btnopt.classList.remove('selected');
+                el_btnoption.classList.remove('selected');
 			}
 
 			el_btnopts[current].classList.add('selected');
@@ -2234,13 +2234,13 @@ if (!Object.keys){
 	
 					for (var j = 0; j < paras.length; j++ ) {
 						paraname = paras[j].split('*');
-						opt.id === paraname[0] ? current = [Number(paraname[1])] : '';
+						option.id === paraname[0] ? current = [Number(paraname[1])] : '';
 					}
 				} else {
 					//only one : tab=1
 					if (para.split('*').length > 1) {
 						paraname = para.split('*');
-						opt.id === paraname[0] ? current = [Number(paraname[1])] : '';
+						option.id === paraname[0] ? current = [Number(paraname[1])] : '';
 					} else {
 						current = [Number(para)];
 					}
@@ -2403,13 +2403,13 @@ if (!Object.keys){
 				acco.querySelector('#' + accoId + 'Btn0').focus();
 			}
 		},
-		toggle: function(opt){
-			const id = opt.id;
+		toggle: function(option){
+			const id = option.id;
 			const el_acco = doc.querySelector('#' + id);
-			const current = opt.current === undefined ? null : opt.current;
-			const callback = opt.callback === undefined ? opt.callback : Global.accordion[id].callback;
-			const state = opt.state === undefined ? 'toggle' : opt.state;
-			const autoclose = opt.autoclose === undefined ? Global.accordion[id].autoclose : opt.autoclose;
+			const current = option.current === undefined ? null : option.current;
+			const callback = option.callback === undefined ? option.callback : Global.accordion[id].callback;
+			const state = option.state === undefined ? 'toggle' : option.state;
+			const autoclose = option.autoclose === undefined ? Global.accordion[id].autoclose : option.autoclose;
 
 			console.log(current,  state, autoclose);
 
@@ -2604,11 +2604,11 @@ if (!Object.keys){
 
 			(isTure.indexOf('ui-drop-pnl') < 0) && Global.dropdown.hide();
 		},
-		toggle: function(opt) {
-			const id = opt.id;
+		toggle: function(option) {
+			const id = option.id;
 			const el_btn = doc.querySelector('#' + id);
 			const el_pnl = doc.querySelector('.ui-drop-pnl[data-id="'+ id +'"]');
-			const state = opt.state !== undefined ? opt.state : 'toggle';
+			const state = option.state !== undefined ? option.state : 'toggle';
 			let btnExpanded =  el_btn.getAttribute('aria-expanded');
 
 			let ps = el_btn.dataset.ps;
@@ -3082,7 +3082,7 @@ if (!Object.keys){
 					//단일
 					endfocus = endfocus === false ? 
 						doc.querySelector('[data-focus="'+id+'"]') : 
-						opt.endfocus;
+						option.endfocus;
 
 					//$('html').off('click.uimodaldim');
 					elHtml.classList.remove('is-modal');
@@ -3090,7 +3090,7 @@ if (!Object.keys){
 					//여러개
 					endfocus = endfocus === false ? 
 						doc.querySelector('[data-focus="'+id+'"]') : 
-						opt.endfocus;
+						option.endfocus;
 				}
 			}
 
@@ -3562,13 +3562,13 @@ if (!Object.keys){
 
 					for (var j = 0; j < paras.length; j++ ) {
 						paraname = paras[j].split('*');
-						opt.id === paraname[0] ? current = Number(paraname[1]) : '';
+						option.id === paraname[0] ? current = Number(paraname[1]) : '';
 					}
 				} else {
 					//only one : tab=1
 					if (para.split('*').length > 1) {
 						paraname = para.split('*');
-						opt.id === paraname[0] ? current = Number(paraname[1]) : '';
+						option.id === paraname[0] ? current = Number(paraname[1]) : '';
 					} else {
 						current = Number(para);
 					}
@@ -3655,7 +3655,7 @@ if (!Object.keys){
 				el_btn.addEventListener('keydown', evtKeys);
 			}
 
-			callback && callback(opt);
+			callback && callback(option);
 			
 			//event
 			function evtClick(e) {
@@ -3715,7 +3715,7 @@ if (!Object.keys){
 			}
 		},
 		toggle: function(option) {
-            const id = opt.id;
+			const id = option.id;
 			let current = option.current !== undefined ? option.current : 0;
 			const onePanel = option.onePanel !== undefined ? option.onePanel : false;
 			const callback = option.callback !== undefined ? option.callback : false;
@@ -3730,7 +3730,7 @@ if (!Object.keys){
 			const el_pnlwrap = el_tab.querySelector(':scope > .ui-tab-pnls');
 			const el_pnls = el_pnlwrap.querySelectorAll(':scope > .ui-tab-pnl');
 			
-            current = isNaN(opt.current) ? 0 : opt.current;
+            current = isNaN(option.current) ? 0 : option.current;
 			const el_current = el_btnwrap.querySelector('.ui-tab-btn[data-tab="'+ current +'"]');
 			const el_pnlcurrent = el_pnlwrap.querySelector('.ui-tab-pnl[data-tab="'+ current +'"]');
 			const btnId = el_current.id;
@@ -3772,7 +3772,7 @@ if (!Object.keys){
 				el_pnls[0].setAttribute('aria-labelledby', btnId);
 			}
 
-			callback && callback(opt);
+			callback && callback(option);
 		}
 	}
 
