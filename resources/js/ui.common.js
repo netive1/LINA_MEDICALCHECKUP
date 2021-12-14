@@ -23,10 +23,10 @@
 			}
 			act();
 		},
-		stepUp: function(){
+		stepUp: function(v){
 			const wrap = document.querySelector('html, body');
-			const stepHide = document.querySelector('.step-toggle[data-toggle="hide"]');
-			const stepShow = document.querySelector('.step-toggle[data-toggle="show"]');
+			const stepHide = document.querySelector('.step-toggle[data-toggle="hide"][data-id="'+ v +'"]');
+			const stepShow = document.querySelector('.step-toggle[data-toggle="show"][data-id="'+ v +'"]');
 			const header = document.querySelector('.header-wrap');
 
 			stepHide.classList.add('show');
