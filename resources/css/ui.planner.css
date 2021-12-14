@@ -852,7 +852,15 @@ h6 {
     right:0;
     font-weight: 600;
 }
-
+.group-subject .btn-print::before{
+	content: "";
+	display:inline-block;
+	width:3.2rem;
+	height: 3.2rem;
+	background: url(../img/planner/ico_print.png) no-repeat 0 0;
+	vertical-align: middle;
+	margin: -.3rem .5rem 0 0;
+}
 .group-sec{
     position: relative;
     width:100%;
