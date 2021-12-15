@@ -249,14 +249,14 @@
 	left:50%;
 	width:11.2rem;
 	height: 11.2rem;
-	background: url(../img/mo/progress-emoji-1.png) center/100% no-repeat;
+	background: url(../img/common/progress-emoji-1.png) center/100% no-repeat;
 	transform: translate(-50%, -50%);
 }
-.circle-progress.n5 .emoji{background-image: url(../img/mo/progress-emoji-1.png);}
-.circle-progress.n4 .emoji{background-image: url(../img/mo/progress-emoji-1.png);}
-.circle-progress.n3 .emoji{background-image: url(../img/mo/progress-emoji-1.png);}
-.circle-progress.n2 .emoji{background-image: url(../img/mo/progress-emoji-1.png);}
-.circle-progress.n1 .emoji{background-image: url(../img/mo/progress-emoji-1.png);}
+.circle-progress.n5 .emoji{background-image: url(../img/common/progress-emoji-1.png);}
+.circle-progress.n4 .emoji{background-image: url(../img/common/progress-emoji-1.png);}
+.circle-progress.n3 .emoji{background-image: url(../img/common/progress-emoji-1.png);}
+.circle-progress.n2 .emoji{background-image: url(../img/common/progress-emoji-1.png);}
+.circle-progress.n1 .emoji{background-image: url(../img/common/progress-emoji-1.png);}
 
 /* Entry_1~2 상태 선택 */
 .state-wrap {
@@ -324,6 +324,9 @@
 }
 
 /* 건강검진 분석결과 */
+.result .box-wrap .box-base + .box-base {
+	margin-top: 1.6rem;
+}
 .box-base.info dl dt {
 	margin-bottom: 1.2rem;
 }
@@ -376,6 +379,9 @@
 .box-base.list li + li {
 	margin-top: 2.4rem;
 }
+.box-base.list .txt-wrap > .fs-s {
+	color: #222;
+}
 .box-base.disease li {
 	width: 100%;
 	padding: 2.4rem 0;
@@ -390,12 +396,29 @@
 }
 .box-base.disease .img-wrap {
 	position: relative;
-	width: 4.8rem;
+	width: 5.4rem;
+	height: 6.6rem;
 	margin-right: 1.2rem;
 }
 .box-base.disease .img-wrap img {
-	width: 100%;
-	height: auto;
+	width: 4.8rem;
+	height: 4.8rem;
+}
+.box-base.banner .bg-disease {
+    background: #fff url(../img/mo/bg-disease-obj.png) right bottom no-repeat;
+    background-size: 9.4rem 8.2rem;
+}
+.box-base.banner .bg-disease {
+	color: #222;
+	font-size: 1.4rem;
+}
+.box-base.banner .bg-disease strong {
+	display: block;
+	font-size: 2rem;
+	font-weight: 700;
+}
+.box-base.banner .bg-disease p {
+	font-size: 1.2rem;
 }
 .img-myhealthage::before{
 	content: "";
@@ -442,7 +465,7 @@
 .box-base.disease .state {
 	position: absolute;
 	left: -.3rem;
-	bottom: -.8rem;
+	bottom: 0;
 	width: 5.4rem;
 	height: 2.4rem;
 	padding: .1rem 0 .2rem;	
@@ -471,7 +494,7 @@
 }
 .box-base.disease .ui-progressbar {
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
 }
 /* Contents_MW_Main_상세 */
 .result-detail {

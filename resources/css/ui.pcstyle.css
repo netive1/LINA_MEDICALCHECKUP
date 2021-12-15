@@ -62,6 +62,9 @@
 	width: 2rem;
 	height: 2rem;
 }
+.pc .btn-base-link:before {
+	left: 2.6rem;
+}
 .pc .btn-half button + button {
 	margin-left: 1.6rem;
 }
@@ -90,7 +93,7 @@
 }
 .pc .tit-wrap {
 	padding: 0 3rem;
-	margin-bottom: 4.4rem;
+	margin-bottom: 1.4rem;
 }
 .pc .tit-wrap .h-1, 
 .pc .tit-wrap .h-2 {
@@ -101,6 +104,7 @@
 }
 .pc .tit-wrap .h-1 + p {
 	margin-top: 1.5rem;
+	font-size: 1.8rem;
 }
 .pc .ui-chkgroup > .h-3 {
     font-size: 1.8rem;
@@ -135,9 +139,6 @@
 .pc .box-base {
 	padding: 3.2rem;
 }
-.pc .box-base + .box-base {
-	margin-top: 1.8rem;
-}
 .pc .box-base + .from-info {
 	padding-left: 0;
 	margin-top: 1.2rem;
@@ -152,7 +153,7 @@
 	border-radius: 2.5rem;
 }
 /*box*/
-.box-base {
+.pc .box-base {
 	padding: 3.2rem;
 }
 
@@ -183,9 +184,11 @@
 /*accordion*/
 .pc .ui-chkgroup {
 	padding: 0 3rem;
+	margin-top: 4.4rem;
 }
 .pc .btn-wrap.btn-half {
 	padding: 0 3rem;
+	margin-top: 2.4rem;
 }
 .pc .ui-acco {
 	padding: 0;
@@ -218,7 +221,7 @@
 .pc .ui-chkgroup .all-chked {
 	position: relative;
 	width: 100%;
-	margin-bottom: 2.4rem;
+	margin-bottom: 1.4rem;
 }
 .pc .ui-chkgroup .all-chked .chkbox {
 	position: relative;
@@ -227,6 +230,8 @@
 	border-radius: 1rem;
 }
 .pc .all-chked .chkbox-label {
+	display: inline-block;
+	width: 100%;
 	font-weight: 500;
 }
 .pc .all-chked .chkbox.chked {
@@ -239,6 +244,14 @@
 	padding: 0 2.4rem;
 	color: #666;
 	font-size: 1.4rem;
+}
+.pc .ui-chkgroup .chklist li .chkbox input[type=checkbox] + .chkbox-label:before {
+	width: 1.6rem;
+	height: 1.6rem;
+	background-image: url(../img/pc/common/ico-chkbox-s.svg);
+}
+.pc .ui-chkgroup .chklist li .chkbox input[type=checkbox]:checked + .chkbox-label:before {
+	background-image: url(../img/pc/common/ico-chkbox-s-on.svg);
 }
 .pc .ui-chkgroup .ui-acco-btn {
 	position: static;
@@ -297,6 +310,7 @@
 }
 .pc .ui-tab-pnl .ui-chkgroup {
 	padding: 0;
+	margin-top: 0;
 }
 .pc .ui-tab-btns:after {
 	display: none;
@@ -347,7 +361,7 @@
 [class*="size-desktop"] .ui-modal .ui-modal-body {
 	padding: 5.4rem 3.2rem 4.5rem;
 	color: #666;
-	font-size: var(--text-s);
+	font-size: 1.6rem;
 }
 [class*="size-desktop"] .ui-modal.bg .ui-modal-body  {
 	padding: 0 0 11rem;
@@ -364,6 +378,7 @@
 	padding: 0 3.2em 3.2rem;
 }
 [class*="size-desktop"] .ui-modal .ui-modal-wrap strong {
+	margin-bottom: 1rem;
 	font-size: 2.4rem;
 }
 [class*="size-desktop"] .ui-modal.bg .ui-modal-header .ui-modal-tit {
@@ -454,6 +469,7 @@
 	font-size: 4.6rem;
 }
 .pc.base-loading .tit-wrap p {
+	margin-top: 2rem;
 	font-size: 1.8rem;
 }
 .pc .circle-progress .text .percent {
@@ -461,6 +477,9 @@
 }
 .pc .circle-progress .text span {
 	font-size: 2.8rem;
+}
+.pc .circle-progress .text {
+	bottom: -8.4rem;
 }
 /*main*/
 .pc.result .base-header + .base-body .base-main {
@@ -470,20 +489,31 @@
 	max-width: 100%;
 }
 .pc.base-wrap.result .content-area {
+	padding:  0 0 4.8rem;
 	margin: 0;
 	background: #F1F8FD url(../img/pc/common/logo-gray.svg) bottom 4.8rem center no-repeat;
 }
 .pc.result .tit-wrap {
-	padding-bottom: 10.4rem;
+	padding: 0 0 10.4rem;
+}
+.pc .base-wrap.result .tit-wrap img {
+	width: 3.4rem;
+	height: auto;
 }
 .pc.result .tit-wrap , 
 .pc.result .box-area{
 	max-width: 43.4rem;
 	margin: 0 auto;
 }
+.pc.result .box-base + .box-base {
+	margin-top: 1.8rem;
+}
 .pc.result .content-area .box-area {
 	top: -3.8rem;
 	padding-bottom: 5rem;
+}
+.pc.result .box-base.list li + li {
+	margin-top: 3.2rem;
 }
 /*splash*/
 .pc.base-splash {
@@ -576,6 +606,9 @@
 	background: #fff url(../img/pc/bg-disease-obj.png) right bottom no-repeat;
 	background-size: 12.4rem 10.8rem;
 }
+.pc .box-tit .h-3 {
+	font-size: 1.6rem;
+}
 .pc .box-base.info dl dt {
 	margin-bottom: 1.6rem;
 	font-size: 2.4rem;
@@ -624,7 +657,7 @@
 }
 .pc .box-base.disease .ui-progressbar-level {
     left: -0.35rem;
-    bottom: -1.5rem;
+    bottom: 0;
     width: 7rem;
     height: 3rem;
     padding: .2rem 0 .3rem;
@@ -632,12 +665,19 @@
     font-size: 1.6rem;
 }
 .pc .box-base.disease .img-wrap {
-	width: 6.4rem;
-	height: 6.4rem;
+	width: 7rem;
+	height: 8.6rem;
 	margin-right: 1.8rem;
 }
+.pc .box-base.disease .img-wrap img {
+	width: 6.4rem;
+	height: 6.4rem;
+}
+.pc .box-base.disease ul {
+	margin-bottom: 1.5rem;
+}
 .pc .box-base.disease li {
-	padding: 3.2rem 0 4.3rem;
+	padding: 3.2rem 0 3.3rem;
 }
 .pc .box-base.disease li:first-child {
 	padding-top: 0;
@@ -655,9 +695,12 @@
 	margin-top: 1.2rem;
 	border-radius: 1.3rem;
 }
-.pc .box-base.disease .progress-wrap .txt-wrap .fs-m {
-	line-height: 3rem;
+.pc .box-base.disease .progress-wrap .txt-wrap {
+	min-height: 4rem;
 }
 .pc .box-base.disease .progress-wrap .txt-wrap .fs-xs {
 	font-size: 1.4rem;
+}
+.pc .box-base.list .fx-wrap .txt-wrap span {
+	color: #222;
 }

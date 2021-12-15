@@ -774,6 +774,7 @@ textarea.inp-base {
 }
 .box-base + .from-info {
 	padding-left: .6rem;
+	margin-top: 1.6rem;
 	font-size: 1.6rem;
 }
 .box-base .box-tit .h-3 strong {
@@ -1160,19 +1161,19 @@ progress {
 }
 .img-l {
 	width: 9.4rem;
-	height: auto;
+	height: 9.4rem;
 }
 .img-m {
 	width: 6.4rem;
-	height: auto;
+	height: 6.4rem;
 }
 .img-s {
 	width: 4.8rem;
-	height: auto;
+	height: 4.8rem;
 }
 .img-xs {
 	width: 2.4rem;
-	height: auto;
+	height: 2.4rem;
 }
 
 /*** [COMMON] UI-MODAL ***/
