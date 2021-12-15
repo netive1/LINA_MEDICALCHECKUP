@@ -74,8 +74,8 @@
                             </ul>
                             <div class="all-chked">
                                 <div class="chkbox">
-                                    <input type="checkbox" id="allChk" name="chkbox">
-                                    <label for="allChk" class="chkbox-label">모두 동의하기</label>
+                                    <input type="checkbox" id="allChk1" name="chkbox">
+                                    <label for="allChk1" class="chkbox-label">모두 동의하기</label>
                                 </div>
                             </div>
                         </div>
@@ -134,7 +134,7 @@
                                     </div>
                                 </div> -->
                         </div>
-                        <div class="step-toggle" data-toggle="hide">
+                        <div class="step-toggle" data-toggle="hide" data-id="step1">
                             <div class="tit-wrap">
                                 <h1 class="h-1"><strong>카카오톡 앱에서 인증을</strong><br>진행해 주세요.</h1>
                                 <p class="fs-l">인증 요청이 오지 않았을 경우,<br>[다시 요청하기]를 눌러 주세요.</p>
@@ -169,9 +169,9 @@
                             </div>
                         </div>
                         <!-- //입력 필드 -->
-                        <div class="step-toggle btn-area mgt-l" data-toggle="show">
+                        <div class="step-toggle btn-area mgt-l" data-toggle="show" data-id="step1">
                             <div class="btn-wrap">
-                                <button type="button" id="" class="btn-base-l btn-confirm" onclick="netive.common.stepUp();">
+                                <button type="button" id="" class="btn-base-l btn-confirm" onclick="netive.common.stepUp('step1');">
                                     <span>카카오 인증 요청하기</span>
                                 </button>
                             </div>
@@ -218,9 +218,9 @@
                                 </li>
                             </ul>
                             <div class="all-chked">
-                                <div class="chkbox">
-                                    <input type="checkbox" id="allChk" name="chkbox" checked>
-                                    <label for="allChk" class="chkbox-label">모두 동의하기</label>
+                                <div class="chkbox chked">
+                                    <input type="checkbox" id="allChk2" name="chkbox" checked>
+                                    <label for="allChk2" class="chkbox-label">모두 동의하기</label>
                                 </div>
                             </div>
                         </div>
@@ -279,7 +279,7 @@
                                     </div>
                                 </div> -->
                         </div>
-                        <div class="step-toggle show" data-toggle="hide">
+                        <div class="step-toggle show" data-toggle="hide" data-id="step2">
                             <div class="tit-wrap">
                                 <h1 class="h-1"><strong>PASS 앱에서 인증을</strong><br>진행해 주세요.</h1>
                                 <p class="fs-l">인증 요청이 오지 않았을 경우,<br>
@@ -318,9 +318,9 @@
                             </div>
                         </div>
                         <!-- //입력 필드 -->
-                        <div class="step-toggle btn-area mgt-l hide" data-toggle="show">
+                        <div class="step-toggle btn-area mgt-l hide" data-toggle="show" data-id="step2">
                             <div class="btn-wrap">
-                                <button type="button" id="" class="btn-base-l btn-confirm" onclick="netive.common.stepUp();">
+                                <button type="button" id="" class="btn-base-l btn-confirm" onclick="netive.common.stepUp('step2');">
                                     <span>PASS 인증 요청하기</span>
                                 </button>
                             </div>
@@ -340,7 +340,16 @@
 
                 netive.common.init();
 
-                $('.ui-chkgroup').uiCheckAll({
+                $('#agreeAllChk1').uiCheckAll({
+                    callback: function () {
+                        // $('#btnConfirm').prop('disabled', false);
+                        console.log('callback');
+                    },
+                    callbackCancel: function () {
+                        // $('#btnConfirm').prop('disabled', true);
+                    }
+                });
+                $('#agreeAllChk2').uiCheckAll({
                     callback: function () {
                         // $('#btnConfirm').prop('disabled', false);
                         console.log('callback');

@@ -5,7 +5,7 @@
 .base-splash {
 	width: 100%;
 	height: 100%;
-	background: var(--white);
+	background: #fff;
 }
 .base-splash .base-body {
 	height: 100%;
@@ -67,7 +67,7 @@
 	margin-bottom: 1.6rem;
 }
 .base-terms .base-main .desc {
-	font-size: var(--text-xs);
+	font-size: 1.4rem;
 	line-height: 2.4rem;
 }
 /* .ui-chkgroup .ui-acco-pnl[aria-hidden="false"] {
@@ -79,7 +79,7 @@
 	align-items: center;
 	width: calc(100% - 2.5rem);
 	height: 100%;
-	font-size: var(--text-s);
+	font-size: 1.6rem;
 	font-weight: 500;
 	z-index: 2;
 }
@@ -87,7 +87,7 @@
 	font-weight: 500;
 }
 .ui-chkgroup .all-chked .ez-chkbox.ez-checked + label {
-    border-color: var(--gray900);
+    border-color: #222;
 }
 .ui-chkgroup .all-chked .ez-chkbox.ez-checked + label:before {
     background-image: url(../img/common/ico-chkbox-on.svg);
@@ -110,12 +110,12 @@
     display: block;
     position: relative;
     padding: 1.2rem 6.6rem 1.2rem 2.4rem;
-    color: var(--gray800);
-    font-size: var(--text-xs);
+    color: #666;
+    font-size: 1.4rem;
 }
 .ui-chkgroup .chklist li .chkbox label:before {
 	width: 1.2rem;
-	height: 1.2rem;
+	height: .8rem;
 	margin-right: .8rem;
 	background-image: url(../img/common/ico-chkbox-s.svg);
 	background-size: 100%;
@@ -136,9 +136,9 @@
 	width: 5rem;
 	text-align: center;
 	padding: .3rem 1.2rem .4rem;
-	font-size: var(--text-xs);
+	font-size: 1.4rem;
 	font-weight: 500;
-	background-color: var(--gray100);
+	background-color: #F3F3F3;
 	border-radius: .4rem;
 	transform: translateY(-50%);
 }
@@ -150,7 +150,7 @@
 .kakao-process {
 	margin: 2.4rem 0 1.6rem;
 	padding: 2.4rem;
-	background-color: var(--gray300);
+	background-color: #F7F7F7;
 	border-radius: 1rem;
 }
 .kakao-process .img-wrap {
@@ -178,8 +178,8 @@
 .kakao-process .img-wrap span {
 	display: block;
 	margin-top: .8rem;
-	color: var(--gray800);
-	font-size: var(--text-xxs);
+	color: #666;
+	font-size: 1.2rem;
 }
 .form-tel .radio.radio-type-txt input[type=radio] + .radio-label:before {
 	width: 7rem;
@@ -231,7 +231,7 @@
 	left: 50%;
 	bottom: -6rem;
 	transform: translateX(-50%);
-	color: var(--gray900);
+	color: #222;
 	font-family: 'Roboto';
 	font-weight: 700;
 }
@@ -240,7 +240,7 @@
 	font-weight: 700;
 }
 .circle-progress .text span {
-	font-size: var(--text-xl);
+	font-size: 2.4rem;
 	font-weight: 400;
 }
 .emoji{
@@ -278,17 +278,17 @@
 /* main (결과 화면) */
 .base-wrap.result {
 	min-height: 100%;
-	background: var(--primary);
+	background: #019AF9;
 }
 .base-wrap.result .base-main {
 	padding-bottom: 0;
 }
 .base-wrap.result .tit-wrap {
 	padding-bottom: 7.8rem;
-	color: var(--white);
+	color: #fff;
 }
 .base-wrap.result .tit-wrap .h-1 {
-	color: var(--white);
+	color: #fff;
 }
 .base-wrap.result .tit-wrap img {
 	position: relative;
@@ -328,10 +328,10 @@
 	margin-bottom: 1.2rem;
 }
 .box-base.info dl dd {
-	font-size: var(--text-s);
+	font-size: 1.6rem;
 }
 .box-base.info dl dd span {
-	color: var(--gray800);
+	color: #666;
 }
 .box-base.info dl dd + dd {
 	margin-top: 1rem;
@@ -343,23 +343,23 @@
 .box-base.info .fx-wrap .txt {
 	min-width: 5.4rem;
 	margin-right: 1.2rem;
-	color: var(--gray900);
-	font-size: var(--text-xs);
+	color: #222;
+	font-size: 1.4rem;
 	font-weight: 500;
 }
 .box-base.info .progress-wrap .fx-wrap .age {
-	color: var(--gray800);
-	font-size: var(--text-xs);
+	color: #666;
+	font-size: 1.4rem;
 }
 .box-base.info .fx-wrap .state {
 	display: inline-block;
 	width: 4rem;
 	padding: .2rem 0;	
-	color: var(--white);
+	color: #fff;
 	border-radius: .5rem;
 }
 .box-base.info .result-txt {
-	font-size: var(--text-xs);
+	font-size: 1.4rem;
 }
 .box-base.info .result-txt img {
 	margin-right: 1.6rem;
@@ -379,7 +379,7 @@
 .box-base.disease li {
 	width: 100%;
 	padding: 2.4rem 0;
-	border-bottom: 1px solid var(--gray100);
+	border-bottom: 1px solid #F3F3F3;
 }
 .box-base.disease li:first-child {
 	padding-top: 0;
@@ -415,7 +415,7 @@
 	background-color: #aaa;
 }
 .progress.c2 .ui-progressbar-item{
-	background-color: var(--primary);
+	background-color: #019AF9;
 }
 .state-1 .ui-progressbar-level{
 	background-color: #4792EF;
@@ -433,8 +433,8 @@
 	background-color: #FF6262;
 }
 .ui-progressbar-level{
-	color: var(--white);
-    font-size: var(--text-xs);
+	color: #fff;
+    font-size: 1.4rem;
     font-weight: 500;
     text-align: center;
 }
@@ -454,12 +454,12 @@
 .box-base.disease .progress-wrap .txt-wrap {
 	display: flex;
 	justify-content: space-between;
-	color: var(--gray900);
+	color: #222;
 }
 .box-base.disease .progress-wrap .txt-wrap .fs-xs {
 	display: block;
-	color: var(--gray800);
-	font-size: var(--text-xxs);
+	color: #666;
+	font-size: 1.2rem;
 	font-weight: 400;
 }
 
@@ -492,7 +492,7 @@
 }
 .result-detail .box-base .info .name em {
 	display: block;
-	color: var(--gray900);
+	color: #222;
 	font-size: 2.6rem;
 }
 .result-detail .box-base .info img {
@@ -530,7 +530,7 @@
 	right: 0;
 	display: inline-block;
 	height: 2.4rem;
-	border: 1px dashed var(--gray200);
+	border: 1px dashed #ddd;
 	content: '';
 }
 .result-detail .box-base .info .step .state:first-child {
@@ -546,8 +546,8 @@
 	position: absolute;
 	left: 50%;
 	bottom: -2.7rem;
-	color: var(--gray900);
-	font-size: var(--text-xxs);
+	color: #222;
+	font-size: 1.2rem;
 	font-weight: 400;
 	line-height: 1.7rem;
 	transform: translateX(-50%);
@@ -610,17 +610,17 @@
 .result-graph .circle-progress .text span {
 	position: relative;
 	top: -.4rem;
-	font-size: var(--text-s);
+	font-size: 1.6rem;
 }
 .result-graph .grpah-txt p:nth-child(1) {
-	color: var(--gray900);
+	color: #222;
 }
 .result-graph .grpah-txt p + p {
 	margin-top: .8rem;
 }
 .result-detail .result-graph .graph-caption {
 	margin-top: 2.8rem;
-	font-size: var(--text-xs);
+	font-size: 1.4rem;
 	text-align: center;
 }
 .result-detail .hr-cont {
@@ -643,7 +643,7 @@
 }
 .result-detail .disease-chklist li {
 	position: relative;
-	font-size: var(--text-xs);
+	font-size: 1.4rem;
 	min-height: 2.4rem;
 	padding-left: 3.6rem;
 }
