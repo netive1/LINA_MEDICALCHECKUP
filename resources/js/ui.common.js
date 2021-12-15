@@ -162,6 +162,7 @@ $.fn.uiCheckAll = function (opt) {
 			gCnt: null,
 			gBtn: null,
 			checkAllFn: function (v) {
+				console.log('checkAllFn',this, v);
 				var o = this,
 					$t = $(v),
 					$boolean = $t.is(':checked'),
@@ -181,6 +182,7 @@ $.fn.uiCheckAll = function (opt) {
 				}
 			},
 			checkItemFn: function (v) {
+				console.log('checkItemFn',this, v);
 				var o = this,
 					$t = $(v),
 					$boolean = $t.is(':checked'),
@@ -203,6 +205,7 @@ $.fn.uiCheckAll = function (opt) {
 				}
 			},
 			viewFn: function (v) {
+				console.log('viewFn',this, v);
 				var o = this,
 					$t = $(v),
 					$parent = $t.parent();
@@ -218,6 +221,7 @@ $.fn.uiCheckAll = function (opt) {
 				}
 			},
 			init: function (v) {
+				console.log(this, v);
 				var o = this;
 				o.gTarget = $(v);
 				o.gAllObjParent = o.gTarget.find('.all-chked .chkbox');
