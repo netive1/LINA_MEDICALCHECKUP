@@ -26,159 +26,309 @@
                 <h1 class="h-1"><strong>본인인증을</strong><br>진행해 주세요.</h1>
                 <p class="fs-l">본인이 맞는지 확인하는 절차로 한 번만 진행하니 걱정 마세요.</p>
             </div>
-            <div class="btn-area">
-                <div class="btn-wrap">
-                    <a href="LMO-009.html" class="btn-base-link btn-kakao on">
-                        <span>카카오 인증</span>
-                    </a>
-                </div>
-                <div class="btn-wrap">
-                    <a href="LMO-012.html" class="btn-base-link btn-pass">
-                        <span>PASS 인증(통신사)</span>
-                    </a>
-                </div>
-            </div>
-            <!-- 약관 동의 -->
-            <div id="agreeAllChk" class="ui-chkgroup">
-                <h2 class="h-3">[필수] 카카오 인증을 위한 개인정보 동의</h2>
-                <ul id="exeAcco2" class="ui-acco chklist mgb-s" data-n="5" data-allopen="false">
-                    <li class="ui-acco-wrap" data-n="0">
-                        <div class="ui-acco-tit">
-                            <div id="exeAcco1Btn0" class="chkbox ui-acco-btn">
-                                <input type="checkbox" id="chk0" name="chkbox" checked>
-                                <label for="chk0" class="chkbox-label">건강정보(민감정보) 수집/이용 동의</label>
-                            </div>
-                        </div>
-                        <div id="exeAcco1Pnl0" class="ui-acco-pnl" data-n="0">
-                            <div class="ui-acco-pnl-wrap">
-                                <p>귀하는 개인(신용)정보의 수집. 이용 및 조회, 제공에 관한 동의를 거부하실 수 있으며, 개인의 신용도 등을 평가하기 위한 목적 이외의 개인(신용)정보 제공 동의는 철회할 수
-                                    있습니다. 다만, 본 동의는 ‘보험계약
-                                    인수심사, 체결, 이행, 유지, 관리’를 위해 필수적인 사항이므로 동의를 거부하시는 경우 관련 업무 수행이 불가능합니다.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="ui-acco-wrap" data-n="1">
-                        <div class="ui-acco-tit">
-                            <div id="exeAcco1Btn1" class="chkbox ui-acco-btn">
-                                <input type="checkbox" id="chk1" name="chkbox" checked>
-                                <label for="chk1" class="chkbox-label">개인정보 제3자 제공 동의</label>
-                            </div>
-                        </div>
-                        <div class="ui-acco-pnl" id="exeAcco1Pnl1">
-                            <div class="ui-acco-pnl-wrap">
-                                <p>귀하는 개인(신용)정보의 수집. 이용 및 조회, 제공에 관한 동의를 거부하실 수 있으며, 개인의 신용도 등을 평가하기 위한 목적 이외의 개인(신용)정보 제공 동의는 철회할 수
-                                    있습니다. 다만, 본
-                                    동의는 ‘보험계약
-                                    인수심사, 체결, 이행, 유지, 관리’를 위해 필수적인 사항이므로 동의를 거부하시는 경우 관련 업무 수행이 불가능합니다.</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <div class="all-chked">
-                    <div class="chkbox">
-                        <input type="checkbox" id="allChk" name="chkbox" checked>
-                        <!-- onclick="netive.accordion.toggle({ id:'exeAcco1', current: 'all' })"-->
-                        <label for="allChk" class="chkbox-label">모두 동의하기</label>
-                    </div>
-                </div>
-            </div>
-            <!-- //약관 동의 -->
-            <div class="from-info">
-                <div class="bul-info" aria-live="polite">
-                    <div>카카오 인증은 카카오톡 앱에서, PASS 인증은 PASS 앱으로 진행이 됩니다.<br>
-                        최초 본인인증 진행 시 휴대폰에 앱이 없을 경우 설치가 필요합니다.</div>
-                </div>
-            </div>
-            <!-- 입력 필드 -->
-            <div class="form-wrap">
-                <div class="form-label">
-                    <label for="input1" class="form-item-label">이름</label>
-                </div>
-                <div class="form-item">
-                    <input type="text" id="input1" class="inp-base" value="라인하" placeholder="이름 입력">
-                </div>
-            </div>
-            <div class="form-wrap">
-                <div class="form-label">
-                    <label for="input2" class="form-item-label">생년월일</label>
-                </div>
-                <div class="form-item">
-                    <input type="number" id="input2" class="inp-base" value="19870825" placeholder="숫자 8자리">
-                </div>
-            </div>
-            <div class="form-wrap">
-                <div class="form-label">
-                    <label for="input3" class="form-item-label">성별</label>
-                </div>
-                <div class="form-item">
-                    <div class="fx-wrap" data-align="start" data-valign="center">
-                        <label class="radio-label radio-type-txt">
-                            <input type="radio" name="radioGender" class="radio">
-                            <span class="radio-txt">남자</span>
-                        </label>
-                        <label class="radio-label radio-type-txt">
-                            <input type="radio" name="radioGender" class="radio" checked>
-                            <span class="radio-txt">여자</span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="form-wrap">
-                <div class="form-label">
-                    <label for="input3" class="form-item-label">휴대폰 번호</label>
-                </div>
-                <div class="form-item">
-                    <input type="tel" id="input3" class="inp-base" value="" placeholder="-없이 입력">
-                </div>
-                <!-- 오 입력시 'error' class 부여 -->
-                <!-- <div class="from-info">
-                    <div class="bul-error" aria-live="polite">
-                        <div>숫자를 입력해주세요</div>
-                    </div>
-                </div> -->
-            </div> 
-            <div class="step-toggle show" data-toggle="hide">
-                <div class="tit-wrap">
-                    <h1 class="h-1"><strong>카카오톡 앱에서 인증을</strong><br>진행해 주세요.</h1>
-                    <p class="fs-l">인증 요청이 오지 않았을 경우,<br>[다시 요청하기]를 눌러 주세요.</p>
-                </div>
-                <div class="scroll-area">
-                    <div class="fx-wrap kakao-process" data-align="justify" data-valign="center">
-                        <div class="fx-item img-wrap">
-                            <img src="../../resources/img/pc/common/ico-kakaoprosess-1.png" alt="">
-                            <span>카카오톡<br>인증 요청 확인</span>
-                        </div>
-                        <div class="fx-item img-wrap">
-                            <img src="../../resources/img/pc/common/ico-kakaoprosess-2.png" alt="">
-                            <span>카카오톡<br>본인인증 완료</span>
-                        </div>
-                        <div class="fx-item img-wrap">
-                            <img src="../../resources/img/pc/common/ico-kakaoprosess-3.png" alt="">
-                            <span>카카오 인증하기<br>버튼 클릭</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="btn-area mgt-l">
-                    <div class="btn-wrap request">
-                        <button type="button" id="" class="btn-base-l thick">
-                            <span>다시 요청하기</span>
-                        </button>
-                    </div>
+            <!-- 본인 인증 tab -->
+            <div class="ui-tab" id="certifiedTab">
+                <div class="ui-tab-btns">
                     <div class="btn-wrap">
-                        <button type="button" id="" class="btn-base-l primary">
-                            <span>카카오 인증하기</span>
-                        </button>
+                        <button type="button" data-tab="0" class="ui-tab-btn btn-base-link btn-kakao"><span>카카오 인증</span></button>                        
+                        <button type="button" data-tab="1" class="ui-tab-btn btn-base-link btn-pass"><span>PASS 인증(통신사)</span></button>                        
                     </div>
                 </div>
-            </div>
-            <!-- //입력 필드 -->
-            <div class="step-toggle btn-area mgt-l hide" data-toggle="show">
-                <div class="btn-wrap">
-                    <button type="button" id="" class="btn-base-l btn-confirm" onclick="netive.common.stepUp();">
-                        <span>카카오 인증 요청하기</span>
-                    </button>
+                <div class="ui-tab-pnls">
+                    <section class="ui-tab-pnl" data-tab="0">
+                        <h3 class="ui-tab-tit">[필수] 카카오 인증을 위한 개인정보 동의</h3>
+                        <!-- 약관 동의 -->
+                        <div id="agreeAllChk1" class="ui-chkgroup">
+                            <ul id="kakaoTerms" class="ui-acco chklist mgb-s" data-n="5" data-allopen="false">
+                                <li class="ui-acco-wrap" data-n="0">
+                                    <div class="ui-acco-tit">
+                                        <div id="exeAcco1Btn0" class="chkbox ui-acco-btn">
+                                            <input type="checkbox" id="chk0" name="chkbox" checked>
+                                            <label for="chk0" class="chkbox-label">건강정보(민감정보) 수집/이용 동의</label>
+                                        </div>
+                                    </div>
+                                    <div id="exeAcco1Pnl0" class="ui-acco-pnl" data-n="0">
+                                        <div class="ui-acco-pnl-wrap scroll custom">
+                                            <p>귀하는 개인(신용)정보의 수집. 이용 및 조회, 제공에 관한 동의를 거부하실 수 있으며, 개인의 신용도 등을 평가하기 위한 목적 이외의 개인(신용)정보 제공 동의는 철회할 수
+                                                있습니다. 다만, 본 동의는 ‘보험계약
+                                                인수심사, 체결, 이행, 유지, 관리’를 위해 필수적인 사항이므로 동의를 거부하시는 경우 관련 업무 수행이 불가능합니다.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="ui-acco-wrap" data-n="1">
+                                    <div class="ui-acco-tit">
+                                        <div id="exeAcco1Btn1" class="chkbox ui-acco-btn">
+                                            <input type="checkbox" id="chk1" name="chkbox" checked>
+                                            <label for="chk1" class="chkbox-label">개인정보 제3자 제공 동의</label>
+                                        </div>
+                                    </div>
+                                    <div class="ui-acco-pnl" id="exeAcco1Pnl1">
+                                        <div class="ui-acco-pnl-wrap scroll custom">
+                                            <p>귀하는 개인(신용)정보의 수집. 이용 및 조회, 제공에 관한 동의를 거부하실 수 있으며, 개인의 신용도 등을 평가하기 위한 목적 이외의 개인(신용)정보 제공 동의는 철회할 수
+                                                있습니다. 다만, 본
+                                                동의는 ‘보험계약
+                                                인수심사, 체결, 이행, 유지, 관리’를 위해 필수적인 사항이므로 동의를 거부하시는 경우 관련 업무 수행이 불가능합니다.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="all-chked">
+                                <div class="chkbox chked">
+                                    <input type="checkbox" id="allChk1" name="chkbox" checked>
+                                    <label for="allChk1" class="chkbox-label">모두 동의하기</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //약관 동의 -->
+                        <div class="from-info">
+                            <div class="bul-info" aria-live="polite">
+                                <div>카카오 인증은 카카오톡 앱에서, PASS 인증은 PASS 앱으로 진행이 됩니다.<br>
+                                    최초 본인인증 진행 시 휴대폰에 앱이 없을 경우 설치가 필요합니다.</div>
+                            </div>
+                        </div>
+                        <!-- 입력 필드 -->
+                        <div class="form-wrap">
+                            <div class="form-label">
+                                <label for="input1" class="form-item-label">이름</label>
+                            </div>
+                            <div class="form-item">
+                                <input type="text" id="input1" class="inp-base" value="라인하" placeholder="이름 입력">
+                            </div>
+                        </div>
+                        <div class="form-wrap">
+                            <div class="form-label">
+                                <label for="input2" class="form-item-label">생년월일</label>
+                            </div>
+                            <div class="form-item">
+                                <input type="number" id="input2" class="inp-base" value="19870825" placeholder="숫자 8자리">
+                            </div>
+                        </div>
+                        <div class="form-wrap">
+                            <div class="form-label">
+                                <label for="input3" class="form-item-label">성별</label>
+                            </div>
+                            <div class="form-item">
+                                <div class="fx-wrap" data-align="start" data-valign="center">
+                                    <label class="radio-label radio-type-txt">
+                                        <input type="radio" name="radioGender" class="radio">
+                                        <span class="radio-txt">남자</span>
+                                    </label>
+                                    <label class="radio-label radio-type-txt">
+                                        <input type="radio" name="radioGender" class="radio" checked>
+                                        <span class="radio-txt">여자</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-wrap">
+                            <div class="form-label">
+                                <label for="input3" class="form-item-label">휴대폰 번호</label>
+                            </div>
+                            <div class="form-item">
+                                <input type="tel" id="input3" class="inp-base" value="01012345678" placeholder="-없이 입력">
+                            </div>
+                            <!-- 오 입력시 'error' class 부여 -->
+                            <!-- <div class="from-info">
+                                    <div class="bul-error" aria-live="polite">
+                                        <div>숫자를 입력해주세요</div>
+                                    </div>
+                                </div> -->
+                        </div>
+                        <div class="step-toggle show" data-toggle="hide" data-id="step1">
+                            <div class="tit-wrap">
+                                <h1 class="h-1"><strong>카카오톡 앱에서 인증을</strong><br>진행해 주세요.</h1>
+                                <p class="fs-l">인증 요청이 오지 않았을 경우,<br>[다시 요청하기]를 눌러 주세요.</p>
+                            </div>
+                            <div class="scroll-area">
+                                <div class="fx-wrap kakao-process" data-align="justify" data-valign="center">
+                                    <div class="fx-item img-wrap">
+                                        <img src="../../resources/img/common/ico-kakaoprosess-1.png" alt="">
+                                        <span>카카오톡<br>인증 요청 확인</span>
+                                    </div>
+                                    <div class="fx-item img-wrap">
+                                        <img src="../../resources/img/common/ico-kakaoprosess-2.png" alt="">
+                                        <span>카카오톡<br>본인인증 완료</span>
+                                    </div>
+                                    <div class="fx-item img-wrap">
+                                        <img src="../../resources/img/common/ico-kakaoprosess-3.png" alt="">
+                                        <span>카카오 인증하기<br>버튼 클릭</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-area mgt-l">
+                                <div class="btn-wrap request">
+                                    <button type="button" id="" class="btn-base-l thick">
+                                        <span>다시 요청하기</span>
+                                    </button>
+                                </div>
+                                <div class="btn-wrap">
+                                    <button type="button" id="" class="btn-base-l primary">
+                                        <span>카카오 인증하기</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //입력 필드 -->
+                        <div class="step-toggle btn-area mgt-l hide" data-toggle="show" data-id="step1">
+                            <div class="btn-wrap">
+                                <button type="button" id="" class="btn-base-l btn-confirm" onclick="netive.common.stepUp('step1');">
+                                    <span>카카오 인증 요청하기</span>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- //카카오 인증 -->
+                    <section class="ui-tab-pnl" data-tab="1">
+                        <h3 class="ui-tab-tit">[필수] PASS 인증을 위한 개인정보 동의</h3>
+                        <!-- 약관 동의 -->
+                        <div id="agreeAllChk2" class="ui-chkgroup">
+                            <ul id="passTerms" class="ui-acco chklist mgb-s" data-n="5" data-allopen="false">
+                                <li class="ui-acco-wrap" data-n="0">
+                                    <div class="ui-acco-tit">
+                                        <div id="exeAcco1Btn0" class="chkbox ui-acco-btn">
+                                            <input type="checkbox" id="chk0" name="chkbox">
+                                            <label for="chk0" class="chkbox-label">건강정보(민감정보) 수집/이용 동의</label>
+                                        </div>
+                                    </div>
+                                    <div id="exeAcco1Pnl0" class="ui-acco-pnl" data-n="0">
+                                        <div class="ui-acco-pnl-wrap scroll custom">
+                                            <p>귀하는 개인(신용)정보의 수집. 이용 및 조회, 제공에 관한 동의를 거부하실 수 있으며, 개인의 신용도 등을 평가하기 위한 목적 이외의 개인(신용)정보 제공 동의는
+                                                철회할 수
+                                                있습니다. 다만, 본 동의는 ‘보험계약
+                                                인수심사, 체결, 이행, 유지, 관리’를 위해 필수적인 사항이므로 동의를 거부하시는 경우 관련 업무 수행이 불가능합니다.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="ui-acco-wrap" data-n="1">
+                                    <div class="ui-acco-tit">
+                                        <div id="exeAcco1Btn1" class="chkbox ui-acco-btn">
+                                            <input type="checkbox" id="chk1" name="chkbox">
+                                            <label for="chk1" class="chkbox-label">개인정보 제3자 제공 동의</label>
+                                        </div>
+                                    </div>
+                                    <div class="ui-acco-pnl" id="exeAcco1Pnl1">
+                                        <div class="ui-acco-pnl-wrap scroll custom">
+                                            <p>귀하는 개인(신용)정보의 수집. 이용 및 조회, 제공에 관한 동의를 거부하실 수 있으며, 개인의 신용도 등을 평가하기 위한 목적 이외의 개인(신용)정보 제공 동의는
+                                                철회할 수
+                                                있습니다. 다만, 본
+                                                동의는 ‘보험계약
+                                                인수심사, 체결, 이행, 유지, 관리’를 위해 필수적인 사항이므로 동의를 거부하시는 경우 관련 업무 수행이 불가능합니다.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="all-chked">
+                                <div class="chkbox">
+                                    <input type="checkbox" id="allChk2" name="chkbox">
+                                    <label for="allChk2" class="chkbox-label">모두 동의하기</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //약관 동의 -->
+                        <div class="from-info">
+                            <div class="bul-info" aria-live="polite">
+                                <div>카카오 인증은 카카오톡 앱에서, PASS 인증은 PASS 앱으로 진행이 됩니다.<br>
+                                    최초 본인인증 진행 시 휴대폰에 앱이 없을 경우 설치가 필요합니다.</div>
+                            </div>
+                        </div>
+                        <!-- 입력 필드 -->
+                        <div class="form-wrap">
+                            <div class="form-label">
+                                <label for="input1" class="form-item-label">이름</label>
+                            </div>
+                            <div class="form-item">
+                                <input type="text" id="input1" class="inp-base" value="" placeholder="이름 입력">
+                            </div>
+                        </div>
+                        <div class="form-wrap">
+                            <div class="form-label">
+                                <label for="input2" class="form-item-label">생년월일</label>
+                            </div>
+                            <div class="form-item">
+                                <input type="number" id="input2" class="inp-base" value="" placeholder="숫자 8자리">
+                            </div>
+                        </div>
+                        <div class="form-wrap">
+                            <div class="form-label">
+                                <label for="input3" class="form-item-label">성별</label>
+                            </div>
+                            <div class="form-item">
+                                <div class="fx-wrap" data-align="start" data-valign="center">
+                                    <label class="radio-label radio-type-txt">
+                                        <input type="radio" name="radioGender" class="radio">
+                                        <span class="radio-txt">남자</span>
+                                    </label>
+                                    <label class="radio-label radio-type-txt">
+                                        <input type="radio" name="radioGender" class="radio">
+                                        <span class="radio-txt">여자</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-wrap">
+                            <div class="form-label">
+                                <label for="input3" class="form-item-label">휴대폰 번호</label>
+                            </div>
+                            <div class="form-item">
+                                <input type="tel" id="input3" class="inp-base" value="" placeholder="-없이 입력">
+                            </div>
+                            <!-- 오 입력시 'error' class 부여 -->
+                            <!-- <div class="from-info">
+                                    <div class="bul-error" aria-live="polite">
+                                        <div>숫자를 입력해주세요</div>
+                                    </div>
+                                </div> -->
+                        </div>
+                        <div class="step-toggle" data-toggle="hide" data-id="step2">
+                            <div class="tit-wrap">
+                                <h1 class="h-1"><strong>PASS 앱에서 인증을</strong><br>진행해 주세요.</h1>
+                                <p class="fs-l">인증 요청이 오지 않았을 경우,<br>
+                                    [PASS 앱 실행 → 홈 화면 또는 인증서 메뉴]에서<br>
+                                    인증 요청 확인 및 알림 수신 동의를 확인해 주세요.<br>
+                                    그래도 알림이 오지 않는다면 [다시 요청하기]를 눌러 주세요.
+                                </p>
+                            </div>
+                            <div class="scroll-area">
+                                <div class="fx-wrap kakao-process" data-align="justify" data-valign="center">
+                                    <div class="fx-item img-wrap">
+                                        <img src="../../resources/img/common/ico-passprocess-1.png" alt="">
+                                        <span>PASS 앱에서<br>인증 요청 확인</span>
+                                    </div>
+                                    <div class="fx-item img-wrap">
+                                        <img src="../../resources/img/common/ico-passprocess-2.png" alt="">
+                                        <span>PASS 앱<br>본인인증 완료</span>
+                                    </div>
+                                    <div class="fx-item img-wrap">
+                                        <img src="../../resources/img/common/ico-passprocess-3.png" alt="">
+                                        <span>PASS 인증하기<br>버튼 클릭</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-area mgt-l">
+                                <div class="btn-wrap request">
+                                    <button type="button" id="" class="btn-base-l thick">
+                                        <span>다시 요청하기</span>
+                                    </button>
+                                </div>
+                                <div class="btn-wrap">
+                                    <button type="button" id="" class="btn-base-l primary">
+                                        <span>PASS 인증하기</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //입력 필드 -->
+                        <div class="step-toggle btn-area mgt-l" data-toggle="show" data-id="step2">
+                            <div class="btn-wrap">
+                                <button type="button" id="" class="btn-base-l btn-confirm" onclick="netive.common.stepUp('step2');">
+                                    <span>PASS 인증 요청하기</span>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
+            <!-- //본인 인증 tab -->   
         </main>
       </div>
     </div>
@@ -190,28 +340,56 @@
 
                 netive.common.init();
 
-                $('.btn-base-link').click(function () {
-                    $(this).toggleClass('on');
-                });
-
-                $('#agreeAllChk').uiCheckAll({
+                $('#agreeAllChk1').uiCheckAll({
                     callback: function () {
-                        $('#btnConfirm').prop('disabled', false);
+                        // $('#btnConfirm').prop('disabled', false);
                         console.log('callback');
                     },
                     callbackCancel: function () {
-                        $('#btnConfirm').prop('disabled', true);
+                        // $('#btnConfirm').prop('disabled', true);
                     }
                 });
-
+                $('#agreeAllChk2').uiCheckAll({
+                    callback: function () {
+                        // $('#btnConfirm').prop('disabled', false);
+                        console.log('callback');
+                    },
+                    callbackCancel: function () {
+                        // $('#btnConfirm').prop('disabled', true);
+                    }
+                });
+                 netive.accordion.init({
+                    id: 'kakaoTerms',
+                    current: null,
+                    callback: function (v) {
+                        console.log(v);
+                    }
+                });
                 netive.accordion.init({
-                    id: 'exeAcco2',
+                    id: 'passTerms',
                     current: null,
                     callback: function (v) {
                         console.log(v);
                     }
                 });
 
+                netive.tab.init({
+                    id: 'certifiedTab',
+                    current: 0,
+                    onePanel: false,
+                    effect: false,
+                    callback: function (v) {
+                        console.log(v);
+                    }
+                });
+
+                netive.tab.toggle({
+                    id: 'certifiedTab',
+                    current: 0,
+                    callback: function (v) {
+                        console.log(v);
+                    }
+                });
                 // 본인인증 오류 alert
                 netive.modal.show({
                     type: 'alert',
