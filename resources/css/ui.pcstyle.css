@@ -4,12 +4,17 @@
   PC STYLE 
 *************/
 .pc .base-header .header-wrap {
+	min-height: 6rem;
 	padding: .9rem 0;
 	box-shadow: .4rem .4rem 1.6rem rgba(195,195,195,0.25);
 }
 .pc .base-header .header-wrap  .logo-xcarelink {
-	width: 18.6rem;
-	height: 4.2rem;
+	width: 19.3rem;
+	height: 4.3rem;
+}
+.pc .base-header .header-wrap  .logo-xcarelink img {
+	width: 100%;
+	height: 4.3rem;
 }
 .pc .base-body {
 	max-width: 49.4rem;
@@ -57,11 +62,6 @@
 	min-height: 8rem;
 	border-radius: 2rem;
 }
-.pc .bul-info::before {
-	top: 0;
-	width: 2rem;
-	height: 2rem;
-}
 .pc .btn-base-link:before {
 	left: 2.6rem;
 }
@@ -103,7 +103,7 @@
 	font-size: 3.6rem;
 }
 .pc .tit-wrap .h-1 + p {
-	margin-top: 1.5rem;
+	margin-top: 2rem;
 	font-size: 1.8rem;
 }
 .pc .ui-chkgroup > .h-3 {
@@ -155,6 +155,24 @@
 /*box*/
 .pc .box-base {
 	padding: 3.2rem;
+}
+
+/*** BULLET ***/
+.pc .bul-info,
+.pc .bul-error {
+	padding-left: 2.8rem;
+}
+.pc .bul-info:before,
+.pc .bul-error:before {
+	top: .2rem;
+	width: 2rem;
+	height: 2rem;
+}
+.pc .bul-info:before {
+	background: url(../img/common/bul-info.svg) center/100% no-repeat;
+}
+.pc .bul-error::before {
+	background: url(../img/common/bul-error.svg) center/100% no-repeat;
 }
 
 /*scrollbar*/
@@ -284,7 +302,7 @@
 	margin-top: 10rem;
 }
 .pc .kakao-process {
-	padding: 3.4rem 3.1rem;
+	padding: 3.2rem 3rem;
 	border-radius: 1.4rem;
 }
 .pc .kakao-process .img-wrap img {
@@ -485,6 +503,9 @@
 .pc.result .base-header + .base-body .base-main {
 	padding: 10.8rem 0 0;
 }
+.pc.result .tit-wrap .h-1 + p {
+	margin-top: 1.5rem;
+}
 .pc.result .base-body {
 	max-width: 100%;
 }
@@ -527,25 +548,32 @@
 	font-size: 4.6rem;
 }
 .pc.base-splash .tit-wrap .h-1 + p {
+	margin-top: 2rem;
 	font-size: 1.8rem;
 }
 .pc.base-splash .limit-width {
-	min-width: 33.4rem;
+	min-width: 34rem;
+	margin-right: 3rem;
 }
 .pc.base-splash .tit-wrap {
 	padding: 0;
 	margin: 1.7rem 0 2.2rem;
 }
 .pc.base-splash .base-body {
-	max-width: 86.2rem;
+	max-width: 92.3rem;
 }
 .pc.base-splash .base-body:after {
 	display: none;
 }
+.pc.base-splash .base-body .img-wrap {
+	position: relative;
+	top: 5.5rem;
+	width: 65rem;
+}
 .pc.base-splash .base-body .img-wrap > img {
 	position: relative;
-	width: 44.8rem;
-	height: 43rem;
+	width: 55.6rem;
+	height: 53rem;
 	animation-name: pcSplashEffect;
 	animation-duration: 1s;
 	animation-iteration-count: 1;
@@ -555,14 +583,17 @@
 }
 .pc.base-splash .base-body .img-wrap:before {
 	position: absolute;
-	top: 10.1rem;
-	right: 0;
+	top: 14.9rem;
+	right: 1.3rem;
 	width: 17.4rem;
 	height: 16.8rem;
 	background: url(../img/pc/bg-splash-ico.png) no-repeat;
 	background-size: 100%;
 	z-index: -1;
 	content: '';
+}
+.pc.base-splash .highlight:before {
+	height: 2rem;
 }
 @keyframes pcSplashEffect {
     0% {
@@ -585,7 +616,7 @@
 }
 .pc.base-splash .btn-wrap {
 	max-width: 30.6rem;
-	margin-top: 5rem;
+	margin-top: 5.6rem;
 }
 .pc.base-splash .btn-wrap button {
 	font-size: 2rem;
@@ -685,6 +716,9 @@
 .pc .box-base.disease li:last-child {
 	padding-bottom: 0;
 }
+.pc .box-base.disease .progress-wrap {
+	min-height: 8.6rem;
+}
 .pc .box-base.disease .progress-wrap .btn-more {
 	width: 6rem;
 	height: 3.2rem;
@@ -692,7 +726,6 @@
 }
 .pc .box-base.disease .progress-wrap .progress-cont {
 	height: 1rem;
-	margin-top: 1.2rem;
 	border-radius: 1.3rem;
 }
 .pc .box-base.disease .progress-wrap .txt-wrap {
@@ -702,5 +735,5 @@
 	font-size: 1.4rem;
 }
 .pc .box-base.list .fx-wrap .txt-wrap span {
-	color: #222;
+	font-weight: 500;
 }

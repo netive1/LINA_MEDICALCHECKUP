@@ -9,12 +9,13 @@
 		pageMinHeight: function(){
 			const el_html = doc.querySelector('html');
 			const elMain = document.querySelector('.base-main');
-
+			
 			window.addEventListener('resize', act);
 			function act(){
 				const wh = window.innerHeight;
-				elMain.style.minHeight = wh + 'px';
 
+				elMain.style.minHeight = wh + 'px';
+				
 				if (wh < elMain.offsetHeight) {
 					el_html.classList.add('is-scroll');
 				} else {

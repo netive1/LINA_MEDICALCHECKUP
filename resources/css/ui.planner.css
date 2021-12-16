@@ -1126,3 +1126,74 @@ h6 {
 	.group-sec{margin-top:2rem}
 	/* .base-wrap.checkup-report{width:100%;} */
 }
+
+/* 건강검진 분석결과 조회 */
+.checkup-result .base-header .head-inner {
+	max-width: 110rem;
+	margin: 0 auto;
+}
+.checkup-result .base-header {
+	height: 4.5rem;
+	background: #fff;
+	border-bottom: 1px solid #ddd;
+}
+.checkup-result .base-body {
+	display: flex;
+	align-items: center;
+	height: 100%;	
+	padding: 10rem 0;
+}
+.checkup-result .box-wrap {
+	width: 82rem;
+	padding: 8.3rem 0 9.3rem;
+	margin: 0 auto;
+	border: 1px solid #ddd;
+	border-radius: 1.8rem;
+}
+.checkup-result .result-box {
+	max-width: 43.4rem;
+	margin: 0 auto;
+	text-align: center;
+}
+.checkup-result .result-box .tit-wrap:before {
+	content: '';
+	display: inline-block;
+	width: 17.8rem;
+	height: 11.8rem;
+	background: url(../img/planner/result_illust.png) center/100% no-repeat;
+}
+.checkup-result .result-box .tit-wrap .h-1 {
+	margin-top: 2.9rem;
+}
+.checkup-result .result-box .tit-wrap .h-1 {
+	color: #000;
+	font-size: 3rem;
+	font-weight: 700;
+}
+.checkup-result .result-box .tit-wrap .h-1 + p {
+	margin-top: 1.2rem;
+	color: #666;
+	font-size: 1.8rem;
+}
+.checkup-result .result-box .form-item {
+	margin-top: 5rem;
+}
+.checkup-result .inp-base {
+	width: 100%;
+	height: 6rem;
+	padding: 0 1.8rem;
+	font-size: 1.8rem;
+	font-weight: 700;
+	border: 1px solid #ddd;
+	border-radius: 1rem;
+}
+.inp-base::placeholder {
+	color: #ddd;
+}
+.checkup-result .form-item + .btn-wrap {
+	padding: 0;
+	margin-top: 2.4rem;
+}
+.checkup-result .btn-wrap > .btn-base {
+	width: 100%;
+}

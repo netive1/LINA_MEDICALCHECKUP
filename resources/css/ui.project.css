@@ -49,6 +49,9 @@
 .base-splash .tit-wrap .h-1 + p {
 	margin-top: 1.8rem;
 }
+.base-splash .highlight:before {
+	height: 1.2rem;
+}
 
 /* [COMMON] 약관 동의 */
 .base-terms .header-wrap {
@@ -109,13 +112,13 @@
 .ui-chkgroup .chklist li label {
     display: block;
     position: relative;
-    padding: 1.2rem 6.6rem 1.2rem 2.4rem;
+    padding: 1.1rem 6.6rem 1.1rem 2.4rem;
     color: #666;
     font-size: 1.4rem;
 }
 .ui-chkgroup .chklist li .chkbox label:before {
-	width: 1.2rem;
-	height: .8rem;
+	width: 1.6rem;
+	height: 1.6rem;
 	margin-right: .8rem;
 	background-image: url(../img/common/ico-chkbox-s.svg);
 	background-size: 100%;
@@ -133,9 +136,10 @@
 	position: absolute;
 	right: 0.6rem;
 	top: 50%;
-	width: 5rem;
+	min-width: 5rem;
+	height: 2.8rem;
 	text-align: center;
-	padding: .3rem 1.2rem .4rem;
+	padding: .3rem 1.2rem;
 	font-size: 1.4rem;
 	font-weight: 500;
 	background-color: #F3F3F3;
@@ -163,11 +167,11 @@
 }
 .kakao-process .img-wrap:before {
 	position: absolute;
-	left: 0;
-	top: 2.3rem;
+	left: -.8rem;
+	top: 2rem;
 	display: inline-block;
-	width: .6rem;
-	height: 1.2rem;
+	width: 1.6rem;
+	height: 1.6rem;
 	background: url(../img/common/arr-right.svg) no-repeat;
 	background-size: 100%;
 	content: '';
@@ -177,7 +181,7 @@
 } 
 .kakao-process .img-wrap span {
 	display: block;
-	margin-top: .8rem;
+	margin-top: .6rem;
 	color: #666;
 	font-size: 1.2rem;
 }
@@ -196,7 +200,7 @@
 	margin: 0 auto;
 }
 .base-loading .circle-progress-wrap {
-	margin-top: 8rem;
+	margin-top: 7.7rem;
 }
 .circle-progress .box{
 	position: absolute;
@@ -229,7 +233,7 @@
 .circle-progress .text {
 	position: absolute;
 	left: 50%;
-	bottom: -6rem;
+	bottom: -5.8rem;
 	transform: translateX(-50%);
 	color: #222;
 	font-family: 'Roboto';
@@ -265,8 +269,8 @@
 }
 /* Entry_3 정보 연동 */
 .bg-chkup {
-	background: url('../img/mo/bg-chkup.png') center bottom 18.9rem no-repeat;
-	background-size: 15.8rem 12.8rem;
+	background: url('../img/mo/bg-chkup.png') center top 18.9rem no-repeat;
+	background-size: 18.1rem 13.2rem;
 }
 .bg-chkup .logo-txt .highlight {
 	font-weight: 500 !important;
@@ -284,7 +288,8 @@
 	padding-bottom: 0;
 }
 .base-wrap.result .tit-wrap {
-	padding-bottom: 7.8rem;
+	padding-bottom: 9.2rem;
+	margin-bottom: 0;
 	color: #fff;
 }
 .base-wrap.result .tit-wrap .h-1 {
@@ -304,7 +309,7 @@
 }
 .base-wrap.result .content-area .box-area {
 	position: relative;
-	top: -6.8rem;
+	top: -5.5rem;
 }
 .base-wrap.result .box-base .ta-c span {
 	font-weight: 500;
@@ -319,13 +324,16 @@
 /* 모바일 GA hybrid */
 /* 상담 예약 완료 */
 .bg-complete {
-	background: url('../img/mo/bg-complete.png') center bottom 22rem no-repeat;
+	background: url('../img/mo/bg-complete.png') center top 28rem no-repeat;
 	background-size: 15.2rem 13.4rem;
 }
 
 /* 건강검진 분석결과 */
 .result .box-wrap .box-base + .box-base {
 	margin-top: 1.6rem;
+}
+.box-base.info dl {
+	margin-bottom: .3rem;
 }
 .box-base.info dl dt {
 	margin-bottom: 1.2rem;
@@ -341,11 +349,10 @@
 }
 .box-base.info .progress-wrap .progress-cont {
 	min-width: 17.2rem;
-	margin: 0 .5rem;
+	margin: 0 1.2rem;
 }
 .box-base.info .fx-wrap .txt {
 	min-width: 5.4rem;
-	margin-right: 1.2rem;
 	color: #222;
 	font-size: 1.4rem;
 	font-weight: 500;
@@ -375,6 +382,7 @@
 }
 .box-base.list .fx-wrap .txt-wrap strong {
 	font-weight: 700;
+	letter-spacing: 0;
 }
 .box-base.list li + li {
 	margin-top: 2.4rem;
@@ -414,17 +422,19 @@
 }
 .box-base.banner .bg-disease strong {
 	display: block;
+	margin-top: .2rem;
 	font-size: 2rem;
 	font-weight: 700;
 }
 .box-base.banner .bg-disease p {
+	margin-top: 1rem;
 	font-size: 1.2rem;
 }
 .img-myhealthage::before{
 	content: "";
 	display: block;
-	width:11.7rem;
-	height: 8.7rem;
+	width:11.6rem;
+	height: 8.6rem;
 	background: url(../../resources/img/mo/myhealthage.png) no-repeat 0 0 / 100%;
 	position: absolute;
 	top:-7.8rem;
@@ -464,42 +474,57 @@
 .ui-progressbar-level,
 .box-base.disease .state {
 	position: absolute;
-	left: -.3rem;
+	left: 0;
 	bottom: 0;
 	width: 5.4rem;
 	height: 2.4rem;
 	padding: .1rem 0 .2rem;	
 	border-radius: 1.2rem;
 }
-.box-base.disease .progress-wrap  {
-	width: calc(100% - 6rem);
+.box-base.disease .progress-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	width: calc(100% - 6.6rem);
+	min-height: 6.6rem;
 }
 .box-base.disease .progress-wrap .txt-wrap {
-	display: flex;
-	justify-content: space-between;
+	position: relative;
+	/* display: flex;
+	align-items: center; */
+	width: 100%;
+	min-height: 3.4rem;
+	padding-bottom: 1rem;
+	padding-right: 6rem;
 	color: #222;
+	word-break: break-all;
 }
 .box-base.disease .progress-wrap .txt-wrap .fs-xs {
 	display: block;
 	color: #666;
 	font-size: 1.2rem;
 	font-weight: 400;
+	line-height: 1.7rem;
 }
 
 .box-base.disease .progress-wrap .progress-cont {
-	margin: 1rem 0 0;
+	margin: 0 0 .8rem;
 }
 .box-base.disease .progress-wrap .btn-more {
-	height: 2.6rem;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 5rem;
+	height: 2.8rem;
 }
 .box-base.disease .ui-progressbar {
 	display: flex;
 	align-items: center;
+	min-height: 6.6rem;
 }
 /* Contents_MW_Main_상세 */
 .result-detail {
 	position: relative;
-	top: 1rem;
 	padding: 0 2.4rem 2.4rem;
 }
 .result-detail .base-wrap.result {
@@ -508,13 +533,17 @@
 .result-detail .box-base + .box-base  {
 	margin-top: 1.8rem;
 }
-.result-detail .box-base .info .state {
+.result-detail .box-base .info span.state {
+	display: inline-block;
 	width: auto;
+	min-width: 5.4rem;
+	min-height: 2.4rem;
 	border-radius: 1.2rem;
-	padding: .2rem 1.5rem;
+	padding: .2rem 1.4rem;
 }
 .result-detail .box-base .info .name em {
 	display: block;
+	margin-top: .7rem;
 	color: #222;
 	font-size: 2.6rem;
 }
@@ -598,7 +627,7 @@
 	top:0;
 } */
 .result-graph .circle-progress .text {
-	top: 2.4rem;
+	top: 2.5rem;
 	bottom: auto;
 	background: #fff;
 	width:10.6rem;
@@ -662,7 +691,7 @@
 	margin-left: .4rem;;
 }
 .result-detail .disease-chklist {
-	margin-top: 1.6rem;
+	margin: 1.6rem 0 1rem;
 }
 .result-detail .disease-chklist li {
 	position: relative;
@@ -682,7 +711,7 @@
 	content: '';
 }
 .result-detail .disease-chklist li + li {
-	margin-top: 1.2rem;
+	margin-top: 1.4rem;
 }
 .result-detail .btn-wrap {
 	margin-top: 2.6rem;
