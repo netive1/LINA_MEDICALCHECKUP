@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ko">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=yes">
@@ -10,42 +10,43 @@
     <script src="../../resources/js/lib/jquery-3.6.0.min.js"></script>
     <script src="../../resources/js/ui.global.js"></script>
     <script src="../../resources/js/ui.common.js"></script>    
-  </head>
-  <body>
+</head>
+<body>
     <div class="base-wrap base-splash">
-      <div class="base-body">
-        <main class="base-main">
-          <h1 class="logo"><img src="../../resources/img/common/logo.svg" alt="logo"></h1>
-          <div class="tit-wrap">
-            <h2 class="h-1">건강검진 분석으로<br><strong class="highlight">질병 별 위험도를</strong><br>알아볼 수 있다면?</h2>
-            <p>라이나생명<br>건강검진 분석 서비스</p>
-          </div>
-        </main>
-      </div>
+        <div class="base-body">
+            <main class="base-main">
+                <h1 class="logo"><img src="../../resources/img/common/logo.svg" alt="라이나생명"></h1>
+                <div class="tit-wrap">
+                    <h2 class="h-1">건강검진 분석으로<br><strong class="highlight">질병 별 위험도를</strong><br>알아볼 수 있다면?</h2>
+                    <p>라이나생명<br>건강검진 분석 서비스</p>
+                </div>
+            </main>
+        </div>
     </div>
     <script>
-      ;(function (win, doc, jQuery, undefined) {
+        ;(function (win, doc, jQuery, undefined) {
+
         'use strict';
 
-        document.addEventListener("DOMContentLoaded", function () {
+            document.addEventListener("DOMContentLoaded", function () {
 
-          netive.common.init();
-          
-          setTimeout(function () {
-            //서비스 코드 만료 안내 alert
-              netive.modal.show({
-              type: 'alert',
-              sMessage: '<strong>서비스 코드의 사용 기간이<br>만료되었습니다.</strong>설계사를 통해 다시 발급해 주시기 바랍니다.',
-              sBtnConfirmTxt: '확인',
-              sClass: 'type-alert',
-              sConfirmCallback: function () {
-                console.log('close'); netive.modal.hideSystem();
-              }
+                netive.common.init();
+                
+                setTimeout(function () {
+                    //서비스 코드 만료 안내 alert
+                    netive.modal.show({
+                        type: 'alert',
+                        sMessage: '<strong>서비스 코드의 사용 기간이<br>만료되었습니다.</strong>설계사를 통해 다시 발급해 주시기 바랍니다.',
+                        sBtnConfirmTxt: '확인',
+                        sClass: 'type-alert',
+                        sConfirmCallback: function () {
+                            console.log('close'); netive.modal.hideSystem();
+                        }
+                    });
+                }, 1000);  
             });
-          }, 1000);  
-        });
 
-      })(window, document, $);
+        })(window, document, $);
     </script>
-  </body>
+</body>
 </html>

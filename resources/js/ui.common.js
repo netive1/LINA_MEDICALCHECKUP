@@ -9,12 +9,13 @@
 		pageMinHeight: function(){
 			const el_html = doc.querySelector('html');
 			const elMain = document.querySelector('.base-main');
-
+			
 			window.addEventListener('resize', act);
 			function act(){
 				const wh = window.innerHeight;
-				elMain.style.minHeight = wh + 'px';
 
+				elMain.style.minHeight = wh + 'px';
+				
 				if (wh < elMain.offsetHeight) {
 					el_html.classList.add('is-scroll');
 				} else {
@@ -23,10 +24,10 @@
 			}
 			act();
 		},
-		stepUp: function(){
+		stepUp: function(v){
 			const wrap = document.querySelector('html, body');
-			const stepHide = document.querySelector('.step-toggle[data-toggle="hide"]');
-			const stepShow = document.querySelector('.step-toggle[data-toggle="show"]');
+			const stepHide = document.querySelector('.step-toggle[data-toggle="hide"][data-id="'+ v +'"]');
+			const stepShow = document.querySelector('.step-toggle[data-toggle="show"][data-id="'+ v +'"]');
 			const header = document.querySelector('.header-wrap');
 
 			stepHide.classList.add('show');
@@ -37,32 +38,92 @@
 				behavior: 'smooth'
 			});
 		},
-		progress: function(opt){
-			const max = Number(opt.max);
-			const val = Number(opt.val);
-			const circleprogress = document.querySelector('.circle-progress');
-			const emoji = document.querySelector('.circle-progress .emoji');
-			const box = document.querySelector('.circle-progress .box');
-			const percent = document.querySelector('.circle-progress .percent');
+		progressBar: function () {
+			const el = document.querySelectorAll('.ui-progressbar');
+			const level = [0, 20, 40, 60, 80, 100];
+			const levelTxt = ['양호', '주의', '경고', '위험', '고위험'];
+			let ps = [];
+			
+			document.addEventListener('scroll', act);
 
-			setTimeout(function () {
-				box.style.transform = 'rotate(' + (360 * val / 100) + 'deg)';
-				box.style.opacity = 1;
-			}, 0);
+			for (let i = 0, len = el.length; i < len; i++) {
+				const that = el[i];
+				const per = that.dataset.percent;
+				ps.push(that.getBoundingClientRect().top.toFixed(0));
 
-			let n = 0;
-
-			function countUp() {
-				if (val >= n) {
-					percent.innerHTML = n;
-					n = n + 1;
-					console.log(n);
-					setTimeout(function () {
-						countUp();
-					}, 1);
+				for (let j = 0, len2 = level.length; j < len2; j++) {
+					if (Number(per) < Number(level[j])) {
+						state(that, j, per);
+						break;
+					}
 				}
 			}
-			countUp();
+
+			function state(a, b, c) {
+				const el_level = a.querySelector('.ui-progressbar-level');
+				const el_item = a.querySelector('.ui-progressbar-item');
+				
+				if (!!el_level) {
+					a.classList.add('state-' + b);
+					el_level.textContent = levelTxt[b - 1]
+				}
+				el_item.dataset.per = c;
+				el_item.setAttribute('aria-label', c + '%');
+			}
+
+			function act() {
+				const sc = document.documentElement.scrollTop + window.innerHeight - 100;
+				
+				for (let i = 0, len = el.length; i < len; i++) {
+					const that = el[i];
+					const el_item = that.querySelector('.ui-progressbar-item');
+
+					if (sc > Number(ps[i])) {
+						el_item.style.width = el_item.dataset.per + '%';
+					}
+				}
+			}
+			act();
+		},
+		progress: function(opt){
+			const id = opt.id;
+			const max = Number(opt.max);
+			const val = Number(opt.val);
+			const circleprogress = document.querySelector('#' + id);
+			const emoji = circleprogress.querySelector('.emoji');
+			const box = circleprogress.querySelector('.box');
+			const percent = circleprogress.querySelector('.percent');
+
+			// const elbody = document.querySelector('.ui-modal-body');
+			// console.log(elbody.scrollTop + window.innerHeight);
+
+			// elbody.addEventListener('scroll', act);
+			// function act() {
+			// 	const sc = elbody.scrollTop;
+				
+			// 	console.log(sc);
+			// }
+
+			setTimeout(function () {
+				if (!!box) {
+					box.style.transform = 'rotate(' + (360 * val / 100) + 'deg)';
+					box.style.opacity = 1;
+				}
+			}, 0);
+			
+			percent.innerHTML = val;
+			// let n = 0;
+
+			// function countUp() {
+			// 	if (Number(val) >= n) {
+			// 		percent.innerHTML = n;
+			// 		n = Number(n + 0.1).toFixed(3);
+			// 		setTimeout(function () {
+			// 			countUp();
+			// 		}, 1);
+			// 	}
+			// }
+			// countUp();
 
 			if (val > 100) {
 				circleprogress.classList.add('n5');
@@ -75,8 +136,7 @@
 			} else {
 				circleprogress.classList.add('n1');
 			}
-
-			new CircleProgress('.circle-progress', {
+			new CircleProgress('#' + id, {
 				// textFormat: 'percent',
 				max: max,
 				value: val,
@@ -103,6 +163,7 @@ $.fn.uiCheckAll = function (opt) {
 			gCnt: null,
 			gBtn: null,
 			checkAllFn: function (v) {
+				console.log('checkAllFn',this, v);
 				var o = this,
 					$t = $(v),
 					$boolean = $t.is(':checked'),
@@ -122,6 +183,7 @@ $.fn.uiCheckAll = function (opt) {
 				}
 			},
 			checkItemFn: function (v) {
+				console.log('checkItemFn',this, v);
 				var o = this,
 					$t = $(v),
 					$boolean = $t.is(':checked'),
@@ -144,6 +206,7 @@ $.fn.uiCheckAll = function (opt) {
 				}
 			},
 			viewFn: function (v) {
+				console.log('viewFn',this, v);
 				var o = this,
 					$t = $(v),
 					$parent = $t.parent();
@@ -159,6 +222,7 @@ $.fn.uiCheckAll = function (opt) {
 				}
 			},
 			init: function (v) {
+				console.log(this, v);
 				var o = this;
 				o.gTarget = $(v);
 				o.gAllObjParent = o.gTarget.find('.all-chked .chkbox');

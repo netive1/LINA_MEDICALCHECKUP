@@ -14,8 +14,8 @@ html {
 body {
 	margin: 0;
 	font-family: 'Noto Sans KR', sans-serif;
-	color: var(--gray800);
-	font-size: var(--text-s);
+	color: #666;
+	font-size: 1.6rem;
 	font-weight: normal;
 	line-height: 1.5;
 	word-break: keep-all;
@@ -72,7 +72,7 @@ td {
 
 hr {
 	border: 0;
-	border-top: 1px solid var(--gray200-color);
+	border-top: 1px solid #ddd;
 	margin: 4rem 0;
 }
 
@@ -143,7 +143,7 @@ input[type='month'] {
 	padding: 0; 
 	color: inherit; 
 	font: inherit; 
-	font-size: var(--text-s); 
+	font-size: 1.6rem; 
 	border: 0; 
 	background-color: transparent; 
 }

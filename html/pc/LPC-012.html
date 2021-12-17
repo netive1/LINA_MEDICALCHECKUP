@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=yes">
+    <title>라이나생명 검진분석 서비스</title>
+    <link rel="stylesheet" href="../../resources/css/ui.base.css">
+    <link rel="canonical" href="">
+    <script src="../../resources/js/lib/jquery-3.6.0.min.js"></script>
+    <script src="../../resources/js/lib/circle-progress.js"></script> <!--progress lib-->
+    <script src="../../resources/js/ui.global.js"></script>
+    <script src="../../resources/js/ui.common.js"></script>
+</head>
+<body>
+    <div class="base-wrap base-loading pc">
+        <header class="base-header">
+            <div class="header-wrap">
+                <div class="fx-wrap modal-tit" data-align="center" data-valign="center">
+                    <h1 class="logo-xcarelink"><img src="../../resources/img/pc/common/logo-xcarelink.svg" alt="라이나생명 x CareLink"></h1>
+                </div>
+            </div>
+        </header>
+        <div class="base-body">
+            <main class="base-main">
+                <div class="tit-wrap">
+                    <h2 class="h-1">지금 데이터를 통해<br><strong>건강 분석 진행 중이에요.</strong></h2>
+                    <p>국민건강보험공단 정보를 통해<br>데이터 분석중입니다.</p>
+                </div>
+                <div class="circle-progress-wrap">
+                    <div class="circle-progress" id="empg1">
+                        <div class="box">
+                            <div class="head"></div>
+                        </div>
+                        <div class="emoji"></div>
+                        <div class="text">
+                            <em class="percent"></em>
+                            <span>%</span>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <!-- <footer class="base-footer">
+            <div class="base-footer-inner">
+                <img src="../../resources/img/pc/common/logo-footer.svg" class="footer-logo" alt="라이나생명">
+                <address>
+                    <span>서울특별시 종로구 삼봉로 48 (청진동 188) 시그나타워</span>
+                    <span>대표이사 조지은</span>
+                    <span>사업자등록번호 : 104-81-85673</span>
+                </address>
+                <p class="copyright">Copyright©LINA Korea, a Cigna Company. All Rights Reserved.</p>
+            </div>
+        </footer> -->
+    </div>
+    <script>
+        ;(function (win, doc, jQuery, undefined) {
+            'use strict';
+
+            document.addEventListener("DOMContentLoaded", function () {
+
+                netive.common.init();
+
+                //progress
+                netive.common.progress({
+                    id: 'empg1',
+                    max: 100,
+                    val: 75
+                });
+
+            });
+
+        })(window, document, $);
+    </script>
+</body>
+</html>

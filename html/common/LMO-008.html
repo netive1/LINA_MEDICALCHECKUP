@@ -1,54 +1,64 @@
 <!doctype html>
 <html lang="ko">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=yes">
-    <title>라이나생명 검진분석 서비스</title>
-    <link rel="stylesheet" href="../../resources/css/ui.base.css">
-    <link rel="canonical" href="">
-    <script src="../../resources/js/lib/jquery-3.6.0.min.js"></script>
-    <script src="../../resources/js/ui.global.js"></script>
-    <script src="../../resources/js/ui.common.js"></script>    
-  </head>
-  <body>
-    <div class="base-wrap">
-      <div class="base-body">
-        <main class="base-main">
-          <div class="tit-wrap">
-            <h1 class="h-1"><strong>본인인증 방법을</strong><br>선택해주세요</h1>
-            <p class="fs-m">본인이 맞는지 확인하는 절차입니다.<br>한 번만 진행하니 걱정마세요.</p>
-          </div>
-          <div class="btn-area">
-            <div class="btn-wrap">
-              <a href="LMO-009.html" class="btn-base-link btn-kakao">           
-                <span>카카오 인증</span>
-              </a>
-            </div>
-            <div class="btn-wrap">
-              <a href="LMO-012.html" class="btn-base-link btn-phone">
-                <span>휴대폰 인증</span>
-              </a>
-            </div>
-          </div>
-        </main>
-      </div>
-    </div>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=yes">
+		<title>라이나생명 검진분석 서비스</title>
+		<link rel="stylesheet" href="../../resources/css/ui.base.css">
+		<link rel="canonical" href="">
+		<script src="../../resources/js/lib/jquery-3.6.0.min.js"></script>
+		<script src="../../resources/js/ui.global.js"></script>
+		<script src="../../resources/js/ui.common.js"></script>    
+	</head>
+	<body>
+	<div class="base-wrap">
+		<div class="base-body">
+			<main class="base-main">
+				<div class="tit-wrap">
+					<h1 class="h-1"><strong>본인인증 방법을</strong><br>선택해주세요</h1>
+					<p class="fs-m">본인이 맞는지 확인하는 절차입니다.<br>한 번만 진행하니 걱정마세요.</p>
+				</div>
+				<div class="btn-area">
+					<div class="btn-wrap">
+						<a href="LMO-009.html" class="btn-base-link btn-kakao">           
+							<span>카카오 인증</span>
+						</a>
+					</div>
+					<div class="btn-wrap">
+						<a href="LMO-012.html" class="btn-base-link btn-pass">
+							<span>PASS 인증(통신사)</span>
+						</a>
+					</div>
+				</div>
+				<div class="from-info ps-bottom">
+					<div class="bul-info" aria-live="polite">
+						<div>
+							카카오 인증은 카카오톡 앱에서,<br>
+							PASS 인증은 PASS 앱으로 진행이 됩니다.<br>
+							최초 본인인증 진행 시 휴대폰에 앱이 없을 경우<br>
+							설치가 필요합니다.
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+	</div>
 
-    <script>
-      ; (function (win, doc, jQuery, undefined) {
-        'use strict';
+	<script>
+		;(function (win, doc, jQuery, undefined) {
+			'use strict';
 
-        document.addEventListener("DOMContentLoaded", function () {
+			document.addEventListener("DOMContentLoaded", function () {
 
-          netive.common.init();
-          
-          $('.btn-base-link').click(function () {
-            $(this).toggleClass('on');
-          });
-        });
+				netive.common.init();
+				
+				$('.btn-base-link').click(function () {
+					$(this).toggleClass('on');
+				});
+			});
 
-      })(window, document, $);
-    </script>
-  </body>
+		})(window, document, $);
+	</script>
+	</body>
 </html>
