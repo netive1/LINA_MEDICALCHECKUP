@@ -622,10 +622,12 @@
 	content:"";
 	display: block;
 	position:absolute;
+	left: 50%;
 	top:2rem;
 	width:1.8rem;
 	height: 21rem;
 	background: url(../../resources/img/common/ico-graph-high.png) no-repeat 50% 0 / 100%;
+	transform: translateX(-50%);
 }
 .result-graph .circle-progress .text.down::before{
 	content:"";
@@ -635,6 +637,7 @@
 	width:1.8rem;
 	height: 21rem;
 	background: url(../../resources/img/common/ico-graph-low.png) no-repeat 50% 0 / 100%;
+	transform: translateX(-50%);
 }
 .result-graph .circle-progress .text .percent {
 	font-size: 3rem;

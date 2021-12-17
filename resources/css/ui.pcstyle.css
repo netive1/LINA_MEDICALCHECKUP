@@ -176,21 +176,38 @@
 }
 
 /*scrollbar*/
+.ui-modal .scroll,
 .pc .scroll { 
 	overflow-y: auto; 
 }
+.ui-modal .scroll::-webkit-scrollbar,
 .pc .scroll::-webkit-scrollbar {
 	width: .6rem;
 	border-radius: .4rem;
 }
+.ui-modal .scroll.custom::-webkit-scrollbar-track,
 .pc .scroll.custom::-webkit-scrollbar-track {
   background: #fafafa;
   border-radius: .4rem;
 }
+.ui-modal .scroll.custom::-webkit-scrollbar-thumb,
 .pc .scroll.custom::-webkit-scrollbar-thumb {
   background: #ddd;
   border-radius: .4rem;
 }
+
+.ui-modal .scroll,
+.pc .scroll {
+	scrollbar-arrow-color: #efefef;
+	scrollbar-Track-Color: #efefef;
+	scrollbar-base-color: #dfdfdf;
+	scrollbar-Face-Color: #dfdfdf;
+	scrollbar-3dLight-Color: #dfdfdf;
+	scrollbar-DarkShadow-Color: #dfdfdf;
+	scrollbar-Highlight-Color: #dfdfdf;
+	scrollbar-Shadow-Color: #dfdfdf
+}
+
 .box-base.box-scroll {
 	padding: 1.5rem 3.4rem 1.5rem 2.2rem;
 	border-radius: .4rem;
@@ -300,8 +317,8 @@
 	border-radius: 1.4rem;
 }
 .pc .kakao-process .img-wrap img {
-	width: 7.7rem;
-	height: 7.7rem;
+	width: 7.8rem;
+	height: 7.8rem;
 }
 .pc .kakao-process .img-wrap:before {
 	top: 3rem;
@@ -367,6 +384,9 @@
 	top: 0;
 	padding: 0 4.8rem 3.6rem;
 }
+[class*="size-desktop"] .ui-modal .box-area.result-detail .box-base {
+	padding: 3rem 3.2rem;
+}
 [class*="size-desktop"] .ui-modal.type-system .ui-modal-wrap {
 	max-width: 43.4rem;
 }
@@ -397,6 +417,7 @@
 	font-size: 2rem;
 }
 [class*="size-desktop"] .ui-modal-header .btn-close {
+	top: 4.2rem;
 	height: 4.2rem;
 	width: 2.2rem;
 	height: 2.2rem;
@@ -422,8 +443,8 @@
 	font-size: 3rem;
 }
 [class*="size-desktop"] .ui-modal .grpah-txt {
-	width: calc(100% - 17rem);
-	margin-left: 1rem;
+	width: calc(100% - 18rem);
+	margin-right: 1rem;
 } 
 [class*="size-desktop"] .ui-modal .grpah-txt .fs-l {
 	color: #222;
@@ -438,6 +459,12 @@
 }
 [class*="size-desktop"] .result-detail .box-base .info .step .state {
 	border-radius: 0;
+}
+[class*="size-desktop"] .result-detail .box-base .info .step .state:first-child {
+	border-radius: .5rem 0 .0 .5rem;
+}
+[class*="size-desktop"] .result-detail .box-base .info .step .state:last-child {
+	border-radius: 0 .5rem .5rem 0;
 }
 [class*="size-desktop"] .result-detail .box-base .info .step .state:after {
 	top: -1rem;
@@ -471,6 +498,16 @@
 }
 [class*="size-desktop"] .result-detail .btn-wrap {
 	margin-top: 4rem;
+}
+[class*="size-desktop"] .bul-info,
+[class*="size-desktop"] .bul-error {
+	padding-left: 2.8rem;
+}
+[class*="size-desktop"] .bul-info:before,
+[class*="size-desktop"] .bul-error:before {
+	top: .2rem;
+	width: 2rem;
+	height: 2rem;
 }
 
 /*loding 화면*/
