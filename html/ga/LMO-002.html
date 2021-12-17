@@ -1,74 +1,74 @@
 <!doctype html>
 <html lang="ko">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=yes">
-		<title>라이나생명 검진분석 서비스</title>
-		<link rel="stylesheet" href="../../resources/css/ui.base.css">
-		<link rel="canonical" href="">
-    <script src="../../resources/js/lib/jquery-3.6.0.min.js"></script>
-    <script src="../../resources/js/ui.global.js"></script>
-    <script src="../../resources/js/ui.common.js"></script>    
-	</head>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=yes">
+        <title>라이나생명 검진분석 서비스</title>
+        <link rel="stylesheet" href="../../resources/css/ui.base.css">
+        <link rel="canonical" href="">
+        <script src="../../resources/js/lib/jquery-3.6.0.min.js"></script>
+        <script src="../../resources/js/ui.global.js"></script>
+        <script src="../../resources/js/ui.common.js"></script>    
+    </head>
 	<body>
     <div class="base-wrap">
-      <div class="base-body">
-        <main class="base-main">
-          <progress id="" class="progress-base fixed" max="100" value="50">50%</progress>
-          <div class="tit-wrap">
-            <h1 class="h-1">지금 스스로의<br><strong>건강상태를<br>어떻게 생각하세요?</strong></h1>
-            <p class="fs-m">사실 고민할 필요도 없이<br>건강하다고 생각해야 가장 좋겠지요?</p>
-          </div>
-          <div class="form-wrap state-wrap">
-            <div class="form-item">
-              <div class="radio radio-type-emoji emoji1">
-                <input type="radio" id="radio-emoji1" name="radioEmoji" checked="">
-                <label for="radio-emoji1" class="radio-label"><span>별로예요..</span></label>
-              </div>
-            </div>
-            <div class="form-item">
-              <div class="radio radio-type-emoji emoji2">
-                <input type="radio" id="radio-emoji2" name="radioEmoji">
-                <label for="radio-emoji2" class="radio-label"><span>잘 모르겠어요</span></label>
-              </div>
-            </div>
-            <div class="form-item">
-              <div class="radio radio-type-emoji emoji3">
-                <input type="radio" id="radio-emoji3" name="radioEmoji">
-                <label for="radio-emoji3" class="radio-label"><span>좋아요!</span></label>
-              </div>
-            </div>
-          </div>
-          <div class="fx-wrap skip" data-align="right" data-valign="center">
-            <a href="./LMO-004.html" class="btn-base text highlight">
-              <span>건너뛰기</span>
-            </a>
-          </div>
-        </main>
-      </div>
+        <div class="base-body">
+            <main class="base-main">
+                <progress class="progress-base fixed" max="100" value="50">50%</progress>
+                <div class="tit-wrap">
+                    <h1 class="h-1">지금 스스로의<br><strong>건강상태를<br>어떻게 생각하세요?</strong></h1>
+                    <p class="fs-m">사실 고민할 필요도 없이<br>건강하다고 생각해야 가장 좋겠지요?</p>
+                </div>
+                <div class="form-wrap state-wrap">
+                    <div class="form-item">
+                        <div class="radio radio-type-emoji emoji1">
+                            <input type="radio" id="radio-emoji1" name="radioEmoji" checked="">
+                            <label for="radio-emoji1" class="radio-label"><span>별로예요..</span></label>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <div class="radio radio-type-emoji emoji2">
+                            <input type="radio" id="radio-emoji2" name="radioEmoji">
+                            <label for="radio-emoji2" class="radio-label"><span>잘 모르겠어요</span></label>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <div class="radio radio-type-emoji emoji3">
+                            <input type="radio" id="radio-emoji3" name="radioEmoji">
+                            <label for="radio-emoji3" class="radio-label"><span>좋아요!</span></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="fx-wrap skip" data-align="right" data-valign="center">
+                    <a href="./LMO-004.html" class="btn-base text highlight">
+                        <span>건너뛰기</span>
+                    </a>
+                </div>
+            </main>
+        </div>
     </div>
     <script>
-      ;(function (win, doc, $, undefined) {
-        'use strict';
+        ;(function (win, doc, $, undefined) {
+            'use strict';
 
-        document.addEventListener("DOMContentLoaded", function () {
+            document.addEventListener("DOMContentLoaded", function () {
 
-          netive.common.init();
+                netive.common.init();
 
-          $('input[name="radioEmoji"]').change(function () {
-            $('input[name="radioEmoji"]').each(function () {
-              var checked = $(this).prop('checked');
+                $('input[name="radioEmoji"]').change(function () {
+                    $('input[name="radioEmoji"]').each(function () {
+                        var checked = $(this).prop('checked');
 
-              if (checked) {
-                $('.form-item').css('opacity', '0.5');
-                $(this).parents('.form-item').css('opacity', '1');
-              }
+                        if (checked) {
+                            $('.form-item').css('opacity', '0.5');
+                            $(this).parents('.form-item').css('opacity', '1');
+                        }
+                    });
+                });
+
             });
-          });
-
-        });
-      })(window, document, jQuery);
+        })(window, document, jQuery);
     </script>
-  </body>
+</body>
 </html>

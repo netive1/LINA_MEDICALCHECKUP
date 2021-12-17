@@ -22,13 +22,16 @@
 			.color-guide p {font-size: 13px;}
 			.color-guide div + p {margin-top: 1.2rem;}
 			.main-color {background-color: #019AF9;color: #fff;}
-			.sub-color.s1 {background-color: #01D4E5;color: #fff;}
-			.sub-color.s2 {background-color: #F2F7FF;color: #019AF9;}
+			.sub-color.s1 {background-color: #F1F8FD;color: #019AF9;}
 			.base-color.b1 {background-color: #222;color: #fff;}
 			.base-color.b2 {background-color: #666;color: #fff;}
 			.base-color.b3 {background-color: #ddd;color: #fff;}
-			.etc-color.e1 {background-color: #09BFAD;color: #fff;}
-			.etc-color.e2 {background-color: #FF6262;color: #fff;}
+			.color-guide span.etc-color {width: 4rem;height: 4rem;}
+			.etc-color.e1 {background-color: #4792EF;color: #fff;}
+			.etc-color.e2 {background-color: #01D4E5;color: #fff;}
+			.etc-color.e3 {background-color: #A1DE52;color: #fff;}
+			.etc-color.e4 {background-color: #FFD600;color: #fff;}
+			.etc-color.e5 {background-color: #FF6262;color: #fff;}
 		</style>
 	</head>
 	<body>
@@ -41,14 +44,10 @@
 					<div class="guide-wrap">
 						<section class="color-guide">
 							<h2 class="h-2">color</h2>
-							<p>main color</p>
+							<p>main/sub color</p>
 							<div class="fx-wrap" data-align="start" data-valign="center">
 								<span class="main-color">#019AF9</span>
-							</div>
-							<p>sub color</p>
-							<div class="fx-wrap" data-align="start" data-valign="center">
-								<span class="sub-color s1">#01D4E5</span>
-								<span class="sub-color s2">#286EF0</span>
+								<span class="sub-color s1">#F1F8FD</span>
 							</div>
 							<p>base color</p>
 							<div class="fx-wrap" data-align="start" data-valign="center">
@@ -56,26 +55,43 @@
 								<span class="base-color b2">#666666</span>
 								<span class="base-color b3">#DDDDDD</span>
 							</div>
-							<p>etc color</p>
+							<p>state color</p>
 							<div class="fx-wrap" data-align="start" data-valign="center">
-								<span class="etc-color e1">#09BFAD</span>
-								<span class="etc-color e2">#FF6262</span>
+								<span class="etc-color e1">양호</span>
+								<span class="etc-color e2">주의</span>
+								<span class="etc-color e3">경고</span>
+								<span class="etc-color e4">위험</span>
+								<span class="etc-color e5">고위험</span>
 							</div>
 						</section>
 						<section>
-							<h2 class="h-2">progress bar</h2>							
-							<div class="progress-wrap mgt-l">
+							<h2 class="h-2">progress bar</h2>	
+							<!-- progress (bar) -->
+							<div class="progress-wrap">
 								<div class="fx-wrap" data-align="justify" data-valign="center">
 									<span class="txt">실제 나이</span>
-									<div class="progress-cont progress" data-progress-percent="50">
-										<div class="progress-bar progress"></div>
+									<div class="progress-cont progress c1 ui-progressbar" data-percent="40">
+										<div class="progress-bar progress">
+											<div class="ui-progressbar-item" aria-label=""></div>
+										</div>
 									</div>
 									<span class="age">40세</span>
 								</div>
 							</div>
-							<progress id="" class="progress-base" max="100" value="70">70%</progress>
-							<div class="circle-progress-wrap">
-								<div class="circle-progress">
+							<div class="progress-wrap mgt-m">
+								<div class="fx-wrap" data-align="justify" data-valign="center">
+									<span class="txt">생체 나이</span>
+									<div class="progress-cont progress c2 ui-progressbar" data-percent="60">
+										<div class="progress-bar progress">
+											<div class="ui-progressbar-item" aria-label=""></div>
+										</div>
+									</div>
+									<span class="age">60세</span>
+								</div>
+							</div>
+							<!-- progress (circle) -->
+							<div class="circle-progress-wrap mgt-l">
+								<div class="circle-progress" id="empg1">
 									<div class="box">
 										<div class="head"></div>
 									</div>
@@ -104,11 +120,14 @@
 							<p>영문, 숫자 (Roboto) <span class="en-font">AELKSHER 19870825</span></p>
 							<!-- (h-1, h-2, h-3 , fs-l, fs-m, fs-s)class 사용 -->		
 							<div class="mgt-s">		
-								<h1 class="h-1 m">고혈압</h1>						
+								<div class="tit-wrap mgb-n">
+									<h1 class="h-1"><strong>본인인증 방법을</strong><br>선택해주세요</h1>
+								</div>
 								<h3 class="h-3">전조증상 체크</h3>						
+								<h4 class="h-4">질병분류에 따른 현재 상태</h4>
 								<p class="fs-l">잘 모르겠어요</p>
 								<p class="fs-m b">고혈압은 심장, 뇌에 혈액을 공급하는<br>혈관의 변화로 장기 기능에 영향을 줍니다.</p>
-								<p class="fs-s">고혈압은 뚜렷한 증상이 없어 무언의 살인자라고<br>하며, 합병증이 발생해야 증상이 나타납니다.<br>최고혈압(140이상), 최저혈압(90이상)인 경우<br>고혈압으로 분류합니다.</p>						
+								<p class="fs-s">고혈압은 뚜렷한 증상이 없어 무언의 살인자라고<br>하며, 합병증이 발생해야 증상이 나타납니다.</p>
 							</div>
 						</section>				
 						<section>
@@ -143,37 +162,28 @@
 							</div>
 						</section>
 						<section>
-							<h2 class="h-2">checkBox</h2>
-							<div class="chkbox">
-								<input type="checkbox" id="chkbox1" name="chkbox" checked>
-								<label for="chkbox1" class="chkbox-label">[필수] 건강검진 연동을 위한 개인정보 동의</label>
-							</div>
-							<div class="chkbox mgt-s">
-								<input type="checkbox" id="chkbox2" name="chkbox">
-								<label for="chkbox2" class="chkbox-label">[필수] 건강검진 연동을 위한 개인정보 동의</label>
-							</div>	
-						</section>
-						<section>
 							<h2 class="h-2">radio</h2>
-							<div class="fx-wrap" data-align="start" data-valign="center">
-								<div class="radio radio-type-txt">
-									<input type="radio" id="radio-txt1" name="radioTxt" checked>
-									<label for="radio-txt1" class="radio-label"><span>남자</span></label>
+							<div class="form-item">
+								<div class="fx-wrap" data-align="start" data-valign="center">
+									<label class="radio-label radio-type-txt">
+										<input type="radio" name="radioGender" class="radio" checked>
+										<span class="radio-txt">남자</span>
+									</label>
+									<label class="radio-label radio-type-txt">
+										<input type="radio" name="radioGender" class="radio">
+										<span class="radio-txt">여자</span>
+									</label>
 								</div>
-								<div class="radio radio-type-txt">
-									<input type="radio" id="radio-txt2" name="radioTxt">
-									<label for="radio-txt2" class="radio-label"><span>여자</span></label>
-								</div>
-							</div>							
+							</div>
 							<div class="btn-area">
 								<div class="btn-wrap">
 									<a href="#none" class="btn-base-link btn-kakao">
-										<span>카카오인증</span>
+										<span>카카오 인증</span>
 									</a>
 								</div>
 								<div class="btn-wrap">
-									<a href="#none" class="btn-base-link btn-phone">
-										<span>휴대폰인증</span>
+									<a href="#none" class="btn-base-link btn-pass">
+										<span>PASS 인증(통신사)</span>
 									</a>
 								</div>
 							</div>
@@ -229,7 +239,7 @@
 								</button>
 							</div>
 
-							<div class="form-wrap form-inbtn mgt-l">
+							<!-- <div class="form-wrap form-inbtn mgt-l">
 								<div class="fx-wrap" data-align="justify" data-valign="bottom">
 									<div class="fx-item ui-form" data-flex="2-1-1">
 										<div class="form-label">
@@ -247,7 +257,7 @@
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> -->
 							<div class="mgt-l">
 								<div class="btn-wrap btn-skip">
 									<a href="#none" class="btn-base text">
@@ -264,19 +274,20 @@
 						<section>
 							<h2 class="h-2">modal, alert</h2>
 							<button type="button" class="btn-base btn-base-l"
-								onclick="netive.modal.show({ id:'LMO001', src:'LMO-MODAL.html', ps: 'bottom' });">LMO001
+								onclick="netive.modal.show({ id:'LMO001', src:'../ga/LMO-001.html', ps: 'bottom' });">LMO001
 							</button>
 							<button type="button" class="btn-base btn-base-l"
-								onclick="netive.modal.show({ id:'LMO020', src:'LMO-MODAL.html', ps: 'bottom' });">LMO020
+								onclick="netive.modal.show({ id:'LMO020', src:'../ga/LMO-020.html', ps: 'bottom' });">LMO020
 							</button>
-							<button type="button" class="btn-base btn-base-l" onclick="netive.modal.show({ 
-								type : 'alert', 
-								sMessage: '<p><strong>휴대폰 번호가 일치하지 않습니다.</strong>올바르게 기입되어 있는지<br>다시 확인해 주세요.</p>', 
-								sBtnConfirmTxt: '확인', 
-								sConfirmCallback: function(){ 
-									console.log('close'); netive.modal.hideSystem();
-								}
-							});">alert
+							<button type="button" class="btn-base btn-base-l" 
+								onclick="netive.modal.show({ 
+									type : 'alert', 
+									sMessage: '<p><strong>휴대폰 번호가 일치하지 않습니다.</strong>올바르게 기입되어 있는지<br>다시 확인해 주세요.</p>', 
+									sBtnConfirmTxt: '확인', 
+									sConfirmCallback: function(){ 
+										console.log('close'); netive.modal.hideSystem();
+									}
+								});">alert
 							</button>
 						</section>
 						<section>
@@ -304,7 +315,7 @@
 															<input type="checkbox" id="chk1" name="chkbox">
 															<label for="chk1" class="chkbox-label">건강정보(민감정보) 수집/이용 동의</label>
 														</div>
-														<button type="button" class="ui-btn" onclick="netive.modal.show({ id:'LMO007', src:'LMO-POPUP.html', full: true });">
+														<button type="button" class="ui-btn" onclick="netive.modal.show({ id:'LMO007', src:'LMO-007.html', full: true });">
 															<span>보기</span>
 														</button>
 													</li>
@@ -353,24 +364,36 @@
 						</section>
 						<section>
 							<h2 class="h-2">box</h2>
-							<div class="box-base">
-								<div class="fx-wrap" data-align="justify" data-valign="center">
-									<div class="ta-c">
-										<div class="img-wrap"><img src="../../resources/img/mo/img-result-obj-1.png" alt="" class="img-m"></div>
-										<span class="fs-xs">연간 의료비</span>
-										<strong class="fs-s primary-color">120,000원</strong>
-									</div>
-									<div class="ta-c">
-										<div class="img-wrap"><img src="../../resources/img/mo/img-result-obj-2.png" alt="" class="img-m"></div>
-										<span class="fs-xs">연간 의료비 증가액</span>
-										<strong class="fs-s primary-color">500,000원</strong>
-									</div>
-									<div class="ta-c">
-										<div class="img-wrap"><img src="../../resources/img/mo/img-result-obj-3.png" alt="" class="img-m"></div>
-										<span class="fs-xs">외래/통원 일수</span>
-										<strong class="fs-s primary-color">10일 / 4일</strong>
-									</div>
-								</div>
+							<div class="box-base list">
+								<ul>
+									<li>
+										<div class="fx-wrap" data-align="start" data-valign="center">
+											<img src="../../resources/img/mo/img-result-obj-1.png" alt="" class="img-m">
+											<div class="txt-wrap">
+												<span class="fs-s m">연간 의료비</span>
+												<strong class="primary-color">120,000원</strong>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="fx-wrap" data-align="start" data-valign="center">
+											<img src="../../resources/img/mo/img-result-obj-2.png" alt="" class="img-m">
+											<div class="txt-wrap">
+												<span class="fs-s m">연간 의료비 증가액</span>
+												<strong class="primary-color">500,000원</strong>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="fx-wrap" data-align="start" data-valign="center">
+											<img src="../../resources/img/mo/img-result-obj-3.png" alt="" class="img-m">
+											<div class="txt-wrap">
+												<span class="fs-s m">외래/통원 일수</span>
+												<strong class="primary-color">10일 / 4일</strong>
+											</div>
+										</div>
+									</li>
+								</ul>
 							</div>
 						</section>
 						<section>
@@ -393,57 +416,44 @@
 			</div>
 			<!-- <footer class="base-footer"></footer> -->
 		</div>
+
 		<script>
-			;(function (win, doc, jQuery, undefined) {
+			; (function (win, doc, jQuery, undefined) {
 				'use strict';
 
 				document.addEventListener("DOMContentLoaded", function () {
 
 					netive.common.init();
+					netive.common.progressBar();
+	
 
+					//모두 동의 chk
 					$('#agreeAllChk').uiCheckAll({
 						callback: function (v) {
 							console.log(v);
 						}
 					});
-					// $('#agreeAllChk').uiCheckAll({
-					// 		callback: function () {
-					// 			$('#btnConfirm').prop('disabled', false);
-					// 			console.log('callback');
-					// 			// allchk시 아코디언 닫힘
-					// 			// netive.accordion.toggle({
-					// 			//   id: 'accoLMO005',
-					// 			//   current: [0],
-					// 			//   state: 'close'
-					// 			// });
-					// 		},
-					// 		callbackCancel: function () {
-					// 			$('#btnConfirm').prop('disabled', true);
-					// 			// allchk시 아코디언 열림
-					// 			//  netive.accordion.toggle({
-					// 			//   id: 'accoLMO005',
-					// 			//   current: [0],
-					// 			//   state: 'open'
-					// 			// });
-					// 		}
-					// 	});
-					$('.progress-wrap .progress').uiProgressbar();
 
-					netive.accordion.init({ 
-						id:'accoTerms', 
-						current:[0], 
-						callback:function(v){
+					//acco 호출
+					netive.accordion.init({
+						id: 'accoTerms',
+						current: [0],
+						callback: function (v) {
 							console.log(v);
-						} 
+						}
 					});
 
+					//progress (circle)
 					netive.common.progress({
+						id: 'empg1',
 						max: 100,
 						val: 75
 					});
+					
+					//progress (bar)
+					$('.progress-wrap .progress').uiProgressbar();
 
 				});
-
 			})(window, document, $);
 		</script>
 	</body>

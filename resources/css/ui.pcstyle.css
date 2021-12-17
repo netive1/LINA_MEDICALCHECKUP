@@ -619,7 +619,7 @@
 
 /*완료 화면*/
 .pc .bg-complete {
-	background: url('../img/pc/common/bg-complete.png') center no-repeat;
+	background: url('../img/pc/bg-complete.png') center no-repeat;
 	background-size: 16.8rem 14.8rem;
 }
 .pc .bg-complete .btn-wrap.bottom {

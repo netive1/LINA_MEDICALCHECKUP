@@ -1,7 +1,6 @@
 @charset "utf-8";
 
-/*** COMMON PAGE ***/
-/* [common] 스플래시 화면 */
+/* 스플래시 화면 */
 .base-splash {
 	width: 100%;
 	height: 100%;
@@ -29,14 +28,14 @@
 }
 @keyframes slideRightIn {
     0% {
-			bottom: 6.9rem;
-			right: -10rem;
-			opacity: 0;
+		bottom: 6.9rem;
+		right: -10rem;
+		opacity: 0;
     }
     100% {
-			bottom: 6.9rem;
-			right: 4rem;
-			opacity: 1;
+		bottom: 6.9rem;
+		right: 4rem;
+		opacity: 1;
     }
 }
 .base-splash .logo img {
@@ -53,7 +52,7 @@
 	height: 1.2rem;
 }
 
-/* [COMMON] 약관 동의 */
+/* 약관 동의 화면 */
 .base-terms .header-wrap {
 	padding-top: 5rem;
 }
@@ -73,9 +72,6 @@
 	font-size: 1.4rem;
 	line-height: 2.4rem;
 }
-/* .ui-chkgroup .ui-acco-pnl[aria-hidden="false"] {
-	overflow: visible;
-} */
 .ui-chkgroup .all-chked {
 	position: relative;
 	display: flex;
@@ -128,7 +124,6 @@
 	opacity: 1;
 	background-image: url(../img/common/ico-chkbox-s.svg);
 }
-
 .ui-chkgroup .chklist li .chkbox input[type=checkbox]:checked + .chkbox-label:before {
 	background-image: url(../img/common/ico-chkbox-s-on.svg);	
 }
@@ -189,15 +184,12 @@
 	width: 7rem;
 }
 
-/* [COMMON] LOADING */
+/* LOADING */
 .base-loading {
 	min-height: 100%;
 }
 .base-loading .tit-wrap {
 	text-align: center;
-}
-.base-loading .circle-progress {
-	margin: 0 auto;
 }
 .base-loading .circle-progress-wrap {
 	margin-top: 7.7rem;
@@ -269,7 +261,7 @@
 }
 /* Entry_3 정보 연동 */
 .bg-chkup {
-	background: url('../img/mo/bg-chkup.png') center top 18.9rem no-repeat;
+	background: url('../img/mo/bg-chkup.png') center top 32.5rem no-repeat;
 	background-size: 18.1rem 13.2rem;
 }
 .bg-chkup .logo-txt .highlight {
@@ -347,17 +339,17 @@
 .box-base.info dl dd + dd {
 	margin-top: 1rem;
 }
-.box-base.info .progress-wrap .progress-cont {
+.progress-wrap .progress-cont {
 	min-width: 17.2rem;
 	margin: 0 1.2rem;
 }
-.box-base.info .fx-wrap .txt {
+.progress-wrap .fx-wrap .txt {
 	min-width: 5.4rem;
 	color: #222;
 	font-size: 1.4rem;
 	font-weight: 500;
 }
-.box-base.info .progress-wrap .fx-wrap .age {
+.progress-wrap .fx-wrap .age {
 	color: #666;
 	font-size: 1.4rem;
 }
@@ -490,8 +482,6 @@
 }
 .box-base.disease .progress-wrap .txt-wrap {
 	position: relative;
-	/* display: flex;
-	align-items: center; */
 	width: 100%;
 	min-height: 3.4rem;
 	padding-bottom: 1rem;
@@ -522,6 +512,7 @@
 	align-items: center;
 	min-height: 6.6rem;
 }
+
 /* Contents_MW_Main_상세 */
 .result-detail {
 	position: relative;
@@ -615,17 +606,6 @@
 	width: 15.4rem;
 	height: 15.4rem;
 }
-/* .result-graph .circle-progress::before{
-	content: "";
-	display: block;
-	width:100%;
-	height: 100%;
-	border-radius: 50%;
-	background-color: #fff;
-	box-shadow: 0 .4rem .4rem rgba(0, 0, 0, .2);
-	position: absolute;
-	top:0;
-} */
 .result-graph .circle-progress .text {
 	top: 2.5rem;
 	bottom: auto;

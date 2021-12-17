@@ -16,12 +16,14 @@
     <div class="base-wrap">
         <div class="base-body">
             <main class="base-main">
-                <button type="button" class="btn-base" onclick="netive.modal.show({
-                id: 'LMO019',
-                ps: 'center',
-                src: './LMO-019.html',
-                full: true
-                });"><span>컨텐츠 상세 팝업</span>
+                <button type="button" class="btn-base" 
+                    onclick="netive.modal.show({
+                        id: 'LMO019',
+                        ps: 'center',
+                        src: './LMO-019.html',
+                        full: true
+                        });">
+                    <span>컨텐츠 상세</span>
                 </button>
             </main>
         </div>
@@ -46,7 +48,6 @@
                             max: 100,
                             val: 54.2
                         });
-
                         netive.common.progress({
                             id: 'pgb2',
                             max: 100,
@@ -59,5 +60,4 @@
         })(window, document, $);
     </script>
 </body>
-
 </html>

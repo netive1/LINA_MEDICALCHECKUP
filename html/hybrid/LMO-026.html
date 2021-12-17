@@ -8,8 +8,7 @@
 	<link rel="stylesheet" href="../../resources/css/ui.base.css">
 	<link rel="canonical" href="">
 	<script src="../../resources/js/lib/jquery-3.6.0.min.js"></script>
-	<script src="../../resources/js/lib/circle-progress.js"></script>
-
+	<script src="../../resources/js/lib/circle-progress.js"></script> <!--progress lib-->
 	<script src="../../resources/js/ui.global.js"></script>
 	<script src="../../resources/js/ui.common.js"></script>
 </head>
@@ -129,27 +128,29 @@
 											<div class="progress-wrap">
 												<div class="txt-wrap">
 													<span class="fs-m m">1차성 질환 <span class="fs-xs">(노인성 질환)</span></span>
-													<button type="button" class="btn-base-s btn-more" onclick="
-													netive.modal.show({
-														id: 'LMO019',
-														ps: 'center',
-														src: '../common/LMO-019.html',
-														full: true,
-														callback: function(){
-															
-															netive.common.progress({
-																id: 'pgb1',
-																max: 100,
-																val: 54.2
-															});
+													<button type="button" class="btn-base-s btn-more" 
+														onclick="netive.modal.show({
+															id: 'LMO019',
+															ps: 'center',
+															src: '../common/LMO-019.html',
+															full: true,
+															callback: function(){
+																
+																netive.common.progress({
+																	id: 'pgb1',
+																	max: 100,
+																	val: 54.2
+																});
 
-															netive.common.progress({
-																id: 'pgb2',
-																max: 100,
-																val: 30.2
-															});
-														}
-													});"><span>자세히</span></button>
+																netive.common.progress({
+																	id: 'pgb2',
+																	max: 100,
+																	val: 30.2
+																});
+															}
+														});">
+														<span>자세히</span>
+													</button>
 												</div>
 												<div class="progress-cont progress">
 													<div class="ui-progressbar-item" aria-label=""></div>
@@ -166,8 +167,8 @@
 											<div class="progress-wrap">
 												<div class="txt-wrap">
 													<span class="fs-m m">심장질환<span class="fs-xs">(심근경색증, 허혈성심장질환)</span></span>
-													<button type="button" class="btn-base-s btn-more" onclick="
-														netive.modal.show({
+													<button type="button" class="btn-base-s btn-more" 
+														onclick="netive.modal.show({
 															id: 'LMO019',
 															ps: 'center',
 															src: '../common/LMO-019.html',
@@ -179,7 +180,7 @@
 																	max: 100,
 																	val: 54.2
 																});
-	
+
 																netive.common.progress({
 																	id: 'pgb2',
 																	max: 100,
@@ -204,12 +205,15 @@
 											<div class="progress-wrap">
 												<div class="txt-wrap">
 													<span class="fs-m m">뇌질환<span class="fs-xs">(뇌졸증, 치매)</span></span>
-													<button type="button" class="btn-base-s btn-more" onclick="netive.modal.show({
-													id: 'LMO026-POP3',
-													ps: 'center',
-													src: './LMO-026-POP3.html',
-													full: true
-													});"><span>자세히</span></button>
+													<button type="button" class="btn-base-s btn-more" 
+														onclick="netive.modal.show({
+															id: 'LMO026-POP3',
+															ps: 'center',
+															src: './LMO-026-POP3.html',
+															full: true
+														});">
+														<span>자세히</span>
+													</button>
 												</div>
 												<div class="progress-cont progress">
 													<div class="ui-progressbar-item" aria-label=""></div>
@@ -226,12 +230,15 @@
 											<div class="progress-wrap">
 												<div class="txt-wrap">
 													<span class="fs-m m">암</span>
-													<button type="button" class="btn-base-s btn-more" onclick="netive.modal.show({
-													id: 'LMO026-POP4',
-													ps: 'center',
-													src: './LMO0-26-POP4.html',
-													full: true
-													});"><span>자세히</span></button>
+													<button type="button" class="btn-base-s btn-more" 
+														onclick="netive.modal.show({
+															id: 'LMO026-POP4',
+															ps: 'center',
+															src: './LMO0-26-POP4.html',
+															full: true
+														});">
+														<span>자세히</span>
+													</button>
 												</div>
 												<div class="progress-cont progress">
 													<div class="ui-progressbar-item" aria-label=""></div>
@@ -246,9 +253,11 @@
 							<div class="box-base banner">
 								<div class="box-tit bg-disease">
 									<h3 class="fs-s m">조금 걱정되는 질병에 대해 <strong>충분히 대비가<br>되어 있으신가요?</strong></h3>
-									<p>라이나생명 설계사가 분석결과를<br>
+									<p>
+										라이나생명 설계사가 분석결과를<br>
 										함께 보고 질병 위험도에 따른<br>
-										미래 준비를 도와드릴 수 있어요!</p>
+										미래 준비를 도와드릴 수 있어요!
+									</p>
 								</div>
 								<div class="btn-wrap mgt-m">
 									<button type="button" onclick="location.href='./LMO-027.html'" class="btn-base-l primary">설계사 상담 신청하기</button>
@@ -257,7 +266,8 @@
 							<div class="from-info">
 								<div class="bul-info" aria-live="polite">
 									<div>이 분석 결과는 참고용으로, 실제 건강검진의<br>
-										전문적인 분석은 의사 상담을 받으시길 권유드립니다.</div>
+										전문적인 분석은 의사 상담을 받으시길 권유드립니다.
+									</div>
 								</div>
 							</div>
 						</div>
@@ -267,7 +277,7 @@
 		</div>
 	</div>
 	<script>
-		; (function (win, doc, jQuery, undefined) {
+		;(function (win, doc, jQuery, undefined) {
 			'use strict';
 
 			document.addEventListener("DOMContentLoaded", function () {
@@ -275,7 +285,7 @@
 				netive.common.init();
 				netive.common.progressBar();
 
-				
+				//progress (bar)
 				$('.progress-wrap .progress').uiProgressbar();
 
 			});
@@ -283,5 +293,4 @@
 		})(window, document, $);
 	</script>
 </body>
-
 </html>
