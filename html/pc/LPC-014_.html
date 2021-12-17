@@ -1,30 +1,33 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=yes">
-  <title>라이나생명 검진분석 서비스</title>
-  <link rel="stylesheet" href="../../resources/css/ui.base.css">
-  <link rel="canonical" href="">
-  <script src="../../resources/js/lib/jquery-3.6.0.min.js"></script>
-  <script src="../../resources/js/lib/circle-progress.js"></script>
-  <script src="../../resources/js/ui.global.js"></script>
-  <script src="../../resources/js/ui.common.js"></script>  
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=yes">
+	<title>라이나생명 검진분석 서비스</title>
+	<link rel="stylesheet" href="../../resources/css/ui.base.css">
+	<link rel="canonical" href="">
+	<script src="../../resources/js/lib/jquery-3.6.0.min.js"></script>
+	<script src="../../resources/js/lib/circle-progress.js"></script> <!--progress lib-->
+	<script src="../../resources/js/ui.global.js"></script>
+	<script src="../../resources/js/ui.common.js"></script>  
 </head>
 <body>
-  <div class="base-wrap">
-    <div class="base-body">
-      <main class="base-main">
-        <button type="button" class="btn-base" onclick="netive.modal.show({
-          id: 'LPC014',
-          ps: 'center',
-          src: './LPC-014.html',
-          full: true
-        });"><span>컨텐츠 상세 팝업</span></button>
-      </main>
-    </div>
-  </div>
+	<div class="base-wrap">
+		<div class="base-body">
+			<main class="base-main">
+				<button type="button" class="btn-base" 
+					onclick="netive.modal.show({
+						id: 'LPC014',
+						ps: 'center',
+						src: './LPC-014.html',
+						full: true
+					});">
+					<span>컨텐츠 상세 팝업</span>
+				</button>
+			</main>
+		</div>
+	</div>
   <script>
     ;(function (win, doc, jQuery, undefined) {
     ' use strict';
@@ -33,7 +36,6 @@
 
         netive.common.init();
         netive.common.progressBar();
-
 
         $('.progress-wrap .progress').uiProgressbar();
 
