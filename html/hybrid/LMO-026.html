@@ -60,7 +60,7 @@
 											<span class="txt">건강등급</span>
 											<span class="state state-1">양호</span>
 											<!-- 
-											[등급 별 class guide]
+											[건강 등급 별 class guide]
 											양호 state-1 , 주의 state-2, 경고 state-3, 위험 state-4, 중위험 state-5, 고위험 state-6 
 											-->
 										</div>
@@ -169,22 +169,16 @@
 													<span class="fs-m m">심장질환<span class="fs-xs">(심근경색증, 허혈성심장질환)</span></span>
 													<button type="button" class="btn-base-s btn-more" 
 														onclick="netive.modal.show({
-															id: 'LMO019',
+															id: 'LMO019-1',
 															ps: 'center',
-															src: '../common/LMO-019.html',
+															src: '../common/LMO-019-1.html',
 															full: true,
 															callback: function(){
 																
 																netive.common.progress({
-																	id: 'pgb1',
+																	id: 'pgb3',
 																	max: 100,
 																	val: 54.2
-																});
-
-																netive.common.progress({
-																	id: 'pgb2',
-																	max: 100,
-																	val: 30.2
 																});
 															}
 														});"><span>자세히</span>
@@ -207,10 +201,24 @@
 													<span class="fs-m m">뇌질환<span class="fs-xs">(뇌졸증, 치매)</span></span>
 													<button type="button" class="btn-base-s btn-more" 
 														onclick="netive.modal.show({
-															id: 'LMO026-POP3',
+															id: 'LMO019-2',
 															ps: 'center',
-															src: './LMO-026-POP3.html',
-															full: true
+															src: '../common/LMO-019-2.html',
+															full: true,
+															callback: function(){
+																
+																netive.common.progress({
+																	id: 'pgb4',
+																	max: 100,
+																	val: 54.2
+																});
+
+																netive.common.progress({
+																	id: 'pgb5',
+																	max: 100,
+																	val: 30.2
+																});
+															}
 														});">
 														<span>자세히</span>
 													</button>
@@ -230,13 +238,7 @@
 											<div class="progress-wrap">
 												<div class="txt-wrap">
 													<span class="fs-m m">암</span>
-													<button type="button" class="btn-base-s btn-more" 
-														onclick="netive.modal.show({
-															id: 'LMO026-POP4',
-															ps: 'center',
-															src: './LMO0-26-POP4.html',
-															full: true
-														});">
+													<button type="button" class="btn-base-s btn-more">
 														<span>자세히</span>
 													</button>
 												</div>

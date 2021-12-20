@@ -135,8 +135,8 @@
                                             <div class="progress-wrap">
                                                 <div class="txt-wrap">
                                                     <span class="fs-m m">1차성 질환 <span class="fs-xs">(노인성 질환)</span></span>
-                                                    <button type="button" class="btn-base-s btn-more" onclick="
-                                                        netive.modal.show({
+                                                    <button type="button" class="btn-base-s btn-more" 
+                                                        onclick="netive.modal.show({
                                                             id: 'LPC014',
                                                             ps: 'center',
                                                             src: './LPC-014.html',
@@ -153,7 +153,8 @@
                                                                     val: 30.2
                                                                 });
                                                             }
-                                                        });"><span>자세히</span>
+                                                        });">
+                                                        <span>자세히</span>
                                                     </button>
                                                 </div>
                                                 <div class="progress-cont progress">
@@ -171,7 +172,22 @@
                                             <div class="progress-wrap">
                                                 <div class="txt-wrap">
                                                     <span class="fs-m m">심장질환<span class="fs-xs">(심근경색증, 허혈성심장질환)</span></span>
-                                                    <button type="button" class="btn-base-s btn-more"><span>자세히</span></button>
+                                                    <button type="button" class="btn-base-s btn-more"
+                                                        onclick="netive.modal.show({
+                                                            id: 'LPC014-1',
+                                                            ps: 'center',
+                                                            src: './LPC-014-1.html',
+                                                            full: true,
+                                                            callback: function(){                                                                
+                                                                netive.common.progress({
+                                                                    id: 'pgb1',
+                                                                    max: 100,
+                                                                    val: 54.2
+                                                                });
+                                                            }
+                                                        });">
+                                                        <span>자세히</span>
+                                                    </button>
                                                 </div>
                                                 <div class="progress-cont progress">
                                                     <div class="ui-progressbar-item" aria-label=""></div>
@@ -188,7 +204,27 @@
                                             <div class="progress-wrap">
                                                 <div class="txt-wrap">
                                                     <span class="fs-m m">뇌질환<span class="fs-xs">(뇌졸증, 치매)</span></span>
-                                                    <button type="button" class="btn-base-s btn-more"><span>자세히</span></button>
+                                                    <button type="button" class="btn-base-s btn-more"
+                                                        onclick="netive.modal.show({
+                                                            id: 'LPC014-2',
+                                                            ps: 'center',
+                                                            src: './LPC-014-2.html',
+                                                            full: true,
+                                                            callback: function(){                                                                
+                                                                netive.common.progress({
+                                                                    id: 'pgb1',
+                                                                    max: 100,
+                                                                    val: 54.2
+                                                                });
+                                                                netive.common.progress({
+                                                                    id: 'pgb2',
+                                                                    max: 100,
+                                                                    val: 54.2
+                                                                });
+                                                            }
+                                                        });">
+                                                        <span>자세히</span>
+                                                    </button>
                                                 </div>
                                                 <div class="progress-cont progress">
                                                     <div class="ui-progressbar-item" aria-label=""></div>

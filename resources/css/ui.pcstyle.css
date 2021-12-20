@@ -175,39 +175,6 @@
 	background: url(../img/common/bul-error.svg) center/100% no-repeat;
 }
 
-/*scrollbar*/
-.ui-modal .scroll,
-.pc .scroll { 
-	overflow-y: auto; 
-}
-.ui-modal .scroll::-webkit-scrollbar,
-.pc .scroll::-webkit-scrollbar {
-	width: .6rem;
-	border-radius: .4rem;
-}
-.ui-modal .scroll.custom::-webkit-scrollbar-track,
-.pc .scroll.custom::-webkit-scrollbar-track {
-  background: #fafafa;
-  border-radius: .4rem;
-}
-.ui-modal .scroll.custom::-webkit-scrollbar-thumb,
-.pc .scroll.custom::-webkit-scrollbar-thumb {
-  background: #ddd;
-  border-radius: .4rem;
-}
-
-.ui-modal .scroll,
-.pc .scroll {
-	scrollbar-arrow-color: #efefef;
-	scrollbar-Track-Color: #efefef;
-	scrollbar-base-color: #dfdfdf;
-	scrollbar-Face-Color: #dfdfdf;
-	scrollbar-3dLight-Color: #dfdfdf;
-	scrollbar-DarkShadow-Color: #dfdfdf;
-	scrollbar-Highlight-Color: #dfdfdf;
-	scrollbar-Shadow-Color: #dfdfdf
-}
-
 .box-base.box-scroll {
 	padding: 1.5rem 3.4rem 1.5rem 2.2rem;
 	border-radius: .4rem;
