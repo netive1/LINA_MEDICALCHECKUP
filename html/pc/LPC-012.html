@@ -27,17 +27,14 @@
                     <h2 class="h-1">지금 데이터를 통해<br><strong>건강 분석 진행 중이에요.</strong></h2>
                     <p>국민건강보험공단 정보를 통해<br>데이터 분석중입니다.</p>
                 </div>
-                <!-- 220106 loading bar 마크업 변경 -->
-                <div id="loadingBar" class="loading-bar">
-                    <svg class="spinner">
-                        <circle cx="100" cy="100" r="84" stroke="#019AF9" stroke-width="10" fill="none" />
-                    </svg>
-                    <svg class="background">
-                        <circle cx="100" cy="100" r="84" stroke="#F7F7F7" stroke-width="10" fill="none" />
-                    </svg>
-                    <div class="emoji"></div>
+                <!-- 220106 loading type 마크업 변경 -->
+                <div class="loading-spinner-wrap">
+                    <span class="loading-spinner">
+                        <span class="left"><span class="spin"></span></span>
+                        <span class="right"><span class="spin"></span></span>
+                    </span>
                 </div>
-                <!-- //220106 loading bar 마크업 변경 -->
+                <!-- //220106 loading type 마크업 변경 -->
             </main>
         </div>
         <!-- <footer class="base-footer">
@@ -59,7 +56,6 @@
             document.addEventListener("DOMContentLoaded", function () {
 
                 netive.common.init();
-                netive.common.loadingBar(); //220106 loading
 
                 //220106 progress script 삭제
 

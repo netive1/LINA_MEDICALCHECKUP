@@ -90,7 +90,7 @@
 			const max = Number(opt.max);
 			const val = Number(opt.val);
 			const circleprogress = document.querySelector('#' + id);
-			const emoji = circleprogress.querySelector('.emoji');
+			//220106 emoji 변수 삭제
 			const box = circleprogress.querySelector('.box');
 			const percent = circleprogress.querySelector('.percent');
 
@@ -125,46 +125,15 @@
 			// }
 			// countUp();
 
-			//220106 emoji관련 script 삭제
+			//220106 emoji script 삭제
 
 			new CircleProgress('#' + id, {
 				// textFormat: 'percent',
 				max: max,
 				value: val,
 			});
-		},
-
-		//220106 loadingbar
-		loadingBar: function () {
-
-			let loadIncrement = 0,
-				spinIncrement = -90,
-				toggle = true,
-				loadVal = '',
-				spinnerSVG = $('#loadingBar .spinner');
-
-			window.setInterval(function () {
-				//Loader
-				loadIncrement = loadIncrement + 3;
-				loadVal = loadIncrement + ", 540";
-
-				//Spinner
-				spinIncrement = spinIncrement + 360;
-				spinnerSVG.css({ 'transform': 'rotate(' + spinIncrement + 'deg)' });
-
-			}, 2000);
-
-			window.setInterval(function () {
-				if (toggle == true) {
-					spinnerSVG.css('stroke-dasharray', loadVal);
-					toggle = false;
-				} else {
-					spinnerSVG.css('stroke-dasharray', '140, 540');
-					toggle = true;
-				}
-			}, 1000);
-
 		}
+
 	};
 
 	
