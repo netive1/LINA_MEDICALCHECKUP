@@ -125,22 +125,45 @@
 			// }
 			// countUp();
 
-			if (val > 100) {
-				circleprogress.classList.add('n5');
-			} else if (val > 80) {
-				circleprogress.classList.add('n4');
-			} else if (val > 60) {
-				circleprogress.classList.add('n3');
-			} else if (val > 40) {
-				circleprogress.classList.add('n2');
-			} else {
-				circleprogress.classList.add('n1');
-			}
+			//220106 emoji관련 script 삭제
+
 			new CircleProgress('#' + id, {
 				// textFormat: 'percent',
 				max: max,
 				value: val,
 			});
+		},
+
+		//220106 loadingbar
+		loadingBar: function () {
+
+			let loadIncrement = 0,
+				spinIncrement = -90,
+				toggle = true,
+				loadVal = '',
+				spinnerSVG = $('#loadingBar .spinner');
+
+			window.setInterval(function () {
+				//Loader
+				loadIncrement = loadIncrement + 3;
+				loadVal = loadIncrement + ", 540";
+
+				//Spinner
+				spinIncrement = spinIncrement + 360;
+				spinnerSVG.css({ 'transform': 'rotate(' + spinIncrement + 'deg)' });
+
+			}, 2000);
+
+			window.setInterval(function () {
+				if (toggle == true) {
+					spinnerSVG.css('stroke-dasharray', loadVal);
+					toggle = false;
+				} else {
+					spinnerSVG.css('stroke-dasharray', '140, 540');
+					toggle = true;
+				}
+			}, 1000);
+
 		}
 	};
 

@@ -1295,3 +1295,31 @@ progress {
   scrollbar-width: thin;
   scrollbar-color: #ddd #fafafa;
 }
+
+/* loading bar */
+.base-loading .loading-bar {
+	margin-top: 7.7rem;
+}
+.loading-bar {
+	position: relative;
+	width: 20rem;
+	height: 20rem;
+	margin: 0 auto;
+}
+.loading-bar> svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20rem;
+	height: 20rem;
+}
+.loading-bar .spinner {
+  z-index: 2;
+  stroke-dasharray: 0 540;
+  transform: rotate(-90deg);
+  transition: transform 1.25s ease-in-out, stroke-dasharray 0.375s linear;
+  opacity: 0.75;
+}
+.loading-bar .background {
+  z-index: 1;
+}
