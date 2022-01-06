@@ -442,6 +442,11 @@
 .progress.c2 .ui-progressbar-item{
 	background-color: #019AF9;
 }
+/* 220106 */
+.progress.c3 .ui-progressbar-item{
+	background-color: #09BFAD;
+}
+/**220106**/
 .state-1 .ui-progressbar-level{
 	background-color: #4792EF;
 }
