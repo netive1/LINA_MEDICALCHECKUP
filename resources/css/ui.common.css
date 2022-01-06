@@ -1341,18 +1341,11 @@ progress {
 	left: 100%; 
     height: 100%; 
 	width: 100%;
-    border-radius: 999px;
+    border-radius: 99.9rem;
     background: none repeat scroll 0 0 #019AF9;
-    opacity: 0.8;
-    -webkit-animation: ui-spinner-rotate-left 3s infinite;
-    animation: ui-spinner-rotate-left 3s infinite;
-    -webkit-transform-origin: 0 50% 0;
     transform-origin: 0 50% 0;
-	-webkit-animation-delay: 0s;
-	-webkit-animation-duration:3s;
-	-webkit-animation-timing-function: linear;
-	animation-delay: 0s;
-	animation-duration:3s;
+    animation: ui-spinner-rotate-left 2s infinite;
+	animation-duration: 2s;
 	animation-timing-function: linear;
 }
 .loading-spinner .left .spin {
@@ -1363,16 +1356,10 @@ progress {
     left: -100%;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
-    -webkit-transform-origin: 100% 50% 0;
     transform-origin: 100% 50% 0;
-	-webkit-animation-name: ui-spinner-rotate-right;
-	-webkit-animation-delay:0;
-	-webkit-animation-delay: 1.5s;
 	animation-name: ui-spinner-rotate-right;
-	animation-delay:0;
-	animation-delay: 1.5s;
+	animation-delay: 1s;
 }
-
 
 @keyframes ui-spinner-rotate-right{
   0%{
@@ -1410,3 +1397,44 @@ progress {
 	  transform:rotate(0deg)
 	}
 }
+
+/* spinner2 */
+.spinner-wrap {
+	position: relative;
+	margin: 17.4rem auto 0;
+}
+.spinner.spinner--active::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1rem solid #F7F7F7;
+  border-top-color: #019AF9;
+  border-radius: 50%;
+  width: 17.4rem;
+  height: 17.4rem;
+  margin-top: -9.7rem;
+  margin-left: -9.7rem;
+  animation: rotate 1s linear infinite;
+  z-index: 999;
+}
+.spinner {
+	position: relative;
+}
+.spinner-wrap .emoji{
+	position: absolute;
+	top:50%;
+	left:50%;
+	width: 17.4rem;
+	height: 17.4rem;
+	background: url(../img/common/progress-emoji-1.png) center no-repeat;
+	background-size: 11.2rem;
+	transform: translate(-50%, -50%);
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
