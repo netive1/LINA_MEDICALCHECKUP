@@ -84,7 +84,8 @@
 								<hr class="hr-cont">
 								<div class="fx-wrap result-txt" data-align="start" data-valign="top">
 									<img src="../../resources/img/mo/ico-step-age-1.png" alt="" class="img-s">
-									<p>실제 나이보다 건강하게 나왔어요!<br>그래도 매년 검진으로 체크하는 것,<br>잊지 마세요!</p>
+									<p>실제 나이보다 건강하게 나왔어요!<br>그래도 매년 검진으로 체크하는 것, <br class="br">잊지 마세요!</p>
+									<!-- 220111 'br' class 추가 -->
 								</div>
 							</div>
 						</div>
@@ -142,12 +143,13 @@
 											</div>
 											<div class="progress-wrap">
 												<div class="txt-wrap">
-													<span class="fs-m m">1차성 질환(노인성 질환)</span>
+													<!-- 220111 타이틀 UI LMO-026 화면과 같이 현행화 -->
+													<span class="fs-m m">1차성 질환 <span class="fs-xs">(노인성 질환)</span></span>
 													<button type="button" class="btn-base-s btn-more" 
                                                         onclick="netive.modal.show({
                                                             id: 'LMO019',
                                                             ps: 'center',
-                                                            src: './LMO-019.html',
+                                                            src: '../common/LMO-019.html',
                                                             full: true,
                                                             callback: function(){															
                                                                 netive.common.progress({
@@ -179,7 +181,7 @@
 											</div>
 											<div class="progress-wrap">
 												<div class="txt-wrap">
-													<span class="fs-m m">심장질환</span>
+													<span class="fs-m m">심장질환<span class="fs-xs">(심근경색증, 허혈성심장질환)</span></span>
                                                     <button type="button" class="btn-base-s btn-more"><span>자세히</span></button>
 												</div>
 												<div class="progress-cont progress">
@@ -196,7 +198,7 @@
 											</div>
 											<div class="progress-wrap">
 												<div class="txt-wrap">
-													<span class="fs-m m">뇌질환</span>
+													<span class="fs-m m">뇌질환<span class="fs-xs">(뇌졸증, 치매)</span></span>
                                                     <button type="button" class="btn-base-s btn-more"><span>자세히</span></button>
 												</div>
 												<div class="progress-cont progress">
